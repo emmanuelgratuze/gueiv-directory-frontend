@@ -1,0 +1,38 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {
+          "targets": {
+            "browsers": "defaults"
+          },
+          "useBuiltIns": "entry"
+        }
+      }
+    ]
+  ],
+  
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@pages": "./pages",
+          "@screens": "./screens",
+          "@components": "./components",
+          "@store": "./store",
+          "@utils": "./utils"
+        }
+      }
+    ]
+  ]
+}

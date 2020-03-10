@@ -1,25 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/.pnp
-.pnp.js
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-.env*
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 # Standards
 node_modules
 #.next
@@ -30,7 +8,7 @@ npm-debug.log
 *.swp
 *.repeaks
 .next
-./dist
+dist
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
@@ -144,8 +122,7 @@ crashlytics-build.properties
 *.sublime-project
 bower_components/
 *.log
-.vscode
 logs
 stats.json
-dist
-.history
+vendor
+static

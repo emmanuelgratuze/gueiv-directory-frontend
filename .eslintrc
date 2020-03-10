@@ -14,5 +14,16 @@
   },
   "globals": {
     "fetch": true
+  },
+  "plugins": ["module-resolver"],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "extensions": [".js", ".ts", ".tsx"],
+        "alias": {
+          "@components": "./components"
+        }
+      }
+    }
   }
 }

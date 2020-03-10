@@ -5,9 +5,9 @@ import withRedux from 'next-redux-wrapper';
 import withReduxSaga from 'next-redux-saga';
 import ErrorPage from 'next/error';
 
-import Layout from '../components/Layout';
-import configureStore from '../store';
-import compose from '../utils/compose';
+import Layout from '@components/Layout';
+import compose from '@utils/compose';
+import configureStore from '@store';
 
 /* eslint-disable */
 if (process.env.NODE_ENV !== 'production') {
@@ -22,7 +22,6 @@ class WavliveApp extends App {
 
     // Fetch user if logged and not already fetched
     const { ctx } = context;
-    const token = await ctx.store.getState().getIn(['auth', 'token']);
 
     try {
       const componentPromise = App.getInitialProps({ ...context, ctx: { ...ctx } });
@@ -40,8 +39,6 @@ class WavliveApp extends App {
         throw Error(err);
       }
     }
-
-    const { req } = ctx;
 
     return {
       pageProps,

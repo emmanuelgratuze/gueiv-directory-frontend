@@ -25,6 +25,7 @@
     [
       "module-resolver",
       {
+        "root": ["."],
         "alias": {
           "@pages": "./pages",
           "@screens": "./screens",

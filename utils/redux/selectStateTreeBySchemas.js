@@ -1,5 +1,5 @@
-import { memoize } from 'lodash';
-import { Map } from 'immutable';
+import { memoize } from 'lodash'
+import { Map } from 'immutable'
 
 /*
   Get state tree depending on entities keys
@@ -15,7 +15,7 @@ const getStateTreeByKeys = memoize((keys, state) => (
     ), '')
     // memoize acurately (update anytime something changes)
     : JSON.stringify(Map(keys.map((key) => [key, state.get(key)])))
-));
+))
 
 /*
   Allow selecting a specific portion of state
@@ -36,16 +36,16 @@ export const selectStateTreeBySchemas = (
       ), [schemasInput])
       .map((schema) => (
         Array.isArray(schema) ? schema[0].key : schema.key
-      ));
+      ))
 
     const statePortion = getStateTreeByKeys(
       [...new Set(stateKeys)], // remove duplicates
       state,
       onlyUpdateOnStructuralChanges
-    );
+    )
 
-    return statePortion;
+    return statePortion
   }
-);
+)
 
-export default {};
+export default {}

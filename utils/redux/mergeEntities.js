@@ -1,4 +1,4 @@
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
 
 /*
   Merge entities
@@ -11,18 +11,18 @@ export default (
   mergeStrategy = (entityA, entityB) => entityA.merge(entityB)
 ) => {
   if (!entities) {
-    return state;
+    return state
   }
 
-  let newState = state;
+  let newState = state
 
   Object.keys(entities).forEach((entityId) => {
     const newValue = newState.get(entityId)
       ? mergeStrategy(newState.get(entityId), fromJS(entities[entityId])) // If id exists in store
-      : fromJS(entities[entityId]); // If new
+      : fromJS(entities[entityId]) // If new
 
-    newState = newState.set(entityId, newValue);
-  });
+    newState = newState.set(entityId, newValue)
+  })
 
-  return newState;
+  return newState
 }

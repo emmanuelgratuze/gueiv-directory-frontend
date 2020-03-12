@@ -1,17 +1,17 @@
-const devConfig = require('./app.dev');
-const stagingConfig = require('./app.staging');
-const prodConfig = require('./app.prod');
+const devConfig = require('./app.dev')
+const stagingConfig = require('./app.staging')
+const prodConfig = require('./app.prod')
 
 function getConfig(env = process.env.NODE_ENV) {
   switch (env) {
     case 'development':
-      return devConfig;
+      return devConfig
     case 'staging':
-      return stagingConfig;
+      return stagingConfig
     case 'production':
-      return prodConfig;
+      return prodConfig
     default:
-      return devConfig;
+      return devConfig
   }
 }
 

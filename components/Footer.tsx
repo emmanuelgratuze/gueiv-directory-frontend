@@ -1,9 +1,10 @@
 import React from 'react';
+import { Box } from 'grommet';
 
 const Footer: React.FC = () => (
-  <div>
+  <Box>
     Footer
-  </div>
+  </Box>
 );
 
 export default Footer;

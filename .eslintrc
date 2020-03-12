@@ -1,7 +1,7 @@
 {
   "extends": ["airbnb"],
   "rules": {
-    "semi": 0,
+    "semi": [2, "never"],
     "comma-dangle": 0,
     "no-mixed-operators": 0,
     "arrow-parens": 0,
@@ -21,7 +21,9 @@
       "babel-module": {
         "extensions": [".js", ".ts", ".tsx"],
         "alias": {
-          "@components": "./components"
+          "@components": "./components",
+          "@assets": "./assets",
+          "@hooks": "./components"
         }
       }
     }

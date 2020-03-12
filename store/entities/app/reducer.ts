@@ -5,14 +5,23 @@ import { fromJS } from 'immutable';
 import { combineReducers } from 'redux-immutable';
 
 import brands from '@store/entities/brands/reducer';
+import { BasicAction } from '@store/types';
+import { SET_CONFIG } from './actions';
 
-export const initialState = fromJS({
-  // Initial state
-});
+
+function appReducer(state = fromJS({}), action: BasicAction) {
+  switch(action.type) {
+    case SET_CONFIG:
+      return fromJS(action.payload);
+    default:
+      return state;
+  }
+}
 
 /**
  * Creates the main reducer with the dynamically injected ones
  */
 export default combineReducers({
+  app: appReducer,
   brands
 });

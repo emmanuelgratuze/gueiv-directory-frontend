@@ -9,7 +9,8 @@ import apiResponsesMiddleware from './middlewares/apiResponses'
 import apiRequestsMiddleware from './middlewares/apiRequests'
 // import progressMiddleware from './middlewares/progressMiddleware'
 
-import appReducer, { initialState } from './entities/app/reducer'
+import rootReducer from './entities/app/reducer'
+import initialState from './initialState'
 import appSaga from './entities/app/saga';
 import { WithSagaTaskStore } from './types'
 
@@ -30,7 +31,7 @@ function configureStore(
   const sagaMiddleware = createSagaMiddleware();
 
   const store: WithSagaTaskStore = createStore(
-    appReducer,
+    rootReducer,
     // fromJS(stateFromCookies),
     initialState,
     bindMiddleware([

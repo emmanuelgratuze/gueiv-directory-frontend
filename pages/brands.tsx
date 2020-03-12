@@ -1,7 +1,19 @@
 import { NextPage } from 'next'
+import Link from 'next/link'
+import Head from 'next/head'
+import Page from '@components/Page';
 
-import BrandScreen from '../screens/Brand'
-
-const Brand: NextPage = () => <BrandScreen />;
+const Brand: NextPage = () => (
+  <>
+    <Page title="Marcas">
+      Index page
+      <Link href="/">
+        <a>
+          Index
+        </a>
+      </Link>
+    </Page>
+  </>
+);
 
 export default Brand

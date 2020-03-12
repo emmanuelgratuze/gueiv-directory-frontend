@@ -1,7 +1,15 @@
 import { NextPage } from 'next'
+import Link from 'next/link'
 
-import HomeScreen from '../screens/Home'
-
-const Home: NextPage = () => <HomeScreen />;
+const Home: NextPage = () => (
+  <>
+    Index page
+    <Link href="/brands">
+      <a>
+        Brands
+      </a>
+    </Link>
+  </>
+);
 
 export default Home

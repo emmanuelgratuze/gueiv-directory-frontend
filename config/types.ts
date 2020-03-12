@@ -7,7 +7,8 @@ interface ApiConfig {
 }
 
 export interface AppConfig {
-  api: ApiConfig
+  api: ApiConfig,
+  appEnv: 'development' | 'staging' | 'production'
 }
 
 declare global {

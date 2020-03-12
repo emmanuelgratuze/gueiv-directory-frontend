@@ -30,6 +30,8 @@
           "@pages": "./pages",
           "@screens": "./screens",
           "@components": "./components",
+          "@assets": "./assets",
+          "@hooks": "./hooks",
           "@store": "./store",
           "@utils": "./utils"
         }

@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-size: 10px;
-    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-family: 'Quicksand', Helvetica, sans-serif;
   }
 
   * {

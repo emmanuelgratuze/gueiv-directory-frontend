@@ -84,7 +84,7 @@ module.exports = withPlugins(
       config.plugins.push(
         new webpack.EnvironmentPlugin({
           ...localClientConfig,
-          app: { ...getConfig(localServerConfig.NODE_ENV || 'production') },
+          app: { ...getConfig(localServerConfig && localServerConfig.NODE_ENV ? localServerConfig.NODE_ENV : 'production') },
           contents: { ...contentsProperties }
         })
       )

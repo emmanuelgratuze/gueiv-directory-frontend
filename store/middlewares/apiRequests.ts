@@ -18,12 +18,6 @@ const apiRequestsMiddleware = (store: Store) => (next: Dispatch) => (action: RSA
     : apiConfig.headers;
   const state = store.getState();
 
-  // Add auth token
-  const token = state.getIn(['auth', 'token']);
-  if (token) {
-    headers.Authorization = `Bearer ${token}`;
-  }
-
   if (apiConfig.language) {
     headers['Accept-Language'] = apiConfig.language;
   }
@@ -39,11 +33,12 @@ const apiRequestsMiddleware = (store: Store) => (next: Dispatch) => (action: RSA
   }
 
   // newAction[RSAA] = request;
-  const newRequest = {
+  const newAction = {
     ...action,
     RSAA: request
   };
-  return next(newRequest);
+
+  return next(newAction);
 };
 
 export default apiRequestsMiddleware;

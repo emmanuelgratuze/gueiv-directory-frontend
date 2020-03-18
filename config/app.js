@@ -1,7 +1,7 @@
 module.exports = {
   api: {
     language: 'fr',
-    host: 'http://emmanuel.digital/api',
+    host: 'https://gueiv-admin.herokuapp.com',
     headers: {
       Accept: '*/*',
       'Content-Type': 'application/json',

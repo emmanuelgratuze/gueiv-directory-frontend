@@ -25,14 +25,12 @@ const bindMiddleware = (middlewares: any) => {
 };
 
 function configureStore(
-  preloadedState = initialState,
-  { isServer, req = null }: { isServer: boolean, req: Request | null }
+  preloadedState = initialState
 ) {
   const sagaMiddleware = createSagaMiddleware();
 
   const store: WithSagaTaskStore = createStore(
     rootReducer,
-    // fromJS(stateFromCookies),
     initialState,
     bindMiddleware([
       // progressMiddleware,
@@ -50,11 +48,9 @@ function configureStore(
     ])
   );
 
-  if (req || !isServer) {
-    store.sagaTask = sagaMiddleware.run(appSaga);
-  }
+  store.sagaTask = sagaMiddleware.run(appSaga);
 
   return store;
 }
 
-export default configureStore;
+export default configureStore();

@@ -18,20 +18,16 @@ const propTypes = {
 
 type LayoutProps = InferProps<typeof propTypes>
 
-const Layout: React.FC<LayoutProps> = ({
-  children,
-  origin
-}) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const contents = useAppContents()
   const router = useRouter()
-  const currentUrl = origin + router.asPath
 
   return (
     <>
       <Head>
-        <meta property="og:url" content={currentUrl} />
+        {/* <meta property="og:url" content={currentUrl} /> */}
         <meta property="og:type" content="website" />
-        <meta property="twitter:url" content={currentUrl} />
+        {/* <meta property="twitter:url" content={currentUrl} /> */}
         <meta property="twitter:card" content="summary_large_image" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

@@ -4,6 +4,7 @@ import { Box } from 'grommet';
 import usePageTitle from '@hooks/usePageTitle';
 import Head from 'next/head';
 import useAppContents from '@hooks/useAppContents';
+import Layout from '@components/Layout';
 
 const propTypes = {
   title: PropTypes.string,
@@ -33,9 +34,9 @@ const Page: React.FC<PageType> = ({
         {/* <meta property="twitter:title" content={getTitle(title)} /> */}
         {/* <meta property="twitter:image" content={socialBanner} /> */}
       </Head>
-      <Box>
+      <Layout>
         {children}
-      </Box>
+      </Layout>
     </>
   );
 }

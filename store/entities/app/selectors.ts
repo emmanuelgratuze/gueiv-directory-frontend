@@ -13,4 +13,4 @@ export const selectAppContents = createSelector(
   (app) => app.get('contents')
 );
 
-export {}
+export default {}

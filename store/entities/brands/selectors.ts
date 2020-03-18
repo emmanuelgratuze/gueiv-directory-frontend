@@ -1,10 +1,14 @@
+import { RootStateOrAny } from 'react-redux'
 // import { createSelector } from 'reselect'
 // import { memoize } from 'lodash'
 // import { denormalize } from 'normalizr'
 // import { album as albumSchema } from '../schemas'
 // import { selectStateTreeBySchemas } from '../selectors'
 
-// const selectAlbums = (state: RootState) => state.get('app')
+export const selectBrands = (state: RootStateOrAny) => (
+  state.get('brands')
+    .toIndexedSeq()
+)
 
 // export const selectAlbum = createSelector(
 //   selectAlbums,

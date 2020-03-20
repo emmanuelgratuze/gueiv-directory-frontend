@@ -126,3 +126,6 @@ logs
 stats.json
 vendor
 static
+
+# Next
+next-env.d.ts

@@ -1,7 +1,11 @@
-import { applyMiddleware, createStore } from 'redux'
+import {
+  applyMiddleware,
+  createStore,
+  Store,
+  StoreEnhancer
+} from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { fromJS } from 'immutable'
 
 // Middlewares
 import { apiMiddleware } from './middlewares/reduxApiMiddleware'
@@ -9,29 +13,28 @@ import apiResponsesMiddleware from './middlewares/apiResponses'
 import apiRequestsMiddleware from './middlewares/apiRequests'
 // import progressMiddleware from './middlewares/progressMiddleware'
 
-import rootReducer from './entities/app/reducer'
+import rootReducer from './app/reducer'
 import initialState from './initialState'
-import appSaga from './entities/app/saga';
+import { rootSaga } from './app/saga'
 import { WithSagaTaskStore } from './types'
 
-const bindMiddleware = (middlewares: any) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const bindMiddleware = (middlewares: any[]): StoreEnhancer<{ dispatch: unknown }, {}> => {
   if (process.env.NODE_ENV !== 'production') {
     const devMiddlewares = [
       ...middlewares
-    ];
-    return composeWithDevTools(applyMiddleware(...devMiddlewares));
+    ]
+    return composeWithDevTools(applyMiddleware(...devMiddlewares))
   }
-  return applyMiddleware(...middlewares);
-};
+  return applyMiddleware(...middlewares)
+}
 
-function configureStore(
-  preloadedState = initialState
-) {
-  const sagaMiddleware = createSagaMiddleware();
+function configureStore(preloadedState = initialState): Store {
+  const sagaMiddleware = createSagaMiddleware()
 
   const store: WithSagaTaskStore = createStore(
     rootReducer,
-    initialState,
+    preloadedState,
     bindMiddleware([
       // progressMiddleware,
 
@@ -46,11 +49,11 @@ function configureStore(
 
       sagaMiddleware
     ])
-  );
+  )
 
-  store.sagaTask = sagaMiddleware.run(appSaga);
+  store.sagaTask = sagaMiddleware.run(rootSaga)
 
-  return store;
+  return store
 }
 
-export default configureStore();
+export default configureStore()

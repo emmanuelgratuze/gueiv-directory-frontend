@@ -1,8 +1,9 @@
 import { useSelector } from 'react-redux'
-import { selectAppConfig } from '@store/entities/app/selectors'
+import { selectAppConfig } from '~/store/app/selectors'
+import { AppConfig } from '~/store/app/types.d'
 
-const useAppConfig = () => {
-  return useSelector(selectAppConfig);
-}
+const useAppConfig = (): AppConfig => (
+  useSelector(selectAppConfig)
+)
 
 export default useAppConfig

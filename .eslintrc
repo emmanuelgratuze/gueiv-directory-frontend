@@ -1,13 +1,36 @@
 {
-  "extends": ["airbnb"],
+  "extends": ["airbnb", "plugin:@typescript-eslint/recommended"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "rules": {
     "semi": [2, "never"],
     "comma-dangle": 0,
     "no-mixed-operators": 0,
     "arrow-parens": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "react/jsx-props-no-spreading": "off",
-    "max-len": 0
+    "max-len": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "mjs": "never"
+      }
+    ],
+    "@typescript-eslint/semi": [2, "never"],
+    "@typescript-eslint/explicit-function-return-type": [
+      1,
+      {
+        "allowExpressions": true
+      }
+    ]
   },
   "env": {
     "browser": true
@@ -17,13 +40,23 @@
   },
   "plugins": ["module-resolver"],
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
     "import/resolver": {
       "babel-module": {
-        "extensions": [".js", ".ts", ".tsx"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
         "alias": {
-          "@components": "./components",
-          "@assets": "./assets",
-          "@hooks": "./components"
+          "~/components": "components/*",
+          "~/types": "types/*",
+          "~/assets": "assets/*",
+          "~/hooks": "hooks/*",
+          "~/store": "store/*",
+          "~/contents": "./contents",
+          "~/config": "config/*",
+          "~/screens": "screens/*",
+          "~/pages": "pages/*",
+          "~/utils": "utils/*"
         }
       }
     }

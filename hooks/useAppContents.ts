@@ -1,8 +1,9 @@
 import { useSelector } from 'react-redux'
-import { selectAppContents } from '@store/entities/app/selectors'
+import { selectAppContents } from '~/store/app/selectors'
+import { ImmutableAppContents } from '~/contents/types'
 
-const useAppContents = () => {
-  return useSelector(selectAppContents)
-}
+const useAppContents = (): ImmutableAppContents => (
+  useSelector(selectAppContents)
+)
 
 export default useAppContents

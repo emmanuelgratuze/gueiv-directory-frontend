@@ -1,13 +1,13 @@
-import { NextPage, GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import React from 'react'
+import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 import Link from 'next/link'
-import Head from 'next/head'
-import Page from '@components/Page'
+import Page from '~/components/Page'
 
 // Redux
-import { fetchBrands } from '@store/entities/brands/actions'
-import { selectBrands } from '@store/entities/brands/selectors'
+import { fetchBrands } from '~/store/entities/brands/actions'
+import { selectBrands } from '~/store/entities/brands/selectors'
 
-import store from '@store/index';
+import store from '~/store/index'
 
 const Brand: NextPage = () => (
   <>
@@ -20,27 +20,27 @@ const Brand: NextPage = () => (
       </Link>
     </Page>
   </>
-);
+)
 
 export const getStaticProps: GetStaticProps = async () => {
-  await store.dispatch(fetchBrands());
-  const brands = selectBrands(store.getState());
+  await store.dispatch(fetchBrands())
+  const brands = selectBrands(store.getState())
 
   return {
-    props: {}
-  };
+    props: {
+      brands: brands.toJS()
+    }
+  }
 }
 
-export async function getStaticPaths() {
-  await store.dispatch(fetchBrands());
-  const brands = selectBrands(store.getState());
-
-  console.log(brands.toJS());
+export const getStaticPaths: GetStaticPaths = async () => {
+  await store.dispatch(fetchBrands())
+  const brands = selectBrands(store.getState())
 
   return {
-    paths: [{
-      params: { id: '1' }
-    }],
+    paths: brands.toJS().map(brand => ({
+      params: { id: brand.slug }
+    })),
     fallback: false
   }
 }

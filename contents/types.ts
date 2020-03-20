@@ -1,16 +1,16 @@
+import { ImmutableMap } from '~/types/immutable.d'
 
-interface ApiContents {
-  headers: {
-    [key: string]: string
-  }
+export interface AppContents {
+  general: {
+    title: string;
+    description: string;
+  };
 }
 
-declare global {
-  namespace NodeJS {
-    interface ProcessEnv {
-      contents: ApiContents
-    }
-  }
+export type ImmutableAppContents = ImmutableMap<AppContents>
+
+export interface ProcessEnv {
+  contents: string;
 }
 
 export default {}

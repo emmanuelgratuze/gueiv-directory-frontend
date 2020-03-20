@@ -1,12 +1,23 @@
 import { RootStateOrAny } from 'react-redux'
+import { List } from 'immutable'
+import { ImmutableBrand } from './types.d'
 // import { createSelector } from 'reselect'
 // import { memoize } from 'lodash'
 // import { denormalize } from 'normalizr'
 // import { album as albumSchema } from '../schemas'
 // import { selectStateTreeBySchemas } from '../selectors'
 
-export const selectBrands = (state: RootStateOrAny) => (
+export const selectBrands = (state: RootStateOrAny): List<ImmutableBrand> => (
   state.get('brands')
+    // Don't display brands without name
+    .filter((brand: ImmutableBrand) => !!brand.get('name'))
+    .toIndexedSeq()
+)
+
+export const selectBrand = (state: RootStateOrAny): List<ImmutableBrand> => (
+  state.get('brands')
+    // Don't display brands without name
+    .find((brand: ImmutableBrand) => !!brand.get('name'))
     .toIndexedSeq()
 )
 

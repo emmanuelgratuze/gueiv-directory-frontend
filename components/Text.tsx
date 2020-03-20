@@ -1,14 +1,13 @@
-import React from 'react';
-import { Text } from 'grommet';
-import styled, { css } from 'styled-components';
+import { Text } from 'grommet'
+import styled, { css } from 'styled-components'
 
 type StyledTextProps = {
-  sup?: boolean,
-  sub?: boolean,
-  transform?: 'initial' | 'uppercase' | 'lowercase' | 'capitalize',
-  underlined?: boolean,
-  spacing?: 'normal' | 'large',
-  italic?: boolean
+  sup?: boolean;
+  sub?: boolean;
+  transform?: 'initial' | 'uppercase' | 'lowercase' | 'capitalize';
+  underlined?: boolean;
+  spacing?: 'normal' | 'large';
+  italic?: boolean;
 }
 
 const StyledText = styled(Text)`
@@ -64,6 +63,6 @@ const StyledText = styled(Text)`
     && css`
       font-style: italic;
     `}
-`;
+`
 
-export default StyledText;
+export default StyledText

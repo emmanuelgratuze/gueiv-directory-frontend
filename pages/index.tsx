@@ -1,10 +1,11 @@
-import { NextPage } from 'next'
+import React from 'react'
+import { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link'
-import Page from '@components/Page';
+import Page from '~/components/Page'
 
 const Home: NextPage = () => (
   <>
-    <Page>
+    <Page title="Güeiv | Directorio">
       Index page
       <Link href="/brands">
         <a>
@@ -13,12 +14,12 @@ const Home: NextPage = () => (
       </Link>
     </Page>
   </>
-);
+)
 
-export async function getStaticProps() {
-  return {
+export const getStaticProps: GetStaticProps = async () => (
+  {
     props: {}
-  };
-}
+  }
+)
 
 export default Home

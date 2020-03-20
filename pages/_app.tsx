@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Provider } from 'react-redux'
-import App, { AppProps } from 'next/app'
+import App from 'next/app'
 import ErrorPage from 'next/error'
 
-import Layout from '@components/Layout'
-import store from '@store/index'
+import store from '~/store/index'
 
 /* eslint-disable */
 if (process.env.NODE_ENV !== 'production') {
   const whyDidYouRender = require('@welldone-software/why-did-you-render')
   whyDidYouRender(React)
 }
-
 /* eslint-enable */
+
 class GlobalApp extends App {
+  // eslint-disable-next-line
   render() {
-    const { Component, pageProps, ...values } = this.props
+    const { Component, pageProps } = this.props
 
     return (
       <Provider store={store}>

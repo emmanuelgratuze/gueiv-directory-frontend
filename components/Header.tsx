@@ -1,16 +1,16 @@
-import React from 'react';
-import { Box } from 'grommet';
+import React from 'react'
+import { Box } from 'grommet'
 
-import Container from '@components/Container';
-import Text from '@components/Text';
+import Container from '~/components/Container'
+import Text from '~/components/Text'
 
-import { ReactComponent as Logo } from '@assets/logo.svg';
+import { ReactComponent as Logo } from '../assets/logo.svg'
 
 
-const Header = () => (
+const Header: React.FC = () => (
   <Box
     background={{ color: 'light-2' }}
-    height="5rem"
+    height="4rem"
   >
     <Container fill="vertical" fluid>
 
@@ -28,7 +28,7 @@ const Header = () => (
           gap="small"
         >
           <Box>
-            <Logo width="6rem" height="100%" />
+            <Logo width="5rem" height="100%" />
           </Box>
           <Box>
             <Text
@@ -43,13 +43,11 @@ const Header = () => (
         </Box>
 
         {/* Right part */}
-        <Box>
-          
-        </Box>
+        <Box />
       </Box>
 
     </Container>
   </Box>
-);
+)
 
 export default Header

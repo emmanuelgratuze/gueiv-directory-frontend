@@ -1,17 +1,17 @@
-import { css } from 'styled-components'
+import { css, FlattenSimpleInterpolation } from 'styled-components'
 import { deepMerge } from 'grommet/utils'
 import { base } from 'grommet/themes'
 
 const baseSpacing = 24
 const baseFontSize = 16
 
-const fontSizing = (factor: number) => ({
+const fontSizing = (factor: number): { size: string; height: string; maxWidth: string } => ({
   size: `${baseFontSize * factor}px`,
   height: `${baseSpacing * factor}px`,
   maxWidth: `${baseSpacing * (baseFontSize * factor)}px`
 })
 
-const fontSizingStyles = (factor: number) => css`
+const fontSizingStyles = (factor: number): FlattenSimpleInterpolation => css`
   font-size: ${factor}rem;
   line-height: ${factor}rem;
 `
@@ -47,7 +47,7 @@ const colors: { [key: string]: string } = {
   white: '#FFFFFF'
 }
 
-const colorArray = (array: Array<string>, prefix: string) => {
+const colorArray = (array: Array<string>, prefix: string): void => {
   array.forEach((color, index) => {
     colors[`${prefix}-${index + 1}`] = color
   })

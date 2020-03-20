@@ -3,4 +3,4 @@
 //
 // The resulting function can accept as many arguments as the first function does
 // compose(add2, multiply)(4, 10) === 42
-export default (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
+export default (...fns: Function[]): Function => fns.reduce((f, g) => (...args: unknown[]) => f(g(...args)))

@@ -1,4 +1,4 @@
-module.exports = {
+const config: import('~/store/app/types').AppConfig = {
   api: {
     language: 'fr',
     host: 'https://gueiv-admin.herokuapp.com',
@@ -10,3 +10,5 @@ module.exports = {
     }
   }
 }
+
+export default config

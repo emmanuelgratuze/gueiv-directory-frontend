@@ -27,13 +27,16 @@
       {
         "root": ["."],
         "alias": {
-          "@pages": "./pages",
-          "@screens": "./screens",
-          "@components": "./components",
-          "@assets": "./assets",
-          "@hooks": "./hooks",
-          "@store": "./store",
-          "@utils": "./utils"
+          "~/pages": "./pages",
+          "~/screens": "./screens",
+          "~/components": "./components",
+          "~/types": "./types",
+          "~/config": "./config",
+          "~/assets": "./assets",
+          "~/hooks": "./hooks",
+          "~/store": "./store",
+          "~/contents": "./contents",
+          "~/utils": "./utils"
         }
       }
     ]

@@ -5,15 +5,12 @@ const webpack = require('webpack')
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
 
-const { getConfig } = require('./config')
-const contentsProperties = require('./contents/contents.json')
-
 // Get local env
-const { parsed: localClientConfig } = dotenv.config({
+const { parsed: clientEnvironmentVariables = {} } = dotenv.config({
   path: path.resolve(process.cwd(), '.env.client')
 })
 
-const { parsed: localServerConfig } = dotenv.config({
+const { parsed: environmentVariables = {} } = dotenv.config({
   path: path.resolve(process.cwd(), '.env')
 })
 
@@ -83,15 +80,14 @@ module.exports = withPlugins(
 
       config.plugins.push(
         new webpack.EnvironmentPlugin({
-          ...localClientConfig,
-          app: { ...getConfig(localServerConfig && localServerConfig.NODE_ENV ? localServerConfig.NODE_ENV : 'production') },
-          contents: { ...contentsProperties }
+          ...environmentVariables,
+          ...clientEnvironmentVariables
         })
       )
 
       // Unshift polyfills in main entrypoint.
       const originalEntry = config.entry
-      // eslint-disable-next-line
+      // eslint-disable-next-line no-param-reassign
       config.entry = async () => {
         const entries = await originalEntry()
         if (entries['main.js']) {

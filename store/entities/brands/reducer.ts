@@ -1,32 +1,43 @@
-import { fromJS } from 'immutable';
-import { ADD_ENTITIES, CLEAR_ENTITIES } from '../app/actions';
-import mergeEntities from '@utils/redux/mergeEntities';
-import { BasicAction } from '@store/types';
+import { fromJS, Map } from 'immutable'
+import { kebabCase } from 'lodash'
+import {
+  ADD_ENTITIES,
+  CLEAR_ENTITIES,
+  AddEntitiesAction,
+  ClearEntitiesAction
+} from '~/store/app/types.d'
+import mergeEntities from '~/utils/redux/mergeEntities'
 
-function brandsReducer(state = fromJS({}), action: BasicAction) {
+function brandsReducer(state = fromJS({}), action: (AddEntitiesAction | ClearEntitiesAction)): Map<string, unknown> {
   switch (action.type) {
     case ADD_ENTITIES: {
-      if (!action.payload) {
-        return state;
+      const { brands } = action.payload.entities
+
+      if (!brands) {
+        return state
       }
 
-      return mergeEntities(
-        action.payload.entities.artists,
-        state
-      );
+      Object.keys(brands).forEach((key) => {
+        brands[key].slug = kebabCase(brands[key].name)
+      })
+
+      return fromJS(
+        mergeEntities(
+          brands,
+          state
+        )
+      )
     }
     case CLEAR_ENTITIES: {
       if (!action.payload) {
-        return state;
+        return state
       }
 
-      return action.payload.entitiesNames.includes('artists')
-        ? fromJS({})
-        : state;
+      return action.payload.entitiesNames.includes('brands') ? fromJS({}) : state
     }
     default:
-      return state;
+      return state
   }
 }
 
-export default brandsReducer;
+export default brandsReducer

@@ -1,14 +1,24 @@
-import React from 'react';
-import PropTypes, { InferProps } from 'prop-types';
-import { Box } from 'grommet';
-import usePageTitle from '@hooks/usePageTitle';
-import Head from 'next/head';
-import useAppContents from '@hooks/useAppContents';
-import Layout from '@components/Layout';
+import React from 'react'
+import PropTypes, { InferProps } from 'prop-types'
+import Head from 'next/head'
+
+import usePageTitle from '~/hooks/usePageTitle'
+import useAppContents from '~/hooks/useAppContents'
+import Layout from '~/components/Layout'
+
+
+const defaultProps = {
+  children: null,
+  description: null,
+}
 
 const propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 }
 
 type PageType = InferProps<typeof propTypes>
@@ -18,9 +28,9 @@ const Page: React.FC<PageType> = ({
   title,
   description
 }) => {
-  const fullTitle = usePageTitle(title);
-  const contents = useAppContents();
-  
+  const fullTitle = usePageTitle(title)
+  const contents = useAppContents()
+
   return (
     <>
       <Head>
@@ -38,7 +48,10 @@ const Page: React.FC<PageType> = ({
         {children}
       </Layout>
     </>
-  );
+  )
 }
 
-export default Page;
+Page.defaultProps = defaultProps
+Page.propTypes = propTypes
+
+export default Page

@@ -1,16 +1,16 @@
-import { Store } from 'redux';
-import { Task } from 'redux-saga';
+import { Store } from 'redux'
+import { Task } from 'redux-saga'
 
 export interface WithSagaTaskStore extends Store {
   sagaTask?: Task;
 }
 
 export interface BasicAction {
-  type: string,
+  type: string;
   meta?: {
-    [key: string]: any
-  },
+    [key: string]: unknown;
+  };
   payload?: {
-    [key: string]: any
-  }
+    [key: string]: unknown;
+  };
 }

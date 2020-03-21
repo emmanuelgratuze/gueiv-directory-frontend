@@ -5,7 +5,7 @@ import Page from '~/components/Page'
 
 const Home: NextPage = () => (
   <>
-    <Page title="Güeiv | Directorio">
+    <Page title="Home">
       Index page
       <Link href="/brands">
         <a>

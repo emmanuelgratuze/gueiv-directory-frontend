@@ -4,7 +4,7 @@ import { Box } from 'grommet'
 import Container from '~/components/Container'
 import Text from '~/components/Text'
 
-import { ReactComponent as Logo } from '../assets/logo.svg'
+import { ReactComponent as Logo } from '~/assets/logo.svg'
 
 
 const Header: React.FC = () => (

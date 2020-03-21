@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from 'grommet'
+import { InferPropTypes } from '~/types/app.d'
 
 const defaultProps = {
   fluid: false,

@@ -8,7 +8,7 @@ import { combineReducers } from 'redux-immutable'
 import brands from '~/store/entities/brands/reducer'
 
 import { BasicAction } from '~/store/types'
-import { SET_CONFIG } from './types.d'
+import { SET_CONFIG } from './types'
 
 
 function appReducer(state = fromJS({}), action: BasicAction): Reducer {

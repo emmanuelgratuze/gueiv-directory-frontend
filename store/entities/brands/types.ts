@@ -1,4 +1,5 @@
-import { ImmutableMap } from '~/types/immutable.d'
+// import { ImmutableMap } from '~/types/immutable'
+import { Record } from 'immutable'
 
 export interface Brand {
   id: string;
@@ -17,7 +18,7 @@ export interface Brand {
   }[];
 }
 
-export type ImmutableBrand = ImmutableMap<Brand>
+export type ImmutableBrand = Record<Brand>
 
 export interface AppEntities {
   brands: {

@@ -6,7 +6,7 @@ import {
 } from 'redux-saga/effects'
 import { SagaIterator } from 'redux-saga'
 
-import { ADD_ENTITIES, AddEntitiesAction } from './types.d'
+import { ADD_ENTITIES, AddEntitiesAction } from './types'
 
 function* endActionsSaga(action: AddEntitiesAction): SagaIterator {
   if (action.meta && action.meta.endAction) {

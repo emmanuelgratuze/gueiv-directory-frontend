@@ -5,7 +5,7 @@ import {
   CLEAR_ENTITIES,
   AddEntitiesAction,
   ClearEntitiesAction
-} from '~/store/app/types.d'
+} from '~/store/app/types'
 import mergeEntities from '~/utils/redux/mergeEntities'
 
 function brandsReducer(state = fromJS({}), action: (AddEntitiesAction | ClearEntitiesAction)): Map<string, unknown> {

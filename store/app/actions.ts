@@ -7,7 +7,7 @@ import {
   ADD_ENTITIES,
   CLEAR_ENTITIES,
   AppEntities
-} from './types.d'
+} from './types'
 
 export const setConfig = (appConfig: AppConfig): SetConfigAction => ({
   type: SET_CONFIG,

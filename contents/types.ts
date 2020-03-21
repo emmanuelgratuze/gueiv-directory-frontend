@@ -1,4 +1,4 @@
-import { ImmutableMap } from '~/types/immutable.d'
+import { Record } from 'immutable'
 
 export interface AppContents {
   general: {
@@ -7,7 +7,7 @@ export interface AppContents {
   };
 }
 
-export type ImmutableAppContents = ImmutableMap<AppContents>
+export type ImmutableAppContents = Record<AppContents>
 
 export interface ProcessEnv {
   contents: string;

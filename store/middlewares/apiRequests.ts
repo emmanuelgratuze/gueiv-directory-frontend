@@ -11,15 +11,15 @@ const apiRequestsMiddleware = (store: Store) => (next: Dispatch) => (action: RSA
   }
 
   const state = store.getState()
-  const apiConfig = selectAppConfig(state)
+  const apiConfig = selectAppConfig(state).get('api')
   const { [RSAA]: request } = action
 
   const headers: Headers = request.headers
     ? request.headers
-    : apiConfig.headers
+    : apiConfig.get('headers').toJS()
 
-  if (apiConfig.language) {
-    headers['Accept-Language'] = apiConfig.language
+  if (apiConfig.get('language')) {
+    headers['Accept-Language'] = apiConfig.get('language')
   }
 
   request.headers = headers
@@ -29,10 +29,9 @@ const apiRequestsMiddleware = (store: Store) => (next: Dispatch) => (action: RSA
     const { hostname, protocol, port } = window.location
     request.endpoint = `${protocol}//${hostname}${port ? `:${port}` : ''}/api/${request.endpoint}`
   } else {
-    request.endpoint = `${apiConfig.host}/${request.endpoint}`
+    request.endpoint = `${apiConfig.get('host')}/${request.endpoint}`
   }
 
-  // newAction[RSAA] = request;
   const newAction = {
     ...action,
     RSAA: request

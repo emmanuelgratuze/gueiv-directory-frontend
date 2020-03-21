@@ -1,6 +1,6 @@
 import { RootStateOrAny } from 'react-redux'
 import { List } from 'immutable'
-import { ImmutableBrand } from './types.d'
+import { ImmutableBrand } from './types'
 // import { createSelector } from 'reselect'
 // import { memoize } from 'lodash'
 // import { denormalize } from 'normalizr'

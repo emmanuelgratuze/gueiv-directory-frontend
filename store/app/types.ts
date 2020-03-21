@@ -1,3 +1,9 @@
+import { Record } from 'immutable'
+import { SchemaObject } from 'normalizr'
+import { Brand } from '~/store/entities/brands/types'
+import { AppContents } from '~/contents/types'
+import { BasicAction } from '../types'
+
 export const SET_CONFIG = 'app/SET_CONFIG'
 export const ADD_ENTITIES = 'app/ADD_ENTITIES'
 export const CLEAR_ENTITIES = 'app/CLEAR_ENTITIES'
@@ -51,5 +57,5 @@ export interface ClearEntitiesAction {
   };
 }
 
-export type ImmutableAppState = ImmutableMap<AppState>
-export type ImmutableAppConfig = ImmutableMap<AppConfig>
+export type ImmutableAppState = Record<AppState>
+export type ImmutableAppConfig = Record<AppConfig>

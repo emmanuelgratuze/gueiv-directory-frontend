@@ -1,13 +1,7 @@
 {
-  "extends": [
-    "airbnb",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
-  ],
-  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb", "plugin:@typescript-eslint/recommended"],
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": "./"
+    "project": "./tsconfig.json"
   },
   "rules": {
     "semi": [2, "never"],
@@ -44,17 +38,27 @@
   "globals": {
     "fetch": true
   },
-  "plugins": [
-    "@typescript-eslint",
-    "import",
-    "module-resolver"
-  ],
+  "plugins": ["module-resolver"],
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx", ".d.ts"]
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
-      "typescript": {}
+      "babel-module": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "alias": {
+          "~/components": "components/*",
+          "~/types": "types/*",
+          "~/assets": "assets/*",
+          "~/hooks": "hooks/*",
+          "~/store": "store/*",
+          "~/contents": "./contents",
+          "~/config": "config/*",
+          "~/screens": "screens/*",
+          "~/pages": "pages/*",
+          "~/utils": "utils/*"
+        }
+      }
     }
   }
 }

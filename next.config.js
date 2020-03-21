@@ -66,7 +66,7 @@ module.exports = withPlugins(
           },
         },
         {
-          loader: 'file-loader',
+          loader: 'url-loader',
           options: {
             jsx: true
           }

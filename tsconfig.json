@@ -20,16 +20,16 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "~/components/*": ["components/*"],
-      "~/types/*": ["types/*"],
-      "~/assets/*": ["assets/*"],
-      "~/hooks/*": ["hooks/*"],
-      "~/config/*": ["config/*"],
-      "~/store/*": ["store/*"],
-      "~/contents/*": ["contents/*"],
-      "~/screens/*": ["screens/*"],
-      "~/pages/*": ["pages/*"],
-      "~/utils/*": ["utils/*"]
+      "~/components/*": ["./components/*"],
+      "~/types/*": ["./types/*"],
+      "~/assets/*": ["./assets/*"],
+      "~/hooks/*": ["./hooks/*"],
+      "~/config/*": ["./config/*"],
+      "~/store/*": ["./store/*"],
+      "~/contents/*": ["./contents/*"],
+      "~/screens/*": ["./screens/*"],
+      "~/pages/*": ["./pages/*"],
+      "~/utils/*": ["./utils/*"]
     }
   },
   "exclude": [
@@ -37,9 +37,7 @@
   ],
   "include": [
     "next-env.d.ts",
-    "next.config.js"
-  ],
-  "files": [
-    "types/app.d.ts"
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }

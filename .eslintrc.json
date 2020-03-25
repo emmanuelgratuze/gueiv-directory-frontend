@@ -13,6 +13,7 @@
     "max-len": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "@typescript-eslint/no-var-requires": 0,
+    "react/prop-types": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -45,12 +46,14 @@
     },
     "import/resolver": {
       "babel-module": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
         "alias": {
           "~/components": "components/*",
+          "~/contexts": "contexts/*",
           "~/types": "types/*",
           "~/assets": "assets/*",
           "~/hooks": "hooks/*",
+          "~/themes": "themes/*",
           "~/store": "store/*",
           "~/contents": "./contents",
           "~/config": "config/*",

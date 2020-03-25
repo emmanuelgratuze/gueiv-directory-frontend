@@ -11,7 +11,6 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { apiMiddleware } from './middlewares/reduxApiMiddleware'
 import apiResponsesMiddleware from './middlewares/apiResponses'
 import apiRequestsMiddleware from './middlewares/apiRequests'
-// import progressMiddleware from './middlewares/progressMiddleware'
 
 import rootReducer from './app/reducer'
 import initialState from './initialState'

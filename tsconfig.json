@@ -21,6 +21,8 @@
     "baseUrl": ".",
     "paths": {
       "~/components/*": ["./components/*"],
+      "~/contexts/*": ["./contexts/*"],
+      "~/themes/*": ["./themes/*"],
       "~/types/*": ["./types/*"],
       "~/assets/*": ["./assets/*"],
       "~/hooks/*": ["./hooks/*"],

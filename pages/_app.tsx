@@ -2,8 +2,10 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import App from 'next/app'
 import ErrorPage from 'next/error'
+import { Grommet } from 'grommet'
 
 import store from '~/store/index'
+import theme from '~/themes/theme'
 
 /* eslint-disable */
 if (process.env.NODE_ENV !== 'production') {
@@ -19,11 +21,13 @@ class GlobalApp extends App {
 
     return (
       <Provider store={store}>
-        {pageProps.statusCode ? (
-          <ErrorPage statusCode={pageProps.statusCode} />
-        ) : (
-          <Component {...pageProps} />
-        )}
+        <Grommet theme={theme}>
+          {pageProps.statusCode ? (
+            <ErrorPage statusCode={pageProps.statusCode} />
+          ) : (
+            <Component {...pageProps} />
+          )}
+        </Grommet>
       </Provider>
     )
   }

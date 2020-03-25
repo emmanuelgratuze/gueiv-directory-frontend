@@ -1,24 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Box } from 'grommet'
-import { InferPropTypes } from '~/types/app.d'
+import { Box, BoxProps } from 'grommet'
+// import { InferPropTypes } from '~/types/utils'
 
-const defaultProps = {
-  fluid: false,
-  children: null
+type ContainerType = {
+  fluid: boolean;
 }
 
-const propTypes = {
-  fluid: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ])
-}
-
-type ContainerType = InferPropTypes<typeof propTypes, typeof defaultProps>
-
-const Container: React.FC<ContainerType> = ({
+const Container: React.FC<BoxProps & ContainerType> = ({
   children,
   fluid,
   ...props
@@ -34,8 +22,5 @@ const Container: React.FC<ContainerType> = ({
     </Box>
   </Box>
 )
-
-Container.propTypes = propTypes
-Container.defaultProps = defaultProps
 
 export default Container

@@ -1,27 +1,14 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
 import Head from 'next/head'
 
 import usePageTitle from '~/hooks/usePageTitle'
 import useAppContents from '~/hooks/useAppContents'
 import Layout from '~/components/Layout'
 
-
-const defaultProps = {
-  children: null,
-  description: null,
+type PageType = {
+  title: string;
+  description?: string;
 }
-
-const propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ])
-}
-
-type PageType = InferProps<typeof propTypes>
 
 const Page: React.FC<PageType> = ({
   children,
@@ -50,8 +37,5 @@ const Page: React.FC<PageType> = ({
     </>
   )
 }
-
-Page.defaultProps = defaultProps
-Page.propTypes = propTypes
 
 export default Page

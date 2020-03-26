@@ -1,6 +1,6 @@
 import { memoize } from 'lodash'
 import { Map, Record } from 'immutable'
-import { Schema } from 'normalizr'
+import { Schema, schema } from 'normalizr'
 
 /*
   Get state tree depending on entities keys
@@ -25,33 +25,33 @@ const getStateTreeByKeys = memoize((keys, state, onlyUpdateOnStructuralChanges) 
   This prevents selecting the entire state as parameter
   in the app selectors (and triggering an update on every state change)
 */
-export const selectStateTreeBySchemas = (
-  schemasInput: { schema: Schema }[],
-  { onlyUpdateOnStructuralChanges = false } = {}
-) => (
-  (state: Record<{[key: string]: unknown}>) => {
-    const stateSchemas: Schema[] = schemasInput
-      // Remove non schema types
-      .filter(schema => !!schema.schema)
-      .reduce((schemas, schema) => (
-        schemas.concat(Object.values(schema.schema))
-      ), [schemasInput])
+// export const selectStateTreeBySchemas = (
+//   inputSchemas: { schema: Schema }[],
+//   { onlyUpdateOnStructuralChanges = false } = {}
+// ) => (
+//   (state: Record<{[key: string]: unknown}>) => {
+//     const stateSchemas: Schema[] = inputSchemas
+//       // Remove non schema types
+//       .filter(inputSchema => !!inputSchema.schema)
+//       .reduce((outputSchemas, inputSchema) => (
+//         inputSchema.concat(Object.values(schema.schema))
+//       ), [inputSchemas])
 
-    // TODO: Should use normalizr types instead of any
-    const stateKeys = stateSchemas
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .map((schema: any): string => (
-        Array.isArray(schema) ? schema[0].key : schema.key
-      ))
+//     // TODO: Should use normalizr types instead of any
+//     const stateKeys = stateSchemas
+//       // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//       .map((schema: any): string => (
+//         Array.isArray(schema) ? schema[0].key : schema.key
+//       ))
 
-    const statePortion = getStateTreeByKeys(
-      [...Array.from(new Set(stateKeys))], // remove duplicates
-      state,
-      onlyUpdateOnStructuralChanges
-    )
+//     const statePortion = getStateTreeByKeys(
+//       [...Array.from(new Set(stateKeys))], // remove duplicates
+//       state,
+//       onlyUpdateOnStructuralChanges
+//     )
 
-    return statePortion
-  }
-)
+//     return statePortion
+//   }
+// )
 
 export default {}

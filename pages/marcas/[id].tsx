@@ -26,9 +26,10 @@ export const getStaticProps: GetStaticProps = async () => {
   await store.dispatch(fetchBrands())
   const brands = selectBrands(store.getState())
 
+  console.log(brands.toJSON())
   return {
     props: {
-      brands: brands.toJS()
+      brands: brands.toJSON()
     }
   }
 }

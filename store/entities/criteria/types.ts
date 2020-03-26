@@ -1,13 +1,11 @@
 // import { ImmutableMap } from '~/types/immutable'
 import { Record } from 'immutable'
-import { Criterion } from '../criteria/types'
 
-export interface Brand {
+export interface Criterion {
   id: string;
   name: string;
-  slug?: string;
   description?: string;
-  pictures?: {
+  icon?: {
     id: string;
     name: string;
     ext: string;
@@ -16,11 +14,7 @@ export interface Brand {
     url: string;
     createdAt: string;
     updatedAt: string;
-  }[];
-  criteria: Criterion[];
+  };
 }
 
-export type ImmutableBrand = Record<Brand>
-
-
-export {}
+export type ImmutableCriterion = Record<Criterion>

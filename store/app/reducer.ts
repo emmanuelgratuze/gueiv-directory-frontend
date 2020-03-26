@@ -6,6 +6,7 @@ import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 
 import brands from '~/store/entities/brands/reducer'
+import criteria from '~/store/entities/criteria/reducer'
 
 import { BasicAction } from '~/store/types'
 import { SET_CONFIG } from './types'
@@ -25,5 +26,6 @@ function appReducer(state = fromJS({}), action: BasicAction): Reducer {
  */
 export default combineReducers({
   app: appReducer,
-  brands
+  brands,
+  criteria
 })

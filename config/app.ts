@@ -1,7 +1,7 @@
 const config: import('~/store/app/types').AppConfig = {
   api: {
     language: 'fr',
-    host: 'https://gueiv-admin.herokuapp.com',
+    host: 'https://gueiv-directory-api.herokuapp.com',
     headers: {
       Accept: '*/*',
       'Content-Type': 'application/json',

@@ -1,25 +1,38 @@
 import { RootStateOrAny } from 'react-redux'
-import { List } from 'immutable'
+import { createSelector } from 'reselect'
+import { denormalize } from 'normalizr'
+import { Record, List } from 'immutable'
+
+import { brand as brandSchema } from '~/store/schemas'
 import { ImmutableBrand } from './types'
-// import { createSelector } from 'reselect'
-// import { memoize } from 'lodash'
-// import { denormalize } from 'normalizr'
-// import { album as albumSchema } from '../schemas'
-// import { selectStateTreeBySchemas } from '../selectors'
 
-export const selectBrands = (state: RootStateOrAny): List<ImmutableBrand> => (
-  state.get('brands')
-    // Don't display brands without name
-    .filter((brand: ImmutableBrand) => !!brand.get('name'))
-    .toIndexedSeq()
+export const selectBrandsTree = (state: RootStateOrAny): List<ImmutableBrand> => state.get('brands')
+
+export const selectBrands = createSelector(
+  // TODO: select depending on the schema
+  selectBrandsTree,
+  (state) => state,
+  (brands, state) => {
+    const res = state.get('brands')
+      .filter((brand: ImmutableBrand) => !!brand.get('name'))
+      .map((brand: ImmutableBrand) => {
+        return denormalize(brand, brandSchema, state)
+      })
+      .toIndexedSeq()
+
+    console.log(res.toJS())
+
+    return res
+    // return List([])
+  }
 )
 
-export const selectBrand = (state: RootStateOrAny): List<ImmutableBrand> => (
-  state.get('brands')
-    // Don't display brands without name
-    .find((brand: ImmutableBrand) => !!brand.get('name'))
-    .toIndexedSeq()
-)
+// export const selectBrand = (state: RootStateOrAny): List<ImmutableBrand> => (
+//   state.get('brands')
+//     // Don't display brands without name
+//     .find((brand: ImmutableBrand) => !!brand.get('name'))
+//     .toIndexedSeq()
+// )
 
 // export const selectAlbum = createSelector(
 //   selectAlbums,

@@ -1,6 +1,7 @@
 import { css, FlattenSimpleInterpolation } from 'styled-components'
 import { deepMerge } from 'grommet/utils'
 import { base } from 'grommet/themes'
+import { ValueOf } from '~/types/utils'
 
 const baseSpacing = 24
 const baseFontSize = 16
@@ -42,9 +43,26 @@ const statusColors: { [key: string]: string } = {
   ok: '#00C781'
 }
 
+const themeColors = {
+  yellow: '#E0B634',
+  turquoise: '#BAE8E5',
+  blue: '#4071BA',
+  pink: '#D27D83',
+  gray: '#3D3D4F'
+}
+
+const oppositeColors = {
+  yellow: '#FFFFFF',
+  turquoise: '#FFFFFF',
+  blue: '#FFFFFF',
+  pink: '#FFFFFF',
+  gray: '#FFFFFF'
+}
+
 const colors: { [key: string]: string } = {
   black: '#000000',
-  white: '#FFFFFF'
+  white: '#FFFFFF',
+  ...themeColors
 }
 
 const colorArray = (array: Array<string>, prefix: string): void => {
@@ -61,9 +79,10 @@ Object.keys(statusColors).forEach(color => {
   colors[`status-${color}`] = statusColors[color]
 })
 
-export default deepMerge(base, {
+const theme = deepMerge(base, {
   global: {
     colors,
+    oppositeColors,
     breakpoints: {
       xxsmall: {
         value: baseSpacing * 15, // 768
@@ -182,7 +201,7 @@ export default deepMerge(base, {
         }
       },
       large: {
-        value: baseSpacing * 60, // 1440
+        value: baseSpacing * 70, // 1440
         borderSize: {
           xsmall: '1px',
           small: '2px',
@@ -213,7 +232,7 @@ export default deepMerge(base, {
       xlarge: {}
     },
     font: {
-      family: 'Open Sans'
+      family: 'Quicksand'
     },
     focus: {
       border: {
@@ -460,3 +479,12 @@ export default deepMerge(base, {
     }
   }
 })
+
+export type ThemeType = typeof theme
+export type BreakpointsType = ThemeType['global']['breakpoints']
+export type ColorsType = ThemeType['global']['colors']
+export type ThemeColorsType = typeof themeColors
+export type BreakpointsKeysType = keyof BreakpointsType
+export type BreakpointsValuesType = ValueOf<BreakpointsType>
+
+export default theme

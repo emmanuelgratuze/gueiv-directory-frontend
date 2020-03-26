@@ -1,25 +1,11 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
 import Head from 'next/head'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 
 import { GlobalStyles } from './styled'
 
-const defaultProps = {
-  children: null
-}
-
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ])
-}
-
-type LayoutProps = InferProps<typeof propTypes>
-
-const Layout: React.FC<LayoutProps> = ({ children }) => (
+const Layout: React.FC = ({ children }) => (
   <>
     <Head>
       {/* <meta property="og:url" content={currentUrl} /> */}
@@ -28,6 +14,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
       <meta property="twitter:card" content="summary_large_image" />
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+      <meta name="robots" content="noindex" />
 
       {/* Fonts */}
       <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet" />
@@ -52,8 +40,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     <Footer />
   </>
 )
-
-Layout.propTypes = propTypes
-Layout.defaultProps = defaultProps
 
 export default Layout

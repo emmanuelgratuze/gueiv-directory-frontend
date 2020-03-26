@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, BoxProps } from 'grommet'
-// import { InferPropTypes } from '~/types/utils'
 
 type ContainerType = {
   fluid: boolean;

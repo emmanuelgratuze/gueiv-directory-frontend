@@ -1,8 +1,9 @@
 import { Record } from 'immutable'
 import { SchemaObject } from 'normalizr'
-import { Brand } from '~/store/entities/brands/types'
 import { AppContents } from '~/contents/types'
 import { BasicAction } from '../types'
+import { Criterion } from '../entities/criteria/types'
+import { Brand } from '../entities/brands/types'
 
 export const SET_CONFIG = 'app/SET_CONFIG'
 export const ADD_ENTITIES = 'app/ADD_ENTITIES'
@@ -20,8 +21,12 @@ export interface AppConfig {
   api: ApiConfig;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface AppEntities {
-  brands?: {
+  criteria: {
+    [key: string]: Criterion;
+  };
+  brands: {
     [key: string]: Brand;
   };
 }

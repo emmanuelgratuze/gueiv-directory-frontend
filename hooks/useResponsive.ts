@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { ResponsiveContext } from 'grommet'
-import { BreakpointsKeysType } from '~/themes/theme.d'
+import { BreakpointsKeysType } from '~/themes/theme'
 
 type UseResponsiveType = {
   isMobile: boolean;

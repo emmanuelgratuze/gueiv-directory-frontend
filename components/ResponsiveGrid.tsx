@@ -1,8 +1,9 @@
 import React, { Children, useMemo, memo } from 'react'
 import { sortBy } from 'lodash'
 import { Box, BoxTypes } from 'grommet'
+
 import useTheme from '~/hooks/useTheme'
-import { BreakpointsValuesType, BreakpointsType, BreakpointsKeysType } from '~/themes/theme.d'
+import { BreakpointsValuesType, BreakpointsType, BreakpointsKeysType } from '~/themes/theme'
 import useResponsive from '~/hooks/useResponsive'
 
 interface ResponsiveGrid {
@@ -52,7 +53,7 @@ const ResponsiveGrid: React.FC<BoxTypes & ResponsiveGrid> = ({
   ...props
 }) => {
   const { size: currentSize } = useResponsive()
-  const theme = useTheme()
+  const { theme } = useTheme()
 
   // Take into consideration if not array is sent but a simple string
   const columnsSizes = useMemo(() => {

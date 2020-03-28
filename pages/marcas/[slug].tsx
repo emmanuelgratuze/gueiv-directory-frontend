@@ -14,7 +14,7 @@ import { selectBrandBySlug } from '~/store/entities/brands/selectors'
 import { ImmutableAppState } from '~/store/app/types'
 
 interface BrandPageType {
-  slug: 'string';
+  slug: string;
 }
 
 const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
@@ -52,6 +52,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const brands: Brand[] = await fetchBrands()
+
   return {
     paths: brands.map((brand) => ({
       params: { slug: kebabCase(brand.name) }

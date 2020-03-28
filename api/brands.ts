@@ -12,7 +12,12 @@ export const fetchBrands = async (): Promise<Brand[]> => {
       'Accept-Language': apiConfig.get('language') || undefined
     }
   })
-  return response.json()
+
+  let data: Brand[] = await response.json()
+
+  // Delete entries without name
+  data = data.filter((brand) => !!brand.name)
+  return data
 }
 
 export default {}

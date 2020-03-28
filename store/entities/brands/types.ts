@@ -1,5 +1,5 @@
 // import { ImmutableMap } from '~/types/immutable'
-import { Record, List } from 'immutable'
+import { Record, List, Map } from 'immutable'
 import { Criterion } from '../criteria/types'
 
 export interface BrandPicture {
@@ -24,5 +24,7 @@ export interface Brand {
 export type ImmutableBrand = Record<Omit<Brand, 'pictures'>> & Record<{
   pictures?: List<BrandPicture>;
 }>
+
+export type BrandsStateTree = Map<string, ImmutableBrand>
 
 export {}

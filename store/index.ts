@@ -36,16 +36,12 @@ function configureStore(preloadedState = initialState): Store {
     preloadedState,
     bindMiddleware([
       // progressMiddleware,
-
       // Add headers (auth) and prepend API endpoint to every api calls
       apiRequestsMiddleware,
-
       // Api middle (make calls on store actions)
       apiMiddleware,
-
       // Clean API response (prop keys to camelcase)
       addEntitiesMiddleware,
-
       sagaMiddleware
     ])
   )

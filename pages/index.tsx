@@ -1,7 +1,6 @@
 import React from 'react'
 import { NextPage, GetStaticProps } from 'next'
 import { normalize } from 'normalizr'
-import { List } from 'immutable'
 import { useSelector } from 'react-redux'
 
 import Page from '~/components/Page'
@@ -11,12 +10,10 @@ import { ThemeColorsType } from '~/themes/theme'
 import { fetchBrands } from '~/api/brands'
 import * as schemas from '~/store/schemas'
 import { selectBrands } from '~/store/entities/brands/selectors'
-import { ImmutableBrand } from '~/store/entities/brands/types'
-import { AppState } from '~/store/app/types'
 
 const Home: NextPage = () => {
   const homeColors = ['yellow', 'turquoise', 'blue', 'pink']
-  const brands = useSelector<AppState, List<ImmutableBrand>>(selectBrands)
+  const brands = useSelector(selectBrands)
 
   return (
     <>

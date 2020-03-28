@@ -1,6 +1,7 @@
 import { memoize } from 'lodash'
-import { Map, Record } from 'immutable'
-import { Schema, schema } from 'normalizr'
+import { Map } from 'immutable'
+// Record
+// import { Schema, schema } from 'normalizr'
 
 /*
   Get state tree depending on entities keys

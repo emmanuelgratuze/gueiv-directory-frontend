@@ -1,25 +1,27 @@
-import { RootStateOrAny } from 'react-redux'
+
 import { createSelector } from 'reselect'
 import { denormalize } from 'normalizr'
 import { List } from 'immutable'
 import { memoize } from 'lodash'
 
 import * as schemas from '~/store/schemas'
-import { ImmutableBrand } from './types'
+import { ImmutableBrand, BrandsStateTree } from './types'
+import { ImmutableAppState } from '~/store/app/types'
 
-export const selectBrandsTree = (state: RootStateOrAny): List<ImmutableBrand> => state.get('brands')
+export const selectBrandsTree = (state: ImmutableAppState): BrandsStateTree => (
+  state.getIn(['entities', 'brands'])
+)
 
 export const selectBrands = createSelector(
-  // TODO: select depending on the schema
   selectBrandsTree,
   (state) => state,
-  (brands, state): List<ImmutableBrand> => {
-    const res = state.get('brands')
+  (brands, state) => {
+    const res = brands
       .filter((brand: ImmutableBrand) => !!brand.get('name'))
       .map((brand: ImmutableBrand) => denormalize(brand, schemas.brand, state))
       .toIndexedSeq()
 
-    return res
+    return List(res)
   }
 )
 

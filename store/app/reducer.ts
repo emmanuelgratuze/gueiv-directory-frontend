@@ -26,6 +26,8 @@ function appReducer(state = fromJS({}), action: BasicAction): Reducer {
  */
 export default combineReducers({
   app: appReducer,
-  brands,
-  criteria
+  entities: combineReducers({
+    brands,
+    criteria
+  })
 })

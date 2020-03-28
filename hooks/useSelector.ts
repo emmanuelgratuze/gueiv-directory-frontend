@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { isImmutable, fromJS } from 'immutable'
 import { AppState } from '~/store/app/types'

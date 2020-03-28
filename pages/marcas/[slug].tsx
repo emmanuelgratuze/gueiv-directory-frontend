@@ -8,16 +8,17 @@ import { Paragraph, Heading } from 'grommet'
 
 import Page from '~/components/Page'
 import { fetchBrands } from '~/api/brands'
-import { Brand } from '~/store/entities/brands/types'
+import { Brand, ImmutableBrand } from '~/store/entities/brands/types'
 import * as schemas from '~/store/schemas'
 import { selectBrandBySlug } from '~/store/entities/brands/selectors'
+import { ImmutableAppState } from '~/store/app/types'
 
 interface BrandPageType {
   slug: 'string';
 }
 
 const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
-  const brand = useSelector((state) => selectBrandBySlug(state)(slug))
+  const brand = useSelector<ImmutableAppState, ImmutableBrand>((state) => selectBrandBySlug(state)(slug))
 
   return (
     <>

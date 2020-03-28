@@ -20,6 +20,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
+      "~/api/*": ["./api/*"],
       "~/components/*": ["./components/*"],
       "~/contexts/*": ["./contexts/*"],
       "~/themes/*": ["./themes/*"],

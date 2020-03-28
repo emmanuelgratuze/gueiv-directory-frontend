@@ -9,7 +9,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 // Middlewares
 import { apiMiddleware } from './middlewares/reduxApiMiddleware'
-import apiResponsesMiddleware from './middlewares/apiResponses'
+import addEntitiesMiddleware from './middlewares/addEntitiesMiddleware'
 import apiRequestsMiddleware from './middlewares/apiRequests'
 
 import rootReducer from './app/reducer'
@@ -44,7 +44,7 @@ function configureStore(preloadedState = initialState): Store {
       apiMiddleware,
 
       // Clean API response (prop keys to camelcase)
-      apiResponsesMiddleware,
+      addEntitiesMiddleware,
 
       sagaMiddleware
     ])
@@ -55,4 +55,4 @@ function configureStore(preloadedState = initialState): Store {
   return store
 }
 
-export default configureStore()
+export default configureStore

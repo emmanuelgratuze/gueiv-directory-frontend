@@ -7,7 +7,7 @@ import {
 } from '~/store/app/types'
 import mergeEntities from '~/utils/redux/mergeEntities'
 
-function brandsReducer(state = fromJS({}), action: (AddEntitiesAction | ClearEntitiesAction)): Map<string, unknown> {
+function criteriaReducer(state = fromJS({}), action: (AddEntitiesAction | ClearEntitiesAction)): Map<string, unknown> {
   switch (action.type) {
     case ADD_ENTITIES: {
       const { criteria } = action.payload.entities
@@ -35,4 +35,4 @@ function brandsReducer(state = fromJS({}), action: (AddEntitiesAction | ClearEnt
   }
 }
 
-export default brandsReducer
+export default criteriaReducer

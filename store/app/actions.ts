@@ -14,9 +14,11 @@ export const setConfig = (appConfig: AppConfig): SetConfigAction => ({
   payload: appConfig
 })
 
-export const addEntities = (payload: { entities: AppEntities }): AddEntitiesAction => ({
+export const addEntities = (entities: AppEntities): AddEntitiesAction => ({
   type: ADD_ENTITIES,
-  payload
+  payload: {
+    entities
+  }
 })
 
 export const clearEntities = (entitiesNames: keyof AppEntities): ClearEntitiesAction => ({

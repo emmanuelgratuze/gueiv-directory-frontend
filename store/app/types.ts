@@ -23,10 +23,10 @@ export interface AppConfig {
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface AppEntities {
-  criteria: {
+  criteria?: {
     [key: string]: Criterion;
   };
-  brands: {
+  brands?: {
     [key: string]: Brand;
   };
 }

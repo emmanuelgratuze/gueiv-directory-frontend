@@ -1,22 +1,23 @@
 import React from 'react'
 import { NextPage, GetStaticProps } from 'next'
+import { normalize } from 'normalizr'
+import { List } from 'immutable'
+import { useSelector } from 'react-redux'
 
 import Page from '~/components/Page'
-import BrandItem from '~/components/BrandPreview'
+import BrandItem from '~/components/BrandPreview/BrandPreview'
 import ResponsiveGrid from '~/components/ResponsiveGrid'
-import store from '~/store/index'
-import { Brand } from '~/store/entities/brands/types'
-import { fetchBrands } from '~/store/entities/brands/actions'
-import { selectBrands } from '~/store/entities/brands/selectors'
 import { ThemeColorsType } from '~/themes/theme'
+import { fetchBrands } from '~/api/brands'
+import * as schemas from '~/store/schemas'
+import { selectBrands } from '~/store/entities/brands/selectors'
+import { ImmutableBrand } from '~/store/entities/brands/types'
+import { AppState } from '~/store/app/types'
 
-
-interface HomePage {
-  brands: Brand[];
-}
-
-const Home: NextPage<HomePage> = ({ brands }) => {
+const Home: NextPage = () => {
   const homeColors = ['yellow', 'turquoise', 'blue', 'pink']
+  const brands = useSelector<AppState, List<ImmutableBrand>>(selectBrands)
+
   return (
     <>
       <Page title="Home">
@@ -27,9 +28,9 @@ const Home: NextPage<HomePage> = ({ brands }) => {
             xlarge: ['33.33%']
           }}
         >
-          {brands.map((brand, index) => (
+          {!brands || brands.map((brand, index) => (
             <BrandItem
-              key={brand.id}
+              key={brand.get('id')}
               brand={brand}
               color={homeColors[index % homeColors.length] as keyof ThemeColorsType}
             />
@@ -41,12 +42,13 @@ const Home: NextPage<HomePage> = ({ brands }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  await store.dispatch(fetchBrands())
-  const brands = selectBrands(store.getState())
-
+  const data = await fetchBrands()
+  const normalizedData = normalize(data, [schemas.brand])
   return {
     props: {
-      brands: JSON.parse(JSON.stringify(brands.toJS()))
+      entities: [
+        normalizedData.entities
+      ]
     }
   }
 }

@@ -48,6 +48,7 @@
       "babel-module": {
         "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
         "alias": {
+          "~/api": "api/*",
           "~/components": "components/*",
           "~/contexts": "contexts/*",
           "~/types": "types/*",

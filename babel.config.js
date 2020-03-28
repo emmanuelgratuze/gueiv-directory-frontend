@@ -28,6 +28,7 @@ const config = {
         root: ['.'],
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
         alias: {
+          '~/api': './api',
           '~/pages': './pages',
           '~/screens': './screens',
           '~/components': './components',

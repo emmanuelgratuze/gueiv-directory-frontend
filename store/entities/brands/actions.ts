@@ -1,6 +1,6 @@
 import { RSAAAction } from 'redux-api-middleware'
 import { RSAA } from '~/store/middlewares/reduxApiMiddleware'
-import { brand } from '~/store/schemas'
+import * as schemas from '~/store/schemas'
 import { ADD_ENTITIES } from '~/store/app/types'
 import { selectBrands } from './selectors'
 
@@ -16,7 +16,7 @@ export function fetchBrands(): RSAAAction {
         {
           type: ADD_ENTITIES,
           meta: {
-            schema: [brand],
+            schema: [schemas.brand],
             endAction: FETCH_SUCCESS
           }
         },

@@ -8,7 +8,8 @@ const config = {
           targets: {
             browsers: 'defaults'
           },
-          useBuiltIns: 'entry'
+          useBuiltIns: 'entry',
+          corejs: '3.0.0'
         }
       }
     ]

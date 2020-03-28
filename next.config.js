@@ -19,7 +19,6 @@ module.exports = withPlugins(
   ],
   {
     generateEtags: false,
-    distDir: 'dist',
     dir: '.', // base directory where everything is, could move to src later
     webpack(config) {
       // Perform customizations to webpack config

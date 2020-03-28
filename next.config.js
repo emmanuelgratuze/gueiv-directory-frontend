@@ -1,4 +1,3 @@
-const withTM = require('next-transpile-modules')
 const dotenv = require('dotenv')
 const path = require('path')
 const webpack = require('webpack')
@@ -16,21 +15,7 @@ const { parsed: environmentVariables = {} } = dotenv.config({
 
 module.exports = withPlugins(
   [
-    [
-      withTM,
-      {
-        transpileModules: ['gsap'],
-        exportPathMap: () => ({
-          '/': { page: '/' },
-        })
-      }
-    ],
-    [
-      withImages,
-      {
-        // assetPrefix: 'static'
-      }
-    ]
+    withImages
   ],
   {
     generateEtags: false,

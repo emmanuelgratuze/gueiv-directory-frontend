@@ -12,6 +12,7 @@
     "lint": "npm run lint:eslint && npm run lint:stylelint",
     "lint:stylelint": "stylelint './**/*.js' --fix",
     "lint:eslint": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-path .eslintignore",
+    "postinstall": "# cp -r vendor/gsap/bonus-files-for-npm-users/* node_modules/gsap/",
     "precommit": "lint-staged",
     "prettier-js": "prettier-eslint --write './**/*.{ts,tsx,js,jsx}'",
     "prettier-styles": "prettier-stylelint --write './**/*.js'"
@@ -29,7 +30,6 @@
     "@types/request": "^2.48.4",
     "@types/styled-components": "^5.0.1",
     "@welldone-software/why-did-you-render": "^4.0.5",
-    "babel-polyfill": "^6.26.0",
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
     "es6-promise": "^4.2.8",

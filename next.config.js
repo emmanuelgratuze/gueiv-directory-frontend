@@ -70,18 +70,6 @@ module.exports = withPlugins(
         })
       )
 
-      // Unshift polyfills in main entrypoint.
-      const originalEntry = config.entry
-      // eslint-disable-next-line no-param-reassign
-      config.entry = async () => {
-        const entries = await originalEntry()
-        if (entries['main.js']) {
-          entries['main.js'].unshift('./utils/polyfill.js')
-        }
-        return entries
-      }
-
-
       return config
     }
   }

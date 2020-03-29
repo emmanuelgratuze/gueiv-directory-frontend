@@ -3,22 +3,21 @@ import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 import { normalize } from 'normalizr'
 import Link from 'next/link'
 import { kebabCase } from 'lodash'
-import { useSelector } from 'react-redux'
 import { Paragraph, Heading } from 'grommet'
 
+import useSelector from '~/hooks/useSelector'
 import Page from '~/components/Page'
 import { fetchBrands } from '~/api/brands'
-import { Brand, ImmutableBrand } from '~/store/entities/brands/types'
+import { Brand  } from '~/store/entities/brands/types'
 import * as schemas from '~/store/schemas'
 import { selectBrandBySlug } from '~/store/entities/brands/selectors'
-import { ImmutableAppState } from '~/store/app/types'
 
 interface BrandPageType {
   slug: string;
 }
 
 const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
-  const brand = useSelector<ImmutableAppState, ImmutableBrand>((state) => selectBrandBySlug(state)(slug))
+  const brand = useSelector((state) => selectBrandBySlug(state)(slug)) as Brand
 
   return (
     <>
@@ -29,8 +28,8 @@ const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
           </a>
         </Link>
 
-        <Heading>{brand?.get('name')}</Heading>
-        <Paragraph>{brand?.get('description')}</Paragraph>
+        <Heading>{brand.name}</Heading>
+        <Paragraph>{brand.description}</Paragraph>
       </Page>
     </>
   )

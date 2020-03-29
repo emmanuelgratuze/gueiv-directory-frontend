@@ -5,14 +5,14 @@ import Link from 'next/link'
 import RelativeHeightBox from '~/components/RelativeHeightBox'
 import Text from '~/components/Text'
 
-import { ImmutableBrand } from '~/store/entities/brands/types'
+import { Brand } from '~/store/entities/brands/types'
 import { ThemeColorsType } from '~/themes/theme'
 import useTheme from '~/hooks/useTheme'
 
 import BrandImage from './Image'
 
 type BrandItemType = {
-  brand: ImmutableBrand;
+  brand: Brand;
   color?: keyof ThemeColorsType;
 }
 
@@ -23,7 +23,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 }) => {
   const { oppositeColors } = useTheme()
   return (
-    <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
+    <Link href="/marcas/[slug]" as={`/marcas/${brand.slug}`}>
       <a>
         <RelativeHeightBox
           relativeHeight="50%"
@@ -38,14 +38,17 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                 color={color}
               />
             </Box>
-            <Box width="50%" pad="medium">
+            <Box
+              width="50%"
+              pad={{ vertical: 'large', horizontal: '2.2rem' }}
+            >
               <Text
                 weight={600}
                 transform="uppercase"
                 size="large"
                 color={color ? oppositeColors[color] : undefined}
               >
-                {brand.get('name')}
+                {brand.name}
               </Text>
             </Box>
           </Box>

@@ -64,3 +64,4 @@ export interface ClearEntitiesAction {
 
 export type ImmutableAppState = Record<AppState>
 export type ImmutableAppConfig = Record<AppConfig>
+export type ImmutableAppEntities = Record<AppEntities>

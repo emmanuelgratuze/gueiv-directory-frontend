@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextPage, GetStaticProps } from 'next'
 import { normalize } from 'normalizr'
-import { useSelector } from 'react-redux'
+import useSelector from '~/hooks/useSelector'
 
 import Page from '~/components/Page'
 import BrandItem from '~/components/BrandPreview/BrandPreview'
@@ -10,10 +10,11 @@ import { ThemeColorsType } from '~/themes/theme'
 import { fetchBrands } from '~/api/brands'
 import * as schemas from '~/store/schemas'
 import { selectBrands } from '~/store/entities/brands/selectors'
+import { Brand } from '~/store/entities/brands/types'
 
 const Home: NextPage = () => {
   const homeColors = ['yellow', 'turquoise', 'blue', 'pink']
-  const brands = useSelector(selectBrands)
+  const brands = useSelector(selectBrands) as Brand[]
 
   return (
     <>
@@ -27,7 +28,7 @@ const Home: NextPage = () => {
         >
           {!brands || brands.map((brand, index) => (
             <BrandItem
-              key={brand.get('id')}
+              key={brand.id}
               brand={brand}
               color={homeColors[index % homeColors.length] as keyof ThemeColorsType}
             />

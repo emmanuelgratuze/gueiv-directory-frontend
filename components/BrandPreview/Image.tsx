@@ -5,13 +5,14 @@ import {
   BoxProps,
   Image
 } from 'grommet'
-import { ImmutableBrand } from '~/store/entities/brands/types'
+import { Brand } from '~/store/entities/brands/types'
 import { ThemeColorsType } from '~/themes/theme'
+import CriterionIcon from '../CriterionIcon'
 
 const Logo = require('~/assets/images/logo-unicolor.svg').ReactComponent
 
 type BrandImageType = {
-  brand: ImmutableBrand;
+  brand: Brand;
   color?: keyof ThemeColorsType;
 }
 
@@ -24,11 +25,11 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({ brand, ...props }) =>
     background={{ color: 'gray' }}
     {...props}
   >
-    {brand.get('pictures')?.size
+    {brand.pictures?.length
       ? (
         <Image
           fit="cover"
-          src={brand.getIn(['pictures', '0', 'url'])}
+          src={brand.pictures[0].url}
         />
       )
       : (
@@ -38,19 +39,10 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({ brand, ...props }) =>
           fill
         >
           <Box width="xsmall" height="xsmall">
-            {/* Criterion icon */}
-            {brand.getIn(['criteria', '0', 'icon']) && (
-              <Image
-                height="100%"
-                src={brand.getIn(['criteria', '0', 'icon', 'url'])}
-                alt={brand.get('name')}
-              />
-            )}
-
-            {/* Gueiv logo icon */}
-            {!brand.getIn(['criteria', '0', 'icon']) && (
-              <Logo height="100%" fill="black" />
-            )}
+            {/* Criterion icon or Logo */}
+            {brand.criteria.length
+              ? <CriterionIcon criterion={brand.criteria[0]} />
+              : <Logo height="100%" fill="black" />}
           </Box>
         </PlaceholderBox>
       )}

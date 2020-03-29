@@ -10,6 +10,7 @@ export interface CriterionIcon {
   url: string;
   createdAt: string;
   updatedAt: string;
+  content: string;
 }
 
 export interface Criterion {

@@ -13,11 +13,12 @@ export const fetchBrands = async (): Promise<Brand[]> => {
     }
   })
 
-  let data: Brand[] = await response.json()
+  let brands: Brand[] = await response.json()
 
   // Delete entries without name
-  data = data.filter((brand) => !!brand.name)
-  return data
+  brands = brands.filter((brand) => !!brand.name)
+
+  return brands
 }
 
 export default {}

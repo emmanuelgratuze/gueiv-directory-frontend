@@ -1,19 +1,20 @@
 import { RootStateOrAny } from 'react-redux'
 import { createSelector } from 'reselect'
-import { ImmutableAppState } from './types'
+import { ImmutableAppState, ImmutableAppEntities } from './types'
 
-export const selectApp = (state: RootStateOrAny): ImmutableAppState => (
-  state.get('app')
-)
 
 export const selectAppConfig = createSelector(
-  selectApp,
-  (app) => app.getIn(['config'])
+  (state: ImmutableAppState): ImmutableAppState => state,
+  (app) => app.getIn(['app', 'config'])
 )
 
 export const selectAppContents = createSelector(
-  selectApp,
-  (app) => app.getIn(['contents'])
+  (state: ImmutableAppState): ImmutableAppState => state,
+  (app) => app.getIn(['app', 'contents'])
+)
+
+export const selectEntities = (state: ImmutableAppState): ImmutableAppEntities => (
+  state.get('entities') as ImmutableAppEntities
 )
 
 export default {}

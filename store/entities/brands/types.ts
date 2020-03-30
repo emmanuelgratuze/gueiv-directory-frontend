@@ -19,6 +19,19 @@ export interface Brand {
   description?: string;
   pictures?: BrandPicture[];
   criteria: Criterion[];
+  city?: string;
+  country?: {
+    id: string;
+    name: string;
+  };
+  genders?: {
+    id: string;
+    name: string;
+  }[];
+  product_types?: {
+    id: string;
+    name: string;
+  }[];
 }
 
 export type ImmutableBrand = Record<Omit<Brand, 'pictures'>> & Record<{

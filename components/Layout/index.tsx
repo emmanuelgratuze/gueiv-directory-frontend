@@ -21,7 +21,8 @@ const Layout: React.FC = ({ children }) => (
       <meta name="robots" content="noindex" />
 
       {/* Fonts */}
-      <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
     </Head>
 
     <GlobalStyles />

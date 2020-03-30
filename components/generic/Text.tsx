@@ -1,18 +1,17 @@
 import { Text } from 'grommet'
 import styled, { css } from 'styled-components'
 
-type StyledTextProps = {
+export type StyledTextProps = {
   sup?: boolean;
   sub?: boolean;
   transform?: 'initial' | 'uppercase' | 'lowercase' | 'capitalize';
   underlined?: boolean;
   spacing?: 'normal' | 'large';
   italic?: boolean;
+  font?: 'Quicksand' | 'Lato';
 }
 
-const StyledText = styled(Text)`
-  line-height: 1em;
-
+export const textStyles = css`
   /* Sub and sup */
   ${(props: StyledTextProps) => props.sup
     && css`
@@ -63,6 +62,16 @@ const StyledText = styled(Text)`
     && css`
       font-style: italic;
     `}
+
+  ${(props: StyledTextProps) => props.font
+    && css`
+      font-family: ${props.font === 'Lato' ? 'Lato' : 'inherit'}, Helvetica, sans-serif;
+      font-family: ${props.font === 'Quicksand' ? 'Quicksand' : 'inherit'}, Helvetica, sans-serif;
+    `}
+`
+
+const StyledText = styled(Text)`
+  ${textStyles}
 `
 
 export default StyledText

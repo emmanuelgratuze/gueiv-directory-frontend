@@ -3,11 +3,11 @@ import { BoxProps, Box } from 'grommet'
 import styled from 'styled-components'
 
 import { Criterion } from '~/store/entities/criteria/types'
-import { ThemeColorsType } from '~/themes/theme'
+import { ColorsType } from '~/themes/theme'
 
 interface CriterionIcon {
   criterion: Criterion;
-  color?: keyof ThemeColorsType;
+  color?: keyof ColorsType;
 }
 
 const StyledIconContainer = styled(Box)`

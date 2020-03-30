@@ -17,21 +17,22 @@ export const selectBrands = createSelector(
   selectBrandsTree,
   selectEntities,
   (brands, entities) => {
-    const res = brands
+    const result = brands
       .filter((brand: ImmutableBrand) => !!brand.get('name'))
       .map((brand: ImmutableBrand) => denormalize(brand, schemas.brand, entities))
       .toIndexedSeq()
 
-    return List(res)
+    return List(result)
   }
 )
 
 export const selectBrandBySlug = createSelector(
   selectBrands,
-  (state) => state,
   (brands) => (
     memoize((slug: string) => (
-      brands.filter((brand) => brand.get('slug') === slug)?.get(0)
+      brands.filter((brand) => (
+        brand.get('slug') === slug
+      ))?.get(0)
     ))
   )
 )

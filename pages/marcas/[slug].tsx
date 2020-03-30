@@ -8,7 +8,7 @@ import { Paragraph, Heading } from 'grommet'
 import useSelector from '~/hooks/useSelector'
 import Page from '~/components/Page'
 import { fetchBrands } from '~/api/brands'
-import { Brand  } from '~/store/entities/brands/types'
+import { Brand } from '~/store/entities/brands/types'
 import * as schemas from '~/store/schemas'
 import { selectBrandBySlug } from '~/store/entities/brands/selectors'
 
@@ -19,6 +19,10 @@ interface BrandPageType {
 const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
   const brand = useSelector((state) => selectBrandBySlug(state)(slug)) as Brand
 
+  if (!brand) {
+    return null
+  }
+
   return (
     <>
       <Page title="Marca">
@@ -28,8 +32,8 @@ const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
           </a>
         </Link>
 
-        <Heading>{brand.name}</Heading>
-        <Paragraph>{brand.description}</Paragraph>
+        <Heading>{brand?.name}</Heading>
+        <Paragraph>{brand?.description}</Paragraph>
       </Page>
     </>
   )

@@ -1,4 +1,4 @@
-import { css, FlattenSimpleInterpolation } from 'styled-components'
+import { css } from 'styled-components'
 import { deepMerge } from 'grommet/utils'
 import { base } from 'grommet/themes'
 import { ValueOf } from '~/types/utils'
@@ -11,11 +11,6 @@ const fontSizing = (factor: number): { size: string; height: string; maxWidth: s
   height: `${baseSpacing * factor}px`,
   maxWidth: `${baseSpacing * (baseFontSize * factor)}px`
 })
-
-const fontSizingStyles = (factor: number): FlattenSimpleInterpolation => css`
-  font-size: ${factor}rem;
-  line-height: ${factor}rem;
-`
 
 const darkColors = [
   '#1B1B1B',
@@ -44,11 +39,13 @@ const statusColors: { [key: string]: string } = {
 }
 
 const themeColors = {
-  yellow: '#E0B634',
-  turquoise: '#BAE8E5',
-  blue: '#4071BA',
-  pink: '#D27D83',
-  gray: '#3D3D4F'
+  yellow: '#EFB82A',
+  turquoise: '#A9D9DE',
+  blue: '#1488CA',
+  pink: '#EA7E83',
+  gray: '#3D3D4F',
+  black: '#000000',
+  white: '#FFFFFF'
 }
 
 const oppositeColors = {
@@ -56,12 +53,12 @@ const oppositeColors = {
   turquoise: '#FFFFFF',
   blue: '#FFFFFF',
   pink: '#FFFFFF',
-  gray: '#FFFFFF'
+  gray: '#FFFFFF',
+  black: '#FFFFFF',
+  white: themeColors.blue
 }
 
 const colors: { [key: string]: string } = {
-  black: '#000000',
-  white: '#FFFFFF',
   ...themeColors
 }
 
@@ -172,7 +169,7 @@ const theme = deepMerge(base, {
         }
       },
       medium: {
-        value: baseSpacing * 46, // 1152
+        value: baseSpacing * 54, // 1152
         borderSize: {
           xsmall: '1px',
           small: '2px',
@@ -244,29 +241,22 @@ const theme = deepMerge(base, {
     responsiveBreakpoint: 'medium'
   },
   text: {
-    xxsmall: {
-      ...fontSizing(0.7)
-    },
-    xsmall: {
-      ...fontSizing(0.8)
-    },
-    small: {
-      ...fontSizing(0.9)
-    },
-    medium: {
-      ...fontSizing(1)
-    },
-    large: {
-      ...fontSizing(1.3)
-    },
-    xlarge: {
-      ...fontSizing(2)
-    },
-    xxlarge: {
-      ...fontSizing(3)
-    },
+    xxsmall: fontSizing(0.7),
+    xsmall: fontSizing(0.8),
+    small: fontSizing(0.9),
+    medium: fontSizing(1),
+    large: fontSizing(1.3),
+    xlarge: fontSizing(2),
+    xxlarge: fontSizing(3)
+  },
+  paragraph: {
+    small: fontSizing(0.7),
+    medium: fontSizing(1),
+    large: fontSizing(1),
+    xlarge: fontSizing(1),
+    xxlarge: fontSizing(1),
     extend: css`
-      line-height: 1.5em !important;
+      letter-spacing: 0.1em;
     `
   },
   formField: {
@@ -304,128 +294,40 @@ const theme = deepMerge(base, {
   heading: {
     level: {
       1: {
-        xxsmall: css`
-          ${fontSizingStyles(1.8)}
-        `,
-        xsmall: css`
-          ${fontSizingStyles(2)}
-        `,
-        small: css`
-          ${fontSizingStyles(2.5)}
-        `,
-        medium: css`
-          ${fontSizingStyles(3.5)}
-        `,
-        large: css`
-          ${fontSizingStyles(3.5)}
-        `,
-        xlarge: css`
-          ${fontSizingStyles(3.5)}
-        `,
-        extend: css``
+        small: fontSizing(2.5),
+        medium: fontSizing(3.5),
+        large: fontSizing(3.5),
+        xlarge: fontSizing(3.5)
       },
       2: {
-        xxsmall: css`
-          ${fontSizingStyles(1.4)}
-        `,
-        xsmall: css`
-          ${fontSizingStyles(1.5)}
-        `,
-        small: css`
-          ${fontSizingStyles(1.5)}
-        `,
-        medium: css`
-          ${fontSizingStyles(2.5)}
-        `,
-        large: css`
-          ${fontSizingStyles(2.5)}
-        `,
-        xlarge: css`
-          ${fontSizingStyles(2.5)}
-        `,
-        extend: css``
+        small: fontSizing(1.5),
+        medium: fontSizing(1.7),
+        large: fontSizing(1.8),
+        xlarge: fontSizing(1.9),
       },
       3: {
-        xxsmall: css`
-          ${fontSizingStyles(1)}
-        `,
-        xsmall: css`
-          ${fontSizingStyles(1.15)}
-        `,
-        small: css`
-          ${fontSizingStyles(1.15)}
-        `,
-        medium: css`
-          ${fontSizingStyles(1.15)}
-        `,
-        large: css`
-          ${fontSizingStyles(1.15)}
-        `,
-        xlarge: css`
-          ${fontSizingStyles(1.15)}
-        `,
-        extend: css``
+        small: fontSizing(0.81),
+        medium: fontSizing(1.15),
+        large: fontSizing(1.15),
+        xlarge: fontSizing(1.15),
       },
       4: {
-        xxsmall: css`
-          ${fontSizingStyles(0.9)}
-        `,
-        xsmall: css`
-          ${fontSizingStyles(1)}
-        `,
-        small: css`
-          ${fontSizingStyles(1)}
-        `,
-        medium: css`
-          ${fontSizingStyles(1)}
-        `,
-        large: css`
-          ${fontSizingStyles(1)}
-        `,
-        xlarge: css`
-          ${fontSizingStyles(1)}
-        `,
-        extend: css``
+        small: fontSizing(1),
+        medium: fontSizing(1),
+        large: fontSizing(1),
+        xlarge: fontSizing(1)
       },
       5: {
-        xxsmall: css`
-          ${fontSizingStyles(0.7)}
-        `,
-        xsmall: css`
-          ${fontSizingStyles(0.8)}
-        `,
-        small: css`
-          ${fontSizingStyles(1)}
-        `,
-        medium: css`
-          ${fontSizingStyles(1)}
-        `,
-        large: css`
-          ${fontSizingStyles(1)}
-        `,
-        xlarge: css`
-          ${fontSizingStyles(1)}
-        `,
-        extend: css``
+        small: fontSizing(1),
+        medium: fontSizing(1),
+        large: fontSizing(1),
+        xlarge: fontSizing(1)
       },
       6: {
-        font: {
-          // family: undefined,
-          // weight: undefined,
-        },
-        small: css`
-          ${fontSizingStyles(-1)}
-        `,
-        medium: css`
-          ${fontSizingStyles(-1)}
-        `,
-        large: css`
-          ${fontSizingStyles(-1)}
-        `,
-        xlarge: css`
-          ${fontSizingStyles(-1)}
-        `,
-        extend: css``
+        small: fontSizing(-1),
+        medium: fontSizing(-1),
+        large: fontSizing(-1),
+        xlarge: fontSizing(-1)
       }
     },
     extend: css``

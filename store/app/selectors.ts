@@ -1,4 +1,3 @@
-import { RootStateOrAny } from 'react-redux'
 import { createSelector } from 'reselect'
 import { ImmutableAppState, ImmutableAppEntities } from './types'
 

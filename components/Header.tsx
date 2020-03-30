@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from 'grommet'
 
 import Container from '~/components/Container'
-import Text from '~/components/Text'
+import Text from '~/components/generic/Text'
 
 const Logo = require('~/assets/images/logo.svg').ReactComponent
 

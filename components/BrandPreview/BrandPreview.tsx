@@ -2,14 +2,16 @@ import React from 'react'
 import { Box, BoxProps } from 'grommet'
 import Link from 'next/link'
 
+import Heading from '~/components/generic/Heading'
+
 import RelativeHeightBox from '~/components/RelativeHeightBox'
-import Text from '~/components/Text'
 
 import { Brand } from '~/store/entities/brands/types'
 import { ThemeColorsType } from '~/themes/theme'
 import useTheme from '~/hooks/useTheme'
 
 import BrandImage from './Image'
+import CriterionIcon from '../CriterionIcon'
 
 type BrandItemType = {
   brand: Brand;
@@ -42,14 +44,57 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
               width="50%"
               pad={{ vertical: 'large', horizontal: '2.2rem' }}
             >
-              <Text
-                weight={600}
+              {/* Name */}
+              <Heading
+                level={2}
+                size="small"
                 transform="uppercase"
-                size="large"
                 color={color ? oppositeColors[color] : undefined}
               >
                 {brand.name}
-              </Text>
+              </Heading>
+
+              {/* Location */}
+              {brand.city !== '' && brand.country && (
+                <Heading
+                  level={3}
+                  size="small"
+                  color={color ? oppositeColors[color] : undefined}
+                  margin={{ bottom: 'small' }}
+                >
+                  {brand.city}
+                  &thinsp;
+                  {brand.country?.name}
+                </Heading>
+              )}
+
+              {/* Description */}
+              {/* <Paragraph
+                size="small"
+                font="Lato"
+                color={color ? oppositeColors[color] : undefined}
+                length={100}
+              >
+                {brand.description}
+              </Paragraph> */}
+
+              {/* Criteria */}
+              {brand.criteria && (
+                <Box direction="row">
+                  {brand.criteria.map((criterion) => (
+                    <Box
+                      width="1.5rem"
+                      height="1.5rem"
+                      margin={{ right: 'small', bottom: 'small' }}
+                    >
+                      <CriterionIcon
+                        criterion={criterion}
+                        color={color ? oppositeColors[color] : undefined}
+                      />
+                    </Box>
+                  ))}
+                </Box>
+              )}
             </Box>
           </Box>
         </RelativeHeightBox>

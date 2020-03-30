@@ -14,9 +14,7 @@ const { parsed: environmentVariables = {} } = dotenv.config({
 })
 
 module.exports = withPlugins(
-  [
-    withImages
-  ],
+  [withImages],
   {
     generateEtags: false,
     dir: '.', // base directory where everything is, could move to src later

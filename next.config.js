@@ -13,6 +13,9 @@ const { parsed: environmentVariables = {} } = dotenv.config({
   path: path.resolve(process.cwd(), '.env')
 })
 
+// eslint-disable-next-line
+console.log('App environement: ', process.env.APP_ENV || 'production')
+
 module.exports = withPlugins(
   [
     withImages

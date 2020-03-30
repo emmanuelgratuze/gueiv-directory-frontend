@@ -300,7 +300,10 @@ const theme = deepMerge(base, {
         xlarge: fontSizing(3.5)
       },
       2: {
-        small: fontSizing(1.5),
+        small: {
+          ...fontSizing(1.3),
+          height: `${baseFontSize * 1.5}px`
+        },
         medium: fontSizing(1.7),
         large: fontSizing(1.8),
         xlarge: fontSizing(1.9),

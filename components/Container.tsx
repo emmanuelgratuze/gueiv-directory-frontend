@@ -2,12 +2,12 @@ import React from 'react'
 import { Box, BoxProps } from 'grommet'
 
 type ContainerType = {
-  fluid: boolean;
+  fluid?: boolean;
 }
 
 const Container: React.FC<BoxProps & ContainerType> = ({
   children,
-  fluid,
+  fluid = false,
   ...props
 }) => (
   <Box
@@ -16,7 +16,7 @@ const Container: React.FC<BoxProps & ContainerType> = ({
     align="center"
     {...props}
   >
-    <Box width={fluid ? 'full' : 'xlarge'} align="start" fill wrap>
+    <Box width={fluid ? 'full' : 'xlarge'} align="start" fill="vertical" wrap>
       {children}
     </Box>
   </Box>

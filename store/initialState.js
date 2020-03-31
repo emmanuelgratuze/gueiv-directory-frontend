@@ -1,7 +1,7 @@
 import { fromJS } from 'immutable'
 
 import { getConfig } from '~/config/index'
-import contentsProperties from '~/contents/contents.json'
+import contentsProperties from '~/contents/contents'
 
 export default fromJS({
   // Initial state

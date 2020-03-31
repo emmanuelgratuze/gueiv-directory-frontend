@@ -10,7 +10,6 @@ import { motion } from 'framer-motion'
 import { Brand } from '~/store/entities/brands/types'
 import { ThemeColorsType } from '~/themes/theme'
 import CriterionIcon from '../CriterionIcon'
-import useTheme from '~/hooks/useTheme'
 
 const Logo = require('~/assets/images/logo-unicolor.svg').ReactComponent
 
@@ -29,60 +28,59 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({
   color,
   zoom = false,
   ...props
-}) => {
-  const { colors } = useTheme()
-  return (
-    <Box
-      background={{ color: color ? colors[color] as string : 'light-2' }}
-      {...props}
-    >
-      {brand.pictures?.length
-        ? (
-          <Box
-            width="100%"
-            height="100%"
-            overflow="hidden"
-            align="center"
-            justify="center"
+}) => (
+  <Box
+    fill
+    background={{ color: color || 'gray' }}
+    {...props}
+  >
+    {brand.pictures?.length
+      ? (
+        <Box
+          width="100%"
+          height="100%"
+          overflow="hidden"
+          align="center"
+          justify="center"
+        >
+          <motion.div
+            animate={{
+              transform: `scale(${zoom ? '1.1' : '1'})`
+            }}
+            transition={{
+              duration: 0.3,
+              ease: 'easeOut'
+            }}
+            style={{
+              height: '100%',
+              width: '100%',
+              transform: 'scale(1)'
+            }}
           >
-            <motion.div
-              animate={{
-                transform: `scale(${zoom ? '1.1' : '1'})`
-              }}
-              transition={{
-                duration: 0.3,
-                ease: 'easeOut'
-              }}
-              style={{
-                height: '100%',
-                width: '100%'
-              }}
-            >
-              <Image
-                width="100%"
-                height="100%"
-                fit="cover"
-                src={brand.pictures[0].url}
-              />
-            </motion.div>
+            <Image
+              width="100%"
+              height="100%"
+              fit="cover"
+              src={brand.pictures[0].url}
+            />
+          </motion.div>
+        </Box>
+      )
+      : (
+        <PlaceholderBox
+          align="center"
+          justify="center"
+          fill
+        >
+          <Box width="xsmall" height="xsmall">
+            {/* Criterion icon or Logo */}
+            {brand.criteria.length
+              ? <CriterionIcon criterion={brand.criteria[0]} />
+              : <Logo height="100%" fill="white" />}
           </Box>
-        )
-        : (
-          <PlaceholderBox
-            align="center"
-            justify="center"
-            fill
-          >
-            <Box width="xsmall" height="xsmall">
-              {/* Criterion icon or Logo */}
-              {brand.criteria.length
-                ? <CriterionIcon criterion={brand.criteria[0]} />
-                : <Logo height="100%" fill="white" />}
-            </Box>
-          </PlaceholderBox>
-        )}
-    </Box>
-  )
-}
+        </PlaceholderBox>
+      )}
+  </Box>
+)
 
 export default BrandImage

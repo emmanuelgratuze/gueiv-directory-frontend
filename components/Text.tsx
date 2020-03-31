@@ -12,6 +12,8 @@ export type StyledTextProps = {
 }
 
 export const textStyles = css`
+  transition: color 0.2s ease-out;
+
   /* Sub and sup */
   ${(props: StyledTextProps) => props.sup
     && css`

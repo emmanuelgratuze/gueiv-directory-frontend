@@ -2,8 +2,8 @@ import React from 'react'
 import { Box, BoxProps } from 'grommet'
 import Link from 'next/link'
 
-import Heading from '~/components/generic/Heading'
-import Paragraph from '~/components/generic/Paragraph'
+import Heading from '~/components/Heading'
+import Paragraph from '~/components/Paragraph'
 
 import RelativeHeightBox from '~/components/RelativeHeightBox'
 
@@ -70,8 +70,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                       size="small"
                       color={color ? oppositeColors[color] : undefined}
                     >
-                      {brand.city}
-                      &thinsp;
+                      {brand.city && `${brand.city} `}
                       {brand.country?.name}
                     </Heading>
                   )}
@@ -92,6 +91,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                   <Box direction="row">
                     {brand.criteria.map((criterion) => (
                       <Box
+                        key={criterion.id}
                         width="1.5rem"
                         height="1.5rem"
                         margin={{ right: 'small', bottom: 'small' }}

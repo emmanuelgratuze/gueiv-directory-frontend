@@ -1,11 +1,7 @@
 import { Record } from 'immutable'
+import contents from './contents'
 
-export interface AppContents {
-  general: {
-    title: string;
-    description: string;
-  };
-}
+export type AppContents = typeof contents
 
 export type ImmutableAppContents = Record<AppContents>
 

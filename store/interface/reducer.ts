@@ -5,17 +5,13 @@ import { fromJS } from 'immutable'
 import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 
-import brands from '~/store/entities/brands/reducer'
-import criteria from '~/store/entities/criteria/reducer'
-import interfaceReducer from '~/store/interface/reducer'
-
 import { BasicAction } from '~/store/types'
-import { SET_CONFIG } from './types'
+import { SET_BRANDS_COLORS } from './types'
 
 
-function appReducer(state = fromJS({}), action: BasicAction): Reducer {
+function brandsColors(state = fromJS(null), action: BasicAction): Reducer {
   switch (action.type) {
-    case SET_CONFIG:
+    case SET_BRANDS_COLORS:
       return fromJS(action.payload)
     default:
       return state
@@ -26,10 +22,5 @@ function appReducer(state = fromJS({}), action: BasicAction): Reducer {
  * Creates the main reducer with the dynamically injected ones
  */
 export default combineReducers({
-  app: appReducer,
-  entities: combineReducers({
-    brands,
-    criteria
-  }),
-  interface: interfaceReducer
+  brandsColors
 })

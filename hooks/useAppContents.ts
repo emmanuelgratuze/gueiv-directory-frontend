@@ -1,8 +1,8 @@
-import { useSelector } from 'react-redux'
 import { selectAppContents } from '~/store/app/selectors'
-import { ImmutableAppContents } from '~/contents/types'
+import { AppContents } from '~/contents/types'
+import useSelector from '~/hooks/useSelector'
 
-const useAppContents = (): ImmutableAppContents => (
+const useAppContents = (): AppContents | undefined => (
   useSelector(selectAppContents)
 )
 

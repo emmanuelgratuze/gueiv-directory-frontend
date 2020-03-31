@@ -11,9 +11,9 @@ import { ImmutableAppState } from '~/store/app/types'
 function useImmutableSelector<TSelected = unknown>(
   selector: (state: ImmutableAppState) => any, // eslint-disable-line
   equalityFn?: (left: TSelected, right: TSelected) => boolean
-): TSelected | null {
-  const value = useRef<TSelected | null>(null)
-  const jsValue = useRef<TSelected | null>(null)
+): TSelected | undefined {
+  const value = useRef<TSelected>()
+  const jsValue = useRef<TSelected>()
   const previousValue = value.current
 
   value.current = useSelector(selector, equalityFn)

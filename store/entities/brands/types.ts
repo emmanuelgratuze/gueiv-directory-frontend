@@ -32,6 +32,9 @@ export interface Brand {
     id: string;
     name: string;
   }[];
+  facebook?: string;
+  instagram?: string;
+  web?: string;
 }
 
 export type ImmutableBrand = Record<Omit<Brand, 'pictures'>> & Record<{

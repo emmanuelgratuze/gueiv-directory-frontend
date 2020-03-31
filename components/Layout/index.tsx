@@ -2,8 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import { Grommet } from 'grommet'
 
-import Header from '~/components/Header'
-import Footer from '~/components/Footer'
 import theme from '~/themes/theme'
 
 import { GlobalStyles } from './styled'
@@ -22,15 +20,13 @@ const Layout: React.FC = ({ children }) => (
 
       {/* Fonts */}
       <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Lato:400&display=swap" rel="stylesheet" />
     </Head>
 
     <GlobalStyles />
 
     <Grommet theme={theme}>
-      <Header />
       {children}
-      <Footer />
     </Grommet>
   </>
 )

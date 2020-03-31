@@ -5,6 +5,7 @@ type UseThemeType = {
   theme: ThemeType;
   colors: ThemeType['global']['colors'];
   oppositeColors: ThemeType['global']['oppositeColors'];
+  brandColors: ThemeType['global']['brandColors'];
 }
 
 export default (): UseThemeType => {
@@ -13,6 +14,7 @@ export default (): UseThemeType => {
   return {
     theme,
     colors: theme.global.colors,
+    brandColors: theme.global.brandColors,
     oppositeColors: theme.global.oppositeColors
   }
 }

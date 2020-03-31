@@ -4,6 +4,7 @@ import { AppContents } from '~/contents/types'
 import { BasicAction } from '../types'
 import { Criterion } from '../entities/criteria/types'
 import { Brand } from '../entities/brands/types'
+import { InterfaceStateTree } from '../interface/types'
 
 export const SET_CONFIG = 'app/SET_CONFIG'
 export const ADD_ENTITIES = 'app/ADD_ENTITIES'
@@ -37,6 +38,7 @@ export interface AppState {
     config: AppConfig;
     contents: AppContents;
   };
+  interface: InterfaceStateTree;
 }
 
 export interface SetConfigAction {

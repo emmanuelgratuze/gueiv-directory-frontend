@@ -2,11 +2,10 @@ import React, { useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
 import { normalize } from 'normalizr'
 import { useDispatch } from 'react-redux'
+import { Box } from 'grommet'
 
 import Page from '~/components/Page'
-import BrandPreview from '~/components/BrandPreview/BrandPreview'
-import ResponsiveGrid from '~/components/ResponsiveGrid'
-import { ThemeColorsType, BrandColorsKeys } from '~/themes/theme'
+import { BrandColorsKeys } from '~/themes/theme'
 import { fetchBrands } from '~/api/brands'
 import useSelector from '~/hooks/useSelector'
 import * as schemas from '~/store/schemas'
@@ -15,7 +14,7 @@ import { Brand } from '~/store/entities/brands/types'
 import { setBrandsColors } from '~/store/interface/actions'
 import useTheme from '~/hooks/useTheme'
 
-const Home: NextPage = () => {
+const Criteria: NextPage = () => {
   const { theme: { global: { brandColorsNames } } } = useTheme()
   const brands = useSelector(selectBrands) as Brand[]
   const dispatch = useDispatch()
@@ -32,22 +31,8 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Page title="Home">
-        <ResponsiveGrid
-          columns={{
-            small: ['full'],
-            medium: ['50%'],
-            xlarge: ['33.33%']
-          }}
-        >
-          {!brands || brands.map((brand, index) => (
-            <BrandPreview
-              key={brand.id}
-              brand={brand}
-              color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
-            />
-          ))}
-        </ResponsiveGrid>
+      <Page title="Nuestros criterios">
+        <Box height="medium" />
       </Page>
     </>
   )
@@ -65,4 +50,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Home
+export default Criteria

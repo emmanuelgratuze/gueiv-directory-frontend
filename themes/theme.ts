@@ -38,11 +38,17 @@ const statusColors: { [key: string]: string } = {
   ok: '#00C781'
 }
 
-const themeColors = {
+const brandColors = {
   yellow: '#EFB82A',
   turquoise: '#A9D9DE',
   blue: '#1488CA',
   pink: '#EA7E83',
+}
+
+export const brandColorsNames = Object.keys(brandColors) as [keyof (typeof brandColors)]
+
+const themeColors = {
+  ...brandColors,
   gray: '#3D3D4F',
   black: '#000000',
   white: '#FFFFFF'
@@ -59,7 +65,8 @@ const oppositeColors = {
 }
 
 const colors: { [key: string]: string } = {
-  ...themeColors
+  ...themeColors,
+  placeholder: darkColors[4]
 }
 
 const colorArray = (array: Array<string>, prefix: string): void => {
@@ -79,6 +86,8 @@ Object.keys(statusColors).forEach(color => {
 const theme = deepMerge(base, {
   global: {
     colors,
+    brandColorsNames,
+    brandColors,
     oppositeColors,
     breakpoints: {
       xxsmall: {
@@ -235,6 +244,12 @@ const theme = deepMerge(base, {
       border: {
         color: 'transparent'
       }
+    },
+    hover: {
+      color: {
+        dark: 'blue',
+        light: 'blue'
+      }
     }
   },
   box: {
@@ -251,10 +266,10 @@ const theme = deepMerge(base, {
   },
   paragraph: {
     small: fontSizing(0.7),
-    medium: fontSizing(1),
+    medium: fontSizing(0.9),
     large: fontSizing(1),
-    xlarge: fontSizing(1),
-    xxlarge: fontSizing(1),
+    xlarge: fontSizing(1.2),
+    xxlarge: fontSizing(1.3),
     extend: css`
       letter-spacing: 0.1em;
     `
@@ -294,8 +309,8 @@ const theme = deepMerge(base, {
   heading: {
     level: {
       1: {
-        small: fontSizing(2.5),
-        medium: fontSizing(3.5),
+        small: fontSizing(2),
+        medium: fontSizing(3),
         large: fontSizing(3.5),
         xlarge: fontSizing(3.5)
       },
@@ -332,13 +347,33 @@ const theme = deepMerge(base, {
         large: fontSizing(-1),
         xlarge: fontSizing(-1)
       }
-    },
-    extend: css``
+    }
   },
   textInput: {
     extend: css`
       padding-left: 0;
+      font-weight: 300;
+      font-size: 0.9em;
+      font-family: 'Quicksand', sans-serif;
+      font-style: initial;
+      text-align: center;
       border-width: 0 !important;
+      border-bottom: 1px solid ${lightColors[4]} !important;
+      border-radius: 0;
+
+      &:focus {
+        color: ${darkColors[0]};
+        border-bottom: 1px solid ${darkColors[0]} !important;
+      }
+
+      ::placeholder,
+      ::-webkit-input-placeholder,
+      :-ms-input-placeholder {
+        color: ${lightColors[4]};
+        font-weight: bold;
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+      }
     `
   },
   textArea: {
@@ -370,18 +405,19 @@ const theme = deepMerge(base, {
   button: {
     border: {
       width: 0,
-      radius: 0
+      radius: '2em'
     },
     primary: {
       color: {
-        dark: 'brand',
-        light: 'brand'
+        dark: 'gray',
+        light: 'gray'
       }
-    },
-    padding: {
-      vertical: '0.8rem',
-      horizontal: '2.8rem'
     }
+  },
+
+  // Custom
+  header: {
+    height: '4rem'
   }
 })
 
@@ -391,5 +427,6 @@ export type ColorsType = ThemeType['global']['colors']
 export type ThemeColorsType = typeof themeColors
 export type BreakpointsKeysType = keyof BreakpointsType
 export type BreakpointsValuesType = ValueOf<BreakpointsType>
+export type BrandColorsKeys = keyof ThemeType['global']['brandColors']
 
 export default theme

@@ -21,6 +21,8 @@ const Layout: React.FC = ({ children }) => (
       {/* Fonts */}
       <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css?family=Lato:400&display=swap" rel="stylesheet" />
+
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     </Head>
 
     <GlobalStyles />

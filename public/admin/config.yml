@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: emmanuelgratuze/gueiv-directory-frontend
+  branch: content
 media_folder: assets/uploads
 public_folder: assets
 collections:

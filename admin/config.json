@@ -47,7 +47,7 @@
             },
             {
               "label": "Email contact",
-              "name": "instagram",
+              "name": "email",
               "widget": "string"
             }
           ]

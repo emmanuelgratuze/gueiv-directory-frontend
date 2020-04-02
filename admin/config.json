@@ -23,7 +23,9 @@
         {
           "label": "General",
           "name": "general",
-          "file": "contents/configuration/general.yml",
+          "extension": "json",
+          "format": "json",
+          "file": "contents/configuration/general.json",
           "fields": [
             {
               "label": "Title",

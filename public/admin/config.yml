@@ -12,6 +12,13 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Criteria", name: "criteria", widget: "relation", collection: "brand", displayFields: "title"}
+  - label: "Criterion"
+    name: "criterion"
+    folder: "contents/criteria"
+    extension: json
+    format: json
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}

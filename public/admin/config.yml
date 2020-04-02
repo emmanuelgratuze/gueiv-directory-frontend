@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: emmanuelgratuze/gueiv-directory-frontend
-  branch: content
+  branch: contents
 media_folder: assets/uploads
 public_folder: assets
 collections:
@@ -14,7 +14,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Criteria", name: "criteria", widget: "relation", collection: "brand", displayFields: "title"}
+      - {label: "Criteria", name: "criteria", widget: "relation", collection: "criterion", displayFields: "title", multiple: true}
   - label: "Criterion"
     name: "criterion"
     folder: "contents/criteria"

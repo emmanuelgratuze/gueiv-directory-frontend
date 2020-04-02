@@ -39,7 +39,6 @@ module.exports = withPlugins(
           'webpack-glsl-loader'
         ]
       })
-
       config.module.rules.slice()
       config.module.rules.unshift({
         test: /\.svg$/,
@@ -60,19 +59,16 @@ module.exports = withPlugins(
           }
         }]
       })
-
       config.module.rules.unshift({
         test: /\.css$/,
         use: ['raw-loader']
       })
-
       config.plugins.push(
         new webpack.EnvironmentPlugin({
           ...environmentVariables,
           ...clientEnvironmentVariables
         })
       )
-
       return config
     }
   }

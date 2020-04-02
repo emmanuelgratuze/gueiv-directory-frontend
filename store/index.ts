@@ -10,9 +10,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import localStoragePersister, { getStateFromLocalStorage } from '~/utils/redux/storeLocalStoragePersister'
 
 // Middlewares
-import { apiMiddleware } from './middlewares/reduxApiMiddleware'
 import addEntitiesMiddleware from './middlewares/addEntitiesMiddleware'
-import apiRequestsMiddleware from './middlewares/apiRequests'
 
 import rootReducer from './app/reducer'
 import initialStateDefault from './initialState'
@@ -43,13 +41,7 @@ function configureStore(initialState = initialStateDefault): Store {
     preloadedStates,
 
     bindMiddleware([
-      // Add headers (auth) and prepend API endpoint to every api calls
-      apiRequestsMiddleware,
-
-      // Api middle (make calls on store actions)
-      apiMiddleware,
-
-      // Clean API response (prop keys to camelcase)
+      // Add entities (prop keys to camelcase)
       addEntitiesMiddleware,
 
       // Saga

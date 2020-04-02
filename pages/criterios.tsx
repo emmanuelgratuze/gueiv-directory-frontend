@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
-import { normalize } from 'normalizr'
+// import { normalize } from 'normalizr'
 import { useDispatch } from 'react-redux'
 import { Box } from 'grommet'
 
 import Page from '~/components/Page'
 import { BrandColorsKeys } from '~/themes/theme'
-import { fetchBrands } from '~/api/brands'
 import useSelector from '~/hooks/useSelector'
-import * as schemas from '~/store/schemas'
+// import * as schemas from '~/store/schemas'
 import { selectBrands } from '~/store/entities/brands/selectors'
 import { Brand } from '~/store/entities/brands/types'
 import { setBrandsColors } from '~/store/interface/actions'
@@ -39,15 +38,15 @@ const Criteria: NextPage = () => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await fetchBrands()
-  const normalizedData = normalize(data, [schemas.brand])
-  return {
-    props: {
-      entities: [
-        normalizedData.entities
-      ]
-    }
-  }
+  // const data = await fetchBrands()
+  // const normalizedData = normalize(data, [schemas.brand])
+  // return {
+  //   props: {
+  //     entities: [
+  //       // normalizedData.entities
+  //     ]
+  //   }
+  // }
 }
 
 export default Criteria

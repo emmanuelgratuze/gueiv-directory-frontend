@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
-import { normalize } from 'normalizr'
-import { kebabCase } from 'lodash'
+// import { normalize } from 'normalizr'
+// import { kebabCase } from 'lodash'
 import { Box } from 'grommet'
 
 import Page from '~/components/Page'
@@ -10,9 +10,8 @@ import Heading from '~/components/Heading'
 import Button from '~/components/Button'
 import BrandImageCarousel from '~/components/BrandImageCarousel'
 
-import { fetchBrands } from '~/api/brands'
 import { Brand } from '~/store/entities/brands/types'
-import * as schemas from '~/store/schemas'
+// import * as schemas from '~/store/schemas'
 import { selectBrandBySlug } from '~/store/entities/brands/selectors'
 import useSelector from '~/hooks/useSelector'
 import useResponsive from '~/hooks/useResponsive'
@@ -134,28 +133,31 @@ const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
   )
 }
 
+// eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const data = await fetchBrands()
-  const normalizedData = normalize(data, [schemas.brand])
+  // const data = await fetchBrands()
+  // const normalizedData = normalize(data, [schemas.brand])
 
   return {
     props: {
       slug: params?.slug,
       color: params?.color || null,
       entities: [
-        normalizedData.entities
+        // normalizedData.entities
       ]
     }
   }
 }
 
+// eslint-disable-next-line
 export const getStaticPaths: GetStaticPaths = async () => {
-  const brands: Brand[] = await fetchBrands()
+  // const brands: Brand[] = await fetchBrands()
 
   return {
-    paths: brands.map((brand) => ({
-      params: { slug: kebabCase(brand.name) }
-    })),
+    paths: [],
+    // paths: brands.map((brand) => ({
+    //   params: { slug: kebabCase(brand.name) }
+    // })),
     fallback: false
   }
 }

@@ -3,7 +3,7 @@ import { Store } from 'redux'
 
 import configureStore from '~/store/index'
 
-import { addEntities } from '~/store/app/actions'
+import { addEntities } from '~/store/data/actions'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const useStorePreloadedWithStaticProps = (pageProps: any): Store => {

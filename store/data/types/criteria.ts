@@ -1,5 +1,5 @@
 // import { ImmutableMap } from '~/types/immutable'
-import { Record, Map } from 'immutable'
+import { Record } from 'immutable'
 
 export interface CriterionIcon {
   id: string;
@@ -20,11 +20,6 @@ export interface Criterion {
   icon?: CriterionIcon;
 }
 
-// export type ImmutableCriterion = Record<Omit<Criterion, 'icon'>> & Record<{
-//   icon?: Record<CriterionIcon>;
-// }>
 export type ImmutableCriterion = Record<Criterion>
-
-export type CriteriaStateTree = Map<string, ImmutableCriterion>
 
 export default {}

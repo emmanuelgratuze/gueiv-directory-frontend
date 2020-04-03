@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 
-import { CriteriaStateTree } from './types'
-import { ImmutableAppState } from '~/store/app/types'
+import { CriteriaStateTree } from '../criteria/types'
+import { ImmutableAppState } from '~/store/data/types'
 
 export const selectCriteriaTree = (state: ImmutableAppState): CriteriaStateTree => (
   state.getIn(['entities', 'criteria'])

@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Head from 'next/head'
-import config from 'admin/config.json'
+import config from 'cms/config.json'
 import { Widget as IdWidget } from '@ncwidgets/id'
 
 if (typeof window !== 'undefined') {

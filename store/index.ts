@@ -4,7 +4,6 @@ import {
   Store,
   StoreEnhancer
 } from 'redux'
-import createSagaMiddleware from 'redux-saga'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import localStoragePersister, { getStateFromLocalStorage } from '~/utils/redux/storeLocalStoragePersister'
@@ -14,8 +13,6 @@ import addEntitiesMiddleware from './middlewares/addEntitiesMiddleware'
 
 import rootReducer from './app/reducer'
 import initialStateDefault from './initialState'
-import { rootSaga } from './app/saga'
-import { WithSagaTaskStore } from './types'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const bindMiddleware = (middlewares: any[]): StoreEnhancer<{ dispatch: unknown }, {}> => {
@@ -31,27 +28,20 @@ const bindMiddleware = (middlewares: any[]): StoreEnhancer<{ dispatch: unknown }
 const localStorageState = getStateFromLocalStorage()
 
 function configureStore(initialState = initialStateDefault): Store {
-  const sagaMiddleware = createSagaMiddleware()
-
   const preloadedStates = initialState.merge(localStorageState)
 
-  const store: WithSagaTaskStore = createStore(
+  const store = createStore(
     rootReducer,
 
     preloadedStates,
 
     bindMiddleware([
       // Add entities (prop keys to camelcase)
-      addEntitiesMiddleware,
-
-      // Saga
-      sagaMiddleware
+      addEntitiesMiddleware
     ])
   )
 
   localStoragePersister(['interface'])(store)
-
-  store.sagaTask = sagaMiddleware.run(rootSaga)
 
   return store
 }

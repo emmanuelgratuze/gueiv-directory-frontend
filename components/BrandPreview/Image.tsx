@@ -7,7 +7,7 @@ import {
 } from 'grommet'
 import { motion } from 'framer-motion'
 
-import { Brand } from '~/store/entities/brands/types'
+import { Brand } from '~/store/data/types/brands'
 import { ThemeColorsType } from '~/themes/theme'
 import CriterionIcon from '../CriterionIcon'
 

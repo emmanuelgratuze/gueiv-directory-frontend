@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import useTheme from '~/hooks/useTheme'
 import useSelector from '~/hooks/useSelector'
 import { selectBrandsColors } from '~/store/interface/selectors'
-import { Brand } from '~/store/entities/brands/types'
+import { Brand } from '~/store/data/types/brands'
 import { BrandColorsKeys } from '~/themes/theme'
 
 const useBrandColor = (brand: Brand): [string, string] => {

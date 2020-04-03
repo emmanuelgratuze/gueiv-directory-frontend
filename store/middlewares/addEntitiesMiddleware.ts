@@ -1,6 +1,6 @@
 import { normalize } from 'normalizr'
 import { Dispatch } from 'redux'
-import { ADD_ENTITIES, AddEntitiesAction } from '~/store/app/types'
+import { ADD_ENTITIES, AddEntitiesAction } from '~/store/data/types.d'
 
 /* Reponse middleware:
 - Clean api keys (to camelcase)

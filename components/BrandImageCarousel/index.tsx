@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, BoxProps } from 'grommet'
 
-import { Brand } from '~/store/entities/brands/types'
+import { Brand } from '~/store/data/types/brands'
 import BrandImage from '../BrandPreview/Image'
 
 type BrandImageCarouselProps = {

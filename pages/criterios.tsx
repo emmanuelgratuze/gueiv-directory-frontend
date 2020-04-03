@@ -8,8 +8,8 @@ import Page from '~/components/Page'
 import { BrandColorsKeys } from '~/themes/theme'
 import useSelector from '~/hooks/useSelector'
 // import * as schemas from '~/store/schemas'
-import { selectBrands } from '~/store/entities/brands/selectors'
-import { Brand } from '~/store/entities/brands/types'
+import { selectBrands } from '~/store/data/selectors/brands'
+import { Brand } from '~/store/data/types/brands'
 import { setBrandsColors } from '~/store/interface/actions'
 import useTheme from '~/hooks/useTheme'
 
@@ -37,16 +37,17 @@ const Criteria: NextPage = () => {
   )
 }
 
+// eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async () => {
   // const data = await fetchBrands()
   // const normalizedData = normalize(data, [schemas.brand])
-  // return {
-  //   props: {
-  //     entities: [
-  //       // normalizedData.entities
-  //     ]
-  //   }
-  // }
+  return {
+    props: {
+      entities: [
+        // normalizedData.entities
+      ]
+    }
+  }
 }
 
 export default Criteria

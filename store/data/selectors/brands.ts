@@ -4,12 +4,12 @@ import { denormalize } from 'normalizr'
 import { List } from 'immutable'
 import { memoize } from 'lodash'
 
-import * as schemas from '~/store/schemas'
-import { ImmutableBrand, BrandsStateTree } from './types'
+import * as schemas from '~/store/data/schemas'
+import { ImmutableBrand, BrandsStateTree } from '../types/brands'
 import { ImmutableAppState } from '~/store/app/types'
 import { selectEntities } from '~/store/app/selectors'
 
-export const selectBrandsTree = (state: ImmutableAppState): BrandsStateTree => (
+export const selectBrandsTree = (state: ImmutableAppState) => (
   state.getIn(['entities', 'brands'])
 )
 

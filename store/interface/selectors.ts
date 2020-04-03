@@ -1,9 +1,9 @@
 import { createSelector } from 'reselect'
+import { ImmutableAppState } from 'store/app/types'
 
-import { InterfaceStateTree } from './types'
-import { ImmutableAppState } from '~/store/app/types'
+import { InterfaceTree } from './types'
 
-export const selectInterfaceTree = (state: ImmutableAppState): InterfaceStateTree => (
+export const selectInterfaceTree = (state: ImmutableAppState): InterfaceTree => (
   state.getIn(['interface'])
 )
 

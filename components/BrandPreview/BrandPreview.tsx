@@ -7,7 +7,7 @@ import Paragraph from '~/components/Paragraph'
 
 import RelativeHeightBox from '~/components/RelativeHeightBox'
 
-import { Brand } from '~/store/entities/brands/types'
+import { Brand } from '~/store/data/types/brands'
 import { ThemeColorsType } from '~/themes/theme'
 import useTheme from '~/hooks/useTheme'
 import useHover from '~/hooks/useHover'

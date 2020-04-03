@@ -1,10 +1,8 @@
-import {
-  SET_BRANDS_COLORS,
-  SetBrandsColors
-} from './types'
+import { SET_BRANDS_COLORS } from './actionsTypes'
 import { BrandColorsKeys } from '~/themes/theme'
+import { BasicAction } from '../types'
 
-export const setBrandsColors = (brandsColors: { [key: string]: BrandColorsKeys }): SetBrandsColors => ({
+export const setBrandsColors = (brandsColors: { [key: string]: BrandColorsKeys }): BasicAction => ({
   type: SET_BRANDS_COLORS,
   payload: brandsColors
 })

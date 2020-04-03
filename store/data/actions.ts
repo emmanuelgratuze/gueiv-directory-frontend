@@ -3,18 +3,19 @@ import {
   ClearEntitiesAction,
   ADD_ENTITIES,
   CLEAR_ENTITIES,
-  AppEntities
-} from './types'
+  Entities,
+  EntitiesNames
+} from './types.d'
 
 
-export const addEntities = (entities: AppEntities): AddEntitiesAction => ({
+export const addEntities = (entities: unknown): AddEntitiesAction => ({
   type: ADD_ENTITIES,
   payload: {
     entities
   }
 })
 
-export const clearEntities = (entitiesNames: keyof AppEntities): ClearEntitiesAction => ({
+export const clearEntities = (entitiesNames: string[]): ClearEntitiesAction => ({
   type: CLEAR_ENTITIES,
   payload: {
     entitiesNames

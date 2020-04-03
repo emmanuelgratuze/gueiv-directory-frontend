@@ -6,7 +6,7 @@ import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 
 import { BasicAction } from '~/store/types'
-import { SET_BRANDS_COLORS } from './types'
+import { SET_BRANDS_COLORS } from './actionsTypes'
 
 
 function brandsColors(state = fromJS(null), action: BasicAction): Reducer {

@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
-import { normalize } from 'normalizr'
 import { useDispatch } from 'react-redux'
-import fs from 'fs'
 
 import Page from 'components/Page'
 import BrandPreview from 'components/BrandPreview/BrandPreview'
@@ -14,6 +12,7 @@ import { selectBrands } from 'store/data/selectors/brands'
 import { Brand } from 'types/data/brand'
 import { setBrandsColors } from 'store/interface/actions'
 import useTheme from 'hooks/useTheme'
+import { getCollectionData, getSingleCollectionData } from 'cms/api'
 // import { getCollectionData } from 'cms/api'
 
 
@@ -56,24 +55,20 @@ const Home: NextPage = () => {
 }
 
 
-// (entities:  ) => {
-//   const newEntities = entities
-//   Object.keys(brands).forEach((key) => {
-//     newEntities[key].slug = kebabCase(entities[key].name)
-//   })
-//   return newEntities
-// )
-// )
-
-// eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async () => {
-  
+  const brands = await getCollectionData('brands')
+  const criteria = await getCollectionData('criteria')
+  const configuration = await getSingleCollectionData('configuration')
+  const countries = await getCollectionData('countries')
 
-  // const normalizedData = normalize(data, [schemas.brand])
   return {
     props: {
-      entities: [
-        // normalizedData.entities
+      data: [
+        { data: brands, type: ['brand'] },
+        { data: criteria, type: ['criterion'] },
+        { data: configuration, type: 'configuration' },
+        { data: countries, type: ['country'] },
+        { data: countries, type: ['productType'] }
       ]
     }
   }

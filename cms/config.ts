@@ -55,14 +55,6 @@ export default {
               name: 'email',
               widget: 'string',
               required: false
-            },
-            {
-              label: 'Configuration id',
-              hint: 'Don\'t edit this field',
-              name: 'id',
-              widget: 'string',
-              required: false,
-              pattern: ['configuration', 'This field shouldn\'t change']
             }
           ]
         }

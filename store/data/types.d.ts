@@ -1,6 +1,6 @@
 import { SchemaObject } from 'normalizr'
 import { BasicAction } from '../types'
-import schemas from './schemas'
+import * as schemas from './schemas'
 
 export const ADD_DATA = 'app/ADD_DATA'
 export const CLEAR_DATA = 'app/CLEAR_DATA'

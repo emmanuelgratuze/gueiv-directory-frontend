@@ -1,16 +1,16 @@
 
 import { createSelector } from 'reselect'
 import { denormalize } from 'normalizr'
-import { List, Map } from 'immutable'
+import { List, Map, fromJS } from 'immutable'
 import { memoize } from 'lodash'
 
+import { ImmutableAppState } from 'store/app/types'
 import { selectData } from 'store/data/selectors'
 import * as schemas from 'store/data/schemas'
-import { ImmutableBrand } from '../../../types/data/brand'
-import { ImmutableAppState } from 'store/app/types'
+import { ImmutableBrand } from 'types/data/brand'
 
 export const selectBrandsTree = (state: ImmutableAppState): Map<string, ImmutableBrand> => (
-  state.getIn(['data', 'brands'])
+  state.getIn(['data', 'brands']) || fromJS({})
 )
 
 export const selectBrands = createSelector(

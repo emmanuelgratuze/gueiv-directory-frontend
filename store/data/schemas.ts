@@ -5,11 +5,7 @@ export const brand = new schema.Entity('brands', {
   criteria: [criterion]
 })
 export const configuration = new schema.Entity('configuration', {})
+export const country = new schema.Entity('countries', {})
+export const productType = new schema.Entity('productTypes', {})
 
-const schemas = {
-  criterion,
-  brand,
-  configuration
-}
-
-export default schemas
+export default {}

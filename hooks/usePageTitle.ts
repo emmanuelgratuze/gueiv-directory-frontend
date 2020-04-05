@@ -1,10 +1,8 @@
-
-// import useAppContents from './useAppContents'
+import useConfiguration from './useConfiguration'
 
 const usePageTitle = (title?: string | null | undefined): string => {
-  // const contents = useAppContents()
-  // return `${contents?.general.title}${title ? ` | ${title}` : ''}`
-
-  return ''}
+  const configuration = useConfiguration()
+  return `${title ? `${title} | ` : ''}${configuration?.title || ''}`
+}
 
 export default usePageTitle

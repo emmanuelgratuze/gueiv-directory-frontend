@@ -7,6 +7,7 @@ import Footer from 'components/Footer'
 
 import usePageTitle from 'hooks/usePageTitle'
 import useTheme from 'hooks/useTheme'
+import useConfiguration from 'hooks/useConfiguration'
 
 type PageType = {
   title: string;
@@ -24,14 +25,14 @@ const Page: React.FC<BoxProps & PageType> = ({
   ...props
 }) => {
   const fullTitle = usePageTitle(title)
-  // const contents = useAppContents()
+  const configuration = useConfiguration()
   const { theme: { header } } = useTheme()
 
   return (
     <Box>
       <Head>
-        {/* <title>{fullTitle}</title>
-        <meta name="description" content={description || contents?.general.description} /> */}
+        <title>{fullTitle}</title>
+        <meta name="description" content={description || configuration?.description} />
 
         {/* <meta property="og:description" content={description || contents.getIn(['general', 'description'])} /> */}
         {/* <meta property="twitter:description" content={description || contents.getIn(['general', 'description'])} /> */}
@@ -41,7 +42,7 @@ const Page: React.FC<BoxProps & PageType> = ({
         {/* <meta property="twitter:image" content={socialBanner} /> */}
       </Head>
 
-      {/* <Box
+      <Box
         overflow={!withScroll ? 'hidden' : undefined}
         height={!withScroll ? '100vh' : '100%'}
         width="100%"
@@ -57,7 +58,7 @@ const Page: React.FC<BoxProps & PageType> = ({
         {withFooter && (
           <Footer />
         )}
-      </Box> */}
+      </Box>
     </Box>
   )
 }

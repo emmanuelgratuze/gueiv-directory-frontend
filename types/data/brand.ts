@@ -5,9 +5,9 @@ import { Criterion } from './criterion'
 export interface Brand {
   id: string;
   name: string;
-  slug?: string;
+  slug: string;
   description?: string;
-  pictures?: string[];
+  pictures?: string;
   criteria: Criterion[];
   city?: string;
   country?: {

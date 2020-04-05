@@ -9,6 +9,6 @@ export interface Configuration {
   email: string;
 }
 
-export type ImmutableBrand = Record<Configuration>
+export type ImmutableConfiguration = Record<Configuration>
 
 export {}

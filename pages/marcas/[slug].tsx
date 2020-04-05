@@ -10,15 +10,15 @@ import Heading from 'components/Heading'
 import Button from 'components/Button'
 import BrandImageCarousel from 'components/BrandImageCarousel'
 
-import { Brand } from 'store/entities/brands/types'
-// import * as schemas from 'store/schemas'
-import { selectBrandBySlug } from 'store/entities/brands/selectors'
+import { selectBrandBySlug } from 'store/data/selectors/brands'
 import useSelector from 'hooks/useSelector'
 import useResponsive from 'hooks/useResponsive'
 import useBrandColor from 'hooks/useBrandColor'
 import Paragraph from 'components/Paragraph'
 import CriterionIcon from 'components/CriterionIcon'
 import StandardLink from 'components/StandardLink'
+import { Brand } from 'types/data/brand'
+import { getCollectionData, getSingleCollectionData } from 'cms/api'
 
 interface BrandPageType {
   slug: string;
@@ -133,17 +133,22 @@ const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
   )
 }
 
-// eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // const data = await fetchBrands()
-  // const normalizedData = normalize(data, [schemas.brand])
+  const brands = await getCollectionData('brands')
+  const criteria = await getCollectionData('criteria')
+  const configuration = await getSingleCollectionData('configuration')
+  const countries = await getCollectionData('countries')
 
   return {
     props: {
       slug: params?.slug,
       color: params?.color || null,
-      entities: [
-        // normalizedData.entities
+      data: [
+        { data: brands, type: ['brand'] },
+        { data: criteria, type: ['criterion'] },
+        { data: configuration, type: 'configuration' },
+        { data: countries, type: ['country'] },
+        { data: countries, type: ['productType'] }
       ]
     }
   }
@@ -151,13 +156,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 // eslint-disable-next-line
 export const getStaticPaths: GetStaticPaths = async () => {
-  // const brands: Brand[] = await fetchBrands()
+  const brands = await getCollectionData<Brand>('brands')
 
   return {
-    paths: [],
-    // paths: brands.map((brand) => ({
-    //   params: { slug: kebabCase(brand.name) }
-    // })),
+    paths: brands.map((brand) => ({
+      params: { slug: brand.slug }
+    })),
     fallback: false
   }
 }

@@ -9,7 +9,7 @@ import {
   CLEAR_DATA,
   ImmutableDataTree
 } from './types.d'
-import schemas from './schemas'
+import * as schemas from './schemas'
 
 const dataReducer = (
   state: ImmutableDataTree = fromJS({}),

@@ -9,6 +9,7 @@ import Container from 'components/Container'
 import Heading from 'components/Heading'
 import ResponsiveGrid from 'components/ResponsiveGrid'
 import useTheme from 'hooks/useTheme'
+import useConfiguration from 'hooks/useConfiguration'
 
 import StandardLink from './StandardLink'
 
@@ -17,14 +18,14 @@ const FooterHeading: React.FC = ({ ...props }) => (
 )
 
 const Footer: React.FC = () => {
-  const contents = {}
+  const configuration = useConfiguration()
   const { brandColors } = useTheme()
   return (
     <Box
       background={{ color: 'light-1' }}
       pad={{ vertical: 'large' }}
     >
-      {/* <Container>
+      <Container>
         <ResponsiveGrid
           columns={{
             small: ['full'],
@@ -41,13 +42,13 @@ const Footer: React.FC = () => {
             >
               ¿Tienes una marca sostenible y quieres estar en el directorio? Escríbenos a:
               <br />
-              <StandardLink href={`mailto:${contents?.contact.email}`}>
+              <StandardLink href={`mailto:${configuration?.email}`}>
                 <Text
                   color="pink"
                   weight="bold"
                   transform="initial"
                 >
-                  {contents?.contact.email}
+                  {configuration?.email}
                 </Text>
               </StandardLink>
             </Paragraph>
@@ -55,10 +56,10 @@ const Footer: React.FC = () => {
           <Box align="center" gap="small" margin={{ bottom: 'medium' }}>
             <FooterHeading>¡Sigue nuestros pasos!</FooterHeading>
             <Box direction="row" gap="medium">
-              <StandardLink href={contents?.social.instagramUrl} external>
+              <StandardLink href={configuration?.instagram} external>
                 <Instagram size="2rem" color={brandColors.blue} />
               </StandardLink>
-              <StandardLink href={contents?.social.facebookUrl} external>
+              <StandardLink href={configuration?.facebook} external>
                 <Facebook size="2rem" color={brandColors.blue} />
               </StandardLink>
             </Box>
@@ -73,7 +74,7 @@ const Footer: React.FC = () => {
             </Button>
           </Box>
         </ResponsiveGrid>
-      </Container> */}
+      </Container>
     </Box>
   )
 }

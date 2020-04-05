@@ -3,5 +3,6 @@
   "description": "Config with id ???d",
   "facebook": "http://facebook.com",
   "instagram": "http://instagram.com",
-  "email": ""
+  "email": "",
+  "id": "configuration"
 }

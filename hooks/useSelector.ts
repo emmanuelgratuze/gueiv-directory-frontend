@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { isImmutable, fromJS } from 'immutable'
-import { ImmutableAppState } from '~/store/app/types.d'
+import { ImmutableAppState } from 'store/app/types.d'
 
 /*
   useSelector

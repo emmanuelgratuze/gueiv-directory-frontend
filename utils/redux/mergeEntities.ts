@@ -1,5 +1,5 @@
 import { fromJS, Record } from 'immutable'
-// import { Record } from '~/types/immutable'
+// import { Record } from 'types/immutable'
 
 /*
   Merge entities
@@ -7,12 +7,15 @@ import { fromJS, Record } from 'immutable'
   Defaults to merge the more recently found entity onto the previous.
 */
 function mergeEntities(
-  entities: { [key: string]: unknown },
-  state: Record<{ [key: string]: Record<{[key: string]: unknown}> }>,
+  entities: { [key: string]: unknown } | undefined,
+  state: Record<{ [key: string]: Record<{[key: string]: unknown}> }> = fromJS({}),
   mergeStrategy = (entityA: Record<{ [key: string]: unknown }>, entityB: Record<{ [key: string]: unknown }>) => entityA.merge(entityB)
 ): Record<{ [key: string]: Record<{ [key: string]: unknown }> }> {
-  let newState = state
+  if (!entities) {
+    return state
+  }
 
+  let newState = state
   Object.keys(entities).forEach((entityId) => {
     const newValue = typeof newState.get(entityId) !== 'undefined'
       ? mergeStrategy(newState.get(entityId), fromJS(entities[entityId])) // If id exists in store

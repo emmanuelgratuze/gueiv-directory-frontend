@@ -4,14 +4,17 @@ import { normalize } from 'normalizr'
 import { useDispatch } from 'react-redux'
 import fs from 'fs'
 
-import Page from '~/components/Page'
-import BrandPreview from '~/components/BrandPreview/BrandPreview'
-import ResponsiveGrid from '~/components/ResponsiveGrid'
-import { ThemeColorsType, BrandColorsKeys } from '~/themes/theme'
-import useSelector from '~/hooks/useSelector'
-import { setBrandsColors } from '~/store/interface/actions'
-import useTheme from '~/hooks/useTheme'
-
+import Page from 'components/Page'
+import BrandPreview from 'components/BrandPreview/BrandPreview'
+import ResponsiveGrid from 'components/ResponsiveGrid'
+import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
+import useSelector from 'hooks/useSelector'
+import { setBrandsColors } from 'store/interface/actions'
+import { Data } from 'store/data/types.d'
+import useTheme from 'hooks/useTheme'
+import * as schemas from 'store/data/schemas'
+import { getCollectionData } from 'cms/api'
+import { Brand } from 'types/data/brand'
 
 const Home: NextPage = () => {
   return (
@@ -20,26 +23,18 @@ const Home: NextPage = () => {
   )
 }
 
-
-// (entities:  ) => {
-//   const newEntities = entities
-//   Object.keys(brands).forEach((key) => {
-//     newEntities[key].slug = kebabCase(entities[key].name)
-//   })
-//   return newEntities
-// )
-// )
-
 // eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async () => {
-  const data = fs.readdirSync(`${process.env.PWD}/contents/brands`).map((brand) => {
-    return brand
-  })
-  // const normalizedData = normalize(data, [schemas.brand])
+  const brands = await getCollectionData('brands')
+  const criteria = await getCollectionData('criteria')
+  const configuration = await getCollectionData('configuration')
+
   return {
     props: {
-      entities: [
-        // normalizedData.entities
+      data: [
+        { data: brands, type: ['brand'] },
+        { data: criteria, type: ['criterion'] },
+        { data: configuration, type: 'configuration' }
       ]
     }
   }

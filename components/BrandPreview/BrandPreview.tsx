@@ -2,15 +2,15 @@ import React from 'react'
 import { Box, BoxProps } from 'grommet'
 import Link from 'next/link'
 
-import Heading from '~/components/Heading'
-import Paragraph from '~/components/Paragraph'
+import Heading from 'components/Heading'
+import Paragraph from 'components/Paragraph'
 
-import RelativeHeightBox from '~/components/RelativeHeightBox'
+import RelativeHeightBox from 'components/RelativeHeightBox'
 
-import { Brand } from '~/store/data/types/brands'
-import { ThemeColorsType } from '~/themes/theme'
-import useTheme from '~/hooks/useTheme'
-import useHover from '~/hooks/useHover'
+import { Brand } from 'types/data/brand'
+import { ThemeColorsType } from 'themes/theme'
+import useTheme from 'hooks/useTheme'
+import useHover from 'hooks/useHover'
 
 import BrandImage from './Image'
 import CriterionIcon from '../CriterionIcon'

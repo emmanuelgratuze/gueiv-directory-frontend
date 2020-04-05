@@ -2,29 +2,29 @@ import React from 'react'
 import { Box, TextInput } from 'grommet'
 import { Facebook, Instagram } from 'grommet-icons'
 
-import Paragraph from '~/components/Paragraph'
-import Button from '~/components/Button'
-import Text from '~/components/Text'
-import Container from '~/components/Container'
-import Heading from '~/components/Heading'
-import ResponsiveGrid from '~/components/ResponsiveGrid'
+import Paragraph from 'components/Paragraph'
+import Button from 'components/Button'
+import Text from 'components/Text'
+import Container from 'components/Container'
+import Heading from 'components/Heading'
+import ResponsiveGrid from 'components/ResponsiveGrid'
+import useTheme from 'hooks/useTheme'
+
 import StandardLink from './StandardLink'
-import useAppContents from '~/hooks/useAppContents'
-import useTheme from '~/hooks/useTheme'
 
 const FooterHeading: React.FC = ({ ...props }) => (
   <Heading level={3} color="blue" transform="uppercase" {...props} />
 )
 
 const Footer: React.FC = () => {
-  const contents = useAppContents()
+  const contents = {}
   const { brandColors } = useTheme()
   return (
     <Box
       background={{ color: 'light-1' }}
       pad={{ vertical: 'large' }}
     >
-      <Container>
+      {/* <Container>
         <ResponsiveGrid
           columns={{
             small: ['full'],
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
             </Button>
           </Box>
         </ResponsiveGrid>
-      </Container>
+      </Container> */}
     </Box>
   )
 }

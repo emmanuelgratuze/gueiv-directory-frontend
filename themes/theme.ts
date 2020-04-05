@@ -1,7 +1,7 @@
 import { css } from 'styled-components'
 import { deepMerge } from 'grommet/utils'
 import { base } from 'grommet/themes'
-import { ValueOf } from '~/types/utils'
+import { ValueOf } from 'types/utils'
 
 const baseSpacing = 24
 const baseFontSize = 16

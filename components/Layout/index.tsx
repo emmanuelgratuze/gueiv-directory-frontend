@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { Grommet } from 'grommet'
 
-import theme from '~/themes/theme'
+import theme from 'themes/theme'
 
 import { GlobalStyles } from './styled'
 

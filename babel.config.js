@@ -27,22 +27,7 @@ const config = {
       'module-resolver',
       {
         root: ['.'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
-        alias: {
-          '~/api': './api',
-          '~/pages': './pages',
-          '~/screens': './screens',
-          '~/components': './components',
-          '~/contexts': './contexts',
-          '~/themes': './themes',
-          '~/types': './types',
-          '~/config': './config',
-          '~/assets': './assets',
-          '~/hooks': './hooks',
-          '~/store': './store',
-          '~/contents': './contents',
-          '~/utils': './utils'
-        }
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts']
       }
     ]
   ]

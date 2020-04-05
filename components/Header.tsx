@@ -3,11 +3,11 @@ import { Box } from 'grommet'
 import styled from 'styled-components'
 import Link from 'next/link'
 
-import Container from '~/components/Container'
-import Text from '~/components/Text'
-import useTheme from '~/hooks/useTheme'
+import Container from 'components/Container'
+import Text from 'components/Text'
+import useTheme from 'hooks/useTheme'
 
-const Logo = require('~/assets/images/logo.svg').ReactComponent
+const Logo = require('assets/images/logo.svg').ReactComponent
 
 const HeaderWrapper = styled(Box)`
   position: fixed;

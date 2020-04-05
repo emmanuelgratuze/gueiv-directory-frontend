@@ -3,8 +3,8 @@ import { Provider } from 'react-redux'
 import App, { AppProps } from 'next/app'
 import ErrorPage from 'next/error'
 
-import useStorePreloadedWithStaticProps from '~/hooks/useStorePreloadedWithStaticProps'
-import Layout from '~/components/Layout'
+import useStoreWithData from 'hooks/useStoreWithData'
+import Layout from 'components/Layout'
 
 /* eslint-disable */
 if (process.env.NODE_ENV !== 'production') {
@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== 'production') {
 /* eslint-enable */
 
 const ProjectApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  const store = useStorePreloadedWithStaticProps(pageProps)
+  const store = useStoreWithData(pageProps)
   return (
     <Provider store={store}>
       <Layout>

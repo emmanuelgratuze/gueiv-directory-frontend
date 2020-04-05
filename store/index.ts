@@ -5,14 +5,14 @@ import {
   StoreEnhancer
 } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import { fromJS } from 'immutable'
 
-import localStoragePersister, { getStateFromLocalStorage } from '~/utils/redux/storeLocalStoragePersister'
+import localStoragePersister, { getStateFromLocalStorage } from 'utils/redux/storeLocalStoragePersister'
 
 // Middlewares
-import addEntitiesMiddleware from './middlewares/addEntitiesMiddleware'
+import dataMiddleware from './middlewares/dataMiddleware'
 
 import rootReducer from './app/reducer'
-import initialStateDefault from './initialState'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const bindMiddleware = (middlewares: any[]): StoreEnhancer<{ dispatch: unknown }, {}> => {
@@ -27,7 +27,7 @@ const bindMiddleware = (middlewares: any[]): StoreEnhancer<{ dispatch: unknown }
 
 const localStorageState = getStateFromLocalStorage()
 
-function configureStore(initialState = initialStateDefault): Store {
+function configureStore(initialState = fromJS({})): Store {
   const preloadedStates = initialState.merge(localStorageState)
 
   const store = createStore(
@@ -37,7 +37,7 @@ function configureStore(initialState = initialStateDefault): Store {
 
     bindMiddleware([
       // Add entities (prop keys to camelcase)
-      addEntitiesMiddleware
+      dataMiddleware
     ])
   )
 

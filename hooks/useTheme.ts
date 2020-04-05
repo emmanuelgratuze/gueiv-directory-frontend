@@ -1,5 +1,5 @@
 import { useTheme } from 'styled-components'
-import { ThemeType } from '~/themes/theme'
+import { ThemeType } from 'themes/theme'
 
 type UseThemeType = {
   theme: ThemeType;

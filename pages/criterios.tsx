@@ -4,14 +4,14 @@ import { NextPage, GetStaticProps } from 'next'
 import { useDispatch } from 'react-redux'
 import { Box } from 'grommet'
 
-import Page from '~/components/Page'
-import { BrandColorsKeys } from '~/themes/theme'
-import useSelector from '~/hooks/useSelector'
-// import * as schemas from '~/store/schemas'
-import { selectBrands } from '~/store/data/selectors/brands'
-import { Brand } from '~/store/data/types/brands'
-import { setBrandsColors } from '~/store/interface/actions'
-import useTheme from '~/hooks/useTheme'
+import Page from 'components/Page'
+import { BrandColorsKeys } from 'themes/theme'
+import useSelector from 'hooks/useSelector'
+// import * as schemas from 'store/schemas'
+import { selectBrands } from 'store/data/selectors/brands'
+import { Brand } from 'types/data/brand'
+import { setBrandsColors } from 'store/interface/actions'
+import useTheme from 'hooks/useTheme'
 
 const Criteria: NextPage = () => {
   const { theme: { global: { brandColorsNames } } } = useTheme()

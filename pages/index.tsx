@@ -4,16 +4,17 @@ import { normalize } from 'normalizr'
 import { useDispatch } from 'react-redux'
 import fs from 'fs'
 
-import Page from '~/components/Page'
-import BrandPreview from '~/components/BrandPreview/BrandPreview'
-import ResponsiveGrid from '~/components/ResponsiveGrid'
-import { ThemeColorsType, BrandColorsKeys } from '~/themes/theme'
-import useSelector from '~/hooks/useSelector'
-import * as schemas from '~/store/schemas'
-import { selectBrands } from '~/store/entities/brands/selectors'
-import { Brand } from '~/store/entities/brands/types'
-import { setBrandsColors } from '~/store/interface/actions'
-import useTheme from '~/hooks/useTheme'
+import Page from 'components/Page'
+import BrandPreview from 'components/BrandPreview/BrandPreview'
+import ResponsiveGrid from 'components/ResponsiveGrid'
+import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
+import useSelector from 'hooks/useSelector'
+// import * as schemas from 'store/schemas'
+import { selectBrands } from 'store/data/selectors/brands'
+import { Brand } from 'types/data/brand'
+import { setBrandsColors } from 'store/interface/actions'
+import useTheme from 'hooks/useTheme'
+// import { getCollectionData } from 'cms/api'
 
 
 const Home: NextPage = () => {
@@ -66,9 +67,8 @@ const Home: NextPage = () => {
 
 // eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async () => {
-  const data = fs.readdirSync(`${process.env.PWD}/contents/brands`).map((brand) => {
-    return brand
-  })
+  
+
   // const normalizedData = normalize(data, [schemas.brand])
   return {
     props: {

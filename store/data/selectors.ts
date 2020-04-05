@@ -1,14 +1,9 @@
 
-import { createSelector } from 'reselect'
-import { ImmutableAppState } from 'store/app/types.d'
+import { ImmutableAppState } from 'store/app/types'
+import { ImmutableDataTree } from './types.d'
 
-import { ImmutableEntities } from './types.d'
-
-export const selectEntities = createSelector<ImmutableAppState, ImmutableAppState, ImmutableEntities>(() => (
-  (state) => state,
-  (state) => (
-    state.get('entities')
-  )
-))
+export const selectData = (state: ImmutableAppState): ImmutableDataTree => (
+  state.get('data')
+)
 
 export default {}

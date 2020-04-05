@@ -1,5 +1,5 @@
 import { Record } from 'immutable'
-import { BrandColorsKeys } from '~/themes/theme'
+import { BrandColorsKeys } from 'themes/theme'
 
 export interface Interface {
   brandsColors: { [key: string]: BrandColorsKeys };

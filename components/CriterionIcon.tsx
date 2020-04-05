@@ -2,8 +2,8 @@ import React from 'react'
 import { BoxProps, Box } from 'grommet'
 import styled from 'styled-components'
 
-import { Criterion } from '~/store/entities/criteria/types'
-import { ColorsType } from '~/themes/theme'
+import { Criterion } from 'types/data/criterion'
+import { ColorsType } from 'themes/theme'
 
 interface CriterionIcon {
   criterion: Criterion;

@@ -7,11 +7,11 @@ import {
 } from 'grommet'
 import { motion } from 'framer-motion'
 
-import { Brand } from '~/store/data/types/brands'
-import { ThemeColorsType } from '~/themes/theme'
+import { Brand } from 'types/data/brand'
+import { ThemeColorsType } from 'themes/theme'
 import CriterionIcon from '../CriterionIcon'
 
-const Logo = require('~/assets/images/logo-unicolor.svg').ReactComponent
+const Logo = require('assets/images/logo-unicolor.svg').ReactComponent
 
 type BrandImageType = {
   brand: Brand;
@@ -61,7 +61,7 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({
               width="100%"
               height="100%"
               fit="cover"
-              src={brand.pictures[0].url}
+              src={brand.pictures[0]}
             />
           </motion.div>
         </Box>

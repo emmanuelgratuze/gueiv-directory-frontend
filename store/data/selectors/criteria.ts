@@ -1,16 +1,17 @@
 import { createSelector } from 'reselect'
+import { Map } from 'immutable'
 
-import { CriteriaStateTree } from '../criteria/types'
-import { ImmutableAppState } from '~/store/data/types'
+import { ImmutableAppState } from 'store/app/types'
+import { ImmutableCriterion } from 'types/data/criterion'
 
-export const selectCriteriaTree = (state: ImmutableAppState): CriteriaStateTree => (
-  state.getIn(['entities', 'criteria'])
+export const selectCriteriaTree = (state: ImmutableAppState): Map<string, ImmutableCriterion> => (
+  state.getIn(['data', 'criteria'])
 )
 
 export const selectCriteria = createSelector(
   selectCriteriaTree,
   (state) => (
-    state.getIn(['entities', 'criteria']).toIndexedSeq()
+    state.getIn(['data', 'criteria']).toIndexedSeq()
   )
 )
 

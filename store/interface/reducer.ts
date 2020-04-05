@@ -5,11 +5,11 @@ import { fromJS } from 'immutable'
 import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 
-import { BasicAction } from '~/store/types'
+import { BasicAction } from 'store/types'
 import { SET_BRANDS_COLORS } from './actionsTypes'
 
 
-function brandsColors(state = fromJS(null), action: BasicAction): Reducer {
+function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
   switch (action.type) {
     case SET_BRANDS_COLORS:
       return fromJS(action.payload)

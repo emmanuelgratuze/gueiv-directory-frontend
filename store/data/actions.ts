@@ -1,22 +1,24 @@
 import {
-  AddEntitiesAction,
-  ClearEntitiesAction,
-  ADD_ENTITIES,
-  CLEAR_ENTITIES,
-  Entities,
-  EntitiesNames
+  AddDataAction,
+  ClearDataAction,
+  ADD_DATA,
+  CLEAR_DATA,
+  Data,
+  SchemaKeys
 } from './types.d'
 
-
-export const addEntities = (entities: unknown): AddEntitiesAction => ({
-  type: ADD_ENTITIES,
-  payload: {
-    entities
+export function addData(type: SchemaKeys | SchemaKeys[], data: Data[]): AddDataAction {
+  return {
+    type: ADD_DATA,
+    payload: {
+      type,
+      data
+    }
   }
-})
+}
 
-export const clearEntities = (entitiesNames: string[]): ClearEntitiesAction => ({
-  type: CLEAR_ENTITIES,
+export const clearEntities = (entitiesNames: string[]): ClearDataAction => ({
+  type: CLEAR_DATA,
   payload: {
     entitiesNames
   }

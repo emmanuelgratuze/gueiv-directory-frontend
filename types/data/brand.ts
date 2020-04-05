@@ -1,6 +1,6 @@
-// import { ImmutableMap } from '~/types/immutable'
+// import { ImmutableMap } from 'types/immutable'
 import { Record } from 'immutable'
-import { Criterion } from './criteria'
+import { Criterion } from './criterion'
 
 export interface Brand {
   id: string;

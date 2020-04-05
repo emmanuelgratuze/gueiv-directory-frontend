@@ -45,24 +45,7 @@
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
-      "babel-module": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
-        "alias": {
-          "~/api": "api/*",
-          "~/components": "components/*",
-          "~/contexts": "contexts/*",
-          "~/types": "types/*",
-          "~/assets": "assets/*",
-          "~/hooks": "hooks/*",
-          "~/themes": "themes/*",
-          "~/store": "store/*",
-          "~/contents": "./contents",
-          "~/config": "config/*",
-          "~/screens": "screens/*",
-          "~/pages": "pages/*",
-          "~/utils": "utils/*"
-        }
-      }
+      "babel-module": {}
     }
   }
 }

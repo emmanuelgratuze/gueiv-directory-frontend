@@ -1,6 +1,6 @@
 import { Box, BoxProps } from 'grommet'
 import styled, { css } from 'styled-components'
-import { ThemeType } from '~/themes/theme'
+import { ThemeType } from 'themes/theme'
 
 type ButtonProps = {
   theme: ThemeType;

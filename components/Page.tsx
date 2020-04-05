@@ -2,12 +2,11 @@ import React from 'react'
 import Head from 'next/head'
 import { Box, BoxProps } from 'grommet'
 
-import Header from '~/components/Header'
-import Footer from '~/components/Footer'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
 
-import usePageTitle from '~/hooks/usePageTitle'
-import useAppContents from '~/hooks/useAppContents'
-import useTheme from '~/hooks/useTheme'
+import usePageTitle from 'hooks/usePageTitle'
+import useTheme from 'hooks/useTheme'
 
 type PageType = {
   title: string;
@@ -25,14 +24,14 @@ const Page: React.FC<BoxProps & PageType> = ({
   ...props
 }) => {
   const fullTitle = usePageTitle(title)
-  const contents = useAppContents()
+  // const contents = useAppContents()
   const { theme: { header } } = useTheme()
 
   return (
-    <>
+    <Box>
       <Head>
-        <title>{fullTitle}</title>
-        <meta name="description" content={description || contents?.general.description} />
+        {/* <title>{fullTitle}</title>
+        <meta name="description" content={description || contents?.general.description} /> */}
 
         {/* <meta property="og:description" content={description || contents.getIn(['general', 'description'])} /> */}
         {/* <meta property="twitter:description" content={description || contents.getIn(['general', 'description'])} /> */}
@@ -42,26 +41,24 @@ const Page: React.FC<BoxProps & PageType> = ({
         {/* <meta property="twitter:image" content={socialBanner} /> */}
       </Head>
 
-      <Box
+      {/* <Box
         overflow={!withScroll ? 'hidden' : undefined}
         height={!withScroll ? '100vh' : '100%'}
         width="100%"
         {...props}
       >
         <Header />
-
         <Box
           pad={{ top: header.height }}
           height="100%"
         >
           {children}
         </Box>
-
         {withFooter && (
           <Footer />
         )}
-      </Box>
-    </>
+      </Box> */}
+    </Box>
   )
 }
 

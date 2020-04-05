@@ -1,4 +1,4 @@
-// import { ImmutableMap } from '~/types/immutable'
+// import { ImmutableMap } from 'types/immutable'
 import { Record } from 'immutable'
 
 export interface CriterionIcon {

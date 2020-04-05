@@ -18,22 +18,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/api/*": ["./api/*"],
-      "~/components/*": ["./components/*"],
-      "~/contexts/*": ["./contexts/*"],
-      "~/themes/*": ["./themes/*"],
-      "~/types/*": ["./types/*"],
-      "~/assets/*": ["./assets/*"],
-      "~/hooks/*": ["./hooks/*"],
-      "~/config/*": ["./config/*"],
-      "~/store/*": ["./store/*"],
-      "~/contents/*": ["./contents/*"],
-      "~/screens/*": ["./screens/*"],
-      "~/pages/*": ["./pages/*"],
-      "~/utils/*": ["./utils/*"]
-    }
+    "baseUrl": "."
   },
   "exclude": [
     "node_modules"

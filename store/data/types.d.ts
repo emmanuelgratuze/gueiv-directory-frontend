@@ -1,15 +1,17 @@
 import { SchemaObject } from 'normalizr'
-import schemas from 'store/data/schemas'
-
 import { BasicAction } from '../types'
+import schemas from './schemas'
 
-export const ADD_ENTITIES = 'app/ADD_ENTITIES'
-export const CLEAR_ENTITIES = 'app/CLEAR_ENTITIES'
+export const ADD_DATA = 'app/ADD_DATA'
+export const CLEAR_DATA = 'app/CLEAR_DATA'
 
-export interface AddEntitiesAction extends BasicAction {
-  type: typeof ADD_ENTITIES;
+export type SchemaKeys = keyof (typeof schemas)
+
+export interface AddDataAction extends BasicAction {
+  type: typeof ADD_DATA;
   payload: {
-    entities: unkown;
+    type: SchemaKeys | SchemaKeys[];
+    data: Data[];
   };
   meta?: {
     schema: SchemaObject<unknown>;
@@ -17,30 +19,21 @@ export interface AddEntitiesAction extends BasicAction {
   };
 }
 
-export interface ClearEntitiesAction {
-  type: typeof CLEAR_ENTITIES;
+export interface ClearDataAction {
+  type: typeof CLEAR_DATA;
   payload: {
     entitiesNames: string[];
   };
 }
 
-export type ImmutableEntities = Record<Entities>
+export type Data = {
+  [key: string]: unknown;
+}
 
+export type ImmutableData = Record<{
+  [key: string]: Record<unknown>;
+}>
 
-// type NetlifyCMSWidgetsFieldTypes = {
-//   text: string;
-//   boolean: boolean;
-//   code: string;
-//   date: string;
-//   datetime: string;
-//   file: string | string[];
-//   image: string;
-//   // list: '';
-//   // map: '';
-//   markdown: string;
-//   number: number;
-//   object: object;
-//   relation: string;
-//   select: '';
-//   string: '';
-// }
+export type ImmutableDataTree = Record<{
+  [key: string]: ImmutableData;
+}>

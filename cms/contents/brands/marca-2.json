@@ -1,5 +1,8 @@
 {
   "facebook": "http://facebook.com",
+  "productTypes": [
+    "camiseta"
+  ],
   "city": "Santiago",
   "name": "Marca #2",
   "genders": [

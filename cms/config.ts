@@ -10,10 +10,10 @@ export default {
   public_folder: 'assets',
   media_library: {
     name: 'cloudinary',
+    output_filename_only: true,
     config: {
-      output_filename_only: true,
-      cloud_name: 'dq9k7gnud',
-      api_key: 543373913743399
+      cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY
     }
   },
   collections: [
@@ -89,8 +89,7 @@ export default {
             widget: 'file',
             media_library: {
               config: {
-                multiple: false,
-                output_filename_only: true
+                multiple: false
               }
             }
           }
@@ -149,10 +148,10 @@ export default {
         },
         {
           label: 'Product types',
-          name: 'product-types',
+          name: 'productTypes',
           required: false,
           widget: 'slug-relation',
-          collection: 'product-types',
+          collection: 'productTypes',
           displayFields: [
             'name'
           ],
@@ -225,7 +224,7 @@ export default {
     {
       label: 'Product types',
       label_singular: 'Product type',
-      name: 'product-types',
+      name: 'productTypes',
       folder: 'cms/contents/product-types',
       identifier_field: 'name',
       extension: 'json',

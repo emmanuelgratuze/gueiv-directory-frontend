@@ -7,7 +7,7 @@ export interface Brand {
   name: string;
   slug: string;
   description?: string;
-  pictures?: string;
+  pictures?: string[];
   criteria: Criterion[];
   city?: string;
   country?: {

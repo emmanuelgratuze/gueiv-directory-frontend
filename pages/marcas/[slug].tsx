@@ -8,7 +8,7 @@ import Page from 'components/Page'
 import Text from 'components/Text'
 import Heading from 'components/Heading'
 import Button from 'components/Button'
-import BrandImageCarousel from 'components/BrandImageCarousel'
+import BrandCarousel from 'components/BrandCarousel'
 
 import { selectBrandBySlug } from 'store/data/selectors/brands'
 import useSelector from 'hooks/useSelector'
@@ -45,88 +45,96 @@ const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
         <Box
           background={{ color: brandColor }}
           direction="row-responsive"
-          height="100%"
         >
-          <BrandImageCarousel
+          <BrandCarousel
             fill="vertical"
             width="50%"
             brand={brand}
+            color={brandColor}
           />
           <Box
             width="50%"
-            pad={isMobile ? 'large' : 'xlarge'}
-            flex={{ grow: 1 }}
+            overflow="auto"
           >
-            <Heading
-              level={1}
-              transform="uppercase"
+            <Box
+              pad={isMobile ? 'large' : 'xlarge'}
+              flex={{ grow: 1 }}
             >
-              {brand.name}
-            </Heading>
-
-            {/* Location */}
-            {brand.city !== '' && brand.country && (
               <Heading
-                level={2}
-                size="small"
-                color={oppBrandColor}
-              >
-                {brand.city && `${brand.city}, `}
-                {brand.country?.name}
-              </Heading>
-            )}
-
-            {/* Description */}
-            <Paragraph
-              size="large"
-              font="Lato"
-              color={oppBrandColor}
-              margin={{ bottom: 'medium' }}
-            >
-              {brand.description}
-            </Paragraph>
-
-            {/* Criteria */}
-            <Box margin={{ bottom: '2.2rem' }}>
-              <Text
+                level={1}
                 transform="uppercase"
-                color={oppBrandColor}
-                weight="bold"
-                margin={{ bottom: 'small' }}
               >
-                Criterios
-              </Text>
-              {brand.criteria && (
-                <Box direction="row" gap="small">
-                  {brand.criteria.map((criterion) => (
-                    <Box
-                      key={criterion.id}
-                      width="2.2rem"
-                      height="2.2rem"
-                    >
-                      <CriterionIcon
-                        criterion={criterion}
-                        color={oppBrandColor}
-                      />
-                    </Box>
-                  ))}
-                </Box>
-              )}
-            </Box>
+                {brand.name}
+              </Heading>
 
-            {/* Links */}
-            <Box direction="row" gap="small">
-              {[
-                ['Instagram', brand.instagram],
-                ['Facebook', brand.facebook],
-                ['Página web', brand.web]
-              ].map(([label, link]) => link && (
-                <StandardLink href={link} external>
-                  <Button size="small">
-                    {label}
-                  </Button>
-                </StandardLink>
-              ))}
+              {/* Location */}
+              {brand.city !== '' && brand.country && (
+                <Heading
+                  level={2}
+                  size="small"
+                  color={oppBrandColor}
+                >
+                  {brand.city && `${brand.city}, `}
+                  {brand.country?.name}
+                </Heading>
+              )}
+
+              {/* Description */}
+              <Paragraph
+                size="large"
+                font="Lato"
+                color={oppBrandColor}
+                margin={{ bottom: 'medium' }}
+              >
+                {brand.description}
+              </Paragraph>
+
+              {/* Criteria */}
+              <Box margin={{ bottom: '2.2rem' }}>
+                <Text
+                  transform="uppercase"
+                  color={oppBrandColor}
+                  weight="bold"
+                  margin={{ bottom: 'small' }}
+                >
+                  Criterios
+                </Text>
+                {brand.criteria && (
+                  <Box direction="row" gap="small">
+                    {brand.criteria.map((criterion) => (
+                      <Box
+                        key={criterion.name}
+                        width="2.2rem"
+                        height="2.2rem"
+                      >
+                        <CriterionIcon
+                          criterion={criterion}
+                          color={oppBrandColor}
+                        />
+                      </Box>
+                    ))}
+                  </Box>
+                )}
+              </Box>
+
+              {/* Links */}
+              <Box direction="row" gap="small">
+                {[
+                  ['Instagram', brand.instagram],
+                  ['Facebook', brand.facebook],
+                  ['Página web', brand.web]
+                ].map(([label, link]) => link && (
+                  <StandardLink
+                    href={link}
+                    key={label}
+                    external
+                  >
+                    <Button size="small">
+                      {label}
+                    </Button>
+                  </StandardLink>
+                ))}
+              </Box>
             </Box>
           </Box>
         </Box>

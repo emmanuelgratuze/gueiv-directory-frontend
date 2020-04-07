@@ -1,5 +1,9 @@
 {
   "facebook": "http://facebook.com",
+  "productTypes": [
+    "pantalones",
+    "camiseta"
+  ],
   "city": "Buenos Aires",
   "name": "Marca #1",
   "genders": [

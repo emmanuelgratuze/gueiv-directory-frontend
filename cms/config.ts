@@ -64,15 +64,11 @@ export default {
       label: 'Brands',
       name: 'brands',
       folder: 'cms/contents/brands',
+      identifier_field: 'name',
       extension: 'json',
       format: 'json',
       create: true,
       fields: [
-        {
-          widget: 'ncw-id',
-          label: 'ID',
-          name: 'id'
-        },
         {
           label: 'Name',
           name: 'name',
@@ -86,19 +82,23 @@ export default {
         {
           label: 'Pictures',
           name: 'pictures',
-          widget: 'file',
-          required: false,
-          media_library: {
-            config: {
-              multiple: true,
-              output_filename_only: true
+          widget: 'list',
+          field: {
+            label: 'Image',
+            name: 'image',
+            widget: 'file',
+            media_library: {
+              config: {
+                multiple: false,
+                output_filename_only: true
+              }
             }
           }
         },
         {
           label: 'Criteria',
           name: 'criteria',
-          widget: 'relation',
+          widget: 'slug-relation',
           required: false,
           collection: 'criteria',
           displayFields: [
@@ -108,13 +108,12 @@ export default {
           searchFields: [
             'name'
           ],
-          valueField: 'id'
+          valueField: '{{slug}}'
         },
         {
           label: 'City',
           name: 'city',
-          required: false,
-          widget: 'string'
+          required: false
         },
         {
           label: 'Website',
@@ -137,7 +136,7 @@ export default {
         {
           label: 'Country',
           name: 'country',
-          widget: 'relation',
+          widget: 'slug-relation',
           collection: 'countries',
           displayFields: [
             'name'
@@ -146,13 +145,13 @@ export default {
           searchFields: [
             'name'
           ],
-          valueField: 'id'
+          valueField: 'name'
         },
         {
           label: 'Product types',
           name: 'product-types',
           required: false,
-          widget: 'relation',
+          widget: 'slug-relation',
           collection: 'product-types',
           displayFields: [
             'name'
@@ -161,22 +160,15 @@ export default {
           searchFields: [
             'name'
           ],
-          valueField: 'id'
+          valueField: 'name'
         },
         {
           label: 'Genders',
           name: 'genders',
           required: false,
-          widget: 'relation',
-          collection: 'genders',
-          displayFields: [
-            'name'
-          ],
+          widget: 'select',
           multiple: true,
-          searchFields: [
-            'name'
-          ],
-          valueField: 'id'
+          options: ['Men', 'Women', 'Children', 'Unisex'],
         }
       ]
     },
@@ -185,15 +177,11 @@ export default {
       label_singular: 'Criterion',
       name: 'criteria',
       folder: 'cms/contents/criteria',
+      identifier_field: 'name',
       extension: 'json',
       format: 'json',
       create: true,
       fields: [
-        {
-          widget: 'ncw-id',
-          label: 'ID',
-          name: 'id'
-        },
         {
           label: 'Name',
           name: 'name',
@@ -220,17 +208,13 @@ export default {
     {
       label: 'Countries',
       name: 'countries',
-      label_singular: 'Criterion',
+      label_singular: 'Country',
       folder: 'cms/contents/countries',
+      identifier_field: 'name',
       extension: 'json',
       format: 'json',
       create: true,
       fields: [
-        {
-          widget: 'ncw-id',
-          label: 'ID',
-          name: 'id'
-        },
         {
           label: 'Name',
           name: 'name',
@@ -243,36 +227,11 @@ export default {
       label_singular: 'Product type',
       name: 'product-types',
       folder: 'cms/contents/product-types',
+      identifier_field: 'name',
       extension: 'json',
       format: 'json',
       create: true,
       fields: [
-        {
-          widget: 'ncw-id',
-          label: 'ID',
-          name: 'id'
-        },
-        {
-          label: 'Name',
-          name: 'name',
-          widget: 'string'
-        }
-      ]
-    },
-    {
-      label: 'Genders',
-      label_singular: 'Gender',
-      name: 'genders',
-      folder: 'cms/contents/genders',
-      extension: 'json',
-      format: 'json',
-      create: true,
-      fields: [
-        {
-          widget: 'ncw-id',
-          label: 'ID',
-          name: 'id'
-        },
         {
           label: 'Name',
           name: 'name',

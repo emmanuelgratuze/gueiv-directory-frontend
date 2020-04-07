@@ -1,15 +1,25 @@
 {
-  "id": "8okvcg05id",
+  "facebook": "http://facebook.com",
+  "city": "Buenos Aires",
   "name": "Marca #2",
+  "genders": [
+    "Children",
+    "Women"
+  ],
+  "instagram": "http://instagram.com",
   "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1585826666/Photo26_29-2_hfr4vv.jpg",
     "https://res.cloudinary.com/dq9k7gnud/image/upload/v1585826666/Photo26_29-2_hfr4vv.jpg"
   ],
+  "country": "Argentina",
+  "website": "http://google.com",
+  "id": "8okvcg05id",
   "product-types": [
-    "whCf6ZzfT"
+    "Pantalones"
   ],
-  "genders": [
-    "Children"
-  ],
-  "country": "aPrq13jgn",
-  "description": "test test"
+  "description": "test test",
+  "criteria": [
+    "Renta",
+    "Test"
+  ]
 }

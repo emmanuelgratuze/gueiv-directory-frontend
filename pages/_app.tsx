@@ -2,6 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import App, { AppProps } from 'next/app'
 import ErrorPage from 'next/error'
+import { CloudinaryProvider } from 'components/cloudinary/CloudinaryContext'
 
 import useStoreWithData from 'hooks/useStoreWithData'
 import Layout from 'components/Layout'
@@ -16,15 +17,17 @@ if (process.env.NODE_ENV !== 'production') {
 const ProjectApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const store = useStoreWithData(pageProps)
   return (
-    <Provider store={store}>
-      <Layout>
-        {pageProps.statusCode ? (
-          <ErrorPage statusCode={pageProps.statusCode} />
-        ) : (
-          <Component {...pageProps} />
-        )}
-      </Layout>
-    </Provider>
+    <CloudinaryProvider cloudName={process.env.CLOUDINARY_CLOUD_NAME || ''}>
+      <Provider store={store}>
+        <Layout>
+          {pageProps.statusCode ? (
+            <ErrorPage statusCode={pageProps.statusCode} />
+          ) : (
+            <Component {...pageProps} />
+          )}
+        </Layout>
+      </Provider>
+    </CloudinaryProvider>
   )
 }
 

@@ -12,10 +12,10 @@
   ],
   "instagram": "http://instagram.com",
   "pictures": [
-    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1585826666/theo_film_2016-13_eev4en.jpg",
-    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1585826666/Photo26_29-2_hfr4vv.jpg"
+    "assets/sample.jpg",
+    "assets/theo_film_2016-13_eev4en.jpg"
   ],
-  "country": "chile",
+  "country": "argentina",
   "website": "http://google.com",
   "product-types": [
     "camiseta",

@@ -35,7 +35,7 @@ const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
   return (
     <StyledIconContainer
       dangerouslySetInnerHTML={{
-        __html: criterion.icon.content
+        __html: criterion.iconContent
       }}
       color={color}
       {...props}

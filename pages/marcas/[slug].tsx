@@ -19,6 +19,8 @@ import CriterionIcon from 'components/CriterionIcon'
 import StandardLink from 'components/StandardLink'
 import { Brand } from 'types/data/brand'
 import { getCollectionData, getSingleCollectionData } from 'cms/api'
+import { Criterion } from 'types/data/criterion'
+import fetchFileContent from 'utils/fetchFileContent'
 
 interface BrandPageType {
   slug: string;
@@ -135,7 +137,13 @@ const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const brands = await getCollectionData('brands')
-  const criteria = await getCollectionData('criteria')
+  const criteria = await getCollectionData<Criterion>('criteria', async (criterion) => {
+    const newCriterion = criterion
+    if (criterion.icon) {
+      newCriterion.iconContent = await fetchFileContent(criterion.icon)
+    }
+    return newCriterion
+  })
   const configuration = await getSingleCollectionData('configuration')
   const countries = await getCollectionData('countries')
 

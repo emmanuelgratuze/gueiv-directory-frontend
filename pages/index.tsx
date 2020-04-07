@@ -13,6 +13,8 @@ import { Brand } from 'types/data/brand'
 import { setBrandsColors } from 'store/interface/actions'
 import useTheme from 'hooks/useTheme'
 import { getCollectionData, getSingleCollectionData } from 'cms/api'
+import fetchFileContent from 'utils/fetchFileContent'
+import { Criterion } from 'types/data/criterion'
 // import { getCollectionData } from 'cms/api'
 
 
@@ -57,7 +59,13 @@ const Home: NextPage = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const brands = await getCollectionData('brands')
-  const criteria = await getCollectionData('criteria')
+  const criteria = await getCollectionData('criteria', async (criterion: Criterion) => {
+    const newCriterion = criterion
+    if (criterion.icon) {
+      newCriterion.iconContent = await fetchFileContent(criterion.icon)
+    }
+    return newCriterion
+  })
   const configuration = await getSingleCollectionData('configuration')
   const countries = await getCollectionData('countries')
 

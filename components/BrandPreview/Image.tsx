@@ -61,7 +61,7 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({
               width="100%"
               height="100%"
               fit="cover"
-              src={brand.pictures}
+              src={brand.pictures[0]}
             />
           </motion.div>
         </Box>

@@ -32,7 +32,7 @@ export async function getCollectionData<T extends object>(
   return Promise.all(filesPromises)
 }
 
-export async function getSingleCollectionData<T extends unknown>(collectionName: string): Promise<T> {
+export async function getSingleCollectionData<T extends object>(collectionName: string): Promise<T> {
   const data = await getCollectionData<T>(collectionName)
   return data[0]
 }

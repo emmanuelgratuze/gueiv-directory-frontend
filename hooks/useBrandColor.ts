@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
+import { useSelector } from 'react-redux'
 import useTheme from 'hooks/useTheme'
-import useSelector from 'hooks/useSelector'
 import { selectBrandsColors } from 'store/interface/selectors'
 import { Brand } from 'types/data/brand'
 import { BrandColorsKeys } from 'themes/theme'
 
 const useBrandColor = (brand: Brand): [string, string] => {
-  const brandsColors = useSelector(selectBrandsColors) as { [key: string]: BrandColorsKeys }
+  const brandsColors = useSelector(selectBrandsColors)
   const { brandColors, oppositeColors } = useTheme()
   const brandColorName = useMemo(() => {
     if (!brand) {

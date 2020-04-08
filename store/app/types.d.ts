@@ -8,3 +8,8 @@ export interface AppState {
 }
 
 export type ImmutableAppState = Record<AppState>
+
+module 'react-redux' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultRootState extends ImmutableAppState {}
+}

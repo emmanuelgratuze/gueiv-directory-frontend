@@ -42,13 +42,13 @@ const Footer: React.FC = () => {
             >
               ¿Tienes una marca sostenible y quieres estar en el directorio? Escríbenos a:
               <br />
-              <StandardLink href={`mailto:${configuration?.email}`}>
+              <StandardLink href={`mailto:${configuration.social.email}`}>
                 <Text
                   color="pink"
                   weight="bold"
                   transform="initial"
                 >
-                  {configuration?.email}
+                  {configuration.social.email}
                 </Text>
               </StandardLink>
             </Paragraph>
@@ -56,10 +56,10 @@ const Footer: React.FC = () => {
           <Box align="center" gap="small" margin={{ bottom: 'medium' }}>
             <FooterHeading>¡Sigue nuestros pasos!</FooterHeading>
             <Box direction="row" gap="medium">
-              <StandardLink href={configuration?.instagram} external>
+              <StandardLink href={configuration.social.instagram} external>
                 <Instagram size="2rem" color={brandColors.blue} />
               </StandardLink>
-              <StandardLink href={configuration?.facebook} external>
+              <StandardLink href={configuration.social.facebook} external>
                 <Facebook size="2rem" color={brandColors.blue} />
               </StandardLink>
             </Box>

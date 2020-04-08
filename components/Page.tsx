@@ -32,8 +32,7 @@ const Page: React.FC<BoxProps & PageType> = ({
     <Box>
       <Head>
         <title>{fullTitle}</title>
-        <meta name="description" content={description || configuration?.description} />
-
+        <meta name="description" content={description || configuration.general?.description} />
         {/* <meta property="og:description" content={description || contents.getIn(['general', 'description'])} /> */}
         {/* <meta property="twitter:description" content={description || contents.getIn(['general', 'description'])} /> */}
         {/* <meta property="og:title" content={getTitle(title)} /> */}

@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import { NextPage, GetStaticProps } from 'next'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import Page from 'components/Page'
 import BrandPreview from 'components/BrandPreview/BrandPreview'
 import ResponsiveGrid from 'components/ResponsiveGrid'
 import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
-import useSelector from 'hooks/useSelector'
-// import * as schemas from 'store/schemas'
+
 import { selectBrands } from 'store/data/selectors/brands'
 import { Brand } from 'types/data/brand'
 import { setBrandsColors } from 'store/interface/actions'
@@ -15,14 +14,16 @@ import useTheme from 'hooks/useTheme'
 import { getCollectionData, getSingleCollectionData } from 'cms/api'
 import fetchFileContent from 'utils/fetchFileContent'
 import { Criterion } from 'types/data/criterion'
-// import { getCollectionData } from 'cms/api'
+import HomeScreen from 'screens/Home'
 
-
-const Home: NextPage = () => {
+const BrandsPage: NextPage = () => {
   const { theme: { global: { brandColorsNames } } } = useTheme()
-  const brands = useSelector(selectBrands) as Brand[]
-  const dispatch = useDispatch()
 
+  // Immutable to JS
+  const immutableBrands = useSelector(selectBrands)?.toJSON()
+  const brands = !immutableBrands || immutableBrands.map((brand) => brand.toJSON())
+
+  const dispatch = useDispatch()
   useEffect(() => {
     if (brands && brands.length) {
       const brandsColors: { [key: string]: BrandColorsKeys } = {}
@@ -33,26 +34,15 @@ const Home: NextPage = () => {
     }
   }, [brands])
 
+  if (!brands) {
+    return null
+  }
+
   return (
-    <>
-      <Page title="Home">
-        <ResponsiveGrid
-          columns={{
-            small: ['full'],
-            medium: ['50%'],
-            xlarge: ['33.33%']
-          }}
-        >
-          {!brands || brands.map((brand, index) => (
-            <BrandPreview
-              key={brand.id}
-              brand={brand}
-              color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
-            />
-          ))}
-        </ResponsiveGrid>
-      </Page>
-    </>
+    <HomeScreen
+      brands={brands}
+      brandsColors={brandColorsNames}
+    />
   )
 }
 
@@ -66,7 +56,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
     return newCriterion
   })
-  const configuration = await getSingleCollectionData('configuration')
+  const configuration = await getCollectionData('configuration')
   const countries = await getCollectionData('countries')
 
   return {
@@ -74,7 +64,7 @@ export const getStaticProps: GetStaticProps = async () => {
       data: [
         { data: brands, type: ['brand'] },
         { data: criteria, type: ['criterion'] },
-        { data: configuration, type: 'configuration' },
+        { data: configuration, type: ['configuration'] },
         { data: countries, type: ['country'] },
         { data: countries, type: ['productType'] }
       ]
@@ -82,4 +72,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Home
+export default BrandsPage

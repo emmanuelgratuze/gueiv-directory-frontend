@@ -20,22 +20,22 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
   const picturesCount = brand.pictures?.length || 0
   return (
     <Box
-      fill
       background={{ color: 'black' }}
       {...props}
     >
 
       <Stack fill>
         {/* Images */}
-        <Box>
-          <AnimatePresence>
+        <AnimatePresence>
+          <Stack fill>
             {brand.pictures?.map((fileName, index) => (
-              <Box key={fileName}>
+              <Box key={fileName} fill>
                 {index === currentIndex && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
+                    style={{ height: '100%' }}
                   >
                     <CarouselImage
                       fileName={fileName}
@@ -44,8 +44,8 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
                 )}
               </Box>
             ))}
-          </AnimatePresence>
-        </Box>
+          </Stack>
+        </AnimatePresence>
 
         {/* Navigation */}
         {picturesCount > 1 && (

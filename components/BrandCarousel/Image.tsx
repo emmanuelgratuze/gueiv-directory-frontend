@@ -12,14 +12,16 @@ const CarouselImage: React.FC<BoxProps & CarouselImageProps> = ({
 }) => (
   <Box
     fill
+    align="center"
+    justify="center"
     {...props}
   >
     <CloudinaryImage
       fit="cover"
       fileName={fileName}
       cloudinaryOptions={{
-        height: 1200,
-        width: 1200,
+        height: 1400,
+        width: 1400,
         crop: 'fit'
       }}
     />

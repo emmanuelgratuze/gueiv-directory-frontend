@@ -36,10 +36,24 @@ export default {
               widget: 'string'
             },
             {
-              label: 'Description',
+              label: 'Description (for SEO)',
               name: 'description',
               widget: 'text'
             },
+            {
+              label: 'Menu description',
+              name: 'menuDescription',
+              widget: 'markdown'
+            }
+          ]
+        },
+        {
+          label: 'Contact infos',
+          name: 'contact',
+          extension: 'json',
+          format: 'json',
+          file: 'cms/contents/configuration/social.json',
+          fields: [
             {
               label: 'Facebook page',
               name: 'facebook',
@@ -51,10 +65,29 @@ export default {
               widget: 'string'
             },
             {
-              label: 'Email contact',
+              label: 'Email',
               name: 'email',
               widget: 'string',
               required: false
+            }
+          ]
+        },
+        {
+          label: 'Criteria page',
+          name: 'criteriaPage',
+          extension: 'json',
+          format: 'json',
+          file: 'cms/contents/configuration/criteria-page.json',
+          fields: [
+            {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+            },
+            {
+              label: 'Introduction',
+              name: 'introduction',
+              widget: 'text'
             }
           ]
         }

@@ -1,17 +1,17 @@
 import { createSelector } from 'reselect'
-import { Map } from 'immutable'
-
-import { ImmutableAppState } from 'store/app/types'
+import { Map, List, fromJS } from 'immutable'
+import { DefaultRootState } from 'react-redux'
 import { ImmutableCriterion } from 'types/data/criterion'
+import { ImmutableDataTree } from '../types'
 
-export const selectCriteriaTree = (state: ImmutableAppState): Map<string, ImmutableCriterion> => (
-  state.getIn(['data', 'criteria'])
+export const selectCriteriaTree = (state: DefaultRootState): Map<string, ImmutableCriterion> => (
+  state.getIn(['data', 'criteria']) || fromJS({})
 )
 
-export const selectCriteria = createSelector(
+export const selectCriteria = createSelector<DefaultRootState, Map<string, ImmutableCriterion>, List<ImmutableDataTree>>(
   selectCriteriaTree,
-  (state) => (
-    state.getIn(['data', 'criteria']).toIndexedSeq()
+  (criteria) => (
+    List(criteria.valueSeq())
   )
 )
 

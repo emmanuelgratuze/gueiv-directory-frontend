@@ -2,11 +2,20 @@
 import { Record } from 'immutable'
 
 export interface Configuration {
-  title: string;
-  description: string;
-  facebook: string;
-  instagram: string;
-  email: string;
+  general: {
+    title: string;
+    description: string;
+    menuDescription: string;
+  };
+  social: {
+    facebook: string;
+    instagram: string;
+    email: string;
+  };
+  criteriaPage: {
+    title: string;
+    introduction: string;
+  };
 }
 
 export type ImmutableConfiguration = Record<Configuration>

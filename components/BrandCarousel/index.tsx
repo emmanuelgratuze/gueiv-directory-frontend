@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { Box, BoxProps, Stack } from 'grommet'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import { Brand } from 'types/data/brand'
+import { ImmutableBrand } from 'types/data/brand'
 import CarouselImage from './Image'
 import CarouselButton from './Button'
 
 type BrandCarouselProps = {
-  brand: Brand;
+  brand: ImmutableBrand;
   color?: string;
 }
 
@@ -17,7 +17,7 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
   ...props
 }) => {
   const [currentIndex, setIndex] = useState(0)
-  const picturesCount = brand.pictures?.length || 0
+  const picturesCount = brand.get('pictures')?.size || 0
   return (
     <Box
       background={{ color: 'black' }}
@@ -28,7 +28,7 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
         {/* Images */}
         <AnimatePresence>
           <Stack fill>
-            {brand.pictures?.map((fileName, index) => (
+            {brand.get('pictures')?.map((fileName, index) => (
               <Box key={fileName} fill>
                 {index === currentIndex && (
                   <motion.div

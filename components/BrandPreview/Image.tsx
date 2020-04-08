@@ -5,14 +5,14 @@ import { motion } from 'framer-motion'
 
 import CloudinaryImage from 'components/cloudinary/CloudinaryImage'
 
-import { Brand } from 'types/data/brand'
+import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
 import CriterionIcon from '../CriterionIcon'
 
 const Logo = require('assets/images/logo-unicolor.svg').ReactComponent
 
 type BrandImageType = {
-  brand: Brand;
+  brand: ImmutableBrand;
   color?: keyof ThemeColorsType;
   zoom?: boolean;
 }
@@ -32,7 +32,7 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({
     background={{ color: color || 'gray' }}
     {...props}
   >
-    {brand.pictures?.length
+    {brand.get('pictures')?.size
       ? (
         <Box
           width="100%"
@@ -61,7 +61,8 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({
             >
               <CloudinaryImage
                 fit="cover"
-                fileName={brand.pictures[0]}
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                fileName={brand.get('pictures') ? brand.get('pictures')!.first() : ''}
                 cloudinaryOptions={{
                   height: 600,
                   width: 600,
@@ -80,8 +81,8 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({
         >
           <Box width="xsmall" height="xsmall">
             {/* Criterion icon or Logo */}
-            {brand.criteria.length
-              ? <CriterionIcon criterion={brand.criteria[0]} />
+            {brand.get('criteria')?.size
+              ? <CriterionIcon criterion={brand.get('criteria').first()} />
               : <Logo height="100%" fill="white" />}
           </Box>
         </PlaceholderBox>

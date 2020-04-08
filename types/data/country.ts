@@ -5,6 +5,6 @@ export interface Country {
   name: string;
 }
 
-export type ImmutableBrand = Record<Country>
+export type ImmutableCountry = Record<Country>
 
 export {}

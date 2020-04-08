@@ -7,7 +7,7 @@ import Paragraph from 'components/Paragraph'
 
 import RelativeHeightBox from 'components/RelativeHeightBox'
 
-import { Brand } from 'types/data/brand'
+import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
 import useTheme from 'hooks/useTheme'
 import useHover from 'hooks/useHover'
@@ -17,7 +17,7 @@ import CriterionIcon from '../CriterionIcon'
 import DynamicBackgroundColorBox from '../visual/DynamicBackgroundColorBox'
 
 type BrandItemType = {
-  brand: Brand;
+  brand: ImmutableBrand;
   color?: keyof ThemeColorsType;
 }
 
@@ -30,7 +30,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
   const [hoverRef, isHovered] = useHover()
 
   return (
-    <Link href="/marcas/[slug]" as={`/marcas/${brand.slug}`}>
+    <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
       <a ref={hoverRef}>
         <DynamicBackgroundColorBox color={color}>
           <RelativeHeightBox
@@ -60,18 +60,18 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                     transform="uppercase"
                     color={color ? oppositeColors[color] : undefined}
                   >
-                    {brand.name}
+                    {brand.get('name')}
                   </Heading>
 
                   {/* Location */}
-                  {brand.city !== '' && brand.country && (
+                  {brand.get('city') !== '' && brand.get('country') && (
                     <Heading
                       level={3}
                       size="small"
                       color={color ? oppositeColors[color] : undefined}
                     >
-                      {brand.city && `${brand.city} `}
-                      {brand.country?.name}
+                      {brand.get('city') && `${brand.get('city')} `}
+                      {brand.getIn(['country', 'name'])}
                     </Heading>
                   )}
                 </Box>
@@ -83,15 +83,15 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                   color={color ? oppositeColors[color] : undefined}
                   length={50}
                 >
-                  {brand.description}
+                  {brand.get('description')}
                 </Paragraph>
 
                 {/* Criteria */}
-                {brand.criteria && (
+                {brand.get('criteria') && (
                   <Box direction="row">
-                    {brand.criteria.map((criterion) => (
+                    {brand.get('criteria').map((criterion) => (
                       <Box
-                        key={criterion.id}
+                        key={criterion.get('id')}
                         width="1.5rem"
                         height="1.5rem"
                         margin={{ right: 'small', bottom: 'small' }}

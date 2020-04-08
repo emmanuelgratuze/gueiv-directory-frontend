@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react'
-import { NextPage, GetStaticProps } from 'next'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { List } from 'immutable'
 
 import Page from 'components/Page'
 import BrandPreview from 'components/BrandPreview/BrandPreview'
 import ResponsiveGrid from 'components/ResponsiveGrid'
 import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
-import { Brand } from 'types/data/brand'
+import { ImmutableBrand } from 'types/data/brand'
 
 type HomeScreenProps = {
-  brands: Brand[];
+  brands: List<ImmutableBrand>;
   brandsColors: BrandColorsKeys[];
 }
 
@@ -28,7 +27,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
       >
         {!brands || brands.map((brand, index) => (
           <BrandPreview
-            key={brand.id}
+            key={brand.get('id')}
             brand={brand}
             color={brandsColors[index % brandsColors.length] as keyof ThemeColorsType}
           />

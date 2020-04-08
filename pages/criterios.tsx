@@ -8,7 +8,7 @@ import CriteriaScreen from 'screens/Criteria'
 import { selectCriteria } from 'store/data/selectors/criteria'
 
 const Criteria: NextPage = () => {
-  const criteria = useSelector(selectCriteria)?.toJSON()
+  const criteria = useSelector(selectCriteria)
   return (
     <>
       <CriteriaScreen criteria={criteria} />

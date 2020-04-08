@@ -1,32 +1,36 @@
 // import { ImmutableMap } from 'types/immutable'
-import { Record } from 'immutable'
-import { Criterion } from './criterion'
+import { Record, List } from 'immutable'
+import { Country, ImmutableCountry } from './country'
+import { Criterion, ImmutableCriterion } from './criterion'
+import { ProductType, ImmutableProductType } from './productType'
 
-export interface Brand {
+type BrandBase = {
   id: string;
   name: string;
   slug: string;
   description?: string;
-  pictures?: string[];
-  criteria: Criterion[];
   city?: string;
-  country?: {
-    id: string;
-    name: string;
-  };
-  genders?: {
-    id: string;
-    name: string;
-  }[];
-  product_types?: {
-    id: string;
-    name: string;
-  }[];
   facebook?: string;
   instagram?: string;
   web?: string;
 }
 
-export type ImmutableBrand = Record<Brand>
+export interface Brand extends BrandBase {
+  criteria: Criterion[];
+  country?: Country;
+  product_types?: ProductType[];
+  pictures?: string[];
+  genders?: string[];
+}
 
-export {}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface ImmutableBrand extends Record<BrandBase & {
+    criteria: List<ImmutableCriterion>;
+    country?: ImmutableCountry;
+    product_types?: List<ImmutableProductType>;
+    pictures?: List<string>;
+    genders?: List<string>;
+  }
+> {}
+
+export default {}

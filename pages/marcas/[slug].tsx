@@ -13,7 +13,7 @@ interface BrandPageType {
 }
 
 const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
-  const brand = useSelector((state) => selectBrandBySlug(state)(slug))?.toJSON()
+  const brand = useSelector((state) => selectBrandBySlug(state)(slug))
 
   if (!brand) {
     return null

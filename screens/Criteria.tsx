@@ -6,11 +6,12 @@ import Paragraph from 'components/Paragraph'
 import Heading from 'components/Heading'
 import CriterionIcon from 'components/CriterionIcon'
 
-import { Criterion } from 'types/data/criterion'
+import { ImmutableCriterion } from 'types/data/criterion'
 import useConfiguration from 'hooks/useConfiguration'
+import { List } from 'immutable'
 
 interface CriteriaScreenProps {
-  criteria: Criterion[];
+  criteria: List<ImmutableCriterion>;
 }
 
 const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
@@ -25,15 +26,15 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
             transform="uppercase"
             color="gray"
           >
-            {configuration.criteriaPage.title}
+            {configuration.getIn(['criteriaPage', 'title'])}
           </Heading>
           <Paragraph>
-            {configuration.criteriaPage.introduction}
+            {configuration.getIn(['criteriaPage', 'introduction'])}
           </Paragraph>
 
           {criteria.map((criterion) => (
             <Box
-              key={criterion.name}
+              key={criterion.get('name')}
               width="2.2rem"
               height="2.2rem"
             >

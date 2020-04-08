@@ -6,8 +6,7 @@ import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 
 import { BasicAction } from 'store/types'
-import { SET_BRANDS_COLORS, TRIGGER_DATA_READY } from './actionsTypes'
-
+import { SET_BRANDS_COLORS, SET_IS_DATA_READY } from './actionsTypes'
 
 function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
   switch (action.type) {
@@ -20,8 +19,8 @@ function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
 
 function isDataReady(state = false, action: BasicAction): boolean {
   switch (action.type) {
-    case TRIGGER_DATA_READY:
-      return true
+    case SET_IS_DATA_READY:
+      return fromJS(action.payload)
     default:
       return state
   }

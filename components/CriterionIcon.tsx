@@ -2,11 +2,11 @@ import React from 'react'
 import { BoxProps, Box } from 'grommet'
 import styled from 'styled-components'
 
-import { Criterion } from 'types/data/criterion'
+import { ImmutableCriterion } from 'types/data/criterion'
 import { ColorsType } from 'themes/theme'
 
 interface CriterionIcon {
-  criterion: Criterion;
+  criterion: ImmutableCriterion;
   color?: keyof ColorsType;
 }
 
@@ -28,14 +28,14 @@ const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
   color = 'white',
   ...props
 }) => {
-  if (!criterion.icon) {
+  if (!criterion.get('icon')) {
     return null
   }
 
   return (
     <StyledIconContainer
       dangerouslySetInnerHTML={{
-        __html: criterion.iconContent
+        __html: criterion.get('iconContent')
       }}
       color={color}
       {...props}

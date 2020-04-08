@@ -6,9 +6,7 @@ import { BrandColorsKeys } from 'themes/theme'
 import { selectBrands } from 'store/data/selectors/brands'
 import { setBrandsColors } from 'store/interface/actions'
 import useTheme from 'hooks/useTheme'
-import { getCollectionData } from 'cms/api'
-import fetchFileContent from 'utils/fetchFileContent'
-import { Criterion } from 'types/data/criterion'
+import { getPageCollectionData } from 'cms/api'
 import HomeScreen from 'screens/Home'
 
 const BrandsPage: NextPage = () => {
@@ -40,28 +38,21 @@ const BrandsPage: NextPage = () => {
   )
 }
 
-
+// eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async () => {
-  const brands = await getCollectionData('brands')
-  const criteria = await getCollectionData('criteria', async (criterion: Criterion) => {
-    const newCriterion = criterion
-    if (criterion.icon) {
-      newCriterion.iconContent = await fetchFileContent(criterion.icon)
-    }
-    return newCriterion
-  })
-  const configuration = await getCollectionData('configuration')
-  const countries = await getCollectionData('countries')
+  const dataList = [
+    { collection: 'brands', schema: ['brand'] },
+    { collection: 'criteria', schema: ['criterion'] },
+    { collection: 'configuration', schema: ['configuration'] },
+    { collection: 'countries', schema: ['country'] },
+    { collection: 'product-types', schema: ['productType'] }
+  ]
+  const dataPromises = dataList.map((datum) => getPageCollectionData(datum.collection))
+  const data = await Promise.all(dataPromises)
 
   return {
     props: {
-      data: [
-        { data: brands, type: ['brand'] },
-        { data: criteria, type: ['criterion'] },
-        { data: configuration, type: ['configuration'] },
-        { data: countries, type: ['country'] },
-        { data: countries, type: ['productType'] }
-      ]
+      data: dataList.map((datum, index) => ({ ...datum, data: data[index] }))
     }
   }
 }

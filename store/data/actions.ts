@@ -7,11 +7,11 @@ import {
   SchemaKeys
 } from './types.d'
 
-export function addData(type: SchemaKeys | SchemaKeys[], data: Data[]): AddDataAction {
+export function addData(schema: SchemaKeys | SchemaKeys[], data: Data[]): AddDataAction {
   return {
     type: ADD_DATA,
     payload: {
-      type,
+      schema,
       data
     }
   }

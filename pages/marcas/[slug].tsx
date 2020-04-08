@@ -4,9 +4,7 @@ import { useSelector } from 'react-redux'
 import BrandScreen from 'screens/Brand'
 import { selectBrandBySlug } from 'store/data/selectors/brands'
 import { Brand } from 'types/data/brand'
-import { Criterion } from 'types/data/criterion'
-import fetchFileContent from 'utils/fetchFileContent'
-import { getCollectionData } from 'cms/api'
+import { getCollectionData, getPageCollectionData } from 'cms/api'
 
 interface BrandPageType {
   slug: string;
@@ -24,29 +22,23 @@ const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
   )
 }
 
+// eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const brands = await getCollectionData('brands')
-  const criteria = await getCollectionData<Criterion>('criteria', async (criterion) => {
-    const newCriterion = criterion
-    if (criterion.icon) {
-      newCriterion.iconContent = await fetchFileContent(criterion.icon)
-    }
-    return newCriterion
-  })
-  const configuration = await getCollectionData('configuration')
-  const countries = await getCollectionData('countries')
+  const dataList = [
+    { collection: 'brands', schema: ['brand'] },
+    { collection: 'criteria', schema: ['criterion'] },
+    { collection: 'configuration', schema: ['configuration'] },
+    { collection: 'countries', schema: ['country'] },
+    { collection: 'product-types', schema: ['productType'] }
+  ]
+  const dataPromises = dataList.map((datum) => getPageCollectionData(datum.collection))
+  const data = await Promise.all(dataPromises)
 
   return {
     props: {
       slug: params?.slug,
       color: params?.color || null,
-      data: [
-        { data: brands, type: ['brand'] },
-        { data: criteria, type: ['criterion'] },
-        { data: configuration, type: 'configuration' },
-        { data: countries, type: ['country'] },
-        { data: countries, type: ['productType'] }
-      ]
+      data: dataList.map((datum, index) => ({ ...datum, data: data[index] }))
     }
   }
 }

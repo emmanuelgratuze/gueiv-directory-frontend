@@ -1,5 +1,13 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import fs from 'fs'
+import { v2 as cloudinary } from 'cloudinary'
+import { Criterion } from 'types/data/criterion'
+import fetchFileContent from 'utils/fetchFileContent'
 
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY
+})
 const contentsPath = `${process.env.PWD}/cms/contents`
 
 export async function getCollectionData<T extends object>(
@@ -37,17 +45,28 @@ export async function getSingleCollectionData<T extends object>(collectionName: 
   return data[0]
 }
 
+// Adapted for pages
+export async function getPageCollectionData(collectionName: string): Promise<object[]> {
+  if (collectionName === 'criteria') {
+    return getCollectionData('criteria', async (criterion: Criterion) => {
+      const newCriterion = criterion
+      if (criterion.icon) {
+        const fullUrl = criterion.icon.includes('://')
+          ? criterion.icon
+          : cloudinary.url(criterion.icon.split('/')[1])
+        newCriterion.iconContent = await fetchFileContent(fullUrl)
+      }
+      return newCriterion
+    })
+  }
+  return getCollectionData(collectionName)
+}
 
-// export const getCriteria = () => {
-//   return criteria
-// }
-
-// export const getCountries = () => {
-//   return countries
-// }
-
-// export const getProductTypes = () => {
-//   return productTypes
-// }
+export async function getPageCollectionDatas(collections: string[] = []): Promise<object[]> {
+  const promises = collections.map((collectionName) => (
+    getPageCollectionData(collectionName)
+  ))
+  return Promise.all(promises)
+}
 
 export default {}

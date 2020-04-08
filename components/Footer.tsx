@@ -20,6 +20,7 @@ const FooterHeading: React.FC = ({ ...props }) => (
 const Footer: React.FC = () => {
   const configuration = useConfiguration()
   const { brandColors } = useTheme()
+
   return (
     <Box
       background={{ color: 'light-1' }}
@@ -42,13 +43,13 @@ const Footer: React.FC = () => {
             >
               ¿Tienes una marca sostenible y quieres estar en el directorio? Escríbenos a:
               <br />
-              <StandardLink href={`mailto:${configuration.social.email}`}>
+              <StandardLink href={`mailto:${configuration.getIn(['social', 'email'])}`}>
                 <Text
                   color="pink"
                   weight="bold"
                   transform="initial"
                 >
-                  {configuration.social.email}
+                  {configuration.getIn(['social', 'email'])}
                 </Text>
               </StandardLink>
             </Paragraph>
@@ -56,10 +57,10 @@ const Footer: React.FC = () => {
           <Box align="center" gap="small" margin={{ bottom: 'medium' }}>
             <FooterHeading>¡Sigue nuestros pasos!</FooterHeading>
             <Box direction="row" gap="medium">
-              <StandardLink href={configuration.social.instagram} external>
+              <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
                 <Instagram size="2rem" color={brandColors.blue} />
               </StandardLink>
-              <StandardLink href={configuration.social.facebook} external>
+              <StandardLink href={configuration.getIn(['social', 'facebook'])} external>
                 <Facebook size="2rem" color={brandColors.blue} />
               </StandardLink>
             </Box>

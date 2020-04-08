@@ -5,6 +5,6 @@ export interface ProductType {
   name: string;
 }
 
-export type ImmutableBrand = Record<ProductType>
+export type ImmutableProductType = Record<ProductType>
 
 export {}

@@ -7,7 +7,7 @@ import {
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { fromJS } from 'immutable'
 
-import localStoragePersister, { getStateFromLocalStorage } from 'utils/redux/storeLocalStoragePersister'
+import localStorageListener, { getStateFromLocalStorage } from 'utils/redux/storeLocalStoragePersister'
 
 // Middlewares
 import dataMiddleware from './middlewares/dataMiddleware'
@@ -41,7 +41,7 @@ function configureStore(initialState = fromJS({})): Store {
     ])
   )
 
-  localStoragePersister(['interface'])(store)
+  localStorageListener([['interface', 'brandsColors']])(store)
 
   return store
 }

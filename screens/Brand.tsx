@@ -12,10 +12,10 @@ import Paragraph from 'components/Paragraph'
 import CriterionIcon from 'components/CriterionIcon'
 import StandardLink from 'components/StandardLink'
 
-import { Brand } from 'types/data/brand'
+import { ImmutableBrand } from 'types/data/brand'
 
 interface BrandScreenProps {
-  brand: Brand;
+  brand: ImmutableBrand;
 }
 
 const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
@@ -52,18 +52,18 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                 level={1}
                 transform="uppercase"
               >
-                {brand.name}
+                {brand.get('name')}
               </Heading>
 
               {/* Location */}
-              {brand.city !== '' && brand.country && (
+              {brand.get('city') !== '' && brand.get('country') && (
                 <Heading
                   level={2}
                   size="small"
                   color={oppBrandColor}
                 >
-                  {brand.city && `${brand.city}, `}
-                  {brand.country?.name}
+                  {brand.get('city') && `${brand.get('city')}, `}
+                  {brand.getIn(['country', 'name'])}
                 </Heading>
               )}
 
@@ -74,7 +74,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                 color={oppBrandColor}
                 margin={{ bottom: 'medium' }}
               >
-                {brand.description}
+                {brand.get('description')}
               </Paragraph>
 
               {/* Criteria */}
@@ -87,11 +87,11 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                 >
                   Criterios
                 </Text>
-                {brand.criteria && (
+                {brand.get('criteria') && (
                   <Box direction="row" gap="small">
-                    {brand.criteria.map((criterion) => (
+                    {brand.get('criteria').map((criterion) => (
                       <Box
-                        key={criterion.name}
+                        key={criterion.get('name')}
                         width="2.2rem"
                         height="2.2rem"
                       >
@@ -108,9 +108,9 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
               {/* Links */}
               <Box direction="row" gap="small">
                 {[
-                  ['Instagram', brand.instagram],
-                  ['Facebook', brand.facebook],
-                  ['Página web', brand.web]
+                  ['Instagram', brand.get('instagram')],
+                  ['Facebook', brand.get('facebook')],
+                  ['Página web', brand.get('web')]
                 ].map(([label, link]) => link && (
                   <StandardLink
                     href={link}

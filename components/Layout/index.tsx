@@ -1,15 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { Grommet } from 'grommet'
-import { useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
+import { AnimatePresence, motion } from 'framer-motion'
 
+import LoadingScreen from 'screens/Loading'
+import useAnalytics from 'hooks/useAnalytics'
 import theme from 'themes/theme'
-import { selectIsDataReady } from 'store/interface/selectors'
 
 import { GlobalStyles } from './styled'
 
 const Layout: React.FC = ({ children }) => {
-  const isDataReady = useSelector(selectIsDataReady)
+  if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
+    useAnalytics(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
+  }
+
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
+  const handleRouteChangeStart = (): void => {
+    window.scrollTo(0, 0)
+    setIsLoading(true)
+  }
+  const handleRouteChangeComplete = (): void => {
+    setIsLoading(false)
+  }
+
+  useEffect(() => {
+    router.events.on('routeChangeStart', handleRouteChangeStart)
+    router.events.on('routeChangeComplete', handleRouteChangeComplete)
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChangeComplete)
+      router.events.off('routeChangeStart', handleRouteChangeStart)
+    }
+  }, [])
+
   return (
     <>
       <Head>
@@ -31,17 +56,30 @@ const Layout: React.FC = ({ children }) => {
 
       <GlobalStyles />
 
-      {isDataReady && (
-        <Grommet theme={theme}>
-          {children}
-        </Grommet>
-      )}
-
-      {!isDataReady && (
-        <>
-          Loading
-        </>
-      )}
+      <Grommet theme={theme}>
+        <AnimatePresence exitBeforeEnter>
+          {!isLoading && (
+            <motion.div
+              key={router.route}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              {children}
+            </motion.div>
+          )}
+          {isLoading && (
+            <motion.div
+              key={router.route}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <LoadingScreen />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Grommet>
     </>
   )
 }

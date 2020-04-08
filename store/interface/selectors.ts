@@ -15,11 +15,4 @@ export const selectBrandsColors = createSelector<DefaultRootState, ImmutableInte
   )
 )
 
-export const selectIsDataReady = createSelector(
-  selectInterfaceTree,
-  (state) => (
-    state.get('isDataReady')
-  )
-)
-
 export default {}

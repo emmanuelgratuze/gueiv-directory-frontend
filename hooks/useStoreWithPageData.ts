@@ -4,23 +4,26 @@ import { Store } from 'redux'
 import configureStore from 'store/index'
 import { addData } from 'store/data/actions'
 import { Data, SchemaKeys } from 'store/data/types'
-import { triggerDataReady } from 'store/interface/actions'
 
-const useStoreWithData = (
+const useStoreWithPageData = (
   pageProps: { data: { data: Data[]; type: SchemaKeys | SchemaKeys[] }[] }
 ): Store => {
   const store = configureStore()
 
-  useEffect(() => {
+  const addDataToStore = async (): Promise<void> => {
     if (pageProps.data) {
-      pageProps.data.forEach((datum) => {
+      const promises = pageProps.data.map((datum) => (
         store.dispatch(addData(datum.type, datum.data))
-      })
+      ))
+      await Promise.all(promises)
     }
-    store.dispatch(triggerDataReady())
-  })
+  }
+
+  useEffect(() => {
+    addDataToStore()
+  }, [pageProps])
 
   return store
 }
 
-export default useStoreWithData
+export default useStoreWithPageData

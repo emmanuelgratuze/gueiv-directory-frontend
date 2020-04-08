@@ -3,7 +3,5 @@ export interface BasicAction {
   meta?: {
     [key: string]: unknown;
   };
-  payload?: {
-    [key: string]: unknown;
-  };
+  payload?: unknown;
 }

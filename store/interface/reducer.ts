@@ -6,7 +6,7 @@ import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 
 import { BasicAction } from 'store/types'
-import { SET_BRANDS_COLORS } from './actionsTypes'
+import { SET_BRANDS_COLORS, TRIGGER_DATA_READY } from './actionsTypes'
 
 
 function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
@@ -18,9 +18,19 @@ function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
   }
 }
 
+function isDataReady(state = false, action: BasicAction): boolean {
+  switch (action.type) {
+    case TRIGGER_DATA_READY:
+      return true
+    default:
+      return state
+  }
+}
+
 /**
  * Creates the main reducer with the dynamically injected ones
  */
 export default combineReducers({
-  brandsColors
+  brandsColors,
+  isDataReady
 })

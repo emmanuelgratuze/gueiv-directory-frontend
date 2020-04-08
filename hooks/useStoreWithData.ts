@@ -4,8 +4,9 @@ import { Store } from 'redux'
 import configureStore from 'store/index'
 import { addData } from 'store/data/actions'
 import { Data, SchemaKeys } from 'store/data/types'
+import { triggerDataReady } from 'store/interface/actions'
 
-const useStorePreloadedWithStaticProps = (
+const useStoreWithData = (
   pageProps: { data: { data: Data[]; type: SchemaKeys | SchemaKeys[] }[] }
 ): Store => {
   const store = configureStore()
@@ -16,9 +17,10 @@ const useStorePreloadedWithStaticProps = (
         store.dispatch(addData(datum.type, datum.data))
       })
     }
+    store.dispatch(triggerDataReady())
   })
 
   return store
 }
 
-export default useStorePreloadedWithStaticProps
+export default useStoreWithData

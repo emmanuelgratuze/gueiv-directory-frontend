@@ -1,10 +1,10 @@
 import { Record } from 'immutable'
 import { BrandColorsKeys } from 'themes/theme'
 
-export interface Interface {
+export interface InterfaceTree {
   brandsColors: { [key: string]: BrandColorsKeys };
 }
 
-export type InterfaceTree = Record<Interface>
+export type ImmutableInterfaceTree = Record<Interface>
 
 export {}

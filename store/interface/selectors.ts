@@ -1,16 +1,24 @@
 import { createSelector } from 'reselect'
-import { ImmutableAppState } from 'store/app/types'
+import { DefaultRootState } from 'react-redux'
+import { BrandColorsKeys } from 'themes/theme'
 
-import { InterfaceTree } from './types'
+import { ImmutableInterfaceTree } from './types'
 
-export const selectInterfaceTree = (state: ImmutableAppState): InterfaceTree => (
+export const selectInterfaceTree = (state: DefaultRootState): ImmutableInterfaceTree => (
   state.getIn(['interface'])
 )
 
-export const selectBrandsColors = createSelector(
+export const selectBrandsColors = createSelector<DefaultRootState, ImmutableInterfaceTree, { [key: string]: BrandColorsKeys }>(
   selectInterfaceTree,
   (state) => (
     state.get('brandsColors')
+  )
+)
+
+export const selectIsDataReady = createSelector(
+  selectInterfaceTree,
+  (state) => (
+    state.get('isDataReady')
   )
 )
 

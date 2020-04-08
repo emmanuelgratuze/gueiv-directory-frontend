@@ -225,7 +225,14 @@ export default {
           widget: 'markdown'
         },
         {
+          label: 'Color',
+          name: 'color',
+          widget: 'string',
+          required: false
+        },
+        {
           label: 'Icon',
+          hint: 'IMPORTANT: only upload .svg files here',
           name: 'icon',
           required: false,
           widget: 'file',

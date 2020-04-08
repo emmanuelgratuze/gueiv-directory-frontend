@@ -10,7 +10,7 @@ export type SchemaKeys = keyof (typeof schemas)
 export interface AddDataAction extends BasicAction {
   type: typeof ADD_DATA;
   payload: {
-    type: SchemaKeys | SchemaKeys[];
+    schema: SchemaKeys | SchemaKeys[];
     data: Data[];
   };
   meta?: {

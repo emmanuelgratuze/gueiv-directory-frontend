@@ -9,7 +9,7 @@ const baseFontSize = 16
 const fontSizing = (factor: number): { size: string; height: string; maxWidth: string } => ({
   size: `${baseFontSize * factor}px`,
   height: `${baseSpacing * factor}px`,
-  maxWidth: `${baseSpacing * (baseFontSize * factor)}px`
+  maxWidth: `${baseSpacing * (baseFontSize * factor * 5)}px`
 })
 
 const darkColors = [

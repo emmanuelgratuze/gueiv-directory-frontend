@@ -25,7 +25,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
   return (
     <>
       <Page
-        title="Marca"
+        title={brand.get('name')}
         withScroll={isMobile}
         withFooter={false}
       >

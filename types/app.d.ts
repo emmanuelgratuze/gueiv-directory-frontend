@@ -4,7 +4,3 @@ declare module '*.svg' {
   const src: string
   export default src
 }
-export interface ProcessEnv {
-  APP_CONFIG: string;
-  APP_ENV: 'development' | 'staging' | 'test' | 'production';
-}

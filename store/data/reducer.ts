@@ -18,7 +18,7 @@ const dataReducer = (
   switch (action.type) {
     case ADD_DATA: {
       let newState = state
-      const { type, data } = action.payload
+      const { schema: type, data } = action.payload
 
       const dataSchema = Array.isArray(type)
         ? type.map((singleType) => schemas[singleType])

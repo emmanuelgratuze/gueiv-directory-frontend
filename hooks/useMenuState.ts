@@ -14,7 +14,7 @@ const useMenuState = (): UseMenuState => {
   const isMenuOpen = useSelector(selectIsMenuOpen)
 
   const setMenuState = useCallback((value = false) => dispatch(setMenuOpenState(value)), [])
-  const toggleMenu = useCallback((value) => setMenuState(!isMenuOpen), [isMenuOpen])
+  const toggleMenu = useCallback(() => setMenuState(!isMenuOpen), [isMenuOpen])
   const closeMenu = useCallback(() => setMenuState(false), [])
 
   const router = useRouter()

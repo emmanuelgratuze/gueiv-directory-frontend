@@ -55,13 +55,13 @@ const themeColors = {
 }
 
 const oppositeColors = {
-  yellow: '#FFFFFF',
-  turquoise: '#FFFFFF',
-  blue: '#FFFFFF',
-  pink: '#FFFFFF',
-  gray: '#FFFFFF',
-  black: '#FFFFFF',
-  white: themeColors.blue
+  yellow: 'white',
+  turquoise: 'gray',
+  blue: 'white',
+  pink: 'white',
+  gray: 'white',
+  black: 'white',
+  white: 'gray'
 }
 
 const colors: { [key: string]: string } = {
@@ -428,5 +428,5 @@ export type ThemeColorsType = typeof themeColors
 export type BreakpointsKeysType = keyof BreakpointsType
 export type BreakpointsValuesType = ValueOf<BreakpointsType>
 export type BrandColorsKeys = keyof ThemeType['global']['brandColors']
-
+export type ColorsNames = keyof typeof oppositeColors
 export default theme

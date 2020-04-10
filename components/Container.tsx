@@ -16,7 +16,12 @@ const Container: React.FC<BoxProps & ContainerType> = ({
     align="center"
     {...props}
   >
-    <Box width={fluid ? 'full' : 'xlarge'} align="start" fill="vertical" wrap>
+    <Box
+      width={fluid ? 'full' : 'xlarge'}
+      align="start"
+      fill="vertical"
+      wrap
+    >
       {children}
     </Box>
   </Box>

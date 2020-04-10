@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Store } from 'redux'
 
 import configureStore from 'store/index'
@@ -8,7 +8,7 @@ import { Data, SchemaKeys } from 'store/data/types'
 const useStoreWithPageData = (
   pageProps: { data: { data: Data[]; schema: SchemaKeys | SchemaKeys[] }[] }
 ): Store => {
-  const store = configureStore()
+  const [store] = useState(configureStore())
 
   const addDataToStore = async (): Promise<void> => {
     if (pageProps.data) {
@@ -21,7 +21,7 @@ const useStoreWithPageData = (
 
   useEffect(() => {
     addDataToStore()
-  }, [pageProps])
+  })
 
   return store
 }

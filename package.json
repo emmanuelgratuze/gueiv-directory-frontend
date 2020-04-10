@@ -59,6 +59,7 @@
     "polished": "^3.5.1",
     "prop-types": "^15.7.2",
     "react": "16.13.0",
+    "react-animated-burgers": "^1.2.7",
     "react-dom": "16.13.0",
     "react-ga": "^2.7.0",
     "react-redux": "^7.2.0",
@@ -71,7 +72,7 @@
     "redux-persist": "^6.0.0",
     "request": "^2.88.2",
     "reselect": "^4.0.0",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.1.0",
     "webpack": "^4.42.1"
   },
   "devDependencies": {

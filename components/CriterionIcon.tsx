@@ -1,13 +1,17 @@
-import React from 'react'
-import { BoxProps, Box } from 'grommet'
+import React, { useMemo } from 'react'
+import { Box } from 'grommet'
 import styled from 'styled-components'
+import { darken } from 'polished'
 
 import { ImmutableCriterion } from 'types/data/criterion'
-import { ColorsType } from 'themes/theme'
+import { ColorsNames } from 'themes/theme'
+import useTheme from 'hooks/useTheme'
+import useHover from 'hooks/useHover'
 
-interface CriterionIcon {
+type CriterionIcon = {
   criterion: ImmutableCriterion;
-  color?: keyof ColorsType;
+  color?: ColorsNames | string;
+  tooltip?: boolean;
 }
 
 const StyledIconContainer = styled(Box)`
@@ -23,23 +27,42 @@ const StyledIconContainer = styled(Box)`
   }
 `
 
-const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
+const CriterionIcon: React.FC<CriterionIcon> = ({
   criterion,
   color = 'white',
+  tooltip = false,
   ...props
 }) => {
+  const [ref, isHover] = useHover()
+  const { colors, oppositeColors } = useTheme()
   if (!criterion.get('icon')) {
     return null
   }
 
+  const oppositeColor = useMemo(() => {
+    if ((color as ColorsNames) in colors) {
+      return colors[oppositeColors[color as ColorsNames]]
+    }
+    return darken(0.5, color)
+  }, [color])
+
+  const normalColor = useMemo(() => {
+    if ((color as ColorsNames) in colors) {
+      return colors[color as ColorsNames] as string
+    }
+    return color
+  }, [color])
+
   return (
-    <StyledIconContainer
-      dangerouslySetInnerHTML={{
-        __html: criterion.get('iconContent')
-      }}
-      color={color}
-      {...props}
-    />
+    <Box ref={ref}>
+      <StyledIconContainer
+        dangerouslySetInnerHTML={{
+          __html: criterion.get('iconContent')
+        }}
+        color={isHover && tooltip ? oppositeColor : normalColor}
+        {...props}
+      />
+    </Box>
   )
 }
 

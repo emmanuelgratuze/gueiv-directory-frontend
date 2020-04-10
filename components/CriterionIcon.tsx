@@ -7,11 +7,12 @@ import { ImmutableCriterion } from 'types/data/criterion'
 import { ColorsNames } from 'themes/theme'
 import useTheme from 'hooks/useTheme'
 import useHover from 'hooks/useHover'
+import Link from 'next/link'
 
 type CriterionIcon = {
   criterion: ImmutableCriterion;
   color?: ColorsNames | string;
-  tooltip?: boolean;
+  clickable?: boolean;
 }
 
 const StyledIconContainer = styled(Box)`
@@ -27,10 +28,12 @@ const StyledIconContainer = styled(Box)`
   }
 `
 
+
+
 const CriterionIcon: React.FC<CriterionIcon> = ({
   criterion,
   color = 'white',
-  tooltip = false,
+  clickable = false,
   ...props
 }) => {
   const [ref, isHover] = useHover()
@@ -53,17 +56,26 @@ const CriterionIcon: React.FC<CriterionIcon> = ({
     return color
   }, [color])
 
-  return (
+  const content = (
     <Box ref={ref}>
       <StyledIconContainer
         dangerouslySetInnerHTML={{
           __html: criterion.get('iconContent')
         }}
-        color={isHover && tooltip ? oppositeColor : normalColor}
+        color={isHover && clickable ? oppositeColor : normalColor}
         {...props}
       />
     </Box>
   )
+
+  if (clickable) {
+    return (
+      <Link href="/criterios" as={`/criterios#${criterion.get('id')}`}>
+        {content}
+      </Link>
+    )
+  }
+  return content
 }
 
 export default CriterionIcon

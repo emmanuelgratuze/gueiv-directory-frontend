@@ -1,13 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
-import { Box, BoxProps } from 'grommet'
+import { Box, BoxProps, Stack } from 'grommet'
 
 import Header from 'components/Header'
 import Footer from 'components/Footer'
+import MenuScreen from 'screens/Menu'
 
 import usePageTitle from 'hooks/usePageTitle'
 import useTheme from 'hooks/useTheme'
 import useConfiguration from 'hooks/useConfiguration'
+import useMenuState from 'hooks/useMenuState'
 
 type PageType = {
   title: string;
@@ -27,6 +29,7 @@ const Page: React.FC<BoxProps & PageType> = ({
   const fullTitle = usePageTitle(title)
   const configuration = useConfiguration()
   const { theme: { header } } = useTheme()
+  const { isMenuOpen } = useMenuState()
 
   return (
     <Box>
@@ -42,21 +45,26 @@ const Page: React.FC<BoxProps & PageType> = ({
       </Head>
 
       <Box
-        overflow={!withScroll ? 'hidden' : undefined}
-        height={!withScroll ? '100vh' : '100%'}
+        overflow={!withScroll || isMenuOpen ? 'hidden' : undefined}
+        height={!withScroll ? '100vh' : undefined}
         width="100%"
         {...props}
       >
         <Header />
-        <Box
-          pad={{ top: header.height }}
-          height="100%"
-        >
-          {children}
+
+        <Box fill height={{ min: '80vh' }}>
+          <Stack fill>
+            <MenuScreen open={isMenuOpen} />
+            <Box fill={!withScroll}>
+              <Box pad={{ top: header.height }}>
+                {children}
+              </Box>
+              {withFooter && (
+                <Footer />
+              )}
+            </Box>
+          </Stack>
         </Box>
-        {withFooter && (
-          <Footer />
-        )}
       </Box>
     </Box>
   )

@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import { Grommet } from 'grommet'
 import { useRouter } from 'next/router'
 import { AnimatePresence, motion } from 'framer-motion'
 
 import LoadingScreen from 'screens/Loading'
+
 import useAnalytics from 'hooks/useAnalytics'
+import useLoading from 'hooks/useLoading'
 import theme from 'themes/theme'
 
 import { GlobalStyles } from './styled'
@@ -15,25 +17,8 @@ const Layout: React.FC = ({ children }) => {
     useAnalytics(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
   }
 
-  const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
-  const handleRouteChangeStart = (): void => {
-    window.scrollTo(0, 0)
-    setIsLoading(true)
-  }
-  const handleRouteChangeComplete = (): void => {
-    setIsLoading(false)
-  }
-
-  useEffect(() => {
-    router.events.on('routeChangeStart', handleRouteChangeStart)
-    router.events.on('routeChangeComplete', handleRouteChangeComplete)
-
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChangeComplete)
-      router.events.off('routeChangeStart', handleRouteChangeStart)
-    }
-  }, [])
+  const isLoading = useLoading()
 
   return (
     <>

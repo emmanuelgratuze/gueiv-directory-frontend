@@ -1,11 +1,14 @@
 import React from 'react'
-import { Box } from 'grommet'
+import { Box, Button } from 'grommet'
 import styled from 'styled-components'
 import Link from 'next/link'
 
 import Container from 'components/Container'
 import Text from 'components/Text'
+import A from 'components/A'
+import HamburgerIcon from 'components/HamburgerIcon'
 import useTheme from 'hooks/useTheme'
+import useMenuState from 'hooks/useMenuState'
 
 const Logo = require('assets/images/logo.svg').ReactComponent
 
@@ -18,6 +21,7 @@ const HeaderWrapper = styled(Box)`
 
 const Header: React.FC = () => {
   const { theme: { header } } = useTheme()
+  const { isMenuOpen, toggleMenu } = useMenuState()
 
   return (
     <HeaderWrapper
@@ -39,11 +43,16 @@ const Header: React.FC = () => {
             pad="small"
             gap="small"
           >
+            <Box fill="vertical" pad="xsmall">
+              <Button plain onClick={() => toggleMenu()} fill>
+                <HamburgerIcon open={isMenuOpen} />
+              </Button>
+            </Box>
             <Link href="/">
               <Box fill="vertical">
-                <a>
+                <A>
                   <Logo width="5rem" height="100%" />
-                </a>
+                </A>
               </Box>
             </Link>
             <Box>

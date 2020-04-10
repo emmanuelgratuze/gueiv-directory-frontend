@@ -1,5 +1,5 @@
 /* eslint-disable */
-const Logger = ({ children }) => {
+export const Logger = ({ children }) => {
   console.log(children)
   return null
 }

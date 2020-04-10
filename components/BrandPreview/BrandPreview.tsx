@@ -14,7 +14,7 @@ import useHover from 'hooks/useHover'
 
 import BrandImage from './Image'
 import CriterionIcon from '../CriterionIcon'
-import DynamicBackgroundColorBox from '../visual/DynamicBackgroundColorBox'
+import DynamicBackgroundColorBox from '../DynamicBackgroundColorBox'
 
 type BrandItemType = {
   brand: ImmutableBrand;

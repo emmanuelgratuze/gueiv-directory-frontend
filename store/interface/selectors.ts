@@ -15,4 +15,11 @@ export const selectBrandsColors = createSelector<DefaultRootState, ImmutableInte
   )
 )
 
+export const selectIsMenuOpen = createSelector(
+  selectInterfaceTree,
+  (state) => (
+    state.get('isMenuOpen')
+  )
+)
+
 export default {}

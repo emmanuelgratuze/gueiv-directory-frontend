@@ -28,8 +28,6 @@ const StyledIconContainer = styled(Box)`
   }
 `
 
-
-
 const CriterionIcon: React.FC<CriterionIcon> = ({
   criterion,
   color = 'white',

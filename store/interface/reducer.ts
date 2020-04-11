@@ -6,7 +6,7 @@ import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 
 import { BasicAction } from 'store/types'
-import { SET_BRANDS_COLORS, SET_IS_DATA_READY } from './actionsTypes'
+import { SET_BRANDS_COLORS, SET_MENU_OPEN_STATE } from './actionsTypes'
 
 function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
   switch (action.type) {
@@ -17,9 +17,9 @@ function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
   }
 }
 
-function isDataReady(state = false, action: BasicAction): boolean {
+function isMenuOpen(state = false, action: BasicAction): boolean {
   switch (action.type) {
-    case SET_IS_DATA_READY:
+    case SET_MENU_OPEN_STATE:
       return fromJS(action.payload)
     default:
       return state
@@ -31,5 +31,5 @@ function isDataReady(state = false, action: BasicAction): boolean {
  */
 export default combineReducers({
   brandsColors,
-  isDataReady
+  isMenuOpen
 })

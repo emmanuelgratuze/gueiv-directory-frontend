@@ -16,7 +16,7 @@
     "postinstall": "# cp -r vendor/gsap/bonus-files-for-npm-users/* node_modules/gsap/",
     "precommit": "lint-staged",
     "prettier-js": "prettier-eslint --write './**/*.{ts,tsx,js,jsx}'",
-    "prettier-styles": "prettier-stylelint --write './**/*.js'"
+    "prettier-styles": "prettier-stylelint --write './**/*.{ts,tsx,js,jsx}'"
   },
   "lint-staged": {
     "./**/*.js": "npm run lint"
@@ -39,7 +39,6 @@
     "cloudinary": "^1.21.0",
     "cloudinary-core": "^2.8.2",
     "core-js": "^3.6.4",
-    "dotenv": "^8.2.0",
     "es6-promise": "^4.2.8",
     "find-cache-dir": "^3.3.1",
     "framer-motion": "^1.10.3",
@@ -59,7 +58,6 @@
     "polished": "^3.5.1",
     "prop-types": "^15.7.2",
     "react": "16.13.0",
-    "react-animated-burgers": "^1.2.7",
     "react-dom": "16.13.0",
     "react-ga": "^2.7.0",
     "react-redux": "^7.2.0",

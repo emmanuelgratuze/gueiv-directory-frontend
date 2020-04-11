@@ -6,6 +6,9 @@ import Heading from 'components/Heading'
 import Paragraph from 'components/Paragraph'
 
 import RelativeHeightBox from 'components/RelativeHeightBox'
+import CriterionIcon from 'components/CriterionIcon'
+import DynamicBackgroundColorBox from 'components/DynamicBackgroundColorBox'
+import A from 'components/A'
 
 import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
@@ -13,8 +16,6 @@ import useTheme from 'hooks/useTheme'
 import useHover from 'hooks/useHover'
 
 import BrandImage from './Image'
-import CriterionIcon from '../CriterionIcon'
-import DynamicBackgroundColorBox from '../DynamicBackgroundColorBox'
 
 type BrandItemType = {
   brand: ImmutableBrand;
@@ -31,7 +32,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 
   return (
     <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
-      <a ref={hoverRef}>
+      <A ref={hoverRef}>
         <DynamicBackgroundColorBox color={color}>
           <RelativeHeightBox
             relativeHeight="50%"
@@ -97,6 +98,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                         margin={{ right: 'small', bottom: 'small' }}
                       >
                         <CriterionIcon
+                          clickable
                           criterion={criterion}
                           color={color ? oppositeColors[color] : undefined}
                         />
@@ -108,7 +110,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
             </Box>
           </RelativeHeightBox>
         </DynamicBackgroundColorBox>
-      </a>
+      </A>
     </Link>
   )
 }

@@ -1,17 +1,5 @@
-const dotenv = require('dotenv')
-const path = require('path')
-const webpack = require('webpack')
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
-
-// Get local env
-const { parsed: clientEnvironmentVariables = {} } = dotenv.config({
-  path: path.resolve(process.cwd(), '.env.client')
-})
-
-const { parsed: environmentVariables = {} } = dotenv.config({
-  path: path.resolve(process.cwd(), '.env')
-})
 
 module.exports = withPlugins(
   [
@@ -60,13 +48,11 @@ module.exports = withPlugins(
         test: /\.css$/,
         use: ['raw-loader']
       })
-      config.plugins.push(
-        new webpack.EnvironmentPlugin({
-          ...environmentVariables,
-          ...clientEnvironmentVariables
-        })
-      )
       return config
+    },
+    env: {
+      CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+      CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY
     }
   }
 )

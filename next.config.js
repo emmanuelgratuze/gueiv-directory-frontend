@@ -4,11 +4,6 @@ const webpack = require('webpack')
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
 
-// Get local env
-const { parsed: clientEnvironmentVariables = {} } = dotenv.config({
-  path: path.resolve(process.cwd(), '.env.client')
-})
-
 const { parsed: environmentVariables = {} } = dotenv.config({
   path: path.resolve(process.cwd(), '.env')
 })
@@ -62,11 +57,11 @@ module.exports = withPlugins(
       })
       config.plugins.push(
         new webpack.EnvironmentPlugin({
-          ...environmentVariables,
-          ...clientEnvironmentVariables
+          ...environmentVariables
         })
       )
       return config
-    }
+    },
+    env: environmentVariables
   }
 )

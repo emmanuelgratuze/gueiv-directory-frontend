@@ -96,6 +96,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                         height="2.2rem"
                       >
                         <CriterionIcon
+                          clickable
                           criterion={criterion}
                           color={oppBrandColor}
                         />

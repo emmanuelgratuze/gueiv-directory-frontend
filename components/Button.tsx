@@ -1,19 +1,23 @@
-import { Box, BoxProps } from 'grommet'
+// import React from 'react'
+// import { Box, BoxProps } from 'grommet'
 import styled, { css } from 'styled-components'
-import { ThemeType } from 'themes/theme'
+import { ThemeType, ColorsNames } from 'themes/theme'
 
+// type BoxPropsWithoutColor = Omit<BoxProps, 'color'>
 type ButtonProps = {
   theme: ThemeType;
   size?: 'small' | 'medium' | 'large';
+  color?: ColorsNames;
 }
 
-const Button = styled<React.FC<BoxProps & ButtonProps>>(Box)`
-  padding: 0.6em 2em;
-  color: white;
-  font-weight: bold;
-  font-size: 0.9em;
+const Button = styled.div<ButtonProps>`
+  padding: 0.8em 2em;
+  color: ${(props: ButtonProps) => props.theme.global.colors[props.theme.global.oppositeColors[props.color || 'gray']]};
+  font-weight: 600;
+  font-size: 0.8em;
   text-transform: uppercase;
-  background-color: ${(props: ButtonProps) => props.theme.global.colors.gray};
+  text-decoration: none;
+  background-color: ${(props: ButtonProps) => props.theme.global.colors[props.color || 'gray']};
   border-radius: 2rem;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
@@ -26,7 +30,8 @@ const Button = styled<React.FC<BoxProps & ButtonProps>>(Box)`
     padding: 0.7em 2.2em;
   `}
   &:hover {
-    background-color: ${(props: ButtonProps) => props.theme.global.colors.blue};
+    color: ${(props: ButtonProps) => props.theme.global.colors[props.color || 'gray']};
+    background-color: ${(props: ButtonProps) => props.theme.global.colors[props.theme.global.oppositeColors[props.color || 'gray']]};
   }
 `
 

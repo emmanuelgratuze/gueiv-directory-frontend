@@ -1,4 +1,5 @@
 import React from 'react'
+import A from 'components/A'
 
 type StandardLinkProps = {
   href?: string;
@@ -11,7 +12,7 @@ const StandardLink: React.FC<StandardLinkProps> = ({
   children,
   ...props
 }) => (
-  <a
+  <A
     href={href || ''}
     target={external ? '_blank' : undefined}
     {...props}
@@ -19,7 +20,7 @@ const StandardLink: React.FC<StandardLinkProps> = ({
     style={{ textDecoration: 'none' }}
   >
     {children}
-  </a>
+  </A>
 )
 
 export default StandardLink

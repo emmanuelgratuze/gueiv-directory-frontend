@@ -18,6 +18,8 @@ import ScrollableItem from 'components/ScrollableItem'
 
 import useConfiguration from 'hooks/useConfiguration'
 import useTheme from 'hooks/useTheme'
+import useResponsive from 'hooks/useResponsive'
+
 import { ImmutableCriterion } from 'types/data/criterion'
 
 interface CriteriaScreenProps {
@@ -27,6 +29,7 @@ interface CriteriaScreenProps {
 const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
   const configuration = useConfiguration()
   const { brandColors, oppositeColors } = useTheme()
+  const { isMobile } = useResponsive()
   const colorNames = keys(brandColors)
   const [backgroundColorName, setBackgroundColorName] = useState(colorNames[0])
   const refs: { [key: string]: RefObject<HTMLDivElement> } = {}
@@ -89,7 +92,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                 <Container>
                   <Box
                     id={criterion.get('id')}
-                    direction="row"
+                    direction={isMobile ? 'column' : 'row'}
                     height="90vh"
                     align="center"
                     justify="center"

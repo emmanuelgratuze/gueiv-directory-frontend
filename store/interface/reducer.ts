@@ -8,6 +8,8 @@ import { combineReducers } from 'redux-immutable'
 import { BasicAction } from 'store/types'
 import { SET_BRANDS_COLORS, SET_MENU_OPEN_STATE } from './actionsTypes'
 
+import filtersReducer from './filters/reducer'
+
 function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
   switch (action.type) {
     case SET_BRANDS_COLORS:
@@ -31,5 +33,6 @@ function isMenuOpen(state = false, action: BasicAction): boolean {
  */
 export default combineReducers({
   brandsColors,
-  isMenuOpen
+  isMenuOpen,
+  filters: filtersReducer
 })

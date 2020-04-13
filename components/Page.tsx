@@ -10,12 +10,14 @@ import usePageTitle from 'hooks/usePageTitle'
 import useTheme from 'hooks/useTheme'
 import useConfiguration from 'hooks/useConfiguration'
 import useMenuState from 'hooks/useMenuState'
+import FiltersMenu from './FiltersMenu'
 
 type PageType = {
   title: string;
   description?: string;
   withScroll?: boolean;
   withFooter?: boolean;
+  withFilters?: boolean;
 }
 
 const Page: React.FC<BoxProps & PageType> = ({
@@ -24,6 +26,7 @@ const Page: React.FC<BoxProps & PageType> = ({
   description,
   withScroll = true,
   withFooter = true,
+  withFilters,
   ...props
 }) => {
   const fullTitle = usePageTitle(title)
@@ -45,26 +48,22 @@ const Page: React.FC<BoxProps & PageType> = ({
       </Head>
 
       <Box
-        overflow={!withScroll || isMenuOpen ? 'hidden' : undefined}
-        height={!withScroll ? '100vh' : undefined}
-        width="100%"
+        height={!withScroll ? '100vh' : { min: '100vh' }}
         {...props}
       >
-        <Header />
-
-        <Box fill height={{ min: '80vh' }}>
-          <Stack fill>
-            <MenuScreen open={isMenuOpen} />
-            <Box fill={!withScroll}>
-              <Box pad={{ top: header.height }}>
-                {children}
-              </Box>
-              {withFooter && (
-                <Footer />
-              )}
+        <Header withFilters={withFilters} />
+        <Stack fill>
+          <MenuScreen open={isMenuOpen} />
+          <FiltersMenu />
+          <Box fill={!withScroll}>
+            <Box pad={{ top: header.height }}>
+              {children}
             </Box>
-          </Stack>
-        </Box>
+            {withFooter && (
+              <Footer />
+            )}
+          </Box>
+        </Stack>
       </Box>
     </Box>
   )

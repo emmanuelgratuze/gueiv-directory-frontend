@@ -13,7 +13,7 @@ import Link from 'next/link'
 import { Instagram } from 'grommet-icons'
 import StandardLink from 'components/StandardLink'
 
-const Logo = require('assets/images/logo.svg').ReactComponent
+const Logo = require('assets/images/logo-white.svg').ReactComponent
 
 const MenuWrapper = styled.div`
   position: fixed;
@@ -29,7 +29,7 @@ type MenuScreenProps = {
 }
 
 const MenuScreen: React.FC<MenuScreenProps> = ({ open = false }) => {
-  const { theme: { header: { height } } } = useTheme()
+  const { theme: { header } } = useTheme()
   const configuration = useConfiguration()
 
   const AnimatedBox = motion.custom(Box)
@@ -40,22 +40,31 @@ const MenuScreen: React.FC<MenuScreenProps> = ({ open = false }) => {
       {open && (
         <AnimatePresence exitBeforeEnter>
           <AnimatedWrapper
-            initial={{ zIndex: 5 }}
-            animate={{ zIndex: 5 }}
+            initial={{ zIndex: 17 }}
+            animate={{ zIndex: 17 }}
             exit={{ zIndex: -1 }}
           >
             <AnimatedBox
               fill
-              background={{ color: 'blue' }}
+              background={{ color: 'gray' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <Box fill pad={{ top: height }} justify="center">
-                <Box pad="large" width="30%" align="center">
-                  <Paragraph textAlign="center" margin={{ bottom: 'large' }}>
-                    {configuration.getIn(['general', 'menuDescription'])}
-                  </Paragraph>
+              <Box fill pad={{ top: header.height }} justify="center">
+                <Box
+                  pad="large"
+                  width="30%"
+                  align="center"
+                >
+                  <Box width={{ max: '20rem' }}>
+                    <Paragraph
+                      textAlign="center"
+                      margin={{ bottom: 'large' }}
+                    >
+                      {configuration.getIn(['general', 'menuDescription'])}
+                    </Paragraph>
+                  </Box>
 
                   <Box direction="row" margin={{ bottom: 'large' }}>
                     <Link href="/criterios">

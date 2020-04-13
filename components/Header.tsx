@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import Container from 'components/Container'
+import BrandsFilter from 'components/FiltersControls'
 import Text from 'components/Text'
 import A from 'components/A'
 import HamburgerIcon from 'components/HamburgerIcon'
@@ -19,7 +20,11 @@ const HeaderWrapper = styled(Box)`
   z-index: 20;
 `
 
-const Header: React.FC = () => {
+type HeaderProps = {
+  withFilters?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
   const { theme: { header } } = useTheme()
   const { isMenuOpen, toggleMenu } = useMenuState()
 
@@ -43,7 +48,7 @@ const Header: React.FC = () => {
             pad="small"
             gap="small"
           >
-            <Box fill="vertical" pad="xsmall">
+            <Box height="2rem" width="2rem">
               <Button plain onClick={() => toggleMenu()} fill>
                 <HamburgerIcon open={isMenuOpen} />
               </Button>
@@ -68,7 +73,7 @@ const Header: React.FC = () => {
           </Box>
 
           {/* Right part */}
-          <Box />
+          {withFilters ? <BrandsFilter /> : <Box />}
         </Box>
 
       </Container>

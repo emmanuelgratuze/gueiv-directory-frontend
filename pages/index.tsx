@@ -3,7 +3,7 @@ import { NextPage, GetStaticProps } from 'next'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { BrandColorsKeys } from 'themes/theme'
-import { selectBrands } from 'store/data/selectors/brands'
+import { selectFilteredBrands } from 'store/interface/filters/selectors'
 import { setBrandsColors } from 'store/interface/actions'
 import useTheme from 'hooks/useTheme'
 import { getPageCollectionData } from 'cms/api'
@@ -13,26 +13,26 @@ const BrandsPage: NextPage = () => {
   const { theme: { global: { brandColorsNames } } } = useTheme()
 
   // Immutable to JS
-  const brands = useSelector(selectBrands)
+  const filteredBrands = useSelector(selectFilteredBrands)
 
   const dispatch = useDispatch()
   useEffect(() => {
-    if (brands.size) {
+    if (filteredBrands.size) {
       const brandsColors: { [key: string]: BrandColorsKeys } = {}
-      brands.forEach((brand, index) => {
+      filteredBrands.forEach((brand, index) => {
         brandsColors[brand.get('id')] = brandColorsNames[index % brandColorsNames.length]
       })
       dispatch(setBrandsColors(brandsColors))
     }
-  }, [brands])
+  }, [filteredBrands])
 
-  if (!brands) {
+  if (!filteredBrands) {
     return null
   }
 
   return (
     <HomeScreen
-      brands={brands}
+      brands={filteredBrands}
       brandsColors={brandColorsNames}
     />
   )

@@ -2,6 +2,7 @@
 import { Record } from 'immutable'
 
 export interface ProductType {
+  id: string;
   name: string;
 }
 

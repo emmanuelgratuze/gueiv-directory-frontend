@@ -7,13 +7,6 @@ import { CloudinaryProvider } from 'components/cloudinary/CloudinaryContext'
 import useStoreWithPageData from 'hooks/useStoreWithPageData'
 import Layout from 'components/Layout'
 
-/* eslint-disable */
-if (process.env.NODE_ENV !== 'production') {
-  const whyDidYouRender = require('@welldone-software/why-did-you-render')
-  whyDidYouRender(React)
-}
-/* eslint-enable */
-
 const ProjectApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const store = useStoreWithPageData(pageProps)
   return (

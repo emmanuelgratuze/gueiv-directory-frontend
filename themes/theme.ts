@@ -2,6 +2,7 @@ import { css } from 'styled-components'
 import { deepMerge } from 'grommet/utils'
 import { base } from 'grommet/themes'
 import { ValueOf } from 'types/utils'
+import { lighten, darken } from 'polished'
 
 const baseSpacing = 24
 const baseFontSize = 16
@@ -51,9 +52,16 @@ const themeColors = {
   ...brandColors,
   gray: '#3D3D4F',
   black: '#000000',
-  white: '#FFFFFF'
+  white: '#FFFFFF',
+
+  // UI specific colors
+  'light-blue': lighten(0.1, brandColors.blue),
+  'dark-blue': darken(0.1, brandColors.blue),
+  'light-yellow': lighten(0.1, brandColors.yellow),
+  'dark-yellow': darken(0.1, brandColors.yellow),
 }
 
+// All the themeColors keys should exist in oppositeColors
 const oppositeColors = {
   yellow: 'white',
   turquoise: 'gray',
@@ -61,7 +69,13 @@ const oppositeColors = {
   pink: 'white',
   gray: 'white',
   black: 'white',
-  white: 'gray'
+  white: 'gray',
+
+  // UI specific colors
+  'light-blue': 'gray',
+  'dark-blue': 'gray',
+  'light-yellow': 'gray',
+  'dark-yellow': 'gray'
 }
 
 const colors: { [key: string]: string } = {
@@ -413,6 +427,14 @@ const theme = deepMerge(base, {
         light: 'gray'
       }
     }
+  },
+  layer: {
+    container: {
+      zIndex: 15
+    },
+    extend: `
+      
+    `
   },
 
   // Custom

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box } from 'grommet'
+import { StatusGoodSmall } from 'grommet-icons'
 
 import Page from 'components/Page'
 import Text from 'components/Text'
@@ -76,6 +77,34 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
               >
                 {brand.get('description')}
               </Paragraph>
+
+              {/* Productos */}
+              {brand.get('product-types') && (
+                <Box margin={{ bottom: '2.2rem' }}>
+                  <Text
+                    transform="uppercase"
+                    color={oppBrandColor}
+                    weight="bold"
+                    margin={{ bottom: 'small' }}
+                  >
+                    Tipos de productos
+                  </Text>
+                  <Box direction="row">
+                    {brand.get('product-types')?.map((productType, index) => (
+                      <Box align="center" direction="row" key={productType.get('id')}>
+                        {index !== 0 && (
+                          <Box margin={{ horizontal: 'small' }}>
+                            <StatusGoodSmall size="5px" color={oppBrandColor} />
+                          </Box>
+                        )}
+                        <Text color={oppBrandColor}>
+                          {productType.get('name')}
+                        </Text>
+                      </Box>
+                    ))}
+                  </Box>
+                </Box>
+              )}
 
               {/* Criteria */}
               <Box margin={{ bottom: '2.2rem' }}>

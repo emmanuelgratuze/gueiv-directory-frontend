@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Head from 'next/head'
 import { Grommet } from 'grommet'
 import { useRouter } from 'next/router'
-import { AnimatePresence, motion } from 'framer-motion'
 
 import LoadingScreen from 'screens/Loading'
 
@@ -10,7 +9,10 @@ import useAnalytics from 'hooks/useAnalytics'
 import useLoading from 'hooks/useLoading'
 import theme from 'themes/theme'
 
+import { whoUpdated } from 'utils/dev/whoUpdated'
+
 import { GlobalStyles } from './styled'
+import { AnimatePresence } from 'framer-motion'
 
 const Layout: React.FC = ({ children }) => {
   if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
@@ -19,6 +21,11 @@ const Layout: React.FC = ({ children }) => {
 
   const router = useRouter()
   const isLoading = useLoading()
+
+  // Only rerender the pages when route changed
+  const siteContent = useMemo(() => children, [router.pathname])
+
+  whoUpdated('layout', { isLoading, children, pathname: router.pathname })
 
   return (
     <>
@@ -42,28 +49,10 @@ const Layout: React.FC = ({ children }) => {
       <GlobalStyles />
 
       <Grommet theme={theme}>
-        <AnimatePresence exitBeforeEnter>
-          {!isLoading && (
-            <motion.div
-              key={router.route}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              {children}
-            </motion.div>
-          )}
-          {isLoading && (
-            <motion.div
-              key={router.route}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <LoadingScreen />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isLoading && (
+          <LoadingScreen />
+        )}
+        {siteContent}
       </Grommet>
     </>
   )

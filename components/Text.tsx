@@ -9,6 +9,7 @@ export type StyledTextProps = {
   spacing?: 'normal' | 'large';
   italic?: boolean;
   font?: 'Quicksand' | 'Lato';
+  nowrap?: boolean;
 }
 
 export const textStyles = css`
@@ -64,6 +65,12 @@ export const textStyles = css`
     && css`
       font-style: italic;
     `}
+
+  ${(props: StyledTextProps) => props.nowrap
+    && css`
+      white-space: nowrap;
+    `
+  }
 
   ${(props: StyledTextProps) => props.font
     && css`

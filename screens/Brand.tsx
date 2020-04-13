@@ -106,6 +106,34 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                 </Box>
               )}
 
+              {/* Productos */}
+              {brand.get('genders') && (
+                <Box margin={{ bottom: '2.2rem' }}>
+                  <Text
+                    transform="uppercase"
+                    color={oppBrandColor}
+                    weight="bold"
+                    margin={{ bottom: 'small' }}
+                  >
+                    Géneros
+                  </Text>
+                  <Box direction="row">
+                    {brand.get('genders')?.map((gender, index) => (
+                      <Box align="center" direction="row" key={gender}>
+                        {index !== 0 && (
+                          <Box margin={{ horizontal: 'small' }}>
+                            <StatusGoodSmall size="5px" color={oppBrandColor} />
+                          </Box>
+                        )}
+                        <Text color={oppBrandColor}>
+                          {gender}
+                        </Text>
+                      </Box>
+                    ))}
+                  </Box>
+                </Box>
+              )}
+
               {/* Criteria */}
               <Box margin={{ bottom: '2.2rem' }}>
                 <Text

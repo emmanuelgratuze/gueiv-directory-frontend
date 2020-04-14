@@ -9,10 +9,7 @@ import useAnalytics from 'hooks/useAnalytics'
 import useLoading from 'hooks/useLoading'
 import theme from 'themes/theme'
 
-import { whoUpdated } from 'utils/dev/whoUpdated'
-
 import { GlobalStyles } from './styled'
-import { AnimatePresence } from 'framer-motion'
 
 const Layout: React.FC = ({ children }) => {
   if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
@@ -24,8 +21,6 @@ const Layout: React.FC = ({ children }) => {
 
   // Only rerender the pages when route changed
   const siteContent = useMemo(() => children, [router.pathname])
-
-  whoUpdated('layout', { isLoading, children, pathname: router.pathname })
 
   return (
     <>

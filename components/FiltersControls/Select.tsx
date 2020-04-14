@@ -1,11 +1,10 @@
 import React from 'react'
 import { Box, BoxProps, Button } from 'grommet'
-import { FormDown, StatusGoodSmall } from 'grommet-icons'
+import { FormDown } from 'grommet-icons'
 import styled, { css } from 'styled-components'
 import { List } from 'immutable'
 
 import Text from 'components/Text'
-import { Filter } from 'store/interface/filters/types'
 
 type SelectProps = {
   isOpen: boolean;

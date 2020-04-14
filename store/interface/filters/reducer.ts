@@ -1,4 +1,4 @@
-import { fromJS, List, Record } from 'immutable'
+import { fromJS, List } from 'immutable'
 import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 

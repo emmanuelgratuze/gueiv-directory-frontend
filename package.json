@@ -6,6 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
+    "post-build": "babel ./cms/config.ts --out-file ./build/config.js --minified --presets @babel/preset-env && node ./build/postBuild.js && rm ./build/config.js",
     "start": "next start",
     "export": "next export",
     "dev-next": "next",
@@ -70,9 +71,11 @@
     "request": "^2.88.2",
     "reselect": "^4.0.0",
     "styled-components": "^5.1.0",
-    "webpack": "^4.42.1"
+    "webpack": "^4.42.1",
+    "yaml": "^1.8.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@svgr/webpack": "^5.3.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.10.7",

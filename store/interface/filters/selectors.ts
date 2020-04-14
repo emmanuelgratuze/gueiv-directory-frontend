@@ -93,6 +93,7 @@ export const selectFilteredBrands = createSelector(
   selectCurrentFilters,
   (brands, filters, currentFiltersValues) => {
     let filteredBrands = brands
+
     Object.keys(currentFiltersValues.toJS())
       .forEach((filterId) => {
         filteredBrands = filteredBrands.filter(brand => {
@@ -100,9 +101,12 @@ export const selectFilteredBrands = createSelector(
           const filterParams = filters.find((filter: Filter) => filter.get('id') === filterId)
           const propertyName = filterParams?.get('brandProperty') || ''
 
+          
           if (brand.has(propertyName)) {
             const filterValues = currentFiltersValues.get(filterId)
             const brandValues = brand.get(propertyName)
+
+            console.log(brandValues, brand.toJS(), propertyName)
 
             filterValues.some((filterValue) => {
               let brandValueAsList: List<unknown>

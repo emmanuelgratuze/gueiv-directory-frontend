@@ -31,6 +31,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
         withFooter={false}
       >
         <Box
+          fill
           background={{ color: brandColor }}
           direction={isMobile ? 'column' : 'row'}
         >

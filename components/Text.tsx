@@ -69,8 +69,7 @@ export const textStyles = css`
   ${(props: StyledTextProps) => props.nowrap
     && css`
       white-space: nowrap;
-    `
-  }
+    `}
 
   ${(props: StyledTextProps) => props.font
     && css`

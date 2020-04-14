@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
 export default {
   backend: {
-    name: 'github',
+    name: 'git-gateway',
     repo: 'emmanuelgratuze/gueiv-directory-frontend',
     branch: 'contents'
   },

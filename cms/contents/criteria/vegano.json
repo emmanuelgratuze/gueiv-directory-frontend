@@ -1,1 +1,6 @@
-{"name":"Vegano","description":"","id":"vegano"}
+{
+  "name": "Vegano",
+  "description": "Descripción",
+  "id": "vegano",
+  "icon": "assets/vegan_e4cmt4.svg"
+}

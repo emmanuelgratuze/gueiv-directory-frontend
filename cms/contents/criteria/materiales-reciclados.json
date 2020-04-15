@@ -1,1 +1,6 @@
-{"name":"Materiales Reciclados","description":"","id":"materiales-reciclados"}
+{
+  "name": "Materiales Reciclados",
+  "description": "Descripción",
+  "id": "materiales-reciclados",
+  "icon": "assets/recycled-materials_uxcrnf.svg"
+}

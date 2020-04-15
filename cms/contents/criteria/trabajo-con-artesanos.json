@@ -1,1 +1,6 @@
-{"name":"Trabajo con Artesanos","description":"","id":"trabajo-con-artesanos"}
+{
+  "name": "Trabajo con Artesanos",
+  "description": "Descripción",
+  "id": "trabajo-con-artesanos",
+  "icon": "assets/artisanal-work_u3dmkn.svg"
+}

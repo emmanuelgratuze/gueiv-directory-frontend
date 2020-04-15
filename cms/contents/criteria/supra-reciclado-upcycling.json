@@ -1,1 +1,6 @@
-{"name":"Supra-Reciclado (upcycling)","description":"","id":"supra-reciclado-upcycling"}
+{
+  "name": "Supra-Reciclado (upcycling)",
+  "description": "Descripción",
+  "id": "supra-reciclado-upcycling",
+  "icon": "assets/upcycling_myncmu.svg"
+}

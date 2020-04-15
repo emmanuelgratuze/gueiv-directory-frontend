@@ -1,1 +1,6 @@
-{"name":"Renta","description":"","id":"renta"}
+{
+  "name": "Renta",
+  "description": "Descripción",
+  "id": "renta",
+  "icon": "assets/rental_ke7woz.svg"
+}

@@ -1,1 +1,6 @@
-{"name":"Materiales Organicos","description":"","id":"materiales-organicos"}
+{
+  "name": "Materiales Organicos",
+  "description": "Descripción",
+  "id": "materiales-organicos",
+  "icon": "assets/organic_tahw7u.svg"
+}

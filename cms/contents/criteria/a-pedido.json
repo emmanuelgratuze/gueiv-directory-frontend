@@ -1,1 +1,6 @@
-{"name":"A pedido","description":"","id":"a-pedido"}
+{
+  "name": "A pedido",
+  "description": "Descripción",
+  "id": "a-pedido",
+  "icon": "assets/upon-request_oip42e.svg"
+}

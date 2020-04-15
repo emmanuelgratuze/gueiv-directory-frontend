@@ -1,1 +1,6 @@
-{"name":"Empoderamiento de la mujer","description":"","id":"empoderamiento-de-la-mujer"}
+{
+  "name": "Empoderamiento de la mujer",
+  "description": "Descripción",
+  "id": "empoderamiento-de-la-mujer",
+  "icon": "assets/womens-empowerment_inxphs.svg"
+}

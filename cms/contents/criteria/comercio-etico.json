@@ -1,1 +1,6 @@
-{"name":"Comercio ético","description":"","id":"comercio-etico"}
+{
+  "name": "Comercio ético",
+  "description": "Descripción",
+  "id": "comercio-etico",
+  "icon": "assets/commerce_nmbcwq.svg"
+}

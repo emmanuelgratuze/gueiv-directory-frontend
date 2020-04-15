@@ -7,7 +7,6 @@ import Text from 'components/Text'
 import A from 'components/A'
 
 import useTheme from 'hooks/useTheme'
-import styled from 'styled-components'
 import useConfiguration from 'hooks/useConfiguration'
 import Link from 'next/link'
 import { Instagram } from 'grommet-icons'

@@ -1,1 +1,6 @@
-{"name":"Integración social","description":"","id":"integracion-social"}
+{
+  "name": "Integración social",
+  "description": "Descripción",
+  "id": "integracion-social",
+  "icon": "assets/integration_rgreqn.svg"
+}

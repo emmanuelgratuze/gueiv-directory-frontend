@@ -9,7 +9,7 @@
 /out/
 
 # production
-# /build
+/build
 
 # misc
 .DS_Store
@@ -40,7 +40,7 @@ npm-debug.log
 
 ### NetBeans template
 nbproject/private/
-build/
+# build/
 nbbuild/
 nbdist/
 nbactions.xml

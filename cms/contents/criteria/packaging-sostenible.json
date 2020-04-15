@@ -1,1 +1,6 @@
-{"name":"Packaging sostenible","description":"","id":"packaging-sostenible"}
+{
+  "name": "Packaging sostenible",
+  "description": "Descripción",
+  "id": "packaging-sostenible",
+  "icon": "assets/sustainable-packaging_dspivc.svg"
+}

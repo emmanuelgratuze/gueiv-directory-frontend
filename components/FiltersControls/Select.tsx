@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components'
 import { List } from 'immutable'
 
 import Text from 'components/Text'
+import useResponsive from 'hooks/useResponsive'
 
 type SelectProps = {
   isOpen: boolean;
@@ -28,6 +29,7 @@ const Select: React.FC<BoxProps & SelectProps> = ({
   ...props
 }) => {
   const color = isOpen ? ['yellow', 'light-yellow'] : ['blue', 'light-blue']
+  const { isMobile } = useResponsive()
   return (
     <Button
       plain
@@ -38,9 +40,13 @@ const Select: React.FC<BoxProps & SelectProps> = ({
           direction="row"
           align="center"
           justify="center"
-          border={{ side: 'left', color: 'light-3' }}
-          pad={{ horizontal: 'medium' }}
+          border={!isMobile ? { side: 'left', color: 'light-3' } : undefined}
           gap="small"
+          pad={{
+            horizontal: !isMobile ? 'medium' : 'medium',
+            vertical: !isMobile ? undefined : 'medium'
+          }}
+          background="light-2"
         >
           {selectedFilters && (
             <Box

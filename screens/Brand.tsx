@@ -31,6 +31,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
         withFooter={false}
       >
         <Box
+          fill
           background={{ color: brandColor }}
           direction={isMobile ? 'column' : 'row'}
         >
@@ -79,7 +80,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
               </Paragraph>
 
               {/* Productos */}
-              {brand.get('product-types') && (
+              {brand.get('productTypes') && (
                 <Box margin={{ bottom: '2.2rem' }}>
                   <Text
                     transform="uppercase"
@@ -90,7 +91,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                     Tipos de productos
                   </Text>
                   <Box direction="row">
-                    {brand.get('product-types')?.map((productType, index) => (
+                    {brand.get('productTypes')?.map((productType, index) => (
                       <Box align="center" direction="row" key={productType.get('id')}>
                         {index !== 0 && (
                           <Box margin={{ horizontal: 'small' }}>

@@ -59,6 +59,7 @@ const themeColors = {
   'dark-blue': darken(0.1, brandColors.blue),
   'light-yellow': lighten(0.1, brandColors.yellow),
   'dark-yellow': darken(0.1, brandColors.yellow),
+  'light-turquoise': lighten(0.1, brandColors.turquoise),
 }
 
 // All the themeColors keys should exist in oppositeColors
@@ -75,7 +76,8 @@ const oppositeColors = {
   'light-blue': 'gray',
   'dark-blue': 'gray',
   'light-yellow': 'gray',
-  'dark-yellow': 'gray'
+  'dark-yellow': 'gray',
+  'light-turquoise': 'gray'
 }
 
 const colors: { [key: string]: string } = {
@@ -338,13 +340,13 @@ const theme = deepMerge(base, {
         xlarge: fontSizing(1.9),
       },
       3: {
-        small: fontSizing(0.81),
+        small: fontSizing(1),
         medium: fontSizing(1.15),
         large: fontSizing(1.15),
         xlarge: fontSizing(1.15),
       },
       4: {
-        small: fontSizing(1),
+        small: fontSizing(0.7),
         medium: fontSizing(1),
         large: fontSizing(1),
         xlarge: fontSizing(1)

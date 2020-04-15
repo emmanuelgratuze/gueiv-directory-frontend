@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { Box, Button } from 'grommet'
 import styled from 'styled-components'
 import Link from 'next/link'
 
 import Container from 'components/Container'
-import BrandsFilter from 'components/FiltersControls'
+import FiltersControls from 'components/FiltersControls'
 import Text from 'components/Text'
 import A from 'components/A'
 import HamburgerIcon from 'components/HamburgerIcon'
 import useTheme from 'hooks/useTheme'
 import useMenuState from 'hooks/useMenuState'
+import { Filter, Sort } from 'grommet-icons'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectFiltersMenuState } from 'store/interface/filters/selectors'
+import { closeFilterMenu, openFilterMenu } from 'store/interface/filters/actions'
+import useResponsive from 'hooks/useResponsive'
 
 const Logo = require('assets/images/logo.svg').ReactComponent
 
@@ -27,6 +32,17 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
   const { theme: { header } } = useTheme()
   const { isMenuOpen, toggleMenu } = useMenuState()
+  const dispatch = useDispatch()
+
+  const { isMobile } = useResponsive()
+  const filterMenuState = useSelector(selectFiltersMenuState)
+  const handleClickOnSelect = useCallback((filterId) => {
+    const action = filterMenuState.get('filterId') === filterId || !filterId
+      ? closeFilterMenu()
+      : openFilterMenu(filterId)
+
+    dispatch(action)
+  }, [filterMenuState])
 
   return (
     <HeaderWrapper
@@ -36,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
     >
       <Container fill="vertical" fluid>
         <Box
-          fill="horizontal"
+          fill
           direction="row"
           justify="between"
         >
@@ -54,11 +70,11 @@ const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
               </Button>
             </Box>
             <Link href="/">
-              <Box fill="vertical">
-                <A>
-                  <Logo width="5rem" height="100%" />
-                </A>
-              </Box>
+              <A>
+                <Box fill="vertical" align="center" justify="center">
+                  <Logo height={isMobile ? '1.5rem' : '2rem'} />
+                </Box>
+              </A>
             </Link>
             <Box>
               <Text
@@ -73,7 +89,31 @@ const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
           </Box>
 
           {/* Right part */}
-          {withFilters ? <BrandsFilter /> : <Box />}
+          {withFilters ? (
+            <>
+              {isMobile ? (
+                <Button
+                  plain
+                  onClick={() => handleClickOnSelect(!filterMenuState.get('isOpen') ? 'criteria' : null)}
+                >
+                  <Box
+                    fill="vertical"
+                    width="3rem"
+                    align="center"
+                    justify="center"
+                  >
+                    {!filterMenuState.get('isOpen') ? (
+                      <Filter color="gray" />
+                    ) : (
+                      <Sort color="blue" />
+                    )}
+                  </Box>
+                </Button>
+              ) : (
+                <FiltersControls />
+              )}
+            </>
+          ) : <Box />}
         </Box>
 
       </Container>

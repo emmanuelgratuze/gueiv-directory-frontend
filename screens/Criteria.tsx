@@ -45,9 +45,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
       window.scrollTo(0, refs[window.location.hash].current?.offsetTop || 0)
     }
 
-    return () => {
-      // window.removeEventListener('hashchange', handleHashChange)
-    }
+    return () => {}
   }, [refs])
 
   return (
@@ -56,7 +54,10 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
         <motion.div
           animate={{ backgroundColor: brandColors[backgroundColorName] }}
         >
-          <Container height="85vh">
+          <Container
+            height={!isMobile ? '85vh' : undefined}
+            pad="medium"
+          >
             <Box
               justify="center"
               align="center"
@@ -67,7 +68,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                   transform="uppercase"
                   color={oppositeColors[backgroundColorName]}
                   textAlign="center"
-                  margin={{ bottom: '4rem' }}
+                  margin={{ vertical: '4rem' }}
                 >
                   {configuration.getIn(['criteria-page', 'title'])}
                 </Heading>
@@ -83,17 +84,24 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
           {criteria.map((criterion, index) => (
             <ScrollableItem
               onScrollEnter={() => {
-                setBackgroundColorName(colorNames[index % colorNames.length])
-                window.history.pushState(null, document.title, `#${criterion.get('id')}`)
+                if (!isMobile) {
+                  setBackgroundColorName(colorNames[index % colorNames.length])
+                  window.history.pushState(null, document.title, `#${criterion.get('id')}`)
+                }
               }}
               key={criterion.get('id')}
             >
-              <Box fill ref={refs[`#${criterion.get('id')}`]}>
-                <Container>
+              <Box
+                fill
+                ref={refs[`#${criterion.get('id')}`]}
+                background={!isMobile ? undefined : { color: colorNames[index % colorNames.length]}}
+                pad={isMobile ? { vertical: 'large' } : undefined}
+              >
+                <Container pad="medium">
                   <Box
                     id={criterion.get('id')}
                     direction={isMobile ? 'column' : 'row'}
-                    height="90vh"
+                    height={!isMobile ? '90vh' : undefined}
                     align="center"
                     justify="center"
                     fill="horizontal"
@@ -125,7 +133,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                       </Box>
                     </Box>
                     <Box
-                      width="70%"
+                      width={!isMobile ? '70%' : undefined}
                       align="center"
                       justify="center"
                       flex={{ grow: 1 }}

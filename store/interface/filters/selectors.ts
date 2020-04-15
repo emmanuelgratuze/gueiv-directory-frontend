@@ -6,6 +6,7 @@ import { uniqBy, memoize } from 'lodash'
 import { selectData } from 'store/data/selectors'
 import { selectBrands } from 'store/data/selectors/brands'
 import { Filter } from './types'
+// import { ImmutableBrand } from 'types/data/brand'
 
 
 export const selectFiltersMenuState = (state: DefaultRootState): Record<{ isOpen: boolean; filterId: string }> => (
@@ -101,12 +102,9 @@ export const selectFilteredBrands = createSelector(
           const filterParams = filters.find((filter: Filter) => filter.get('id') === filterId)
           const propertyName = filterParams?.get('brandProperty') || ''
 
-          
           if (brand.has(propertyName)) {
             const filterValues = currentFiltersValues.get(filterId)
             const brandValues = brand.get(propertyName)
-
-            console.log(brandValues, brand.toJS(), propertyName)
 
             filterValues.some((filterValue) => {
               let brandValueAsList: List<unknown>
@@ -128,6 +126,7 @@ export const selectFilteredBrands = createSelector(
         })
       })
 
+    // return List<ImmutableBrand>([])
     return filteredBrands
   }
 )

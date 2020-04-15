@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createRef } from 'react'
+import React, { useEffect, useState, createRef, useMemo } from 'react'
 import useWindowSize from 'hooks/useWindowSize'
 import useScrollPosition from 'hooks/useScrollPosition'
 
@@ -41,11 +41,11 @@ const ScrollableItem: React.FC<ScrollableItemProps> = ({
     }
   }, [isActive])
 
-  return (
+  return useMemo(() => (
     <div ref={ref}>
       {children}
     </div>
-  )
+  ), [children, ref])
 }
 
 export default ScrollableItem

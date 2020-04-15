@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Paragraph } from 'grommet'
+import { Box, Paragraph, Layer } from 'grommet'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import Button from 'components/Button'
@@ -12,16 +12,17 @@ import useConfiguration from 'hooks/useConfiguration'
 import Link from 'next/link'
 import { Instagram } from 'grommet-icons'
 import StandardLink from 'components/StandardLink'
+import useResponsive from 'hooks/useResponsive'
 
 const Logo = require('assets/images/logo-white.svg').ReactComponent
 
 const MenuWrapper = styled.div`
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; */
 `
 
 type MenuScreenProps = {
@@ -30,20 +31,20 @@ type MenuScreenProps = {
 
 const MenuScreen: React.FC<MenuScreenProps> = ({ open = false }) => {
   const { theme: { header } } = useTheme()
+  const { isTablet, isMobile } = useResponsive()
   const configuration = useConfiguration()
-
   const AnimatedBox = motion.custom(Box)
   const AnimatedWrapper = motion.custom(MenuWrapper)
 
   return (
     <>
       {open && (
-        <AnimatePresence exitBeforeEnter>
-          <AnimatedWrapper
-            initial={{ zIndex: 17 }}
-            animate={{ zIndex: 17 }}
-            exit={{ zIndex: -1 }}
-          >
+        <Layer
+          plain
+          full
+          animation={false}
+        >
+          <AnimatePresence exitBeforeEnter>
             <AnimatedBox
               fill
               background={{ color: 'gray' }}
@@ -51,73 +52,87 @@ const MenuScreen: React.FC<MenuScreenProps> = ({ open = false }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <Box fill pad={{ top: header.height }} justify="center">
+              <Box
+                fill="vertical"
+                pad={{ top: header.height }}
+                width={isTablet ? '100%' : '30%'}
+                align="center"
+                justify="center"
+                overflow={isMobile ? { vertical: 'scroll' } : undefined}
+              >
                 <Box
-                  pad="large"
-                  width="30%"
-                  align="center"
+                  fill
+                  overflow={isMobile ? 'scroll' : undefined}
+                  pad={isMobile ? { bottom: 'xlarge' } : undefined}
                 >
-                  <Box width={{ max: '20rem' }}>
-                    <Paragraph
-                      textAlign="center"
-                      margin={{ bottom: 'large' }}
-                    >
-                      {configuration.getIn(['general', 'menuDescription'])}
-                    </Paragraph>
-                  </Box>
-
-                  <Box direction="row" margin={{ bottom: 'large' }}>
-                    <Link href="/criterios">
-                      <A>
-                        <Button color="white">
-                          Ver todos los criterios
-                        </Button>
-                      </A>
-                    </Link>
-                  </Box>
-
-                  <Box margin={{ bottom: 'medium' }}>
-                    <Link href="/">
-                      <Box fill="vertical">
-                        <A>
-                          <Logo width="10rem" height="100%" />
-                        </A>
-                      </Box>
-                    </Link>
-                  </Box>
-
-                  <Box margin={{ bottom: 'xsmall' }}>
-                    <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
-                      <Box direction="row" gap="small" justify="center">
-                        <Instagram size="2rem" color="white" />
-                        <Text
-                          font="Quicksand"
-                          transform="uppercase"
-                          weight="bold"
-                          color="white"
+                  <Box
+                    flex={false}
+                    pad={isMobile ? 'medium' : 'large'}
+                  >
+                    <Box align="center">
+                      <Box width={{ max: '20rem' }}>
+                        <Paragraph
+                          textAlign="center"
+                          margin={{ bottom: 'large' }}
                         >
-                          Sigue nuestros pasos!
-                        </Text>
+                          {configuration.getIn(['general', 'menuDescription'])}
+                        </Paragraph>
                       </Box>
-                    </StandardLink>
-                  </Box>
+                    </Box>
 
-                  <Box>
-                    <StandardLink href={`mailto:${configuration.getIn(['social', 'email'])}`}>
-                      <Text
-                        color="yellow"
-                        weight="bold"
-                        transform="uppercase"
-                      >
-                        {configuration.getIn(['social', 'email'])}
-                      </Text>
-                    </StandardLink>
+                    <Box justify="center" direction="row" margin={{ bottom: 'medium' }}>
+                      <Link href="/criterios">
+                        <A>
+                          <Button color="white">
+                            Ver todos los criterios
+                          </Button>
+                        </A>
+                      </Link>
+                    </Box>
+
+                    <Box fill="horizontal" margin={{ bottom: 'medium' }}>
+                      <Link href="/">
+                        <A>
+                          <Box fill align="center">
+                            <Logo width="10rem" height="100%" />
+                          </Box>
+                        </A>
+                      </Link>
+                    </Box>
+
+                    <Box margin={{ bottom: 'xsmall' }}>
+                      <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
+                        <Box direction="row" gap="small" justify="center">
+                          <Instagram size="2rem" color="white" />
+                          <Text
+                            font="Quicksand"
+                            transform="uppercase"
+                            weight="bold"
+                            color="white"
+                          >
+                            Sigue nuestros pasos!
+                          </Text>
+                        </Box>
+                      </StandardLink>
+                    </Box>
+
+                    <Box align="center">
+                      <StandardLink href={`mailto:${configuration.getIn(['social', 'email'])}`}>
+                        <Text
+                          color="yellow"
+                          weight="bold"
+                          transform="uppercase"
+                        >
+                          {configuration.getIn(['social', 'email'])}
+                        </Text>
+                      </StandardLink>
+                    </Box>
                   </Box>
                 </Box>
               </Box>
             </AnimatedBox>
-          </AnimatedWrapper>
-        </AnimatePresence>
+          </AnimatePresence>
+        </Layer>
       )}
     </>
   )

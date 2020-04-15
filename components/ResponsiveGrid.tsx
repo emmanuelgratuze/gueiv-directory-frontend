@@ -64,7 +64,7 @@ const ResponsiveGrid: React.FC<BoxTypes & ResponsiveGrid> = ({
   const childrenLength = Array.isArray(children) ? children.length : 1
 
   return (
-    <Box width="100%" {...props} direction="row" wrap>
+    <Box width="100%" direction="row" wrap {...props}>
       {Children.map(children, (child, index) => (
         <Box
           // eslint-disable-next-line react/no-array-index-key

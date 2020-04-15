@@ -2,8 +2,7 @@
 export default {
   backend: {
     name: 'git-gateway',
-    repo: 'emmanuelgratuze/gueiv-directory-frontend',
-    branch: 'contents'
+    repo: 'emmanuelgratuze/gueiv-directory-frontend'
   },
   site_url: 'https://directorio.gueiv.com',
   media_folder: 'assets/uploads',

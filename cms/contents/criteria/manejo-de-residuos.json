@@ -1,1 +1,6 @@
-{"name":"Manejo de residuos","description":"","id":"manejo-de-residuos"}
+{
+  "name": "Manejo de residuos",
+  "description": "Descripción",
+  "id": "manejo-de-residuos",
+  "icon": "assets/waste-management_cme73z.svg"
+}

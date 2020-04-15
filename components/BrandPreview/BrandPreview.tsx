@@ -12,11 +12,11 @@ import A from 'components/A'
 
 import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
+import useResponsive from 'hooks/useResponsive'
 import useTheme from 'hooks/useTheme'
 import useHover from 'hooks/useHover'
 
 import BrandImage from './Image'
-import useResponsive from 'hooks/useResponsive'
 
 type BrandItemType = {
   brand: ImmutableBrand;

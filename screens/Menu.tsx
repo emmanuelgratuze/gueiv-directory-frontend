@@ -7,7 +7,6 @@ import Text from 'components/Text'
 import A from 'components/A'
 
 import useTheme from 'hooks/useTheme'
-import styled from 'styled-components'
 import useConfiguration from 'hooks/useConfiguration'
 import Link from 'next/link'
 import { Instagram } from 'grommet-icons'
@@ -15,15 +14,6 @@ import StandardLink from 'components/StandardLink'
 import useResponsive from 'hooks/useResponsive'
 
 const Logo = require('assets/images/logo-white.svg').ReactComponent
-
-const MenuWrapper = styled.div`
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; */
-`
 
 type MenuScreenProps = {
   open?: boolean;
@@ -34,7 +24,6 @@ const MenuScreen: React.FC<MenuScreenProps> = ({ open = false }) => {
   const { isTablet, isMobile } = useResponsive()
   const configuration = useConfiguration()
   const AnimatedBox = motion.custom(Box)
-  const AnimatedWrapper = motion.custom(MenuWrapper)
 
   return (
     <>

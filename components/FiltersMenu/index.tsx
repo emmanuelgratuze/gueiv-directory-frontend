@@ -17,6 +17,8 @@ import { selectFiltersMenuState } from 'store/interface/filters/selectors'
 import { closeFilterMenu } from 'store/interface/filters/actions'
 
 import { StatusGoodSmall } from 'grommet-icons'
+import useResponsive from 'hooks/useResponsive'
+import FiltersControls from 'components/FiltersControls'
 
 type FiltersMenuProps = {}
 
@@ -24,6 +26,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
   // Menu state stuff
   const dispatch = useDispatch()
   const menuState = useSelector(selectFiltersMenuState)
+  const { isMobile } = useResponsive()
   const handleClose = useCallback(() => {
     dispatch(closeFilterMenu())
   }, [])
@@ -64,8 +67,24 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
           <Box
             background={{ color: 'gray' }}
             pad={{ top: theme.header.height }}
+            fill
+            overflow={isMobile ? 'scroll' : undefined}
           >
-            <Container pad="medium">
+            {isMobile && (
+              <Box
+                fill="horizontal"
+                overflow="scroll"
+                background={{ color: 'light-2' }}
+                flex={{ shrink: 0 }}
+              >
+                <FiltersControls />
+              </Box>
+            )}
+            <Container
+              pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'medium'}
+              flex={isMobile ? false : undefined}
+              overflow={isMobile ? 'scroll' : undefined}
+            >
               <ResponsiveGrid
                 columns={{
                   small: ['full'],
@@ -84,7 +103,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                       <Box
                         justify="center"
                         align="center"
-                        pad="medium"
+                        pad={isMobile ? 'small' : 'medium'}
                         direction="row"
                         gap="small"
                       >

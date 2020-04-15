@@ -16,6 +16,7 @@ import useTheme from 'hooks/useTheme'
 import useHover from 'hooks/useHover'
 
 import BrandImage from './Image'
+import useResponsive from 'hooks/useResponsive'
 
 type BrandItemType = {
   brand: ImmutableBrand;
@@ -29,6 +30,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 }) => {
   const { oppositeColors } = useTheme()
   const [hoverRef, isHovered] = useHover()
+  const { isSmallMobile } = useResponsive()
 
   return (
     <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
@@ -39,7 +41,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
             {...props}
           >
             <Box fill direction="row">
-              <Box width="50%">
+              <Box width={isSmallMobile ? '45%' : '50%'}>
                 <BrandImage
                   fill
                   brand={brand}
@@ -48,8 +50,8 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                 />
               </Box>
               <Box
-                width="50%"
-                pad={{ vertical: '2rem', horizontal: '2.2rem' }}
+                width={isSmallMobile ? '55%' : '50%'}
+                pad={isSmallMobile ? 'medium' : { vertical: '2rem', horizontal: '2.2rem' }}
                 justify="between"
               >
 
@@ -67,7 +69,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                   {/* Location */}
                   {brand.get('city') !== '' && brand.get('country') && (
                     <Heading
-                      level={3}
+                      level={4}
                       size="small"
                       color={color ? oppositeColors[color] : undefined}
                     >
@@ -78,14 +80,16 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                 </Box>
 
                 {/* Description */}
-                <Paragraph
-                  size="small"
-                  font="Lato"
-                  color={color ? oppositeColors[color] : undefined}
-                  length={50}
-                >
-                  {brand.get('description')}
-                </Paragraph>
+                {!isSmallMobile && (
+                  <Paragraph
+                    size="small"
+                    font="Lato"
+                    color={color ? oppositeColors[color] : undefined}
+                    length={50}
+                  >
+                    {brand.get('description')}
+                  </Paragraph>
+                )}
 
                 {/* Criteria */}
                 {brand.get('criteria') && (

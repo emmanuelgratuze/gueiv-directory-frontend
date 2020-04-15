@@ -338,13 +338,13 @@ const theme = deepMerge(base, {
         xlarge: fontSizing(1.9),
       },
       3: {
-        small: fontSizing(0.81),
+        small: fontSizing(1),
         medium: fontSizing(1.15),
         large: fontSizing(1.15),
         xlarge: fontSizing(1.15),
       },
       4: {
-        small: fontSizing(1),
+        small: fontSizing(0.7),
         medium: fontSizing(1),
         large: fontSizing(1),
         xlarge: fontSizing(1)

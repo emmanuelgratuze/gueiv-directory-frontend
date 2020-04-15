@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
-    "pre-build": "babel-node ./build/preBuild.js --presets @babel/preset-env",
+    "pre-build": "babel-node ./node-scripts/preBuild.js --presets @babel/preset-env",
     "start": "next start",
     "export": "next export",
     "dev-next": "next",

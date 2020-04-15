@@ -1,1 +1,6 @@
-{"name":"Tintes Naturales","description":"","id":"tintes-naturales"}
+{
+  "name": "Tintes Naturales",
+  "description": "Descripción",
+  "id": "tintes-naturales",
+  "icon": "assets/natural-dyes_vec0wl.svg"
+}

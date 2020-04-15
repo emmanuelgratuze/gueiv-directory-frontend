@@ -24,7 +24,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
     <Page title="Home" withFilters withScroll={brands.size !== 0}>
       <Box
         height={brands.size !== 0 ? { min: '100vh' } : undefined}
-        background={{ color: 'blue' }}
+        background={{ color: 'light-turquoise' }}
         fill={brands.size === 0}
       >
         <AnimatePresence exitBeforeEnter>
@@ -64,10 +64,10 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
                 fill
                 align="center"
                 justify="center"
-                background={{ color: 'blue' }}
+                background={{ color: 'light-turquoise' }}
                 pad="medium"
               >
-                <Text weight="bold" color="white" textAlign="center">
+                <Text weight="bold" color="gray" textAlign="center">
                   No hemos encontrado marcas por tu criterios :(
                 </Text>
               </Box>

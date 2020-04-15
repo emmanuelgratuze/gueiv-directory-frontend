@@ -44,8 +44,6 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
     ) {
       window.scrollTo(0, refs[window.location.hash].current?.offsetTop || 0)
     }
-
-    return () => {}
   }, [refs])
 
   return (
@@ -86,15 +84,15 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
               onScrollEnter={() => {
                 if (!isMobile) {
                   setBackgroundColorName(colorNames[index % colorNames.length])
-                  window.history.pushState(null, document.title, `#${criterion.get('id')}`)
                 }
+                window.history.pushState(null, document.title, `#${criterion.get('id')}`)
               }}
               key={criterion.get('id')}
             >
               <Box
                 fill
                 ref={refs[`#${criterion.get('id')}`]}
-                background={!isMobile ? undefined : { color: colorNames[index % colorNames.length]}}
+                background={!isMobile ? undefined : { color: colorNames[index % colorNames.length] }}
                 pad={isMobile ? { vertical: 'large' } : undefined}
               >
                 <Container pad="medium">

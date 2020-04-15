@@ -16,15 +16,6 @@ import useResponsive from 'hooks/useResponsive'
 
 const Logo = require('assets/images/logo-white.svg').ReactComponent
 
-const MenuWrapper = styled.div`
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; */
-`
-
 type MenuScreenProps = {
   open?: boolean;
 }
@@ -34,7 +25,6 @@ const MenuScreen: React.FC<MenuScreenProps> = ({ open = false }) => {
   const { isTablet, isMobile } = useResponsive()
   const configuration = useConfiguration()
   const AnimatedBox = motion.custom(Box)
-  const AnimatedWrapper = motion.custom(MenuWrapper)
 
   return (
     <>

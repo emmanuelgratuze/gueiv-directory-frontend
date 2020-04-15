@@ -1,1 +1,6 @@
-{"name":"Fibras Naturales","description":"","id":"fibras-naturales"}
+{
+  "name": "Fibras Naturales",
+  "description": "Descripción",
+  "id": "fibras-naturales",
+  "icon": "assets/natural-fiber_epx5kg.svg"
+}

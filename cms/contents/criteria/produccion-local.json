@@ -1,1 +1,6 @@
-{"name":"Producción Local","description":"","id":"produccion-local"}
+{
+  "name": "Producción Local",
+  "description": "Descripción",
+  "id": "produccion-local",
+  "icon": "assets/local-production_bqtv17.svg"
+}

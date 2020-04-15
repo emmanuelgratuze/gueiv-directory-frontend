@@ -18,7 +18,7 @@ type BrandBase = {
 export interface Brand extends BrandBase {
   criteria: Criterion[];
   country?: Country;
-  'product-types'?: ProductType[];
+  productTypes?: ProductType[];
   pictures?: string[];
   genders?: string[];
 }
@@ -27,7 +27,7 @@ export interface Brand extends BrandBase {
 export interface ImmutableBrand extends Record<BrandBase & {
     criteria: List<ImmutableCriterion>;
     country?: ImmutableCountry;
-    'product-types'?: List<ImmutableProductType>;
+    productTypes?: List<ImmutableProductType>;
     pictures?: List<string>;
     genders?: List<string>;
   }

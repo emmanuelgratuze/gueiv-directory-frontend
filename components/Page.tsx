@@ -56,7 +56,7 @@ const Page: React.FC<BoxProps & PageType> = ({
           <MenuScreen open={isMenuOpen} />
           <FiltersMenu />
           <Box fill={!withScroll}>
-            <Box pad={{ top: header.height }}>
+            <Box fill={!withScroll} pad={{ top: header.height }}>
               {children}
             </Box>
             {withFooter && (

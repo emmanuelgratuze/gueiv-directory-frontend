@@ -4,6 +4,8 @@ import { List } from 'immutable'
 import Page from 'components/Page'
 import BrandPreview from 'components/BrandPreview/BrandPreview'
 import ResponsiveGrid from 'components/ResponsiveGrid'
+import Text from 'components/Text'
+
 import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
 import { ImmutableBrand } from 'types/data/brand'
 import { Box } from 'grommet'
@@ -19,8 +21,12 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
   brandsColors
 }) => (
   <>
-    <Page title="Home" withFilters>
-      <Box height={{ min: '100vh' }} background={{ color: 'light-2' }}>
+    <Page title="Home" withFilters withScroll={brands.size !== 0}>
+      <Box
+        height={brands.size !== 0 ? { min: '100vh' } : undefined}
+        background={{ color: 'light-turquoise' }}
+        fill={brands.size === 0}
+      >
         <AnimatePresence exitBeforeEnter>
           <ResponsiveGrid
             columns={{
@@ -45,6 +51,28 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
               </motion.div>
             ))}
           </ResponsiveGrid>
+          <motion.div
+            key="no-result"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            style={{ width: '100%', height: '100%' }}
+          >
+            {brands.size === 0 && (
+              <Box
+                fill
+                align="center"
+                justify="center"
+                background={{ color: 'light-turquoise' }}
+                pad="medium"
+              >
+                <Text weight="bold" color="gray" textAlign="center">
+                  No hemos encontrado marcas por tu criterios :(
+                </Text>
+              </Box>
+            )}
+          </motion.div>
         </AnimatePresence>
       </Box>
     </Page>

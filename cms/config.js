@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/camelcase */
 export default {
   backend: {
-    name: 'git-gateway'
+    name: 'git-gateway',
+    branch: 'contents'
   },
   site_url: 'https://directorio.gueiv.com',
   media_folder: 'assets/uploads',

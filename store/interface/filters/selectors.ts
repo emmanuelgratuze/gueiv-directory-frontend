@@ -1,7 +1,7 @@
 import { DefaultRootState } from 'react-redux'
 import { List, Record, isImmutable } from 'immutable'
 import { createSelector } from 'reselect'
-import { sortBy, memoize } from 'lodash'
+import { memoize } from 'lodash'
 
 import { selectData } from 'store/data/selectors'
 import { selectBrands } from 'store/data/selectors/brands'

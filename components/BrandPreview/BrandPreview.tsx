@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Box, BoxProps } from 'grommet'
 import Link from 'next/link'
 
@@ -30,7 +30,20 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 }) => {
   const { oppositeColors } = useTheme()
   const [hoverRef, isHovered] = useHover()
-  const { isSmallMobile } = useResponsive()
+  const { isSmallMobile, size } = useResponsive()
+
+  const paragraphLength = useMemo(() => {
+    switch (size) {
+      case 'small':
+      case 'medium':
+      case 'large':
+        return 70
+      case 'xlarge':
+        return 150
+      default:
+        return 150
+    }
+  }, [size, brand])
 
   return (
     <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
@@ -85,7 +98,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                     size="small"
                     font="Lato"
                     color={color ? oppositeColors[color] : undefined}
-                    length={50}
+                    length={paragraphLength}
                   >
                     {brand.get('description')}
                   </Paragraph>

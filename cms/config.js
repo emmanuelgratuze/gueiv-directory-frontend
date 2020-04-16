@@ -1,9 +1,12 @@
 /* eslint-disable @typescript-eslint/camelcase */
 export default {
-  backend: {
-    name: 'git-gateway',
-    repo: 'emmanuelgratuze/gueiv-directory-frontend'
-  },
+  backend: process.env.NODE_ENV === 'production'
+    ? {
+      name: 'git-gateway'
+    } : {
+      name: 'github',
+      repo: process.env.NETLIFY_CMS_BACKEND_REPO
+    },
   site_url: 'https://directorio.gueiv.com',
   media_folder: 'assets/uploads',
   public_folder: 'assets',
@@ -132,13 +135,9 @@ export default {
           widget: 'slug-relation',
           required: false,
           collection: 'criteria',
-          displayFields: [
-            'name'
-          ],
+          displayFields: ['name'],
           multiple: true,
-          searchFields: [
-            'name'
-          ],
+          searchFields: ['name'],
           valueField: '{{slug}}'
         },
         {
@@ -169,13 +168,9 @@ export default {
           name: 'country',
           widget: 'slug-relation',
           collection: 'countries',
-          displayFields: [
-            'name'
-          ],
+          displayFields: ['name'],
           multiple: false,
-          searchFields: [
-            'name'
-          ],
+          searchFields: ['name'],
           valueField: 'name'
         },
         {
@@ -184,22 +179,21 @@ export default {
           required: false,
           widget: 'slug-relation',
           collection: 'productTypes',
-          displayFields: [
-            'name'
-          ],
+          displayFields: ['name'],
           multiple: true,
-          searchFields: [
-            'name'
-          ],
+          searchFields: ['name'],
           valueField: 'name'
         },
         {
           label: 'Genders',
           name: 'genders',
           required: false,
-          widget: 'select',
+          widget: 'slug-relation',
+          collection: 'genders',
+          displayFields: ['name'],
           multiple: true,
-          options: ['Men', 'Women', 'Children', 'Unisex'],
+          searchFields: ['name'],
+          valueField: 'name'
         }
       ]
     },
@@ -265,6 +259,23 @@ export default {
       label_singular: 'Product type',
       name: 'productTypes',
       folder: 'cms/contents/product-types',
+      identifier_field: 'name',
+      extension: 'json',
+      format: 'json',
+      create: true,
+      fields: [
+        {
+          label: 'Name',
+          name: 'name',
+          widget: 'string'
+        }
+      ]
+    },
+    {
+      label: 'Genders',
+      label_singular: 'Gender',
+      name: 'genders',
+      folder: 'cms/contents/genders',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',

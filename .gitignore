@@ -149,3 +149,9 @@ logs
 stats.json
 dist
 .history
+
+
+# Custom
+
+# Is generated on build
+/public/config.yml

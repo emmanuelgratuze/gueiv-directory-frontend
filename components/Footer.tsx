@@ -1,9 +1,8 @@
 import React from 'react'
-import { Box, TextInput } from 'grommet'
+import { Box } from 'grommet'
 import { Facebook, Instagram } from 'grommet-icons'
 
 import Paragraph from 'components/Paragraph'
-import Button from 'components/Button'
 import Text from 'components/Text'
 import Container from 'components/Container'
 import Heading from 'components/Heading'
@@ -67,12 +66,6 @@ const Footer: React.FC = () => {
           </Box>
           <Box align="center">
             <FooterHeading>Súbete a la nueva ola</FooterHeading>
-            <Box width="16rem" margin={{ bottom: 'small' }}>
-              <TextInput name="yeah" placeholder="Suscríbete con tu e-mail" />
-            </Box>
-            <Button size="small">
-              Subscríbeme
-            </Button>
           </Box>
         </ResponsiveGrid>
       </Container>

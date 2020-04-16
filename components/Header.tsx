@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import { Box, Button } from 'grommet'
 import styled from 'styled-components'
 import Link from 'next/link'
@@ -11,10 +11,8 @@ import HamburgerIcon from 'components/HamburgerIcon'
 import useTheme from 'hooks/useTheme'
 import useMenuState from 'hooks/useMenuState'
 import { Filter, Sort } from 'grommet-icons'
-import { useDispatch, useSelector } from 'react-redux'
-import { selectFiltersMenuState } from 'store/interface/filters/selectors'
-import { closeFilterMenu, openFilterMenu } from 'store/interface/filters/actions'
 import useResponsive from 'hooks/useResponsive'
+import useFilterMenu from 'hooks/useFilterMenu'
 
 const Logo = require('assets/images/logo.svg').ReactComponent
 
@@ -32,17 +30,12 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
   const { theme: { header } } = useTheme()
   const { isMenuOpen, toggleMenu } = useMenuState()
-  const dispatch = useDispatch()
 
   const { isMobile } = useResponsive()
-  const filterMenuState = useSelector(selectFiltersMenuState)
-  const handleClickOnSelect = useCallback((filterId) => {
-    const action = filterMenuState.get('filterId') === filterId || !filterId
-      ? closeFilterMenu()
-      : openFilterMenu(filterId)
-
-    dispatch(action)
-  }, [filterMenuState])
+  const {
+    isOpen: areFiltersOpen,
+    toggle: toggleFilters
+  } = useFilterMenu()
 
   return (
     <HeaderWrapper
@@ -94,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
               {isMobile ? (
                 <Button
                   plain
-                  onClick={() => handleClickOnSelect(!filterMenuState.get('isOpen') ? 'criteria' : null)}
+                  onClick={() => toggleFilters(!areFiltersOpen ? 'criteria' : null)}
                 >
                   <Box
                     fill="vertical"
@@ -102,7 +95,7 @@ const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
                     align="center"
                     justify="center"
                   >
-                    {!filterMenuState.get('isOpen') ? (
+                    {!areFiltersOpen ? (
                       <Filter color="gray" />
                     ) : (
                       <Sort color="blue" />

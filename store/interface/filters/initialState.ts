@@ -23,7 +23,7 @@ export const availableFilters = List([
     id: 'productTypes',
     brandProperty: 'productTypes',
     dataEntity: 'productTypes',
-    label: 'Product'
+    label: 'Producto'
   })
 ])
 

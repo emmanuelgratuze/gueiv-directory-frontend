@@ -1,9 +1,8 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Box, BoxProps } from 'grommet'
 import Link from 'next/link'
 
 import Heading from 'components/Heading'
-import Paragraph from 'components/Paragraph'
 
 import RelativeHeightBox from 'components/RelativeHeightBox'
 import CriterionIcon from 'components/CriterionIcon'
@@ -30,103 +29,81 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 }) => {
   const { oppositeColors } = useTheme()
   const [hoverRef, isHovered] = useHover()
-  const { isSmallMobile, size } = useResponsive()
-
-  const paragraphLength = useMemo(() => {
-    switch (size) {
-      case 'small':
-      case 'medium':
-      case 'large':
-        return 70
-      case 'xlarge':
-        return 150
-      default:
-        return 150
-    }
-  }, [size, brand])
+  const { isSmallMobile } = useResponsive()
 
   return (
     <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
       <A ref={hoverRef}>
-        <DynamicBackgroundColorBox color={color}>
-          <RelativeHeightBox
-            relativeHeight="50%"
-            {...props}
-          >
-            <Box fill direction="row">
-              <Box width={isSmallMobile ? '45%' : '50%'}>
-                <BrandImage
-                  fill
-                  brand={brand}
-                  color={color}
-                  zoom={isHovered}
-                />
-              </Box>
-              <Box
-                width={isSmallMobile ? '55%' : '50%'}
-                pad={isSmallMobile ? 'medium' : { vertical: '2rem', horizontal: '2.2rem' }}
-                justify="between"
-              >
+        <Box round="0.5rem" overflow="hidden">
 
-                <Box>
-                  {/* Name */}
-                  <Heading
-                    level={2}
-                    size="small"
-                    transform="uppercase"
-                    color={color ? oppositeColors[color] : undefined}
-                  >
-                    {brand.get('name')}
-                  </Heading>
+          <DynamicBackgroundColorBox color={color}>
+            <RelativeHeightBox
+              relativeHeight="50%"
+              {...props}
+            >
+              <Box fill direction="row">
+                <Box width={isSmallMobile ? '45%' : '50%'}>
+                  <BrandImage
+                    fill
+                    brand={brand}
+                    color={color}
+                    zoom={isHovered}
+                  />
+                </Box>
+                <Box
+                  width={isSmallMobile ? '55%' : '50%'}
+                  pad={isSmallMobile ? 'medium' : { vertical: '2rem', horizontal: '2.2rem' }}
+                  justify="between"
+                >
 
-                  {/* Location */}
-                  {brand.get('city') !== '' && brand.get('country') && (
+                  <Box>
+                    {/* Name */}
                     <Heading
-                      level={4}
+                      level={2}
                       size="small"
+                      transform="uppercase"
                       color={color ? oppositeColors[color] : undefined}
                     >
-                      {brand.get('city') && `${brand.get('city')} `}
-                      {brand.getIn(['country', 'name'])}
+                      {brand.get('name')}
                     </Heading>
+
+                    {/* Location */}
+                    {brand.get('city') !== '' && brand.get('country') && (
+                      <Heading
+                        level={4}
+                        size="small"
+                        color={color ? oppositeColors[color] : undefined}
+                      >
+                        {brand.get('city') && `${brand.get('city')} `}
+                        {brand.getIn(['country', 'name'])}
+                      </Heading>
+                    )}
+                  </Box>
+
+                  {/* Criteria */}
+                  {brand.get('criteria') && (
+                    <Box direction="row">
+                      {brand.get('criteria').map((criterion) => (
+                        <Box
+                          key={criterion.get('id')}
+                          width="1.5rem"
+                          height="1.5rem"
+                          margin={{ right: 'small', bottom: 'small' }}
+                        >
+                          <CriterionIcon
+                            clickable
+                            criterion={criterion}
+                            color={color ? oppositeColors[color] : undefined}
+                          />
+                        </Box>
+                      ))}
+                    </Box>
                   )}
                 </Box>
-
-                {/* Description */}
-                {!isSmallMobile && (
-                  <Paragraph
-                    size="small"
-                    font="Lato"
-                    color={color ? oppositeColors[color] : undefined}
-                    length={paragraphLength}
-                  >
-                    {brand.get('description')}
-                  </Paragraph>
-                )}
-
-                {/* Criteria */}
-                {brand.get('criteria') && (
-                  <Box direction="row">
-                    {brand.get('criteria').map((criterion) => (
-                      <Box
-                        key={criterion.get('id')}
-                        width="1.5rem"
-                        height="1.5rem"
-                        margin={{ right: 'small', bottom: 'small' }}
-                      >
-                        <CriterionIcon
-                          clickable
-                          criterion={criterion}
-                          color={color ? oppositeColors[color] : undefined}
-                        />
-                      </Box>
-                    ))}
-                  </Box>
-                )}
               </Box>
-            </Box>
-          </RelativeHeightBox>
-        </DynamicBackgroundColorBox>
+            </RelativeHeightBox>
+          </DynamicBackgroundColorBox>
+        </Box>
       </A>
     </Link>
   )

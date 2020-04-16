@@ -11,7 +11,14 @@ import theme from 'themes/theme'
 
 import { GlobalStyles } from './styled'
 
-const Layout: React.FC = ({ children }) => {
+type LayoutProps = {
+  isLoading?: boolean;
+}
+
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  isLoading: isLoadingProp = false
+}) => {
   if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
     useAnalytics(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
   }
@@ -44,10 +51,15 @@ const Layout: React.FC = ({ children }) => {
       <GlobalStyles />
 
       <Grommet theme={theme}>
-        {isLoading && (
+        {(isLoading || isLoadingProp) && (
           <LoadingScreen />
         )}
-        {siteContent}
+        {/* If loading state has been given in prop, we do not render content yet */}
+        {!isLoadingProp && (
+          <>
+            {siteContent}
+          </>
+        )}
       </Grommet>
     </>
   )

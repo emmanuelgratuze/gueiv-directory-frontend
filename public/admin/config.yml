@@ -1,7 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
   repo: emmanuelgratuze/gueiv-directory-frontend
-  branch: contents
 site_url: https://directorio.gueiv.com
 media_folder: assets/uploads
 public_folder: assets
@@ -9,8 +8,8 @@ media_library:
   name: cloudinary
   output_filename_only: true
   config:
-    ? cloud_name
-    ? api_key
+    cloud_name: dq9k7gnud
+    api_key: "543373913743399"
 collections:
   - label: Configuration
     name: configuration
@@ -134,13 +133,14 @@ collections:
       - label: Genders
         name: genders
         required: false
-        widget: select
+        widget: slug-relation
+        collection: genders
+        displayFields:
+          - name
         multiple: true
-        options:
-          - Men
-          - Women
-          - Children
-          - Unisex
+        searchFields:
+          - name
+        valueField: name
   - label: Criteria
     label_singular: Criterion
     name: criteria
@@ -184,6 +184,18 @@ collections:
     label_singular: Product type
     name: productTypes
     folder: cms/contents/product-types
+    identifier_field: name
+    extension: json
+    format: json
+    create: true
+    fields:
+      - label: Name
+        name: name
+        widget: string
+  - label: Genders
+    label_singular: Gender
+    name: genders
+    folder: cms/contents/genders
     identifier_field: name
     extension: json
     format: json

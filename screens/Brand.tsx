@@ -120,14 +120,14 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                   </Text>
                   <Box direction="row">
                     {brand.get('genders')?.map((gender, index) => (
-                      <Box align="center" direction="row" key={gender}>
+                      <Box align="center" direction="row" key={gender.get('id')}>
                         {index !== 0 && (
                           <Box margin={{ horizontal: 'small' }}>
                             <StatusGoodSmall size="5px" color={oppBrandColor} />
                           </Box>
                         )}
                         <Text color={oppBrandColor}>
-                          {gender}
+                          {gender.get('name')}
                         </Text>
                       </Box>
                     ))}

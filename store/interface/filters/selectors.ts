@@ -1,13 +1,11 @@
 import { DefaultRootState } from 'react-redux'
 import { List, Record, isImmutable } from 'immutable'
 import { createSelector } from 'reselect'
-import { uniqBy, memoize } from 'lodash'
+import { memoize } from 'lodash'
 
 import { selectData } from 'store/data/selectors'
 import { selectBrands } from 'store/data/selectors/brands'
 import { Filter } from './types'
-// import { ImmutableBrand } from 'types/data/brand'
-
 
 export const selectFiltersMenuState = (state: DefaultRootState): Record<{ isOpen: boolean; filterId: string }> => (
   state.getIn(['interface', 'filters', 'menuState'])
@@ -31,29 +29,10 @@ type StandardDataEntity = Record<{
   name: string;
 }>
 
-export const selectGendersOptions = createSelector(
-  selectBrands,
-  (brands) => {
-    const gendersWithDuplicates = brands.reduce<FilterOption[]>((genders, brand): FilterOption[] => (
-      [
-        ...genders,
-        ...(
-          (brand.get('genders')?.toJS() || []).map((gender) => ({
-            label: gender,
-            value: gender
-          })))
-      ]
-    ), [])
-
-    return List(uniqBy(gendersWithDuplicates, (gender: FilterOption) => gender.label))
-  }
-)
-
 export const selectFilterOptions = createSelector(
   selectData,
-  selectGendersOptions,
   selectAvailableFilters,
-  (data, genders, filters) => (
+  (data, filters) => (
     memoize((filterId: string) => {
       if (!filterId) {
         return List([])
@@ -79,9 +58,7 @@ export const selectFilterOptions = createSelector(
         return List([])
       }
 
-      const filterOptions = filterId === 'genders'
-        ? genders
-        : getOptionsOfDataEntity(filterParams.get('dataEntity'))
+      const filterOptions = getOptionsOfDataEntity(filterParams.get('dataEntity'))
 
       return filterOptions
     })

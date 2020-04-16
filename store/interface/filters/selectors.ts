@@ -1,7 +1,7 @@
 import { DefaultRootState } from 'react-redux'
 import { List, Record, isImmutable } from 'immutable'
 import { createSelector } from 'reselect'
-import { memoize } from 'lodash'
+import { sortBy, memoize } from 'lodash'
 
 import { selectData } from 'store/data/selectors'
 import { selectBrands } from 'store/data/selectors/brands'
@@ -59,6 +59,9 @@ export const selectFilterOptions = createSelector(
       }
 
       const filterOptions = getOptionsOfDataEntity(filterParams.get('dataEntity'))
+        .sort((a, b) => (
+          a.label.localeCompare(b.label)
+        ))
 
       return filterOptions
     })

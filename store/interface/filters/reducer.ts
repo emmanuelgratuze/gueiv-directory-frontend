@@ -3,8 +3,17 @@ import { Reducer } from 'redux'
 import { combineReducers } from 'redux-immutable'
 
 import { BasicAction } from 'store/types'
-import { OPEN_FILTER_BOX, CLOSE_FILTER_BOX, APPLY_FILTER } from './actionsTypes'
-import { ApplyFilterAction, Filter } from './types'
+import {
+  OPEN_FILTER_BOX,
+  CLOSE_FILTER_BOX,
+  APPLY_FILTER,
+  APPLY_FILTERS
+} from './actionsTypes'
+import {
+  ApplyFilterAction,
+  ApplyFiltersActions,
+  Filter
+} from './types'
 import { availableFilters } from './initialState'
 
 function menuState(state = fromJS({ isOpen: false }), action: BasicAction): Reducer {
@@ -23,7 +32,7 @@ function menuState(state = fromJS({ isOpen: false }), action: BasicAction): Redu
   }
 }
 
-function currentFiltersValues(state = fromJS({}), action: ApplyFilterAction): Reducer {
+function currentFiltersValues(state = fromJS({}), action: ApplyFilterAction | ApplyFiltersActions): Reducer {
   switch (action.type) {
     case APPLY_FILTER: {
       const { filterId, filterValue } = action.payload
@@ -31,6 +40,10 @@ function currentFiltersValues(state = fromJS({}), action: ApplyFilterAction): Re
         return state.delete(filterId)
       }
       return state.set(filterId, filterValue)
+    }
+    case APPLY_FILTERS: {
+      const { filters } = action.payload
+      return fromJS(filters)
     }
     default:
       return state

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // // evt.preventDefault();
 // // const { fields, action } = this.props;
 // // const values = fields.map(field => {

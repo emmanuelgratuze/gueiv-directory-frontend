@@ -21,7 +21,7 @@ type MenuScreenProps = {
 
 const MenuScreen: React.FC<MenuScreenProps> = ({ open = false }) => {
   const { theme: { header } } = useTheme()
-  const { isTablet, isMobile } = useResponsive()
+  const { isMobile } = useResponsive()
   const configuration = useConfiguration()
   const AnimatedBox = motion.custom(Box)
 
@@ -44,7 +44,7 @@ const MenuScreen: React.FC<MenuScreenProps> = ({ open = false }) => {
               <Box
                 fill="vertical"
                 pad={{ top: header.height }}
-                width={isTablet ? '100%' : '30%'}
+                width={isMobile ? '100%' : '30%'}
                 align="center"
                 justify="center"
                 overflow={isMobile ? { vertical: 'scroll' } : undefined}

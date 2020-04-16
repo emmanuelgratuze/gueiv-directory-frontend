@@ -12,7 +12,7 @@ function createConfigFile(yamlConfigString) {
   })
 }
 
-if(!fs.existsSync('./public/admin')) {
+if (!fs.existsSync('./public/admin')) {
   // eslint-disable-next-line prefer-numeric-literals
   fs.mkdirSync('./public/admin', parseInt('0766', 8), (err) => {
     if (err) {

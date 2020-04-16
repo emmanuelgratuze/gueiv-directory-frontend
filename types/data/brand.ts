@@ -3,6 +3,7 @@ import { Record, List } from 'immutable'
 import { Country, ImmutableCountry } from './country'
 import { Criterion, ImmutableCriterion } from './criterion'
 import { ProductType, ImmutableProductType } from './productType'
+import { Gender, ImmutableGender } from './gender'
 
 type BrandBase = {
   id: string;
@@ -20,7 +21,7 @@ export interface Brand extends BrandBase {
   country?: Country;
   productTypes?: ProductType[];
   pictures?: string[];
-  genders?: string[];
+  genders?: Gender[];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -29,7 +30,7 @@ export interface ImmutableBrand extends Record<BrandBase & {
     country?: ImmutableCountry;
     productTypes?: List<ImmutableProductType>;
     pictures?: List<string>;
-    genders?: List<string>;
+    genders?: List<ImmutableGender>;
   }
 > {}
 

@@ -17,6 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const dataList = [
     { collection: 'brands', schema: ['brand'] },
     { collection: 'criteria', schema: ['criterion'] },
+    { collection: 'genders', schema: ['gender'] },
     { collection: 'configuration', schema: ['configuration'] },
     { collection: 'countries', schema: ['country'] },
     { collection: 'product-types', schema: ['productType'] }

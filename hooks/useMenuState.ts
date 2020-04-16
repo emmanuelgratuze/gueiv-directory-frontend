@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 type UseMenuState = {
   isMenuOpen: boolean;
   toggleMenu: Function;
+  closeMenu: Function;
 }
 
 const useMenuState = (): UseMenuState => {
@@ -27,7 +28,8 @@ const useMenuState = (): UseMenuState => {
 
   return {
     isMenuOpen,
-    toggleMenu
+    toggleMenu,
+    closeMenu
   }
 }
 

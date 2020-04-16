@@ -26,6 +26,7 @@ const BrandPage: NextPage<BrandPageType> = ({ slug }) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const dataList = [
     { collection: 'brands', schema: ['brand'] },
+    { collection: 'genders', schema: ['gender'] },
     { collection: 'criteria', schema: ['criterion'] },
     { collection: 'configuration', schema: ['configuration'] },
     { collection: 'countries', schema: ['country'] },

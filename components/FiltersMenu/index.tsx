@@ -5,31 +5,26 @@ import {
   Layer,
   Button
 } from 'grommet'
-import { useSelector, useDispatch } from 'react-redux'
 
 import Text from 'components/Text'
 import Container from 'components/Container'
 import ResponsiveGrid from 'components/ResponsiveGrid'
+import CustomButton from 'components/Button'
 import useTheme from 'hooks/useTheme'
 import useFilter from 'hooks/useFilter'
-
-import { selectFiltersMenuState } from 'store/interface/filters/selectors'
-import { closeFilterMenu } from 'store/interface/filters/actions'
-
 import { StatusGoodSmall } from 'grommet-icons'
+
 import useResponsive from 'hooks/useResponsive'
+import useFilterMenu from 'hooks/useFilterMenu'
+
 import FiltersControls from 'components/FiltersControls'
 
 type FiltersMenuProps = {}
 
 const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
-  // Menu state stuff
-  const dispatch = useDispatch()
-  const menuState = useSelector(selectFiltersMenuState)
   const { isMobile } = useResponsive()
-  const handleClose = useCallback(() => {
-    dispatch(closeFilterMenu())
-  }, [])
+
+  const { state: menuState, close } = useFilterMenu()
 
   // Filter stuff
   const { filterValue, filterOptions, setFilterValue } = useFilter(menuState.get('filterId'))
@@ -61,14 +56,14 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
           position="top"
           full="horizontal"
           plain
-          onClickOutside={handleClose}
-          onEsc={handleClose}
+          onClickOutside={() => close()}
+          onEsc={() => close()}
         >
           <Box
             background={{ color: 'gray' }}
             pad={{ top: theme.header.height }}
             fill
-            overflow={isMobile ? 'scroll' : undefined}
+            overflow="auto"
           >
             {isMobile && (
               <Box
@@ -81,7 +76,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
               </Box>
             )}
             <Container
-              pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'medium'}
+              pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'large'}
               flex={isMobile ? false : undefined}
               overflow={isMobile ? 'scroll' : undefined}
             >
@@ -123,6 +118,11 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                   </Button>
                 ))}
               </ResponsiveGrid>
+              <Box fill="horizontal" align="center" onClick={() => close()}>
+                <CustomButton color="yellow">
+                  Ver las marcas
+                </CustomButton>
+              </Box>
             </Container>
           </Box>
         </Layer>

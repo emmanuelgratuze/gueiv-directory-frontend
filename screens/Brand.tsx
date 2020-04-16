@@ -88,9 +88,9 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                     weight="bold"
                     margin={{ bottom: 'small' }}
                   >
-                    Tipos de productos
+                    Tipos de producto
                   </Text>
-                  <Box direction="row">
+                  <Box direction="row" wrap>
                     {brand.get('productTypes')?.map((productType, index) => (
                       <Box align="center" direction="row" key={productType.get('id')}>
                         {index !== 0 && (
@@ -136,7 +136,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
               )}
 
               {/* Criteria */}
-              <Box margin={{ bottom: '2.2rem' }}>
+              <Box margin={{ bottom: '2.2rem' }} wrap>
                 <Text
                   transform="uppercase"
                   color={oppBrandColor}

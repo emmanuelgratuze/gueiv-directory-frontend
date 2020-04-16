@@ -51,6 +51,9 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
       <Page title="Nuestros criterios">
         <motion.div
           animate={{ backgroundColor: brandColors[backgroundColorName] }}
+          transition={{
+            duration: 1
+          }}
         >
           <Container
             height={!isMobile ? '85vh' : undefined}

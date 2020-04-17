@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
 
   return (
     <HeaderWrapper
-      background={{ color: 'light-2' }}
+      background={{ color: 'white' }}
       fill="horizontal"
       height={header.height}
     >
@@ -75,6 +75,7 @@ const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
                 weight={700}
                 color="dark-3"
                 size="0.9rem"
+                spacing="large"
               >
                 Directorio
               </Text>

@@ -27,7 +27,10 @@ const Layout: React.FC<LayoutProps> = ({
   const isLoading = useLoading()
 
   // Only rerender the pages when route changed
-  const siteContent = useMemo(() => children, [router.pathname])
+  const siteContent = useMemo(
+    () => children,
+    [router.pathname, children]
+  )
 
   return (
     <>
@@ -44,6 +47,16 @@ const Layout: React.FC<LayoutProps> = ({
         {/* Fonts */}
         <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400&display=swap" rel="stylesheet" />
+
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0B89CB" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#f1f1f1" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="theme-color" content="#f1f1f1" />
 
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>

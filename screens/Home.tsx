@@ -1,45 +1,74 @@
-import React, { useMemo } from 'react'
-import { List } from 'immutable'
+import React, { useEffect } from 'react'
+
+import { Box } from 'grommet'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useDispatch } from 'react-redux'
+
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 import Page from 'components/Page'
 import BrandPreview from 'components/BrandPreview/BrandPreview'
 import Text from 'components/Text'
-
-import useResponsiveGrid from 'hooks/useResponsiveGrid'
+import Loader from 'components/Loader'
 
 import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
-import { ImmutableBrand } from 'types/data/brand'
-import { Box, InfiniteScroll } from 'grommet'
-import { AnimatePresence, motion } from 'framer-motion'
+import useResponsiveGrid from 'hooks/useResponsiveGrid'
+import useTheme from 'hooks/useTheme'
 
-type HomeScreenProps = {
-  brands: List<ImmutableBrand>;
-  brandsColors: BrandColorsKeys[];
-}
+import { setBrandsColors } from 'store/interface/actions'
+import useFilteredBrands from 'hooks/useFilteredBrands'
 
-const HomeScreen: React.FC<HomeScreenProps> = ({
-  brands,
-  brandsColors
-}) => {
+type HomeScreenProps = {}
+
+const HomeScreen: React.FC<HomeScreenProps> = () => {
+  const { theme: { global: { brandColorsNames } } } = useTheme()
   const { getChildrenSize } = useResponsiveGrid({
     small: ['full'],
     medium: ['50%'],
     xlarge: ['33.33%']
   })
-  const brandsItems = useMemo(() => brands.toArray(), [brands])
+
+  const { brands, selectMore, hasMore } = useFilteredBrands()
+
+  const dispatch = useDispatch()
+  useEffect(() => {
+    if (brands.size) {
+      const colors: { [key: string]: BrandColorsKeys } = {}
+      brands.forEach((brand, index) => {
+        colors[brand.get('id')] = brandColorsNames[index % brandColorsNames.length]
+      })
+      dispatch(setBrandsColors(colors))
+    }
+  }, [brands])
 
   return (
     <>
       <Page title="Home" withFilters withScroll={brands.size !== 0}>
         <Box
           height={brands.size !== 0 ? { min: '100vh' } : undefined}
-          background={{ color: 'light-turquoise' }}
+          background={{ color: 'white' }}
           fill={brands.size === 0}
         >
           <AnimatePresence>
             <Box direction="row" wrap>
-              <InfiniteScroll items={brandsItems} step={20}>
-                {(brand, index) => (
+              <InfiniteScroll
+                dataLength={brands.size}
+                next={() => { selectMore() }}
+                hasMore={hasMore}
+                loader={(
+                  <Box width="100%" height="medium" align="center" justify="center">
+                    <Loader />
+                  </Box>
+                )}
+                endMessage={undefined}
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  flexWrap: 'wrap'
+                }}
+                outerStyle={{ width: '100%' }}
+              >
+                {brands.map((brand, index) => (
                   <Box
                     key={brand.get('id')}
                     width={getChildrenSize(index)}
@@ -53,14 +82,13 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
                       <BrandPreview
                         key={brand.get('id')}
                         brand={brand}
-                        color={brandsColors[index % brandsColors.length] as keyof ThemeColorsType}
+                        color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
                       />
                     </motion.div>
                   </Box>
-                )}
+                ))}
               </InfiniteScroll>
             </Box>
-
             <motion.div
               key="no-result"
               initial={{ opacity: 0 }}
@@ -69,7 +97,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
               transition={{ duration: 0.6 }}
               style={{ width: '100%', height: '100%' }}
             >
-              {brands.size === 0 && (
+              {brands && brands.size === 0 && (
                 <Box
                   fill
                   align="center"

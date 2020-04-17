@@ -7,9 +7,11 @@ export type StyledTextProps = {
   transform?: 'initial' | 'uppercase' | 'lowercase' | 'capitalize';
   underlined?: boolean;
   spacing?: 'normal' | 'large';
+  lineHeight?: 'small' | 'normal' | 'large';
   italic?: boolean;
   font?: 'Quicksand' | 'Lato';
   nowrap?: boolean;
+  wordBreak?: boolean;
 }
 
 export const textStyles = css`
@@ -46,6 +48,20 @@ export const textStyles = css`
       text-transform: capitalize;
     `}
 
+  /* Line height */
+  ${(props: StyledTextProps) => props.lineHeight === 'large'
+    && css`
+      line-height: '1.5em';
+    `}
+  ${(props: StyledTextProps) => props.lineHeight === 'normal'
+    && css`
+      line-height: '1.2em';
+    `}
+  ${(props: StyledTextProps) => props.lineHeight === 'small'
+    && css`
+      line-height: '0.8em';
+    `}
+
   /* Underline */
   ${(props: StyledTextProps) => props.underlined
     && css`
@@ -69,6 +85,11 @@ export const textStyles = css`
   ${(props: StyledTextProps) => props.nowrap
     && css`
       white-space: nowrap;
+    `}
+
+  ${(props: StyledTextProps) => props.wordBreak
+    && css`
+      word-break: break-word;
     `}
 
   ${(props: StyledTextProps) => props.font

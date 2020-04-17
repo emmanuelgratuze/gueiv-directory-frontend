@@ -1,14 +1,13 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Box, BoxProps } from 'grommet'
 import Link from 'next/link'
 
-import Heading from 'components/Heading'
-import Paragraph from 'components/Paragraph'
 
+import Heading from 'components/Heading'
+import A from 'components/A'
 import RelativeHeightBox from 'components/RelativeHeightBox'
 import CriterionIcon from 'components/CriterionIcon'
 import DynamicBackgroundColorBox from 'components/DynamicBackgroundColorBox'
-import A from 'components/A'
 
 import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
@@ -30,23 +29,10 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 }) => {
   const { oppositeColors } = useTheme()
   const [hoverRef, isHovered] = useHover()
-  const { isSmallMobile, size } = useResponsive()
-
-  const paragraphLength = useMemo(() => {
-    switch (size) {
-      case 'small':
-      case 'medium':
-      case 'large':
-        return 70
-      case 'xlarge':
-        return 150
-      default:
-        return 150
-    }
-  }, [size, brand])
+  const { isSmallMobile } = useResponsive()
 
   return (
-    <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
+    <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`} prefetch={false}>
       <A ref={hoverRef}>
         <DynamicBackgroundColorBox color={color}>
           <RelativeHeightBox
@@ -72,9 +58,10 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                   {/* Name */}
                   <Heading
                     level={2}
-                    size="small"
                     transform="uppercase"
                     color={color ? oppositeColors[color] : undefined}
+                    wordBreak
+                    margin={{ bottom: 'small' }}
                   >
                     {brand.get('name')}
                   </Heading>
@@ -91,18 +78,6 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                     </Heading>
                   )}
                 </Box>
-
-                {/* Description */}
-                {!isSmallMobile && (
-                  <Paragraph
-                    size="small"
-                    font="Lato"
-                    color={color ? oppositeColors[color] : undefined}
-                    length={paragraphLength}
-                  >
-                    {brand.get('description')}
-                  </Paragraph>
-                )}
 
                 {/* Criteria */}
                 {brand.get('criteria') && (

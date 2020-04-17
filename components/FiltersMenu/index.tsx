@@ -12,7 +12,7 @@ import ResponsiveGrid from 'components/ResponsiveGrid'
 import CustomButton from 'components/Button'
 import useTheme from 'hooks/useTheme'
 import useFilter from 'hooks/useFilter'
-import { StatusGoodSmall } from 'grommet-icons'
+import { StatusGoodSmall, FormClose } from 'grommet-icons'
 
 import useResponsive from 'hooks/useResponsive'
 import useFilterMenu from 'hooks/useFilterMenu'
@@ -27,7 +27,13 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
   const { state: menuState, close } = useFilterMenu()
 
   // Filter stuff
-  const { filterValue, filterOptions, setFilterValue } = useFilter(menuState.get('filterId'))
+  const {
+    filterValue,
+    filterOptions,
+    addFilter,
+    removeFilters
+  } = useFilter(menuState.get('filterId'))
+
   const handleOptionClick = useCallback((optionId: string): void => {
     let currentValue = filterValue
     if (filterValue.includes(optionId)) {
@@ -36,8 +42,8 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
     } else {
       currentValue = currentValue.push(optionId)
     }
-    setFilterValue(currentValue)
-  }, [setFilterValue, filterValue])
+    addFilter(currentValue)
+  }, [addFilter, filterValue])
 
   // UI stuff
   const { theme } = useTheme()
@@ -76,7 +82,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
               </Box>
             )}
             <Container
-              pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'large'}
+              pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'medium'}
               flex={isMobile ? false : undefined}
               overflow={isMobile ? 'scroll' : undefined}
             >
@@ -118,10 +124,33 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                   </Button>
                 ))}
               </ResponsiveGrid>
-              <Box fill="horizontal" align="center" onClick={() => close()}>
-                <CustomButton color="yellow">
+              <Box
+                margin={{ top: 'medium' }}
+                fill="horizontal"
+                align="center"
+                justify="center"
+                direction="row"
+                gap="medium"
+              >
+                <CustomButton color="yellow" onClick={() => close()}>
                   Ver las marcas
                 </CustomButton>
+                <Button plain onClick={() => removeFilters()} disabled={filterValue.size === 0}>
+                  {({ hover }: { hover: boolean }) => (
+                    <Box align="center" direction="row">
+                      <FormClose color={hover && filterValue.size > 0 ? 'pink' : 'white'} />
+                      <Text
+                        size="xsmall"
+                        transform="uppercase"
+                        color={hover && filterValue.size > 0 ? 'pink' : 'white'}
+                        weight="bold"
+                        font="Quicksand"
+                      >
+                        Borrar filtros
+                      </Text>
+                    </Box>
+                  )}
+                </Button>
               </Box>
             </Container>
           </Box>

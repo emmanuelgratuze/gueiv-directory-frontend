@@ -55,8 +55,11 @@ const CriterionIcon: React.FC<CriterionIcon> = ({
   }, [color])
 
   const content = (
-    <Box ref={ref}>
+    <Box fill ref={ref}>
       <StyledIconContainer
+        fill
+        align="center"
+        justify="center"
         dangerouslySetInnerHTML={{
           __html: criterion.get('iconContent')
         }}

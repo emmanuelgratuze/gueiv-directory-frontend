@@ -3,6 +3,7 @@ import { List, Record, isImmutable } from 'immutable'
 import { createSelector } from 'reselect'
 import { memoize } from 'lodash'
 
+import { ImmutableBrand } from 'types/data/brand'
 import { selectData } from 'store/data/selectors'
 import { selectBrands } from 'store/data/selectors/brands'
 import { Filter } from './types'
@@ -68,47 +69,55 @@ export const selectFilterOptions = createSelector(
   )
 )
 
-export const selectFilteredBrands = createSelector(
-  selectBrands,
-  selectAvailableFilters,
-  selectCurrentFilters,
-  (brands, filters, currentFiltersValues) => {
-    let filteredBrands = brands
+type SelectorFunction = (currentFiltersValues: Record<{ [key: string]: List<string> }>, offset: number, limit: number) => { brands: List<ImmutableBrand>; totalLength: number; hasMore: boolean }
 
-    Object.keys(currentFiltersValues.toJS())
-      .forEach((filterId) => {
-        filteredBrands = filteredBrands.filter(brand => {
-          let keepIt = false
-          const filterParams = filters.find((filter: Filter) => filter.get('id') === filterId)
-          const propertyName = filterParams?.get('brandProperty') || ''
+export const selectFilteredBrands = createSelector<DefaultRootState, List<ImmutableBrand>, List<Filter>, SelectorFunction>(
+  [selectBrands, selectAvailableFilters],
+  (brands, filters) => (
+    memoize(
+      (currentFiltersValues, offset = 0, limit = 20) => {
+        let filteredBrands = brands
 
-          if (brand.has(propertyName)) {
-            const filterValues = currentFiltersValues.get(filterId)
-            const brandValues = brand.get(propertyName)
+        Object.keys(currentFiltersValues.toJS())
+          .forEach((filterId) => {
+            filteredBrands = filteredBrands.filter(brand => {
+              let keepIt = false
+              const filterParams = filters.find((filter: Filter) => filter.get('id') === filterId)
+              const propertyName = filterParams?.get('brandProperty') || ''
 
-            filterValues.some((filterValue) => {
-              let brandValueAsList: List<unknown>
-              if (!List.isList(brandValues)) {
-                brandValueAsList = List([brandValues])
-              } else {
-                brandValueAsList = brandValues
+              if (brand.has(propertyName)) {
+                const filterValues = currentFiltersValues.get(filterId)
+                const brandValues = brand.get(propertyName)
+
+                filterValues.some((filterValue) => {
+                  let brandValueAsList: List<unknown>
+                  if (!List.isList(brandValues)) {
+                    brandValueAsList = List([brandValues])
+                  } else {
+                    brandValueAsList = brandValues
+                  }
+                  const brandValuesIds = brandValueAsList.map((val: unknown) => (
+                    isImmutable(val) ? val.get('id') : val
+                  ))
+                  keepIt = brandValuesIds.includes(filterValue)
+
+                  // will break the loop if keepit is true
+                  return keepIt
+                })
               }
-              const brandValuesIds = brandValueAsList.map((val: unknown) => (
-                isImmutable(val) ? val.get('id') : val
-              ))
-              keepIt = brandValuesIds.includes(filterValue)
-
-              // will break the loop if keepit is true
               return keepIt
             })
-          }
-          return keepIt
-        })
-      })
+          })
 
-    // return List<ImmutableBrand>([])
-    return filteredBrands
-  }
+        return {
+          brands: filteredBrands.slice(offset, offset + limit),
+          totalLength: filteredBrands.size,
+          hasMore: offset + limit < filteredBrands.size
+        }
+      },
+      (...args) => JSON.stringify(args) // Memoization based on all the arguments
+    )
+  )
 )
 
 export default {}

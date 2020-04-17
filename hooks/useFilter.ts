@@ -1,18 +1,20 @@
 import {
   useCallback,
   useMemo,
-  useEffect
+  useEffect,
+  useRef
 } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { List } from 'immutable'
 import { selectFilterOptions, FilterOption, selectCurrentFilters } from 'store/interface/filters/selectors'
-import { applyFilter, applyFilters } from 'store/interface/filters/actions'
+import { applyFilter, applyFilters, removeFilter } from 'store/interface/filters/actions'
 import convertObjectToStringParameters from 'utils/url/convertObjectInStringParameters'
 import getParametersFromUrl from 'utils/url/getParametersFromUrl'
 
 type ReturnedValue = {
   filterValue: List<string>;
-  setFilterValue: Function;
+  addFilter: Function;
+  removeFilters: Function;
   filterOptions: List<FilterOption>;
   filterId: string;
 }
@@ -23,18 +25,25 @@ const useFilter = (filterId: string): ReturnedValue => {
     (state) => selectFilterOptions(state)(filterId)
   )
   const currentFiltersValues = useSelector(selectCurrentFilters)
+  const previousFilterValues = useRef(currentFiltersValues)
   const filterValue = useMemo(() => (
     currentFiltersValues.get(filterId) || List([])
   ), [currentFiltersValues, filterId])
 
   // Didn't figure out how to use filtername hook's scope value
-  const setFilterValue = useCallback((newFilterValue) => {
+  const addFilter = useCallback((newFilterValue) => {
     dispatch(applyFilter(filterId, newFilterValue))
   }, [filterId])
 
+  const removeFilters = useCallback(() => {
+    dispatch(removeFilter(filterId))
+  }, [filterId])
+
   useEffect(() => {
-    const parameters = convertObjectToStringParameters(currentFiltersValues.toJS())
-    window.history.pushState(null, document.title, parameters.length ? `?${parameters}` : '')
+    if (currentFiltersValues !== previousFilterValues.current) {
+      const parameters = convertObjectToStringParameters(currentFiltersValues.toJS())
+      window.history.pushState(null, document.title, parameters.length ? `?${parameters}` : '?')
+    }
   }, [currentFiltersValues])
 
   useEffect(() => {
@@ -53,7 +62,8 @@ const useFilter = (filterId: string): ReturnedValue => {
   return {
     filterId,
     filterValue,
-    setFilterValue,
+    addFilter,
+    removeFilters,
     filterOptions,
   }
 }

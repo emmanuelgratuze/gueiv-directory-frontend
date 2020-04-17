@@ -11,6 +11,7 @@ import useTheme from 'hooks/useTheme'
 import useConfiguration from 'hooks/useConfiguration'
 
 import StandardLink from './StandardLink'
+import MailchimpForm from './MailchimpForm'
 
 const FooterHeading: React.FC = ({ ...props }) => (
   <Heading level={3} color="blue" transform="uppercase" {...props} />
@@ -66,6 +67,7 @@ const Footer: React.FC = () => {
           </Box>
           <Box align="center">
             <FooterHeading>Súbete a la nueva ola</FooterHeading>
+            <MailchimpForm />
           </Box>
         </ResponsiveGrid>
       </Container>

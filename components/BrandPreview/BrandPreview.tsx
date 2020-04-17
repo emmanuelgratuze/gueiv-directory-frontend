@@ -2,12 +2,12 @@ import React from 'react'
 import { Box, BoxProps } from 'grommet'
 import Link from 'next/link'
 
-import Heading from 'components/Heading'
 
+import Heading from 'components/Heading'
+import A from 'components/A'
 import RelativeHeightBox from 'components/RelativeHeightBox'
 import CriterionIcon from 'components/CriterionIcon'
 import DynamicBackgroundColorBox from 'components/DynamicBackgroundColorBox'
-import A from 'components/A'
 
 import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
@@ -32,7 +32,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
   const { isSmallMobile } = useResponsive()
 
   return (
-    <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
+    <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`} prefetch={false}>
       <A ref={hoverRef}>
         <DynamicBackgroundColorBox color={color}>
           <RelativeHeightBox
@@ -58,9 +58,10 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                   {/* Name */}
                   <Heading
                     level={2}
-                    size="small"
                     transform="uppercase"
                     color={color ? oppositeColors[color] : undefined}
+                    wordBreak
+                    margin={{ bottom: 'small' }}
                   >
                     {brand.get('name')}
                   </Heading>

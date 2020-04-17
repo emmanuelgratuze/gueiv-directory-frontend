@@ -1,23 +1,36 @@
 // import React from 'react'
-// import { Box, BoxProps } from 'grommet'
+import { Button as GrommetButton, ButtonProps as GrommetButtonProps } from 'grommet'
 import styled, { css } from 'styled-components'
 import { ThemeType, ColorsNames } from 'themes/theme'
+import { ColorType } from 'grommet/utils'
 
 // type BoxPropsWithoutColor = Omit<BoxProps, 'color'>
 type ButtonProps = {
   theme: ThemeType;
   size?: 'small' | 'medium' | 'large';
   color?: ColorsNames;
+  hoverColor?: ColorsNames;
 }
 
-const Button = styled.div<ButtonProps>`
+const getHoverOppositeColor = (props: ButtonProps): ColorType => (
+  props.hoverColor
+    ? props.theme.global.oppositeColors[props.hoverColor]
+    : props.theme.global.colors[props.color || 'gray']
+)
+const getOppositeColor = (props: ButtonProps): ColorType => (
+  props.theme.global.colors[props.hoverColor || props.theme.global.oppositeColors[props.color || 'gray']]
+)
+
+const Button = styled(GrommetButton)<ButtonProps & GrommetButtonProps>`
   padding: 0.8em 2em;
   color: ${(props: ButtonProps) => props.theme.global.colors[props.theme.global.oppositeColors[props.color || 'gray']]};
   font-weight: 600;
   font-size: 0.8em;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   background-color: ${(props: ButtonProps) => props.theme.global.colors[props.color || 'gray']};
+  border: none;
   border-radius: 2rem;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
@@ -30,8 +43,8 @@ const Button = styled.div<ButtonProps>`
     padding: 0.7em 2.2em;
   `}
   &:hover {
-    color: ${(props: ButtonProps) => props.theme.global.colors[props.color || 'gray']};
-    background-color: ${(props: ButtonProps) => props.theme.global.colors[props.theme.global.oppositeColors[props.color || 'gray']]};
+    color: ${getHoverOppositeColor};
+    background-color: ${getOppositeColor};
   }
 `
 

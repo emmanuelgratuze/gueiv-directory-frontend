@@ -9,7 +9,13 @@ const baseFontSize = 16
 
 const fontSizing = (factor: number): { size: string; height: string; maxWidth: string } => ({
   size: `${baseFontSize * factor}px`,
-  height: `${baseSpacing * factor}px`,
+  height: `${baseSpacing * factor * 1}px`,
+  maxWidth: `${baseSpacing * (baseFontSize * factor * 5)}px`
+})
+
+const headingFontSizing = (factor: number): { size: string; height: string; maxWidth: string } => ({
+  size: `${baseFontSize * factor}px`,
+  height: `${baseSpacing * factor * 0.7}px`,
   maxWidth: `${baseSpacing * (baseFontSize * factor * 5)}px`
 })
 
@@ -80,7 +86,7 @@ const oppositeColors = {
   'light-turquoise': 'gray'
 }
 
-const colors: { [key: string]: string } = {
+export const colors: { [key: string]: string } = {
   ...themeColors,
   placeholder: darkColors[4]
 }
@@ -325,50 +331,47 @@ const theme = deepMerge(base, {
   heading: {
     level: {
       1: {
-        small: fontSizing(2),
-        medium: fontSizing(3),
-        large: fontSizing(3.5),
-        xlarge: fontSizing(3.5)
+        small: headingFontSizing(2),
+        medium: headingFontSizing(3),
+        large: headingFontSizing(3.5),
+        xlarge: headingFontSizing(3.5)
       },
       2: {
-        small: {
-          ...fontSizing(1.3),
-          height: `${baseFontSize * 1.5}px`
-        },
-        medium: fontSizing(1.7),
-        large: fontSizing(1.8),
-        xlarge: fontSizing(1.9),
+        small: headingFontSizing(1.3),
+        medium: headingFontSizing(1.7),
+        large: headingFontSizing(1.8),
+        xlarge: headingFontSizing(1.9),
       },
       3: {
-        small: fontSizing(1),
-        medium: fontSizing(1.15),
-        large: fontSizing(1.15),
-        xlarge: fontSizing(1.15),
+        small: headingFontSizing(1),
+        medium: headingFontSizing(1.15),
+        large: headingFontSizing(1.15),
+        xlarge: headingFontSizing(1.15),
       },
       4: {
-        small: fontSizing(0.8),
-        medium: fontSizing(1),
-        large: fontSizing(1),
-        xlarge: fontSizing(1)
+        small: headingFontSizing(0.8),
+        medium: headingFontSizing(1),
+        large: headingFontSizing(1),
+        xlarge: headingFontSizing(1)
       },
       5: {
-        small: fontSizing(1),
-        medium: fontSizing(1),
-        large: fontSizing(1),
-        xlarge: fontSizing(1)
+        small: headingFontSizing(1),
+        medium: headingFontSizing(1),
+        large: headingFontSizing(1),
+        xlarge: headingFontSizing(1)
       },
       6: {
-        small: fontSizing(-1),
-        medium: fontSizing(-1),
-        large: fontSizing(-1),
-        xlarge: fontSizing(-1)
+        small: headingFontSizing(-1),
+        medium: headingFontSizing(-1),
+        large: headingFontSizing(-1),
+        xlarge: headingFontSizing(-1)
       }
     }
   },
   textInput: {
     extend: css`
       padding-left: 0;
-      font-weight: 300;
+      font-weight: 600;
       font-size: 0.9em;
       font-family: 'Quicksand', sans-serif;
       font-style: initial;
@@ -376,10 +379,11 @@ const theme = deepMerge(base, {
       border-width: 0 !important;
       border-bottom: 1px solid ${lightColors[4]} !important;
       border-radius: 0;
+      transition: border-color 0.2s ease-out;
 
       &:focus {
-        color: ${darkColors[0]};
-        border-bottom: 1px solid ${darkColors[0]} !important;
+        color: ${colors.blue};
+        border-bottom: 1px solid ${colors.blue} !important;
       }
 
       ::placeholder,

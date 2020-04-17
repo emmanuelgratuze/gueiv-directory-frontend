@@ -1,30 +1,49 @@
 import React, { useCallback } from 'react'
 import { Box, TextInput } from 'grommet'
-import Button from 'components/Button'
+import fetch from 'isomorphic-fetch'
 
-const MailchimpForm = () => {
-  const handleSubmit = useCallback(() => {
-    // evt.preventDefault()
-    // const { fields, action } = this.props
-    // const values = fields.map(field => {
-    //   return `${field.name}=${encodeURIComponent(this.state[field.name])}`
-    // }).join("&")
-    // const path = `${action}&${values}`
-    // const url = path.replace('/post?', '/post-json?')
-    // const regex = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/
-    // const email = this.state['EMAIL']
-    // (!regex.test(email)) ? this.setState({ status: "empty" }) : this.sendData(url)
-  })
+import Button from 'components/Button'
+import Text from 'components/Text'
+
+const MailchimpForm: React.FC = () => {
+  // const [errorMessage, setErrorMessage] = useState(null)
+
+  const handleSubmit = useCallback(async (event) => {
+    event.preventDefault()
+    const endpoint = `https://${process.env.MAILCHIMP_USERNAME}.us4.list-manage.com/subscribe/post-json?u=${process.env.MAILCHIMP_U}&id=${process.env.MAILCHIMP_ID}&c=`
+    const result = await fetch(endpoint, {
+      method: 'POST',
+      body: new FormData(event.currentTarget),
+      credentials: 'include'
+    })
+    // eslint-disable-next-line no-console
+    console.log(result)
+  }, [])
 
   return (
-    <>
+    <form onSubmit={handleSubmit}>
       <Box width="16rem" margin={{ bottom: 'small' }}>
-        <TextInput name="yeah" placeholder="Suscríbete con tu e-mail" />
+        <TextInput
+          name="EMAIL"
+          placeholder="Suscríbete con tu e-mail"
+          type="email"
+          required
+        />
+        <input type="hidden" name="b_664cf3e57f1fcf8ad1698389e_83630f6786" tabIndex={-1} value="" />
       </Box>
-      <Button size="small">
-        Subscríbeme
-      </Button>
-    </>
+      <Box align="center">
+        <Button
+          hoverColor="pink"
+          as="input"
+          type="submit"
+          value="Subscríbeme"
+        />
+
+        <Text color="status-critical">
+          {/* {errorMessage} */}
+        </Text>
+      </Box>
+    </form>
   )
 }
 

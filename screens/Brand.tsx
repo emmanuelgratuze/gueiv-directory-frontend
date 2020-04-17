@@ -14,6 +14,7 @@ import CriterionIcon from 'components/CriterionIcon'
 import StandardLink from 'components/StandardLink'
 
 import { ImmutableBrand } from 'types/data/brand'
+import { ColorsNames } from 'themes/theme'
 
 interface BrandScreenProps {
   brand: ImmutableBrand;
@@ -27,8 +28,6 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
     <>
       <Page
         title={brand.get('name')}
-        withScroll={isMobile}
-        withFooter={false}
       >
         <Box
           fill
@@ -39,8 +38,8 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
           <BrandCarousel
             width={isMobile ? '100%' : '50%'}
             brand={brand}
-            color={brandColor}
-            height={isMobile ? 'medium' : '100%'}
+            color={brandColor as ColorsNames}
+            height={isMobile ? 'medium' : undefined}
             overflow="hidden"
           />
           <Box

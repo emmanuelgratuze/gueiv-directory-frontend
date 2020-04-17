@@ -4,9 +4,10 @@ import {
   OPEN_FILTER_BOX,
   CLOSE_FILTER_BOX,
   APPLY_FILTER,
-  APPLY_FILTERS
+  APPLY_FILTERS,
+  REMOVE_FILTER
 } from './actionsTypes'
-import { ApplyFilterAction, ApplyFiltersActions } from './types'
+import { ApplyFilterAction, ApplyFiltersActions, RemoveFilterAction } from './types'
 
 export const openFilterMenu = (filterId: string): BasicAction => ({
   type: OPEN_FILTER_BOX,
@@ -22,6 +23,13 @@ export const applyFilter = (filterId: string, filterValue: List<string>): ApplyF
   payload: {
     filterId,
     filterValue
+  }
+})
+
+export const removeFilter = (filterId: string): RemoveFilterAction => ({
+  type: REMOVE_FILTER,
+  payload: {
+    filterId
   }
 })
 

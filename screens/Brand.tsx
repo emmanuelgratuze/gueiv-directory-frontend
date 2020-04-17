@@ -34,6 +34,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
           fill
           background={{ color: brandColor }}
           direction={isMobile ? 'column' : 'row'}
+          overflow="hidden"
         >
           <BrandCarousel
             width={isMobile ? '100%' : '50%'}

@@ -38,10 +38,10 @@ const Lines = styled.div`
         transform: translate3d(-20%, 0, 0)
       }
       &:first-child {
-        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 45deg) translate3d(-3%, 0, 0);
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 45deg) translate3d(-2%, 0, 0);
       }
       &:last-child {
-        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, -45deg) translate3d(-3%, 0, 0);
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, -45deg) translate3d(-2%, 0, 0);
       }
     }
   `}

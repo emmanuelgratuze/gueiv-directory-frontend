@@ -34,76 +34,73 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
   return (
     <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`}>
       <A ref={hoverRef}>
-        <Box round="0.5rem" overflow="hidden">
+        <DynamicBackgroundColorBox color={color}>
+          <RelativeHeightBox
+            relativeHeight="50%"
+            {...props}
+          >
+            <Box fill direction="row">
+              <Box width={isSmallMobile ? '45%' : '50%'}>
+                <BrandImage
+                  fill
+                  brand={brand}
+                  color={color}
+                  zoom={isHovered}
+                />
+              </Box>
+              <Box
+                width={isSmallMobile ? '55%' : '50%'}
+                pad={isSmallMobile ? 'medium' : { vertical: '2rem', horizontal: '2.2rem' }}
+                justify="between"
+              >
 
-          <DynamicBackgroundColorBox color={color}>
-            <RelativeHeightBox
-              relativeHeight="50%"
-              {...props}
-            >
-              <Box fill direction="row">
-                <Box width={isSmallMobile ? '45%' : '50%'}>
-                  <BrandImage
-                    fill
-                    brand={brand}
-                    color={color}
-                    zoom={isHovered}
-                  />
-                </Box>
-                <Box
-                  width={isSmallMobile ? '55%' : '50%'}
-                  pad={isSmallMobile ? 'medium' : { vertical: '2rem', horizontal: '2.2rem' }}
-                  justify="between"
-                >
+                <Box>
+                  {/* Name */}
+                  <Heading
+                    level={2}
+                    size="small"
+                    transform="uppercase"
+                    color={color ? oppositeColors[color] : undefined}
+                  >
+                    {brand.get('name')}
+                  </Heading>
 
-                  <Box>
-                    {/* Name */}
+                  {/* Location */}
+                  {brand.get('city') !== '' && brand.get('country') && (
                     <Heading
-                      level={2}
+                      level={4}
                       size="small"
-                      transform="uppercase"
                       color={color ? oppositeColors[color] : undefined}
                     >
-                      {brand.get('name')}
+                      {brand.get('city') && `${brand.get('city')} `}
+                      {brand.getIn(['country', 'name'])}
                     </Heading>
-
-                    {/* Location */}
-                    {brand.get('city') !== '' && brand.get('country') && (
-                      <Heading
-                        level={4}
-                        size="small"
-                        color={color ? oppositeColors[color] : undefined}
-                      >
-                        {brand.get('city') && `${brand.get('city')} `}
-                        {brand.getIn(['country', 'name'])}
-                      </Heading>
-                    )}
-                  </Box>
-
-                  {/* Criteria */}
-                  {brand.get('criteria') && (
-                    <Box direction="row">
-                      {brand.get('criteria').map((criterion) => (
-                        <Box
-                          key={criterion.get('id')}
-                          width="1.5rem"
-                          height="1.5rem"
-                          margin={{ right: 'small', bottom: 'small' }}
-                        >
-                          <CriterionIcon
-                            clickable
-                            criterion={criterion}
-                            color={color ? oppositeColors[color] : undefined}
-                          />
-                        </Box>
-                      ))}
-                    </Box>
                   )}
                 </Box>
+
+                {/* Criteria */}
+                {brand.get('criteria') && (
+                  <Box direction="row">
+                    {brand.get('criteria').map((criterion) => (
+                      <Box
+                        key={criterion.get('id')}
+                        width="1.5rem"
+                        height="1.5rem"
+                        margin={{ right: 'small', bottom: 'small' }}
+                      >
+                        <CriterionIcon
+                          clickable
+                          criterion={criterion}
+                          color={color ? oppositeColors[color] : undefined}
+                        />
+                      </Box>
+                    ))}
+                  </Box>
+                )}
               </Box>
-            </RelativeHeightBox>
-          </DynamicBackgroundColorBox>
-        </Box>
+            </Box>
+          </RelativeHeightBox>
+        </DynamicBackgroundColorBox>
       </A>
     </Link>
   )

@@ -82,7 +82,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
               </Box>
             )}
             <Container
-              pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'large'}
+              pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'medium'}
               flex={isMobile ? false : undefined}
               overflow={isMobile ? 'scroll' : undefined}
             >
@@ -125,6 +125,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                 ))}
               </ResponsiveGrid>
               <Box
+                margin={{ top: 'medium' }}
                 fill="horizontal"
                 align="center"
                 justify="center"

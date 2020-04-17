@@ -7,12 +7,14 @@ import {
   OPEN_FILTER_BOX,
   CLOSE_FILTER_BOX,
   APPLY_FILTER,
-  APPLY_FILTERS
+  APPLY_FILTERS,
+  REMOVE_FILTER
 } from './actionsTypes'
 import {
   ApplyFilterAction,
   ApplyFiltersActions,
-  Filter
+  Filter,
+  RemoveFilterAction
 } from './types'
 import { availableFilters } from './initialState'
 
@@ -32,18 +34,37 @@ function menuState(state = fromJS({ isOpen: false }), action: BasicAction): Redu
   }
 }
 
-function currentFiltersValues(state = fromJS({}), action: ApplyFilterAction | ApplyFiltersActions): Reducer {
+function currentFiltersValues(state = fromJS({}), action: ApplyFilterAction | ApplyFiltersActions | RemoveFilterAction): Reducer {
   switch (action.type) {
     case APPLY_FILTER: {
       const { filterId, filterValue } = action.payload
       if (filterValue.size === 0) {
         return state.delete(filterId)
       }
-      return state.set(filterId, filterValue)
+
+      return state.set(
+        filterId,
+        !List.isList(filterValue) && !Array.isArray(filterValue)
+          ? List([filterValue])
+          : filterValue
+      )
     }
     case APPLY_FILTERS: {
       const { filters } = action.payload
+
+      // Ensure filters are array
+      Object.keys(filters).forEach((key) => {
+        if (!List.isList(filters[key]) && !Array.isArray(filters[key])) {
+          filters[key] = List([filters[key]])
+        }
+      })
+
       return fromJS(filters)
+    }
+    case REMOVE_FILTER: {
+      const { filterId } = action.payload
+
+      return state.delete(filterId)
     }
     default:
       return state

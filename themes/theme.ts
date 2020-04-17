@@ -346,7 +346,7 @@ const theme = deepMerge(base, {
         xlarge: fontSizing(1.15),
       },
       4: {
-        small: fontSizing(0.7),
+        small: fontSizing(0.8),
         medium: fontSizing(1),
         large: fontSizing(1),
         xlarge: fontSizing(1)

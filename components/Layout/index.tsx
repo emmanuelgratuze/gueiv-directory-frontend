@@ -27,7 +27,10 @@ const Layout: React.FC<LayoutProps> = ({
   const isLoading = useLoading()
 
   // Only rerender the pages when route changed
-  const siteContent = useMemo(() => children, [router.pathname])
+  const siteContent = useMemo(
+    () => children,
+    [router.pathname, children]
+  )
 
   return (
     <>

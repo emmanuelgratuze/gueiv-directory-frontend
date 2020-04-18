@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: emmanuelgratuze/gueiv-directory-frontend
+  name: git-gateway
 site_url: https://directorio.gueiv.com
 media_folder: assets/uploads
 public_folder: assets

@@ -32,6 +32,7 @@ const Button = styled(GrommetButton)<ButtonProps & GrommetButtonProps>`
   background-color: ${(props: ButtonProps) => props.theme.global.colors[props.color || 'gray']};
   border: none;
   border-radius: 2rem;
+  outline: none;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
   ${(props: ButtonProps) => props.size === 'small' && css`

@@ -24,6 +24,7 @@ const CarouselImage: React.FC<BoxProps & CarouselImageProps> = ({
         width: 1400,
         crop: 'fit'
       }}
+      fill
     />
   </Box>
 )

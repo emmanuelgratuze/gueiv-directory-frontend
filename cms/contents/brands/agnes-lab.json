@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Agnes Lab","website":"https://www.agnes.store","instagram":"https://www.instagram.com/agnes.tintoreria/","facebook":"","description":"Agnes Lab es un taller de teñido artesanal dirigido por Carla Qua en la Ciudad de México. Cada pieza es el medio con el que nos acercamos al oficio de los tintes naturales y técnicas de teñido tradicionales por las que sentimos una gran admiración.","criteria":["materiales-organicos","tintes-naturales"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Agnes Lab",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/agnes.tintoreria/",
+  "pictures": [
+    "assets/Photo26_29-2_hfr4vv.jpg",
+    "assets/theo_film_2016-13_eev4en.jpg",
+    "assets/sample.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.agnes.store",
+  "description": "Agnes Lab es un taller de teñido artesanal dirigido por Carla Qua en la Ciudad de México. Cada pieza es el medio con el que nos acercamos al oficio de los tintes naturales y técnicas de teñido tradicionales por las que sentimos una gran admiración.",
+  "criteria": [
+    "materiales-organicos",
+    "tintes-naturales"
+  ]
+}

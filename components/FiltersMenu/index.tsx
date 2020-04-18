@@ -17,7 +17,7 @@ import { StatusGoodSmall, FormClose } from 'grommet-icons'
 import useResponsive from 'hooks/useResponsive'
 import useFilterMenu from 'hooks/useFilterMenu'
 
-import FiltersControls from 'components/FiltersControls'
+import FiltersControlsFields from 'components/FiltersControls/Fields'
 
 type FiltersMenuProps = {}
 
@@ -74,17 +74,18 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
             {isMobile && (
               <Box
                 fill="horizontal"
-                overflow="scroll"
-                background={{ color: 'light-2' }}
+                overflow={{ horizontal: 'auto' }}
+                background={{ color: 'white' }}
                 flex={{ shrink: 0 }}
+                align="center"
               >
-                <FiltersControls />
+                <FiltersControlsFields />
               </Box>
             )}
             <Container
               pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'medium'}
               flex={isMobile ? false : undefined}
-              overflow={isMobile ? 'scroll' : undefined}
+              // overflow={isMobile ? 'scroll' : undefined}
             >
               <ResponsiveGrid
                 columns={{
@@ -129,7 +130,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                 fill="horizontal"
                 align="center"
                 justify="center"
-                direction="row"
+                direction="row-responsive"
                 gap="medium"
               >
                 <CustomButton color="yellow" onClick={() => close()}>
@@ -137,7 +138,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                 </CustomButton>
                 <Button plain onClick={() => removeFilters()} disabled={filterValue.size === 0}>
                   {({ hover }: { hover: boolean }) => (
-                    <Box align="center" direction="row">
+                    <Box align="center" direction="row" justify="center">
                       <FormClose color={hover && filterValue.size > 0 ? 'pink' : 'white'} />
                       <Text
                         size="xsmall"

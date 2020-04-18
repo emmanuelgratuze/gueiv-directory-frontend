@@ -37,7 +37,6 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({
         <Box
           width="100%"
           height="100%"
-          overflow="hidden"
           align="center"
           justify="center"
         >

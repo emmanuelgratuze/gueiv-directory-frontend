@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  RefObject,
-  createRef
-} from 'react'
+import React, { useState, RefObject } from 'react'
 import { Box, Stack } from 'grommet'
 import { List } from 'immutable'
 import { motion } from 'framer-motion'
@@ -35,18 +30,6 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
   const colorNames = keys(brandColors)
   const [backgroundColorName, setBackgroundColorName] = useState(colorNames[0])
   const refs: { [key: string]: RefObject<HTMLDivElement> } = {}
-  criteria.forEach((criterion) => {
-    refs[`#${criterion.get('id')}`] = createRef()
-  })
-  useEffect(() => {
-    // if (
-    //   window.location.hash !== ''
-    //   && window.location.hash in refs
-    //   && refs[window.location.hash]?.current !== null
-    // ) {
-    //   window.scrollTo(0, refs[window.location.hash].current?.offsetTop || 0)
-    // }
-  }, [refs])
 
   return (
     <>
@@ -57,7 +40,10 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
             transition={{
               duration: 1
             }}
-            style={{ position: 'fixed' }}
+            style={{
+              position: 'fixed',
+              zIndex: -1
+            }}
             fill
           />
           <Box>

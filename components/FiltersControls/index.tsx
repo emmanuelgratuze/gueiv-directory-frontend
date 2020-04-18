@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, BoxProps, Button } from 'grommet'
-import { Filter, Sort } from 'grommet-icons'
+import { FormFilter, FormUp } from 'grommet-icons'
 
 import useFilterMenu from 'hooks/useFilterMenu'
 import useResponsive from 'hooks/useResponsive'
@@ -24,9 +24,9 @@ const FiltersControls: React.FC<BoxProps> = () => {
           justify="center"
         >
           {!areFiltersOpen ? (
-            <Filter color="gray" />
+            <FormFilter color="gray" />
           ) : (
-            <Sort color="blue" />
+            <FormUp color="blue" />
           )}
         </Box>
       </Button>

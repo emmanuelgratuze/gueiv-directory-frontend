@@ -88,7 +88,8 @@ const oppositeColors = {
 
 export const colors: { [key: string]: string } = {
   ...themeColors,
-  placeholder: darkColors[4]
+  placeholder: darkColors[4],
+  focus: 'blue'
 }
 
 const colorArray = (array: Array<string>, prefix: string): void => {
@@ -302,8 +303,14 @@ const theme = deepMerge(base, {
       bottom: 'medium'
     },
     border: {
-      color: 'light-4'
+      color: 'light-2'
     },
+    focus: {
+      border: {
+        color: 'blue'
+      }
+    },
+    error: {},
     label: {
       margin: 'none',
       weight: 600,
@@ -311,7 +318,23 @@ const theme = deepMerge(base, {
       style: {
         textTransform: 'uppercase'
       },
-    }
+    },
+    extend: css`
+      align-items: center;
+      justify-content: center;
+
+      > div {
+        width: 100%;
+        transition: border-color 0.2s ease-out;
+      }
+
+      /* Errors or infos */
+      span {
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+    `
   },
   checkBox: {
     border: {
@@ -376,14 +399,10 @@ const theme = deepMerge(base, {
       font-family: 'Quicksand', sans-serif;
       font-style: initial;
       text-align: center;
-      border-width: 0 !important;
-      border-bottom: 1px solid ${lightColors[4]} !important;
       border-radius: 0;
-      transition: border-color 0.2s ease-out;
 
       &:focus {
         color: ${colors.blue};
-        border-bottom: 1px solid ${colors.blue} !important;
       }
 
       ::placeholder,

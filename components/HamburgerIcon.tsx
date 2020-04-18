@@ -15,8 +15,8 @@ const Lines = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
 
   > div {
     left: 0;

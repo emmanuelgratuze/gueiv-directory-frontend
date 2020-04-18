@@ -1,46 +1,38 @@
-import React, { useCallback } from 'react'
-import { Box, BoxProps } from 'grommet'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { Box, BoxProps, Button } from 'grommet'
+import { Filter, Sort } from 'grommet-icons'
 
-import { openFilterMenu, closeFilterMenu } from 'store/interface/filters/actions'
-import { selectFiltersMenuState, selectCurrentFilters, selectAvailableFilters } from 'store/interface/filters/selectors'
+import useFilterMenu from 'hooks/useFilterMenu'
+import useResponsive from 'hooks/useResponsive'
 
-import FilterSelect from './Select'
+import FiltersControlsFields from './Fields'
 
+const FiltersControls: React.FC<BoxProps> = () => {
+  const { isOpen: areFiltersOpen, toggle: toggleFilters } = useFilterMenu()
+  const { isMobile } = useResponsive()
 
-type FiltersControlsProps = {}
-
-const FiltersControls: React.FC<BoxProps & FiltersControlsProps> = ({ ...props }) => {
-  const menuState = useSelector(selectFiltersMenuState)
-  const currentFiltersValues = useSelector(selectCurrentFilters)
-  const availableFilters = useSelector(selectAvailableFilters)
-  const dispatch = useDispatch()
-
-  const handleClickOnSelect = useCallback((filterId) => {
-    const action = menuState.get('filterId') === filterId
-      ? closeFilterMenu()
-      : openFilterMenu(filterId)
-
-    dispatch(action)
-  }, [menuState])
-
-  return (
-    <Box
-      direction="row"
-      {...props}
-    >
-      {availableFilters.map((filter) => (
-        <FilterSelect
-          key={`${filter.get('id')}`}
-          isOpen={menuState.get('filterId') === filter.get('id')}
-          selectedFilters={currentFiltersValues.get(filter.get('id'))}
-          onClick={() => handleClickOnSelect(filter.get('id'))}
+  return isMobile
+    ? (
+      <Button
+        plain
+        onClick={() => toggleFilters(!areFiltersOpen ? 'criteria' : null)}
+      >
+        <Box
+          fill="vertical"
+          width="3rem"
+          align="center"
+          justify="center"
         >
-          {filter.get('label')}
-        </FilterSelect>
-      ))}
-    </Box>
-  )
+          {!areFiltersOpen ? (
+            <Filter color="gray" />
+          ) : (
+            <Sort color="blue" />
+          )}
+        </Box>
+      </Button>
+    ) : (
+      <FiltersControlsFields />
+    )
 }
 
 export default FiltersControls

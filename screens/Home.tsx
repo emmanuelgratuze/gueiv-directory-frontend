@@ -3,13 +3,13 @@ import React, { useEffect } from 'react'
 import { Box } from 'grommet'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useDispatch } from 'react-redux'
-
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import Page from 'components/Page'
 import BrandPreview from 'components/BrandPreview/BrandPreview'
 import Text from 'components/Text'
 import Loader from 'components/Loader'
+import FiltersControls from 'components/FiltersControls'
 
 import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
 import useResponsiveGrid from 'hooks/useResponsiveGrid'
@@ -17,6 +17,8 @@ import useTheme from 'hooks/useTheme'
 
 import { setBrandsColors } from 'store/interface/actions'
 import useFilteredBrands from 'hooks/useFilteredBrands'
+import useFilters from 'hooks/userFilters'
+
 
 type HomeScreenProps = {}
 
@@ -27,8 +29,8 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
     medium: ['50%'],
     xlarge: ['33.33%']
   })
-
   const { brands, selectMore, hasMore } = useFilteredBrands()
+  const { applyFiltersFromUrl } = useFilters()
 
   const dispatch = useDispatch()
   useEffect(() => {
@@ -41,9 +43,21 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
     }
   }, [brands])
 
+  useEffect(() => (
+    applyFiltersFromUrl(window.location.href)
+  ), [])
+
   return (
     <>
-      <Page title="Home" withFilters withScroll={brands.size !== 0}>
+      <Page
+        title="Home"
+        withScroll={brands.size !== 0}
+        headerChildren={(
+          <Box fill="vertical" justify="center">
+            <FiltersControls />
+          </Box>
+        )}
+      >
         <Box
           height={brands.size !== 0 ? { min: '100vh' } : undefined}
           background={{ color: 'white' }}

@@ -17,7 +17,7 @@ import { StatusGoodSmall, FormClose } from 'grommet-icons'
 import useResponsive from 'hooks/useResponsive'
 import useFilterMenu from 'hooks/useFilterMenu'
 
-import FiltersControls from 'components/FiltersControls'
+import FiltersControlsFields from 'components/FiltersControls/Fields'
 
 type FiltersMenuProps = {}
 
@@ -78,7 +78,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                 background={{ color: 'light-2' }}
                 flex={{ shrink: 0 }}
               >
-                <FiltersControls />
+                <FiltersControlsFields />
               </Box>
             )}
             <Container

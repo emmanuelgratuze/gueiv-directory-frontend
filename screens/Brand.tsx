@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box } from 'grommet'
-import { StatusGoodSmall } from 'grommet-icons'
+import { Box, Button as GrommetButton } from 'grommet'
+import { StatusGoodSmall, FormClose } from 'grommet-icons'
+import Link from 'next/link'
 
 import Page from 'components/Page'
 import Text from 'components/Text'
@@ -12,22 +13,44 @@ import useBrandColor from 'hooks/useBrandColor'
 import Paragraph from 'components/Paragraph'
 import CriterionIcon from 'components/CriterionIcon'
 import StandardLink from 'components/StandardLink'
+import Icon from 'components/Icon'
 
 import { ImmutableBrand } from 'types/data/brand'
 import { ColorsNames } from 'themes/theme'
+
+import useFilters from 'hooks/userFilters'
 
 interface BrandScreenProps {
   brand: ImmutableBrand;
 }
 
 const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
-  const { isMobile } = useResponsive()
+  const { isMobile, isTablet } = useResponsive()
   const [brandColor, oppBrandColor] = useBrandColor(brand)
+  const { getFiltersUrlString } = useFilters()
 
   return (
     <>
       <Page
         title={brand.get('name')}
+        headerChildren={(
+          <Box justify="center" fill="vertical" width="2.5rem">
+            <Link href={`/${getFiltersUrlString()}`}>
+              <GrommetButton
+                plain
+                fill
+              >
+                {({ hover }: { hover: boolean }) => (
+                  <Icon
+                    Component={FormClose}
+                    color={hover ? brandColor : 'gray'}
+                    size="2.5rem"
+                  />
+                )}
+              </GrommetButton>
+            </Link>
+          </Box>
+        )}
       >
         <Box
           fill
@@ -47,7 +70,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
             overflow="auto"
           >
             <Box
-              pad={isMobile ? 'large' : 'xlarge'}
+              pad={isTablet ? { vertical: 'xlarge', horizontal: 'large' } : 'xlarge'}
               flex={false}
             >
               <Heading

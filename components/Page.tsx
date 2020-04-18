@@ -21,6 +21,7 @@ type PageType = {
   withScroll?: boolean;
   withFooter?: boolean;
   withFilters?: boolean;
+  headerChildren?: React.ReactNode;
 }
 
 const Page: React.FC<BoxProps & PageType> = ({
@@ -29,7 +30,7 @@ const Page: React.FC<BoxProps & PageType> = ({
   description,
   withScroll = true,
   withFooter = true,
-  withFilters,
+  headerChildren,
   ...props
 }) => {
   const fullTitle = usePageTitle(title)
@@ -67,7 +68,9 @@ const Page: React.FC<BoxProps & PageType> = ({
         height={!withScroll ? '100vh' : { min: '100vh' }}
         {...props}
       >
-        <Header withFilters={withFilters} />
+        <Header>
+          {headerChildren}
+        </Header>
         <Stack>
           <MenuScreen open={isMenuOpen} />
           <FiltersMenu />

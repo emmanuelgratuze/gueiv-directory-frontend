@@ -41,6 +41,7 @@ const MailchimpForm: React.FC = () => {
       }}
       noValidate
     >
+      <div />
       {status === 'success' && (
         <Box fill align="center" justify="center" pad="medium">
           <Text color="pink" font="Lato" weight="bold">
@@ -61,6 +62,8 @@ const MailchimpForm: React.FC = () => {
                 message: '¡Tu e-mail no es valido!'
               }}
               onChange={(e) => {
+                setMessage(null)
+                setStatus(null)
                 setEmail(e.currentTarget.value)
               }}
               value={email}

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { IconProps } from 'grommet-icons'
+import { BoxProps } from 'grommet'
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -18,6 +19,20 @@ type CustomIconProps = {
 }
 
 const Icon: React.FC<IconProps & React.SVGProps<SVGSVGElement> & CustomIconProps> = ({
+  Component,
+  ...props
+}) => (
+  <StyledWrapper>
+    <Component {...props} />
+  </StyledWrapper>
+)
+
+// Version accepting Box type components
+type CustomBoxIconProps = {
+  Component: React.ComponentType<BoxProps>;
+}
+
+export const BoxIcon: React.FC<BoxProps & CustomBoxIconProps & React.HTMLAttributes<HTMLDivElement>> = ({
   Component,
   ...props
 }) => (

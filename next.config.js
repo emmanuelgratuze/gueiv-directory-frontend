@@ -57,7 +57,8 @@ module.exports = withPlugins(
       CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
       MAILCHIMP_USERNAME: process.env.MAILCHIMP_USERNAME,
       MAILCHIMP_U: process.env.MAILCHIMP_U,
-      MAILCHIMP_ID: process.env.MAILCHIMP_ID
+      MAILCHIMP_ID: process.env.MAILCHIMP_ID,
+      MAILCHIMP_FORM_ID: process.env.MAILCHIMP_FORM_ID
     }
   }
 )

@@ -1,10 +1,5 @@
-import React, {
-  useState,
-  useEffect,
-  RefObject,
-  createRef
-} from 'react'
-import { Box } from 'grommet'
+import React, { useState, RefObject } from 'react'
+import { Box, Stack } from 'grommet'
 import { List } from 'immutable'
 import { motion } from 'framer-motion'
 import { keys } from 'utils/object'
@@ -22,6 +17,8 @@ import useResponsive from 'hooks/useResponsive'
 
 import { ImmutableCriterion } from 'types/data/criterion'
 
+const Background = motion.custom(Box)
+
 interface CriteriaScreenProps {
   criteria: List<ImmutableCriterion>;
 }
@@ -33,128 +30,124 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
   const colorNames = keys(brandColors)
   const [backgroundColorName, setBackgroundColorName] = useState(colorNames[0])
   const refs: { [key: string]: RefObject<HTMLDivElement> } = {}
-  criteria.forEach((criterion) => {
-    refs[`#${criterion.get('id')}`] = createRef()
-  })
-  useEffect(() => {
-    if (
-      window.location.hash !== ''
-      && window.location.hash in refs
-      && refs[window.location.hash]?.current !== null
-    ) {
-      window.scrollTo(0, refs[window.location.hash].current?.offsetTop || 0)
-    }
-  }, [refs])
 
   return (
     <>
       <Page title="Nuestros criterios">
-        <motion.div
-          animate={{ backgroundColor: brandColors[backgroundColorName] }}
-          transition={{
-            duration: 1
-          }}
-        >
-          <Container
-            height={!isMobile ? '85vh' : undefined}
-            pad="medium"
-          >
-            <Box
-              justify="center"
-              align="center"
-              fill
-            >
-              <Box width="large">
-                <Heading
-                  transform="uppercase"
-                  color={oppositeColors[backgroundColorName]}
-                  textAlign="center"
-                  margin={{ vertical: '4rem' }}
-                >
-                  {configuration.getIn(['criteria-page', 'title'])}
-                </Heading>
-                <Paragraph
-                  textAlign="center"
-                  color={oppositeColors[backgroundColorName]}
-                >
-                  {configuration.getIn(['criteria-page', 'introduction'])}
-                </Paragraph>
-              </Box>
-            </Box>
-          </Container>
-          {criteria.map((criterion, index) => (
-            <ScrollableItem
-              onScrollEnter={() => {
-                if (!isMobile) {
-                  setBackgroundColorName(colorNames[index % colorNames.length])
-                }
-                window.history.pushState(null, document.title, `#${criterion.get('id')}`)
-              }}
-              key={criterion.get('id')}
+        <Stack guidingChild="last">
+          <Background
+            animate={{ backgroundColor: brandColors[backgroundColorName] }}
+            transition={{
+              duration: 1
+            }}
+            style={{
+              position: 'fixed',
+              zIndex: -1
+            }}
+            fill
+          />
+          <Box>
+            <Container
+              height={!isMobile ? '85vh' : undefined}
+              pad="medium"
             >
               <Box
+                justify="center"
+                align="center"
                 fill
-                ref={refs[`#${criterion.get('id')}`]}
-                background={!isMobile ? undefined : { color: colorNames[index % colorNames.length] }}
-                pad={isMobile ? { vertical: 'large' } : undefined}
               >
-                <Container pad="medium">
-                  <Box
-                    id={criterion.get('id')}
-                    direction={isMobile ? 'column' : 'row'}
-                    height={!isMobile ? '90vh' : undefined}
-                    align="center"
-                    justify="center"
-                    fill="horizontal"
+                <Box width="large">
+                  <Heading
+                    transform="uppercase"
+                    color={oppositeColors[backgroundColorName]}
+                    textAlign="center"
+                    margin={{ vertical: '4rem' }}
                   >
+                    {configuration.getIn(['criteria-page', 'title'])}
+                  </Heading>
+                  <Paragraph
+                    textAlign="center"
+                    color={oppositeColors[backgroundColorName]}
+                  >
+                    {configuration.getIn(['criteria-page', 'introduction'])}
+                  </Paragraph>
+                </Box>
+              </Box>
+            </Container>
+            {criteria.map((criterion, index) => (
+              <ScrollableItem
+                onScrollEnter={() => {
+                  if (!isMobile) {
+                    setBackgroundColorName(colorNames[index % colorNames.length])
+                  }
+                  window.history.pushState(null, document.title, `#${criterion.get('id')}`)
+                }}
+                key={criterion.get('id')}
+              >
+                <Box
+                  fill
+                  ref={refs[`#${criterion.get('id')}`]}
+                  background={!isMobile ? undefined : { color: colorNames[index % colorNames.length] }}
+                  pad={isMobile ? { vertical: 'large' } : undefined}
+                >
+                  <Container pad="medium">
                     <Box
-                      width="30%"
+                      id={criterion.get('id')}
+                      direction={isMobile ? 'column' : 'row'}
+                      height={!isMobile ? '90vh' : undefined}
                       align="center"
                       justify="center"
+                      fill="horizontal"
                     >
                       <Box
-                        key={criterion.get('name')}
-                        width="small"
-                        height="small"
-                        gap="medium"
+                        width="30%"
+                        align="center"
+                        justify="center"
                       >
-                        <CriterionIcon
-                          criterion={criterion}
-                          color={oppositeColors[backgroundColorName]}
-                        />
-                        <Heading
-                          transform="uppercase"
-                          level={2}
-                          size="small"
-                          textAlign="center"
-                          color={oppositeColors[backgroundColorName]}
+                        <Box
+                          key={criterion.get('name')}
+                          width="small"
+                          height="small"
+                          gap="medium"
                         >
-                          {criterion.get('name')}
-                        </Heading>
+                          <CriterionIcon
+                            criterion={criterion}
+                            color={oppositeColors[backgroundColorName]}
+                          />
+                          <Heading
+                            transform="uppercase"
+                            level={2}
+                            size="small"
+                            textAlign="center"
+                            color={oppositeColors[backgroundColorName]}
+                          >
+                            {criterion.get('name')}
+                          </Heading>
+                        </Box>
+                      </Box>
+                      <Box
+                        width={!isMobile ? '70%' : undefined}
+                        align="center"
+                        justify="center"
+                        flex={{ grow: 1 }}
+                      >
+                        <Box width="35rem">
+                          <Paragraph
+                            size="large"
+                            textAlign="center"
+                            color={oppositeColors[backgroundColorName]}
+                          >
+                            {criterion.get('description')}
+                          </Paragraph>
+                        </Box>
                       </Box>
                     </Box>
-                    <Box
-                      width={!isMobile ? '70%' : undefined}
-                      align="center"
-                      justify="center"
-                      flex={{ grow: 1 }}
-                    >
-                      <Box width="35rem">
-                        <Paragraph
-                          size="large"
-                          textAlign="center"
-                          color={oppositeColors[backgroundColorName]}
-                        >
-                          {criterion.get('description')}
-                        </Paragraph>
-                      </Box>
-                    </Box>
-                  </Box>
-                </Container>
-              </Box>
-            </ScrollableItem>
-          ))}
-        </motion.div>
+                  </Container>
+                </Box>
+              </ScrollableItem>
+            ))}
+          </Box>
+        </Stack>
       </Page>
     </>
   )

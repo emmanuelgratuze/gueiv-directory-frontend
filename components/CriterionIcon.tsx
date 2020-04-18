@@ -1,13 +1,16 @@
 import React, { useMemo } from 'react'
-import { Box } from 'grommet'
+import { Box, Stack } from 'grommet'
 import styled from 'styled-components'
 import { darken } from 'polished'
+
+import CriterionTooltip from 'components/CriterionTooltip'
 
 import { ImmutableCriterion } from 'types/data/criterion'
 import { ColorsNames } from 'themes/theme'
 import useTheme from 'hooks/useTheme'
 import useHover from 'hooks/useHover'
 import Link from 'next/link'
+import { AnimatePresence } from 'framer-motion'
 
 type CriterionIcon = {
   criterion: ImmutableCriterion;
@@ -25,6 +28,11 @@ const StyledIconContainer = styled(Box)`
   g,
   path {
     fill: ${(props) => props.color} !important;
+    pointer-events: none;
+  }
+
+  path {
+    transition: fill 0.1s ease-out;
   }
 `
 
@@ -55,7 +63,7 @@ const CriterionIcon: React.FC<CriterionIcon> = ({
   }, [color])
 
   const content = (
-    <Box fill ref={ref}>
+    <Box fill overflow="hidden">
       <StyledIconContainer
         fill
         align="center"
@@ -71,9 +79,28 @@ const CriterionIcon: React.FC<CriterionIcon> = ({
 
   if (clickable) {
     return (
-      <Link href="/criterios" as={`/criterios#${criterion.get('id')}`}>
-        {content}
-      </Link>
+      <Box
+        fill
+        style={{ position: 'relative' }}
+        align="center"
+        justify="center"
+      >
+        <Link href="/criterios" as={`/criterios#${criterion.get('id')}`}>
+          <Box ref={ref}>
+            <Stack fill>
+              {content}
+            </Stack>
+          </Box>
+        </Link>
+        <AnimatePresence>
+          {isHover && (
+            <CriterionTooltip
+              criterion={criterion}
+              color={color}
+            />
+          )}
+        </AnimatePresence>
+      </Box>
     )
   }
   return content

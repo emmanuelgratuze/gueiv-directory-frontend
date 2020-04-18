@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, BoxProps, Button } from 'grommet'
 import { Next, Previous } from 'grommet-icons'
+import Icon from 'components/Icon'
 
 type NavigationButtonProps = {
   side: 'previous' | 'next';
@@ -12,10 +13,9 @@ const CarouselButton: React.FC<BoxProps & NavigationButtonProps> = ({
   color = 'black',
   ...props
 }) => {
-  const Icon = side === 'previous' ? Previous : Next
+  const IconType = side === 'previous' ? Previous : Next
   return (
     <Box
-      width="50"
       fill
       pad="large"
     >
@@ -24,12 +24,13 @@ const CarouselButton: React.FC<BoxProps & NavigationButtonProps> = ({
           <Box
             fill
             justify="center"
-            align={side === 'next' ? 'end' : undefined}
+            align={side === 'next' ? 'end' : 'start'}
             {...props}
           >
             <Icon
+              Component={IconType}
               color={hover ? color : 'white'}
-              size="large"
+              size="2.5rem"
             />
           </Box>
         )}

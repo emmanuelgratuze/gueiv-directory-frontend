@@ -81,7 +81,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 
                 {/* Criteria */}
                 {brand.get('criteria') && (
-                  <Box direction="row">
+                  <Box direction="row" wrap>
                     {brand.get('criteria').map((criterion) => (
                       <Box
                         key={criterion.get('id')}

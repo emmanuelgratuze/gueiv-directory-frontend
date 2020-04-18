@@ -4,15 +4,12 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import Container from 'components/Container'
-import FiltersControls from 'components/FiltersControls'
 import Text from 'components/Text'
 import A from 'components/A'
 import HamburgerIcon from 'components/HamburgerIcon'
 import useTheme from 'hooks/useTheme'
 import useMenuState from 'hooks/useMenuState'
-import { Filter, Sort } from 'grommet-icons'
 import useResponsive from 'hooks/useResponsive'
-import useFilterMenu from 'hooks/useFilterMenu'
 
 const Logo = require('assets/images/logo.svg').ReactComponent
 
@@ -23,19 +20,13 @@ const HeaderWrapper = styled(Box)`
   z-index: 20;
 `
 
-type HeaderProps = {
-  withFilters?: boolean;
-}
+type HeaderProps = {}
 
-const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
+const Header: React.FC<HeaderProps> = ({ children }) => {
   const { theme: { header } } = useTheme()
   const { isMenuOpen, toggleMenu } = useMenuState()
 
   const { isMobile } = useResponsive()
-  const {
-    isOpen: areFiltersOpen,
-    toggle: toggleFilters
-  } = useFilterMenu()
 
   return (
     <HeaderWrapper
@@ -82,32 +73,9 @@ const Header: React.FC<HeaderProps> = ({ withFilters = false }) => {
             </Box>
           </Box>
 
-          {/* Right part */}
-          {withFilters ? (
-            <>
-              {isMobile ? (
-                <Button
-                  plain
-                  onClick={() => toggleFilters(!areFiltersOpen ? 'criteria' : null)}
-                >
-                  <Box
-                    fill="vertical"
-                    width="3rem"
-                    align="center"
-                    justify="center"
-                  >
-                    {!areFiltersOpen ? (
-                      <Filter color="gray" />
-                    ) : (
-                      <Sort color="blue" />
-                    )}
-                  </Box>
-                </Button>
-              ) : (
-                <FiltersControls />
-              )}
-            </>
-          ) : <Box />}
+          <Box>
+            {children}
+          </Box>
         </Box>
 
       </Container>

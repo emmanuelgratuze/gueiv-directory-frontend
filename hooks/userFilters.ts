@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectCurrentFilters } from 'store/interface/filters/selectors'
+import { selectCurrentFilters, selectAvailableFilters } from 'store/interface/filters/selectors'
 import { applyFilters } from 'store/interface/filters/actions'
 import convertObjectToStringParameters from 'utils/url/convertObjectInStringParameters'
 import getParametersFromUrl from 'utils/url/getParametersFromUrl'
@@ -13,7 +13,10 @@ type ReturnedValue = {
 const useFilters = (): ReturnedValue => {
   const dispatch = useDispatch()
   const currentFiltersValues = useSelector(selectCurrentFilters)
+  const availableFilters = useSelector(selectAvailableFilters)
   const previousFilterValues = useRef(currentFiltersValues)
+
+  const availableFiltersId = availableFilters.map((filter) => filter.get('id'))
 
   const getFiltersUrlString = (): string => {
     const parameters = convertObjectToStringParameters(currentFiltersValues.toJS())
@@ -30,10 +33,12 @@ const useFilters = (): ReturnedValue => {
     const parameters = getParametersFromUrl(url)
     const parsedParameters: { [key: string]: unknown } = {}
     Object.keys(parameters).forEach((key: string) => {
-      if (parameters[key].includes(',')) {
-        parsedParameters[key] = parameters[key].split(',')
-      } else {
-        parsedParameters[key] = parameters[key]
+      if (availableFiltersId.includes(key)) {
+        if (parameters[key].includes(',')) {
+          parsedParameters[key] = parameters[key].split(',')
+        } else {
+          parsedParameters[key] = parameters[key]
+        }
       }
       dispatch(applyFilters(parsedParameters))
     })

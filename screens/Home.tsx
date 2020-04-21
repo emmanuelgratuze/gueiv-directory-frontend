@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import { Box } from 'grommet'
+import { Box, Button } from 'grommet'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useDispatch } from 'react-redux'
 import InfiniteScroll from 'react-infinite-scroll-component'
@@ -88,18 +88,23 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                     key={brand.get('id')}
                     width={getChildrenSize(index)}
                   >
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <BrandPreview
-                        key={brand.get('id')}
-                        brand={brand}
-                        color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
-                      />
-                    </motion.div>
+                    <Button plain>
+                      {({ hover }: { hover: boolean }) => (
+                        <motion.div
+                          initial={{ opacity: 0, transform: 'scale3d(0.98, 0.98, 1)' }}
+                          animate={{ opacity: 1, transform: 'scale3d(1, 1, 1)' }}
+                          exit={{ opacity: 0, transform: 'scale3d(0.98, 0.98, 1)' }}
+                          transition={{ duration: 0.6 }}
+                          style={{ zIndex: hover ? 2 : 1 }}
+                        >
+                          <BrandPreview
+                            key={brand.get('id')}
+                            brand={brand}
+                            color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
+                          />
+                        </motion.div>
+                      )}
+                    </Button>
                   </Box>
                 ))}
               </InfiniteScroll>

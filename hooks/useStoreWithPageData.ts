@@ -23,6 +23,8 @@ const useStoreWithPageData = (
       ))
       await Promise.all(promises)
       setIsReady(true)
+    } else {
+      setIsReady(true)
     }
   }
 

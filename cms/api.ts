@@ -54,7 +54,7 @@ export async function getPageCollectionData(collectionName: string): Promise<obj
         const fullUrl = criterion.icon.includes('://')
           ? criterion.icon
           : cloudinary.url(criterion.icon.split('/')[1])
-        newCriterion.iconContent = await fetchFileContent(fullUrl)
+        newCriterion.iconContent = await fetchFileContent(fullUrl, true)
       }
       return newCriterion
     })

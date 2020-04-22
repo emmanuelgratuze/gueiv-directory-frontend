@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Maathai Organic","website":"","instagram":"https://www.instagram.com/maathaiorganic/","facebook":"https://www.facebook.com/maathaiorganic","description":"Una pequeña marca tratando de cambiar el mundo.","criteria":["materiales-organicos","produccion-local"],"genders":["women"],"productTypes":["lenceria"]}
+{
+  "facebook": "https://www.facebook.com/maathaiorganic",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "lenceria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Maathai Organic",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/maathaiorganic/",
+  "pictures": [
+    "assets/31556922_165912820771727_3111880393532375040_n_y7cwat.jpg",
+    "assets/35490826_1897253163917443_5409996494587559936_n_pisnjv.jpg"
+  ],
+  "country": "colombia",
+  "website": "",
+  "description": "Una pequeña marca tratando de cambiar el mundo.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local"
+  ]
+}

@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Ultra","website":"https://ultra.com.co/","instagram":"https://www.instagram.com/ultra.com.co/","facebook":"","description":"Ultra es una marca creada para exploradores urbanos que creen en el poder de la comunidad, y que a través de ella quieren crear consciencia acerca de un mundo más ético, libre y sostenible.","criteria":["produccion-local","comercio-etico"],"genders":["women","men"],"productTypes":["vestimenta","bolsos-y-mochilas"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ultra",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/ultra.com.co/",
+  "pictures": [
+    "assets/26685378_1703036766425247_8514574181319082611_o_pjnu2z.jpg",
+    "assets/18404206_1436485129747080_4807968697260494738_o_hbftkp.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://ultra.com.co/",
+  "description": "Ultra es una marca creada para exploradores urbanos que creen en el poder de la comunidad, y que a través de ella quieren crear consciencia acerca de un mundo más ético, libre y sostenible.",
+  "criteria": [
+    "produccion-local",
+    "comercio-etico"
+  ]
+}

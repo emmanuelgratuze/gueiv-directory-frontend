@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Dvotio","website":"http://dvotio.com/","instagram":"https://www.instagram.com/dvotio/?hl=es-la","facebook":"","description":"Nos dedicamos a explorar la sinergia entre diseño, sostenibilidad, tradición indígena e innovación. Nuestro propósito es armonizar las técnicas invaluables de la artesanía tradicional con elementos artísticos contemporáneos. Estamos en constante evolución y liderando un cambio sistemático para marcar la diferencia en la industria de la moda al transmitir principios sostenibles y tradicionales.","criteria":["fibras-naturales","trabajo-con-artesanos","integracion-social"],"genders":["women"],"productTypes":["vestimenta","bolsos-y-mochilas","joyeria","calzado"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "bolsos-y-mochilas",
+    "joyeria",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Dvotio",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/dvotio/?hl=es-la",
+  "pictures": [
+    "assets/27173374_1838957562783745_5672460172158745495_o_femqlb.jpg",
+    "assets/27173633_1838953592784142_3049844598800203574_o_hifjgt.jpg"
+  ],
+  "country": "colombia",
+  "website": "http://dvotio.com/",
+  "description": "Nos dedicamos a explorar la sinergia entre diseño, sostenibilidad, tradición indígena e innovación. Nuestro propósito es armonizar las técnicas invaluables de la artesanía tradicional con elementos artísticos contemporáneos. Estamos en constante evolución y liderando un cambio sistemático para marcar la diferencia en la industria de la moda al transmitir principios sostenibles y tradicionales.",
+  "criteria": [
+    "fibras-naturales",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

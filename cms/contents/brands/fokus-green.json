@@ -1,1 +1,37 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Fokus Green","website":"https://fokusgreen.com/?v=35357b9c8fe4","instagram":"https://www.instagram.com/fokusgreen/","facebook":"","description":"En FOKUS GREEN trabajamos por un propósito claro: Generar CONSCIENCIA a través de la moda para impactar positivamente en el presente y el futuro de nuestra sociedad y nuestro planeta. Nuestros productos son elaborados con materia prima 100% reciclada a partir de desechos textiles y botellas de plástico recuperadas del mar y del suelo. Nuestros estampados y tintas son libres de PVC y de metales pesados. Nuestras etiquetas son 100% recicladas/orgánicas.","criteria":["materiales-organicos","fibras-naturales","materiales-reciclados","produccion-local","comercio-etico","eficiencia-uso-de-agua","packaging-sostenible"],"genders":["women","men","children"],"productTypes":["vestimenta","denim","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "denim",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Fokus Green",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/fokusgreen/",
+  "pictures": [
+    "assets/72273538_966364553717019_322143008424198144_o_vjajoh.jpg",
+    "assets/80682217_1037966503223490_8053945870577565696_o_ajtoef.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://fokusgreen.com/?v=35357b9c8fe4",
+  "description": "En FOKUS GREEN trabajamos por un propósito claro: Generar CONSCIENCIA a través de la moda para impactar positivamente en el presente y el futuro de nuestra sociedad y nuestro planeta. Nuestros productos son elaborados con materia prima 100% reciclada a partir de desechos textiles y botellas de plástico recuperadas del mar y del suelo. Nuestros estampados y tintas son libres de PVC y de metales pesados. Nuestras etiquetas son 100% recicladas/orgánicas.",
+  "criteria": [
+    "materiales-organicos",
+    "fibras-naturales",
+    "materiales-reciclados",
+    "produccion-local",
+    "comercio-etico",
+    "eficiencia-uso-de-agua",
+    "packaging-sostenible"
+  ]
+}

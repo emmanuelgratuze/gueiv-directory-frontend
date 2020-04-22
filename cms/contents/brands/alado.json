@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Alado","website":"http://www.aladogroup.com","instagram":"https://www.instagram.com/aladodiseno/","facebook":"","description":"Andrés y Alejandro, han generado una marca que hace la diferencia no solo desde el diseño, sino además, desde sus principios de producción: no serializar, reutilizar, practicar el comercio justo, buscar y generar nuevos materiales, son algunas de sus premisas. Una firma que conjuga las miradas de dos diseñadores que desde un trabajo independiente generan una propuesta de vestuario en la que se cuentan historias con matices en las que el arte siempre está presente.","criteria":["a-pedido","materiales-reciclados","produccion-local","comercio-etico"],"genders":["women"],"productTypes":["vestimenta","eco-lujo","joyeria","decoracion-y-hogar"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo",
+    "joyeria",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Alado",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/aladodiseno/",
+  "pictures": [
+    "assets/1907-ALADO-TERRACOTA-0483-600x900_ncvolm.jpg",
+    "assets/1907-ALADO-TERRACOTA-0989-600x900_ecaauv.jpg"
+  ],
+  "country": "colombia",
+  "website": "http://www.aladogroup.com",
+  "description": "Andrés y Alejandro, han generado una marca que hace la diferencia no solo desde el diseño, sino además, desde sus principios de producción: no serializar, reutilizar, practicar el comercio justo, buscar y generar nuevos materiales, son algunas de sus premisas. Una firma que conjuga las miradas de dos diseñadores que desde un trabajo independiente generan una propuesta de vestuario en la que se cuentan historias con matices en las que el arte siempre está presente.",
+  "criteria": [
+    "a-pedido",
+    "materiales-reciclados",
+    "produccion-local",
+    "comercio-etico"
+  ]
+}

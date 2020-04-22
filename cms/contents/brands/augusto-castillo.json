@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"guatemala","name":"Augusto Castillo","website":"","instagram":"https://www.instagram.com/augusto.castillo/","facebook":"https://www.facebook.com/AugustoCastilloBags","description":"Accesorios y carteras de lujo hechos a mano.","criteria":["fibras-naturales","produccion-local"],"genders":["women"],"productTypes":["eco-lujo","complementos"]}
+{
+  "facebook": "https://www.facebook.com/AugustoCastilloBags",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "eco-lujo",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Augusto Castillo",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/augusto.castillo/",
+  "pictures": [
+    "assets/66338422_2928128987224093_6746189416265416704_o_ghdcux.jpg",
+    "assets/66227451_2926293137407678_4458640133054267392_o_augl8u.jpg"
+  ],
+  "country": "guatemala",
+  "website": "",
+  "description": "Accesorios y carteras de lujo hechos a mano.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local"
+  ]
+}

@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Casa Lefay","website":"https://www.casalefay.com/shop","instagram":"https://www.instagram.com/casalefay/","facebook":"","description":"Ilustramos inspirados en la naturaleza para crear diseños que cuiden el medio ambiente y propongan una nueva manera de conectarnos con la madre Tierra.","criteria":["fibras-naturales","comercio-etico"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Casa Lefay",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/casalefay/",
+  "pictures": [
+    "assets/38878119_2097844273581972_2033919219430588416_o_mgmnf3.jpg",
+    "assets/62589182_2572142779485450_8463189136432431104_o_mkxaoz.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://www.casalefay.com/shop",
+  "description": "Ilustramos inspirados en la naturaleza para crear diseños que cuiden el medio ambiente y propongan una nueva manera de conectarnos con la madre Tierra.",
+  "criteria": [
+    "fibras-naturales",
+    "comercio-etico"
+  ]
+}

@@ -1,1 +1,21 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Somos Martina","website":"https://somosmartina.com/","instagram":"https://www.instagram.com/somosmartina/","facebook":"","description":"Hecho en Colombia. Calzones absorbentes para personas menstruantes.","criteria":[],"genders":[],"productTypes":[]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Somos Martina",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [],
+  "instagram": "https://www.instagram.com/somosmartina/",
+  "pictures": [
+    "assets/72733532_225147348473857_4481746303086397894_n_zkhwkx.jpg",
+    "assets/74436779_394036631481899_3620611876720476226_n_ol9uoa.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://somosmartina.com/",
+  "description": "Hecho en Colombia. Calzones absorbentes para personas menstruantes.",
+  "criteria": []
+}

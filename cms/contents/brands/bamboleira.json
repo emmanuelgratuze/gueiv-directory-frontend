@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Bamboleira","website":"https://www.bamboleira.com","instagram":"https://www.instagram.com/bamboleira/","facebook":"","description":"Somos Bamboleira, una marca colombiana de joyas y accesorios de moda, inspirados en el legado de las tradiciones ancestrales, el apoyo al talento de nuestro país y el cuidado del medio ambiente. Esto nos ha llevado a emprender un camino hacia la creación de piezas únicas que expresan la autenticidad de cada mujer en el mundo.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico"],"genders":["women"],"productTypes":["joyeria","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Bamboleira",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/bamboleira/",
+  "pictures": [
+    "assets/84449500_2552481468194285_7082419865880887296_o_ovedyr.jpg",
+    "assets/84266028_2515886168520482_8232616660415021056_o_mnidzt.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://www.bamboleira.com",
+  "description": "Somos Bamboleira, una marca colombiana de joyas y accesorios de moda, inspirados en el legado de las tradiciones ancestrales, el apoyo al talento de nuestro país y el cuidado del medio ambiente. Esto nos ha llevado a emprender un camino hacia la creación de piezas únicas que expresan la autenticidad de cada mujer en el mundo.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

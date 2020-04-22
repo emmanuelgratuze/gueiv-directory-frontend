@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Hilo Sagrado","website":"https://www.hilosagrado.org/shop/","instagram":"https://www.instagram.com/hsagrado/","facebook":"","description":"Desde el 2013 Hilo Sagrado ha implementado un modelo de desarrollo inclusivo donde reconoce el invaluable aporte cultural que tienen las comunidades artesanales en América Latina y busca empoderar a las mujeres con herramientas que les permitan mejorar su calidad de vida.A través de la educación, el empoderamiento económico y el desarrollo sostenible, buscamos que las comunidades beneficiarias puedan ser auto-sostenibles, brindándoles las herramientas necesarias para que las mujeres se conviertan en microempresarias, lideren su propio trabajo y puedan salir de la pobreza extrema.","criteria":["produccion-local","integracion-social","empoderamiento-de-la-mujer"],"genders":["women"],"productTypes":["bolsos-y-mochilas","joyeria","decoracion-y-hogar"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "joyeria",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Hilo Sagrado",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/hsagrado/",
+  "pictures": [
+    "assets/73039225_1732154343587520_3164637013613471371_n_yozlwn.jpg",
+    "assets/75214694_160487118602754_838319117263688960_n_ju6am9.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://www.hilosagrado.org/shop/",
+  "description": "Desde el 2013 Hilo Sagrado ha implementado un modelo de desarrollo inclusivo donde reconoce el invaluable aporte cultural que tienen las comunidades artesanales en América Latina y busca empoderar a las mujeres con herramientas que les permitan mejorar su calidad de vida.A través de la educación, el empoderamiento económico y el desarrollo sostenible, buscamos que las comunidades beneficiarias puedan ser auto-sostenibles, brindándoles las herramientas necesarias para que las mujeres se conviertan en microempresarias, lideren su propio trabajo y puedan salir de la pobreza extrema.",
+  "criteria": [
+    "produccion-local",
+    "integracion-social",
+    "empoderamiento-de-la-mujer"
+  ]
+}

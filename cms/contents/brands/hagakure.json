@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Hagakure","website":"http://www.hagakurehogar.com/index.html","instagram":"https://www.instagram.com/hagakurehogar/","facebook":"","description":"Estudio de diseño que crea piezas de decoración y regalos especiales hechos a mano, usando textiles y materiales ecológicos","criteria":["fibras-naturales","trabajo-con-artesanos"],"genders":["women"],"productTypes":["bolsos-y-mochilas","decoracion-y-hogar"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Hagakure",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/hagakurehogar/",
+  "pictures": [
+    "assets/82138061_247040142952363_6528598784345141336_n_ug34fc.jpg",
+    "assets/70026154_2273569059436730_3048390249345105763_n_ipmbvi.jpg"
+  ],
+  "country": "colombia",
+  "website": "http://www.hagakurehogar.com/index.html",
+  "description": "Estudio de diseño que crea piezas de decoración y regalos especiales hechos a mano, usando textiles y materiales ecológicos",
+  "criteria": [
+    "fibras-naturales",
+    "trabajo-con-artesanos"
+  ]
+}

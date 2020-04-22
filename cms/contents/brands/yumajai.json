@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Yumajai","website":"https://www.yumajai.com/","instagram":"https://www.instagram.com/yumajai/?utm_source=ig_embed","facebook":"","description":"Colaboramos y utilizamos un proceso de co-creación con artesanos indígenas locales talentosos y jóvenes diseñadores prometedores en Colombia para fusionar una artesanía y arte indígena antiguo con un enfoque de diseño moderno para generar diseños únicos. Nuestra colección ofrece diseños frescos al mismo tiempo que apoya la cultura de las tribus indígenas a través de la preservación de artesanías, diseños y sabiduría ancestral.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social","empoderamiento-de-la-mujer"],"genders":["women"],"productTypes":["vestimenta","bolsos-y-mochilas","joyeria","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "bolsos-y-mochilas",
+    "joyeria",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Yumajai",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/yumajai/?utm_source=ig_embed",
+  "pictures": [
+    "assets/56548126_2228797100542730_6833412471106043904_o_zjk9mq.jpg",
+    "assets/82223464_2743452705743831_1443375986623119360_o_l3tegy.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://www.yumajai.com/",
+  "description": "Colaboramos y utilizamos un proceso de co-creación con artesanos indígenas locales talentosos y jóvenes diseñadores prometedores en Colombia para fusionar una artesanía y arte indígena antiguo con un enfoque de diseño moderno para generar diseños únicos. Nuestra colección ofrece diseños frescos al mismo tiempo que apoya la cultura de las tribus indígenas a través de la preservación de artesanías, diseños y sabiduría ancestral.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "empoderamiento-de-la-mujer"
+  ]
+}

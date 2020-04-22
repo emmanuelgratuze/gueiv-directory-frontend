@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"colombia","name":"Tigre de Salon","website":"https://www.untigredesalon.com","instagram":"https://www.instagram.com/tigredesalon/?hl=es-la","facebook":"","description":"Creamos objetos que resaltan el valor de las artesanías antiguas y las cosas hechas a mano, objetos puros y hermosos que atesoran historias, viajes y sueños. Creemos en la belleza de lo simple.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos","manejo-de-residuos"],"genders":["women"],"productTypes":["bolsos-y-mochilas"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Tigre de Salon",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/tigredesalon/?hl=es-la",
+  "pictures": [
+    "assets/Screenshot_2020-03-27_at_20.40.06_xjxv5r.png",
+    "assets/65317071_634737933697812_2212993880442949151_n_k0f1gy.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://www.untigredesalon.com",
+  "description": "Creamos objetos que resaltan el valor de las artesanías antiguas y las cosas hechas a mano, objetos puros y hermosos que atesoran historias, viajes y sueños. Creemos en la belleza de lo simple.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "manejo-de-residuos"
+  ]
+}

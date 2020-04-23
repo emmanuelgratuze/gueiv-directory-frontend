@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"Etérea surge en el 2012 gracias a un llamado creativo, donde la moda y el diseño sirven como un medio para explorar el arquetipo femenino en sus múltiples expresiones. Adicionalmente, etérea busca expresar un estilo y perspectiva de vida que colaboren con un nuevo paradigma socialmente responsable y consciente.","country":"costa-rica","name":"Etérea","website":"https://www.etereacostarica.com/es/","instagram":"https://www.instagram.com/eterea/?hl=es","facebook":"","description":"","criteria":["fibras-naturales","produccion-local","empoderamiento-de-la-mujer"],"genders":["women"],"productTypes":["vestimenta","ropa-de-fiesta","calzado"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "Etérea surge en el 2012 gracias a un llamado creativo, donde la moda y el diseño sirven como un medio para explorar el arquetipo femenino en sus múltiples expresiones. Adicionalmente, etérea busca expresar un estilo y perspectiva de vida que colaboren con un nuevo paradigma socialmente responsable y consciente.",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Etérea",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/eterea/?hl=es",
+  "pictures": [
+    "assets/48120767_2140773345943723_3160625072591339520_n_geyed6.jpg",
+    "assets/46857554_2115436751810716_4695405964797411328_o_rjy9q1.jpg"
+  ],
+  "country": "costa-rica",
+  "website": "https://www.etereacostarica.com/es/",
+  "description": "Creemos en un nuevo paradigma de la moda. Para nosotras la sostenibilidad viene desde adentro. Abocamos a nuestros valores, cualidades femeninas e intuitivas para crear nuevos estándares de trato humano, estética y del buen uso de los recursos naturales. Estamos comprometidas a crear un impacto social positivo, defendiendo los derechos humanos, creando espacios de crecimiento para nuestro equipo de trabajo, para nuestros clientes y la sociedad en la que vivimos.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "empoderamiento-de-la-mujer"
+  ]
+}

@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"Cruda es una marca que rescatara el oficio de la zapatería artesanal. Su diseño y producción se basa en el concepto upcycling y sus materiales son casi en su totalidad reutilizados: cuero de segunda mano y madera de edificaciones y muebles, todo seleccionado de manera minuciosa para garantizar su calidad.","country":"costa-rica","name":"Cruda","website":"","instagram":"https://www.instagram.com/cruda_cruda/","facebook":"https://www.facebook.com/crudacr/","description":"","criteria":["fibras-naturales","materiales-reciclados","supra-reciclado-upcycling","produccion-local","packaging-sostenible"],"genders":["women","men"],"productTypes":["calzado"]}
+{
+  "facebook": "https://www.facebook.com/crudacr/",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "Cruda es una marca que rescatara el oficio de la zapatería artesanal. Su diseño y producción se basa en el concepto upcycling y sus materiales son casi en su totalidad reutilizados: cuero de segunda mano y madera de edificaciones y muebles, todo seleccionado de manera minuciosa para garantizar su calidad.",
+  "productTypes": [
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Cruda",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/cruda_cruda/",
+  "pictures": [
+    "assets/80050080_182495532898733_1923599149775913588_n_uz9w3d.jpg",
+    "assets/80101359_166614917921589_4877286908006954671_n_ko0ybl.jpg"
+  ],
+  "country": "costa-rica",
+  "website": "",
+  "description": "Cruda es una marca que rescatara el oficio de la zapatería artesanal. Su diseño y producción se basa en el concepto upcycling y sus materiales son casi en su totalidad reutilizados: cuero de segunda mano y madera de edificaciones y muebles, todo seleccionado de manera minuciosa para garantizar su calidad.",
+  "criteria": [
+    "fibras-naturales",
+    "materiales-reciclados",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "packaging-sostenible"
+  ]
+}

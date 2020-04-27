@@ -14,7 +14,17 @@ const CloudinaryImage: React.FC<ImageProps & Props> = ({
   ...props
 }) => {
   const { cloudinary } = useContext(CloudinaryContext)
-  const url = cloudinary?.url(fileName.split('/')[1], cloudinaryOptions || {})
+
+  let derivedFileName = fileName
+  if (fileName.includes(`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/`)) {
+    // https://res.cloudinary.com/dq9k7gnud/image/upload/<filename>
+    [, derivedFileName] = fileName.split(`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/`)
+  } else {
+    // assets/<filename>
+    [, derivedFileName] = fileName.split('/')
+  }
+
+  const url = cloudinary?.url(derivedFileName, cloudinaryOptions || {})
 
   return (
     <Image

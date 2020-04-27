@@ -1,0 +1,17 @@
+{
+  "name": "Test",
+  "description": "test",
+  "pictures": [
+    "assets/94003551_152181796327824_6488516321719905848_n_fzjbdk.jpg"
+  ],
+  "criteria": [
+    "comercio-etico"
+  ],
+  "country": "chile",
+  "productTypes": [
+    "denim"
+  ],
+  "genders": [
+    "unisex"
+  ]
+}

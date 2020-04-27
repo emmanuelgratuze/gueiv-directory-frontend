@@ -12,7 +12,7 @@ export default {
   public_folder: 'assets',
   media_library: {
     name: 'cloudinary',
-    output_filename_only: true,
+    output_filename_only: false,
     config: {
       cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
       api_key: process.env.CLOUDINARY_API_KEY

@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"404// content not found","website":"http://www.contentnotfound.com","instagram":"https://www.instagram.com/contentnotfound/","facebook":"","description":"Basado en C2C (de la Cuna a la Cuna) y una producción más limpia, Content Not Found surge como una marca sostenible, donde el enfoque en el medio ambiente, la sociedad y la economía se contemplan holísticamente.","criteria":["comercio-etico","manejo-de-residuos"],"genders":["women"],"productTypes":["bolsos-y-mochilas","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "404// content not found",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/contentnotfound/",
+  "pictures": [
+    "assets/content16_1712web_bdetuc.jpg",
+    "assets/content16_1722_copia_xosnyi.jpg"
+  ],
+  "country": "argentina",
+  "website": "http://www.contentnotfound.com",
+  "description": "Basado en C2C (de la Cuna a la Cuna) y una producción más limpia, Content Not Found surge como una marca sostenible, donde el enfoque en el medio ambiente, la sociedad y la economía se contemplan holísticamente.",
+  "criteria": [
+    "comercio-etico",
+    "manejo-de-residuos"
+  ]
+}

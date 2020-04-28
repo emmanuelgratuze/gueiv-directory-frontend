@@ -1,1 +1,34 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Animana","website":"https://animanaonline.com.ar","instagram":"https://www.instagram.com/animanaonline/","facebook":"","description":"animaná - ‘un lugar en el cielo’ en lengua Kakán - es una invitación a reconectarnos con nuestros orígenes, con la naturaleza, y con su sabiduría a través de las artes ancestrales. La marca fue fundada sobre los pilares del respeto por los pueblos originarios, los animales, la naturaleza y las tradiciones andinas.","criteria":["produccion-local","trabajo-con-artesanos","comercio-etico","empoderamiento-de-la-mujer","tintes-naturales"],"genders":["women"],"productTypes":["vestimenta","eco-lujo","complementos","decoracion-y-hogar"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo",
+    "complementos",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Animana",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/animanaonline/",
+  "pictures": [
+    "assets/Animana61055_1080x_px27gv.jpg",
+    "assets/QZxd62nfQpiowLjekYFM_Animana60646_1080x_nokzgk.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://animanaonline.com.ar",
+  "description": "animaná - ‘un lugar en el cielo’ en lengua Kakán - es una invitación a reconectarnos con nuestros orígenes, con la naturaleza, y con su sabiduría a través de las artes ancestrales. La marca fue fundada sobre los pilares del respeto por los pueblos originarios, los animales, la naturaleza y las tradiciones andinas.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "tintes-naturales"
+  ]
+}

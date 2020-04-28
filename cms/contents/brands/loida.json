@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Loida","website":"https://www.loidanaturals.com.ar","instagram":"https://instagram.com/loida.naturals","facebook":"","description":"Productos amigables con el medio ambiente 100% hechos a mano con fibras naturales, materiales reciclados, hallazgos y más.","criteria":["fibras-naturales","tintes-naturales"],"genders":["children"],"productTypes":["talles-grandes","complementos","telas"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "talles-grandes",
+    "complementos",
+    "telas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Loida",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "children"
+  ],
+  "instagram": "https://instagram.com/loida.naturals",
+  "pictures": [
+    "assets/71823273_480346269362454_5831391410493302199_n_oifr07.jpg",
+    "assets/49686698_242921406602252_3826388988284385374_n_hboirh.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.loidanaturals.com.ar",
+  "description": "Productos amigables con el medio ambiente 100% hechos a mano con fibras naturales, materiales reciclados, hallazgos y más.",
+  "criteria": [
+    "fibras-naturales",
+    "tintes-naturales"
+  ]
+}

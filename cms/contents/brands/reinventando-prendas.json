@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Reinventando Prendas","website":"https://reinventandoprendas.mercadoshops.com.ar","instagram":"https://www.instagram.com/reinventandoprendas/?hl=es","facebook":"","description":"Reinventamos, re-diseñados y re-utilizamos textiles y prendas en desuso.Cuidamos el medio ambiente en todos los aspectos posibles: Re-utilización de prendas en des uso, Comercio Justo, Revalorización de mano de Obra en desuso, Inclusión Social.","criteria":["supra-reciclado-upcycling","comercio-etico"],"genders":["women","men"],"productTypes":["complementos","pijamas-ropa-de-casa"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos",
+    "pijamas-ropa-de-casa"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Reinventando Prendas",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/reinventandoprendas/?hl=es",
+  "pictures": [
+    "assets/66063772_2397290377203983_5881810972243701426_n_qjqvri.jpg",
+    "assets/78757704_2400788860049272_3580768743090387300_n_nb142c.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://reinventandoprendas.mercadoshops.com.ar",
+  "description": "Reinventamos, re-diseñados y re-utilizamos textiles y prendas en desuso.Cuidamos el medio ambiente en todos los aspectos posibles: Re-utilización de prendas en des uso, Comercio Justo, Revalorización de mano de Obra en desuso, Inclusión Social.",
+  "criteria": [
+    "supra-reciclado-upcycling",
+    "comercio-etico"
+  ]
+}

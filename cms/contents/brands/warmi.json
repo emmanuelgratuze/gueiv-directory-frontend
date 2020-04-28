@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Warmi","website":"http://warmi.org","instagram":"https://www.instagram.com/hilanderiawarmi/","facebook":"","description":"Somos el compromiso social fusionando dos mundos que hilan historia, costumbre y empoderamiento. Somos la revalorización de técnicas ancestrales y autóctonas del telar que permiten la vida digna y sustentable, mediante las manos productoras de la Puna. Vibrando empeño, creemos en la producción y trabajo local digno, brindando bienestar a la Puna y Valles Interandinos, con sus encantos coloridos y la fuerza de los sueños de la región. Susurramos en voz alta la diversidad e integridad cultural, construyendo identidad desde las diferencias. Somos la perseverancia, la creatividad y las ganas de hacer de este mundo, un lugar mejor. A través de nuestra fibra de llama se materializa en este mundo moderno el misterio, el silencio y la profundidad de esta Puna, nuestra Puna, tu Puna.","criteria":["produccion-local","trabajo-con-artesanos","comercio-etico","empoderamiento-de-la-mujer","vegano"],"genders":["women"],"productTypes":["complementos","decoracion-y-hogar"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Warmi",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/hilanderiawarmi/",
+  "pictures": [
+    "assets/79240503_123166568841078_1388027583077656407_n_n7yrbj.jpg",
+    "assets/75234594_2194840830823174_967509856432997298_n_wd1las.jpg"
+  ],
+  "country": "argentina",
+  "website": "http://warmi.org",
+  "description": "Somos el compromiso social fusionando dos mundos que hilan historia, costumbre y empoderamiento. Somos la revalorización de técnicas ancestrales y autóctonas del telar que permiten la vida digna y sustentable, mediante las manos productoras de la Puna. Vibrando empeño, creemos en la producción y trabajo local digno, brindando bienestar a la Puna y Valles Interandinos, con sus encantos coloridos y la fuerza de los sueños de la región. Susurramos en voz alta la diversidad e integridad cultural, construyendo identidad desde las diferencias. Somos la perseverancia, la creatividad y las ganas de hacer de este mundo, un lugar mejor. A través de nuestra fibra de llama se materializa en este mundo moderno el misterio, el silencio y la profundidad de esta Puna, nuestra Puna, tu Puna.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "vegano"
+  ]
+}

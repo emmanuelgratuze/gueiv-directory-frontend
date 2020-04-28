@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Vero Vira","website":"https://verovira.mitiendanube.com","instagram":"https://www.instagram.com/vero.vira/","facebook":"","description":"Prendas simples hechas con amor. Apostamos al diseño, el trabajo digno y la calidad, confeccionadas en la cooperativa La Alameda. Ideas mutantes, hechas entre tod@s.","criteria":["produccion-local","comercio-etico"],"genders":["women","children"],"productTypes":["vestimenta","basicos","talles-grandes","maternidad"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "basicos",
+    "talles-grandes",
+    "maternidad"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Vero Vira",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/vero.vira/",
+  "pictures": [
+    "assets/67919661_155171778889745_3478770386013676909_n_kvue9c.jpg",
+    "assets/61218251_655602838235896_6836624349710292231_n_fltgul.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://verovira.mitiendanube.com",
+  "description": "Prendas simples hechas con amor. Apostamos al diseño, el trabajo digno y la calidad, confeccionadas en la cooperativa La Alameda. Ideas mutantes, hechas entre tod@s.",
+  "criteria": [
+    "produccion-local",
+    "comercio-etico"
+  ]
+}

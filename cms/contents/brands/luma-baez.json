@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Luma Baez","website":"www.lumabaez.com","instagram":"https://www.instagram.com/LumaBaez/","facebook":"","description":"Luma Báez es una marca joven y una empresa que, a través de la producción de indumentaria, busca transmitir una forma de vivir. Hacer con las manos, tratarnos como personas. Trabajar con conciencia y cuidar nuestro entorno como a nosotros mismos. Indumentaria presente tejida con pasado, donde la huella de nuestros orígenes viste nuestro cotidiano. Buscamos honrar nuestras raíces y vestir lo que somos con lo que fuimos.","criteria":["materiales-organicos","supra-reciclado-upcycling","produccion-local","tintes-naturales"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Luma Baez",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/LumaBaez/",
+  "pictures": [
+    "assets/_MG_1313_-_Luma_Baez_le5ehe.jpg",
+    "assets/_MG_1132_-_Luma_Baez_nvqhdv.jpg"
+  ],
+  "country": "argentina",
+  "website": "www.lumabaez.com",
+  "description": "Luma Báez es una marca joven y una empresa que, a través de la producción de indumentaria, busca transmitir una forma de vivir. Hacer con las manos, tratarnos como personas. Trabajar con conciencia y cuidar nuestro entorno como a nosotros mismos. Indumentaria presente tejida con pasado, donde la huella de nuestros orígenes viste nuestro cotidiano. Buscamos honrar nuestras raíces y vestir lo que somos con lo que fuimos.",
+  "criteria": [
+    "materiales-organicos",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "tintes-naturales"
+  ]
+}

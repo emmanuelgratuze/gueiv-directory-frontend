@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Silo","website":"http://www.silobag.fashion/","instagram":"https://www.instagram.com/silobags/","facebook":"","description":"Somos la primer marca en el mundo que está innovando con el reciclado de silo bolsas en desuso para crear mochilas, carteras, bolsos, accesorios y mucho más, resultando en productos que son reciclados y reutilizables, 3 veces más resistentes y personalizables.","criteria":["materiales-reciclados","produccion-local","integracion-social"],"genders":["women","men","unisex"],"productTypes":["bolsos-y-mochilas"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Silobag",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/silobags/",
+  "pictures": [
+    "assets/Bolsa_de_Silobag-03_-_Cinthia_Fehling_bmwmom.jpg",
+    "assets/Mochila_Silobag_Campo_txt_-_Cinthia_Fehling_txrrrx.jpg"
+  ],
+  "country": "argentina",
+  "website": "http://www.silobag.fashion/",
+  "description": "Somos la primer marca en el mundo que está innovando con el reciclado de silo bolsas en desuso para crear mochilas, carteras, bolsos, accesorios y mucho más, resultando en productos que son reciclados y reutilizables, 3 veces más resistentes y personalizables.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "integracion-social"
+  ]
+}

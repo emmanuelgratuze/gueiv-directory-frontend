@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"bolivia","name":"Made in Chola","website":"http://www.madeinchola.com/index.html","instagram":"https://www.instagram.com/madeinchola/","facebook":"","description":"Los sombreros de MADE IN CHOLA son el producto de una cultura, una historia y un respeto a las raíces y tradiciones, ambientadas con un toque moderno.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos"],"genders":["women","men"],"productTypes":["complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Made in Chola",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/madeinchola/",
+  "pictures": [
+    "assets/46847023_2339168536155969_2227165392706500245_n_i6gktp.jpg",
+    "assets/45373966_206749146888185_7998316558705853276_n_hfehpa.jpg"
+  ],
+  "country": "bolivia",
+  "website": "http://www.madeinchola.com/index.html",
+  "description": "Los sombreros de MADE IN CHOLA son el producto de una cultura, una historia y un respeto a las raíces y tradiciones, ambientadas con un toque moderno.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

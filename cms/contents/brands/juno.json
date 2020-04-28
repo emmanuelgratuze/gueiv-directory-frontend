@@ -1,1 +1,26 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Juno","website":"https://www.somosjuno.com","instagram":"https://www.instagram.com/somosjuno/","facebook":"","description":"Productos textiles estampados hechos por mujeres que trabajan desde su hogar. La mejor opcion para tu empresa, emprendimiento o celebración. Buscamos empoderar mujeres a través del trabajo entendiendo este como un medio de realización personal que impacta positivamente en su núcleo familiar y en la sociedad. JUNO no solo brinda la posibilidad de un ingreso extra sino que también ofrece una red de contención y acceso a redes de contactos.","criteria":["produccion-local","empoderamiento-de-la-mujer"],"genders":[],"productTypes":["complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Juno",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [],
+  "instagram": "https://www.instagram.com/somosjuno/",
+  "pictures": [
+    "assets/82735074_1360864587420953_3682968030079352832_o_qutnul.jpg",
+    "assets/87048832_1389257764581635_2811689182001364992_n_ljsjsr.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.somosjuno.com",
+  "description": "Productos textiles estampados hechos por mujeres que trabajan desde su hogar. La mejor opcion para tu empresa, emprendimiento o celebración. Buscamos empoderar mujeres a través del trabajo entendiendo este como un medio de realización personal que impacta positivamente en su núcleo familiar y en la sociedad. JUNO no solo brinda la posibilidad de un ingreso extra sino que también ofrece una red de contención y acceso a redes de contactos.",
+  "criteria": [
+    "produccion-local",
+    "empoderamiento-de-la-mujer"
+  ]
+}

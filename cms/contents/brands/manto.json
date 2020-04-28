@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Manto","website":"https://www.mantoabrigos.com/es/","instagram":"https://www.instagram.com/manto_abrigos/","facebook":"","description":"En MANTO respetamos a los artesanos con los que trabajamos. Contribuimos a que estas comunidades no desaparezcan, marginadas y avasalladas por la industria, permitiéndoles permanecer en su lugar de origen, acercando las distancias, e integrando la cultura andina a las grandes ciudades. Diseñamos textiles y abrigos que puedan ser valorados por su atemporalidad y perdurabilidad, deseando que, como se solía hacer, se conviertan en prendas que sean heredadas de generación en generación. Nos preocupamos por el respeto y el cuidado del medio ambiente. Reciclamos el caucho de cámaras de autos y bicicletas, reutilizando un material en desuso, transformándolo en un recurso de diseño.","criteria":["a-pedido","produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico"],"genders":["women"],"productTypes":["vestimenta","bolsos-y-mochilas","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "bolsos-y-mochilas",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Manto",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/manto_abrigos/",
+  "pictures": [
+    "assets/79374454_167949181246902_5100031935207532584_n_bwip6x.jpg",
+    "assets/79957445_583130969141895_4974026764912498577_n_vxmtsy.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.mantoabrigos.com/es/",
+  "description": "En MANTO respetamos a los artesanos con los que trabajamos. Contribuimos a que estas comunidades no desaparezcan, marginadas y avasalladas por la industria, permitiéndoles permanecer en su lugar de origen, acercando las distancias, e integrando la cultura andina a las grandes ciudades. Diseñamos textiles y abrigos que puedan ser valorados por su atemporalidad y perdurabilidad, deseando que, como se solía hacer, se conviertan en prendas que sean heredadas de generación en generación. Nos preocupamos por el respeto y el cuidado del medio ambiente. Reciclamos el caucho de cámaras de autos y bicicletas, reutilizando un material en desuso, transformándolo en un recurso de diseño.",
+  "criteria": [
+    "a-pedido",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

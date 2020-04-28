@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Therapy Recycle and Exorcise","website":"https://www.therapy-berlin.com","instagram":"https://www.instagram.com/poli_aguirre/","facebook":"","description":"tHERAPY Recycle and Exorcise es un proyecto de moda suprarreciclada sostenible y alternativo, sin género, sin temporada y sin tendencias con sede en Berlín, Alemania y Córdoba, Argentina, creado en 2012 por dos hermanas separadas por el Océano Atlántico y unidas por Esta pasión, Paula y Mariángeles Aguirre.","criteria":["renta","supra-reciclado-upcycling","vegano"],"genders":["women","unisex"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Therapy Recycle and Exorcise",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/poli_aguirre/",
+  "pictures": [
+    "assets/PORTADA_LOGO_IMAGEN_2_-_Mariangeles_Aguirre_ts1rrb.jpg",
+    "assets/91544068_420984852099097_8828289035927876144_n_j0ithv.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.therapy-berlin.com",
+  "description": "tHERAPY Recycle and Exorcise es un proyecto de moda suprarreciclada sostenible y alternativo, sin género, sin temporada y sin tendencias con sede en Berlín, Alemania y Córdoba, Argentina, creado en 2012 por dos hermanas separadas por el Océano Atlántico y unidas por Esta pasión, Paula y Mariángeles Aguirre.",
+  "criteria": [
+    "renta",
+    "supra-reciclado-upcycling",
+    "vegano"
+  ]
+}

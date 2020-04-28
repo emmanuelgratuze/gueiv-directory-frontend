@@ -1,1 +1,36 @@
-{"GOTS":"","Empresa B":"X","OKTEX":"X","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Get Wild","website":"https://www.getwild.com.ar","instagram":"https://www.instagram.com/getwildar/?hl=es","facebook":"","description":"Hacemos Indumentaria con la fibra natural de bamboo. Colaboramos activamente con el crecimiento de una tendencia de moda ética: Utilizando un recurso ecológico y sostenible para la fabricación de productos textiles, desarrollando prácticas de comercio justo y asumiendo el compromiso social de mejorar la calidad de vida de las personas. Contamos con Certificación Ecológica Sello Bioproducto Argentino y el respaldo de CAME (Confederación Argentina de la Mediana Empresa) quienes auditaron nuestro proceso ecológico de producción.","criteria":["materiales-organicos","produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico","empoderamiento-de-la-mujer","vegano"],"genders":["women","men","children"],"productTypes":["ropa-deportiva","basicos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "ropa-deportiva",
+    "basicos"
+  ],
+  "OKTEX": "X",
+  "Empresa B": "X",
+  "name": "Get Wild",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/getwildar/?hl=es",
+  "pictures": [
+    "assets/GETWILD7016_-_Agostina_Trovato_mhxtgj.jpg",
+    "assets/MONO_FPD2_-_Agostina_Trovato_gwho0l.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.getwild.com.ar",
+  "description": "Hacemos Indumentaria con la fibra natural de bamboo. Colaboramos activamente con el crecimiento de una tendencia de moda ética: Utilizando un recurso ecológico y sostenible para la fabricación de productos textiles, desarrollando prácticas de comercio justo y asumiendo el compromiso social de mejorar la calidad de vida de las personas. Contamos con Certificación Ecológica Sello Bioproducto Argentino y el respaldo de CAME (Confederación Argentina de la Mediana Empresa) quienes auditaron nuestro proceso ecológico de producción.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "vegano"
+  ]
+}

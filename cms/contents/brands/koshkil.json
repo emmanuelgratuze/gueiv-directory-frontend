@@ -1,1 +1,29 @@
-{"GOTS":"X","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Koshkil","website":"http://www.koshkil.com.ar","instagram":"https://www.instagram.com/koshkil/","facebook":"","description":"Indumentaria & Accesorios 100% Lana merino extra-fine orgánica. Nuestros productos están realizados bajo estrictas normas que aseguran que la materia prima provenga de establecimientos que respetan los derechos de los animales y cuidan el medio ambiente. Promovemos un cambio cultural con base en la importancia dada a la capacitación de nuestros recursos humanos, extensivo a la comunidad toda, permitiendo la participación en toda la cadena de valor por la que atraviesa nuestro producto final.","criteria":["materiales-organicos"],"genders":["women","men"],"productTypes":["vestimenta","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "X",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Koshkil",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/koshkil/",
+  "pictures": [
+    "assets/top1_pgiirb.jpg",
+    "assets/sweater_atzara1_pict_iquhc3.jpg"
+  ],
+  "country": "argentina",
+  "website": "http://www.koshkil.com.ar",
+  "description": "Indumentaria & Accesorios 100% Lana merino extra-fine orgánica. Nuestros productos están realizados bajo estrictas normas que aseguran que la materia prima provenga de establecimientos que respetan los derechos de los animales y cuidan el medio ambiente. Promovemos un cambio cultural con base en la importancia dada a la capacitación de nuestros recursos humanos, extensivo a la comunidad toda, permitiendo la participación en toda la cadena de valor por la que atraviesa nuestro producto final.",
+  "criteria": [
+    "materiales-organicos"
+  ]
+}

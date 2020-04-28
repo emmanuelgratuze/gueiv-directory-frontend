@@ -1,1 +1,26 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Juan Perez","website":"https://www.juanperez.com.ar","instagram":"","facebook":"https://www.facebook.com/juanperezvintage/","description":"El vintage más grande de Argentina. Compra y vende ropa y arte.","criteria":["vintage-y-segunda-mano"],"genders":["women","men"],"productTypes":[]}
+{
+  "facebook": "https://www.facebook.com/juanperezvintage/",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Juan Perez",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "",
+  "pictures": [
+    "assets/96fee309-97bc-4e15-a284-e78b9d60e84f_JPG_iwkoyx.jpg",
+    "assets/Screenshot_2020-01-15_at_17.30.27_lsdbeo.png"
+  ],
+  "country": "argentina",
+  "website": "https://www.juanperez.com.ar",
+  "description": "El vintage más grande de Argentina. Compra y vende ropa y arte.",
+  "criteria": [
+    "vintage-y-segunda-mano"
+  ]
+}

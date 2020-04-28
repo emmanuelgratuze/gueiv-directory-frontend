@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Carla Andrea","website":"https://linktr.ee/carlaandrea___","instagram":"https://www.instagram.com/carlaandrea___/","facebook":"","description":"CARLA ANDREA es un proyecto artístico que se desarrolla dentro de las disciplinas de diseño y formación de acabados textiles sostenibles. Su trabajo se aborda desde una perspectiva ética y responsable con el medio ambiente revalorizando las técnicas de trabajo artesanal en contraste con la normatividad del mundo de la moda.","criteria":["fibras-naturales","materiales-reciclados"],"genders":["women","men","unisex"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Carla Andrea",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/carlaandrea___/",
+  "pictures": [
+    "assets/2020-81-c86c03574c51ea05f615722727158588-1024-1024_qdlkri.jpg",
+    "assets/2020-211-289543c7c46e0d061e15722867190432-1024-1024_cec1hy.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://linktr.ee/carlaandrea___",
+  "description": "CARLA ANDREA es un proyecto artístico que se desarrolla dentro de las disciplinas de diseño y formación de acabados textiles sostenibles. Su trabajo se aborda desde una perspectiva ética y responsable con el medio ambiente revalorizando las técnicas de trabajo artesanal en contraste con la normatividad del mundo de la moda.",
+  "criteria": [
+    "fibras-naturales",
+    "materiales-reciclados"
+  ]
+}

@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Xinca","website":"http://www.xinca.com.ar/web/","instagram":"https://www.instagram.com/xinca_eco_shoes/","facebook":"","description":"Queremos ser algo más que una marca de zapatillas. Buscamos hacer negocios de una forma diferente. Sin traicionar nuestros valores y disfrutar mientras hacemos lo que más nos gusta. Las personas nos importan y creemos que nuestra empresa puede ser espacio de transformación social. Estamos creando un futuro donde el problema de la basura se convierta en integración social.","criteria":["materiales-reciclados","produccion-local","integracion-social","comercio-etico"],"genders":["men"],"productTypes":["complementos","calzado"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Xinca",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/xinca_eco_shoes/",
+  "pictures": [
+    "assets/14026699_1670598766494135_1896087676_n_diamiz.jpg",
+    "assets/39957930_353156378559036_6431538183224913777_n_hzyne4.jpg"
+  ],
+  "country": "argentina",
+  "website": "http://www.xinca.com.ar/web/",
+  "description": "Queremos ser algo más que una marca de zapatillas. Buscamos hacer negocios de una forma diferente. Sin traicionar nuestros valores y disfrutar mientras hacemos lo que más nos gusta. Las personas nos importan y creemos que nuestra empresa puede ser espacio de transformación social. Estamos creando un futuro donde el problema de la basura se convierta en integración social.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"FlanMixto*","website":"https://flanmixto.com","instagram":"https://www.instagram.com/holaflanmixto/","facebook":"","description":"FlanMixto llega para  resignificar la idea de un producto argentino, autóctono y federal: El poncho.\r\nEl sueño de  lograr un círculo virtuoso entre la moda, el arte, la cultura y la sociedad de la cual somos parte.\r\nLa propuesta es: ponchos artesanales confeccionados en Santiago del Estero por tejedoras locales , que luego llegan a la ciudad y son customizados con camperas vintage para lograr un producto urbano y actual.\r\nEl resultado es un producto único, que nace de la fusión entre el campo y la ciudad, un producto que no solo lleva este ítem argentino a la vanguardia, sino que además busca demostrar que el todo es más que la suma de las partes.","criteria":["supra-reciclado-upcycling","produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico"],"genders":["women","men","unisex"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Flan Mixto",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/holaflanmixto/",
+  "pictures": [
+    "assets/60706564_372106416763905_6525659459830465147_n_cnus7b.jpg",
+    "assets/69475189_2375054289269412_502208425244203987_n_jvlsif.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://flanmixto.com",
+  "description": "FlanMixto llega para  resignificar la idea de un producto argentino, autóctono y federal: El poncho.\r\nEl sueño de  lograr un círculo virtuoso entre la moda, el arte, la cultura y la sociedad de la cual somos parte.\r\nLa propuesta es: ponchos artesanales confeccionados en Santiago del Estero por tejedoras locales , que luego llegan a la ciudad y son customizados con camperas vintage para lograr un producto urbano y actual.\r\nEl resultado es un producto único, que nace de la fusión entre el campo y la ciudad, un producto que no solo lleva este ítem argentino a la vanguardia, sino que además busca demostrar que el todo es más que la suma de las partes.",
+  "criteria": [
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

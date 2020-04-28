@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"argentina","name":"Chain","website":"https://chain.com.ar","instagram":"http://instagram.com/chain_sustainable","facebook":"","description":"CHAIN ​​es una marca de moda con sede en Buenos Aires, Argentina. Comprometidos con el medio ambiente, sus diseños están hechos a mano en su pequeño estudio con telas locales en bruto y tintes orgánicos. Los patrones de cero desperdicio, diseños sin género y la producción sostenible hacen que su ropa pase la prueba del tiempo.","criteria":["materiales-organicos","produccion-local","manejo-de-residuos","tintes-naturales"],"genders":["women","men","unisex"],"productTypes":["vestimenta","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Chain",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "http://instagram.com/chain_sustainable",
+  "pictures": [
+    "assets/lucia-chain-29_pbjuxy.jpg",
+    "assets/lucia-chain-61_lff7ta.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://chain.com.ar",
+  "description": "CHAIN ​​es una marca de moda con sede en Buenos Aires, Argentina. Comprometidos con el medio ambiente, sus diseños están hechos a mano en su pequeño estudio con telas locales en bruto y tintes orgánicos. Los patrones de cero desperdicio, diseños sin género y la producción sostenible hacen que su ropa pase la prueba del tiempo.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "manejo-de-residuos",
+    "tintes-naturales"
+  ]
+}

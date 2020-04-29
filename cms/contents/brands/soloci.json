@@ -7,7 +7,7 @@
   ],
   "OKTEX": "",
   "Empresa B": "",
-  "name": "Soloci",
+  "name": "SoloCi",
   "Fair Trade Certified": "",
   "OCS100": "",
   "genders": [
@@ -15,8 +15,8 @@
   ],
   "instagram": "https://www.instagram.com/soloci/",
   "pictures": [
-    "assets/Abrigo_cuadros-01_-_Carolina_Izquierdo_bbfqy9.png",
-    "assets/Vestido_mary_2-01_-_Carolina_Izquierdo_tp7j40.png"
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587567366/COLOMBIA%202/SOLO%20CI/Abrigo_cuadros-01_-_Carolina_Izquierdo_bbfqy9.png",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587567365/COLOMBIA%202/SOLO%20CI/Vestido_mary_2-01_-_Carolina_Izquierdo_tp7j40.png"
   ],
   "country": "colombia",
   "website": "",

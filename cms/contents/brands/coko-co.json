@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Cöko & Co","website":"https://www.coko.com.mx","instagram":"https://www.instagram.com/coko.organico/","facebook":"","description":"Cöko & co. es una empresa mexicana que busca crear un balance entre la ropa que utilizamos y el bienestar de la Tierra.Como padres, queremos darle lo mejor a nuestros hijos y como individuos procuramos llevar una vida saludable. Sin embargo, la mayor parte de los productos en el mercado contienen químicos que dañan a nuestro cuerpo y a la naturaleza. La mercancía que nosotros ofrecemos es orgánica, sustentable, ecológica y accesible económicamente.","criteria":["materiales-organicos","produccion-local","integracion-social","comercio-etico"],"genders":["children"],"productTypes":["vestimenta","complementos","telas"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos",
+    "telas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Cöko & Co",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/coko.organico/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330741/MEXICO1/C%C3%96KO%20_%20CO/70380037_3055450614680870_4326319015367540736_o_brh2cj.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330741/MEXICO1/C%C3%96KO%20_%20CO/70823782_3070644646494800_4600058206222286848_o_ehlinw.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.coko.com.mx",
+  "description": "Cöko & co. es una empresa mexicana que busca crear un balance entre la ropa que utilizamos y el bienestar de la Tierra.Como padres, queremos darle lo mejor a nuestros hijos y como individuos procuramos llevar una vida saludable. Sin embargo, la mayor parte de los productos en el mercado contienen químicos que dañan a nuestro cuerpo y a la naturaleza. La mercancía que nosotros ofrecemos es orgánica, sustentable, ecológica y accesible económicamente.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

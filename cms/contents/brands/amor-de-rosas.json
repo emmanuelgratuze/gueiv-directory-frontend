@@ -1,1 +1,36 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Amor de Rosas","website":"https://www.amorandrosas.com/","instagram":"https://www.instagram.com/amorandrosas/","facebook":"","description":"Amor & Rosas es una marca de moda ética que combina diseños modernos con toques tradicionales usando técnicas de bordado mexicano. Nuestras piezas muestran la autenticidad de la cultura mexicana de una manera actualizada y en tendencia. Nuestra prioridad es ofrecer piezas de la más alta calidad.","criteria":["materiales-organicos","materiales-reciclados","produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico","packaging-sostenible","manejo-de-residuos"],"genders":["women","men"],"productTypes":["vestimenta","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Amor de Rosas",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/amorandrosas/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330736/MEXICO1/AMOR%20DE%20ROSAS/Amor___Rosas_FW_19_Editorials__Q4A3670-Edit-1_frxmtk.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330732/MEXICO1/AMOR%20DE%20ROSAS/Amor___Rosas_FW_19_Editorials__Q4A2575-Edit-1_lkqwui.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.amorandrosas.com/",
+  "description": "Amor & Rosas es una marca de moda ética que combina diseños modernos con toques tradicionales usando técnicas de bordado mexicano. Nuestras piezas muestran la autenticidad de la cultura mexicana de una manera actualizada y en tendencia. Nuestra prioridad es ofrecer piezas de la más alta calidad.",
+  "criteria": [
+    "materiales-organicos",
+    "materiales-reciclados",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "packaging-sostenible",
+    "manejo-de-residuos"
+  ]
+}

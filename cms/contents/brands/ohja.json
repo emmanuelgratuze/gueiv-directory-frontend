@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Ohja","website":"https://www.ohja.com.mx","instagram":"https://www.instagram.com/ohjaofficial/","facebook":"","description":"Nuestro compromiso comenzó con una idea clara: \"Moda con un propósito\" Desde la creación de nuestra primera colección de bolsos, nos hemos dedicado a ser un medio de conciencia utilizando materiales alternativos al cuero, para crear piezas de calidad y diseños impecables.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social","manejo-de-residuos"],"genders":["women","men","unisex"],"productTypes":["bolsos-y-mochilas","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ohja",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/ohjaofficial/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330761/MEXICO1/OHJA/edicion_galeria_wildf_0001_Group_1_1_-_Public_Relations_cavfj5.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330761/MEXICO1/OHJA/edicion_galeria_wildf_0000_Grupo_6_-_Public_Relations_yhjwvt.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.ohja.com.mx",
+  "description": "Nuestro compromiso comenzó con una idea clara: \"Moda con un propósito\" Desde la creación de nuestra primera colección de bolsos, nos hemos dedicado a ser un medio de conciencia utilizando materiales alternativos al cuero, para crear piezas de calidad y diseños impecables.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "manejo-de-residuos"
+  ]
+}

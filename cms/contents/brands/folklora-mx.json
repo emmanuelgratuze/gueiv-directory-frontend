@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Folklora MX","website":"","instagram":"https://www.instagram.com/folkloramx/","facebook":"https://www.facebook.com/FolkloraMX/","description":"Marca mexicana que fusiona técnicas textiles ancestrales con diseños contemporáneos. 100 % hecho a mano","criteria":["produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "https://www.facebook.com/FolkloraMX/",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Folklora MX",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/folkloramx/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330742/MEXICO1/FOLKLORA/74788290_4168888819800637_4974662290251972608_o_rpbomy.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330742/MEXICO1/FOLKLORA/84350291_4356201271069390_8461885639627898880_o-1_brtayt.jpg"
+  ],
+  "country": "mexico",
+  "website": "",
+  "description": "Marca mexicana que fusiona técnicas textiles ancestrales con diseños contemporáneos. 100 % hecho a mano",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

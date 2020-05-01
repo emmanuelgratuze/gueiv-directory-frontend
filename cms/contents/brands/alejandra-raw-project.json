@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Alejandra Raw Project","website":"https://alejandraraw.com/","instagram":"https://www.instagram.com/alejandraraw/","facebook":"","description":"Somos un proyecto de diseño de moda sostenible, inspirado en nuestro entorno y nuestras raíces. Siempre en busca de nuevos materiales para crear moda transformadora, que emana un mensaje de respeto y conservación. Utilizamos y diseñamos textiles que son una expresión cultural, utilizando técnicas de nuestros orígenes, como el telar de pedales, tejidos a mano y textiles antiguos. También utilizamos piezas de materiales reciclados para evitar el desperdicio.","criteria":["a-pedido","produccion-local"],"genders":["women","men","children","unisex"],"productTypes":["vestimenta","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Alejandra Raw Project",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/alejandraraw/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330731/MEXICO1/ALEJANDRA%20RAW%20PROJECT/RAW-S20T-C_1_cd9cef5d-7069-4b78-ad97-005931764ab8_900x_ib5a54.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330729/MEXICO1/ALEJANDRA%20RAW%20PROJECT/RAW-S10BL-C_1_900x_fjzk4m.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://alejandraraw.com/",
+  "description": "Somos un proyecto de diseño de moda sostenible, inspirado en nuestro entorno y nuestras raíces. Siempre en busca de nuevos materiales para crear moda transformadora, que emana un mensaje de respeto y conservación. Utilizamos y diseñamos textiles que son una expresión cultural, utilizando técnicas de nuestros orígenes, como el telar de pedales, tejidos a mano y textiles antiguos. También utilizamos piezas de materiales reciclados para evitar el desperdicio.",
+  "criteria": [
+    "a-pedido",
+    "produccion-local"
+  ]
+}

@@ -1,1 +1,23 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Vintage Hoe","website":"","instagram":"https://www.instagram.com/vintagehoestore/","facebook":"https://www.facebook.com/vintagehoestore","description":"Tienda Vintage para Hombre, Mujer y Hogar. CDMX","criteria":["vintage-y-segunda-mano"],"genders":[],"productTypes":[]}
+{
+  "facebook": "https://www.facebook.com/vintagehoestore",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Vintage Hoe",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [],
+  "instagram": "https://www.instagram.com/vintagehoestore/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330768/MEXICO1/VINTAGE%20HOE/85117162_2609438492611435_5837474335581684469_n_zusnpz.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330770/MEXICO1/VINTAGE%20HOE/88244790_1074275402927297_198463754949284136_n_betqod.jpg"
+  ],
+  "country": "mexico",
+  "website": "",
+  "description": "Tienda Vintage para Hombre, Mujer y Hogar. CDMX",
+  "criteria": [
+    "vintage-y-segunda-mano"
+  ]
+}

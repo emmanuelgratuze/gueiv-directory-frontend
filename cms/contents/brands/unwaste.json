@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Unwaste","website":"https://www.unwaste.mx","instagram":"http://www.instagram.com/unwaste.brand","facebook":"","description":"UnWaste es una marca de productos de piel reciclada, la cual es tomada de los sobrantes de fábricas que de otra forma serían desperdiciados.","criteria":["supra-reciclado-upcycling","produccion-local"],"genders":["women","men","unisex"],"productTypes":["bolsos-y-mochilas","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Unwaste",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "http://www.instagram.com/unwaste.brand",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330768/MEXICO1/UNWASTE/70245201_944162489250714_6360549126046753115_n_mlssi6.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330768/MEXICO1/UNWASTE/72343392_155650015683967_6049600431258522240_n_wwh8sv.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.unwaste.mx",
+  "description": "UnWaste es una marca de productos de piel reciclada, la cual es tomada de los sobrantes de fábricas que de otra forma serían desperdiciados.",
+  "criteria": [
+    "supra-reciclado-upcycling",
+    "produccion-local"
+  ]
+}

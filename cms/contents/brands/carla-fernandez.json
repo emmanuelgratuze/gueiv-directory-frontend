@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Carla Fernandez","website":"http://carlafernandez.com/es/","instagram":"https://www.instagram.com/carlafernandezmx/","facebook":"","description":"Carla Fernández es una marca de moda basada en la Ciudad de México, inspirada por la riqueza geométrica y textil de México. La marca ha ganado reconocimiento internacional por su acercamiento extraordinario a preservar la rica herencia cultural de las comunidades indígenas de México, transformándola en prendas de vestir, textiles y accesorios contemporáneos. La visión de la marca con respecto a los métodos manuales comprueba que la moda ética puede ser innovadora, avant-garde y progresista.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social"],"genders":["women","men","unisex"],"productTypes":["vestimenta","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Carla Fernandez",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/carlafernandezmx/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330729/MEXICO1/CARLA%20FERNANDEZ/CAMISASERI1-768x1024_sgubvn.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330731/MEXICO1/CARLA%20FERNANDEZ/Pantalonpapabuco1-768x1024_edv5d3.jpg"
+  ],
+  "country": "mexico",
+  "website": "http://carlafernandez.com/es/",
+  "description": "Carla Fernández es una marca de moda basada en la Ciudad de México, inspirada por la riqueza geométrica y textil de México. La marca ha ganado reconocimiento internacional por su acercamiento extraordinario a preservar la rica herencia cultural de las comunidades indígenas de México, transformándola en prendas de vestir, textiles y accesorios contemporáneos. La visión de la marca con respecto a los métodos manuales comprueba que la moda ética puede ser innovadora, avant-garde y progresista.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

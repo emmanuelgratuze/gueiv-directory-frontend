@@ -1,1 +1,34 @@
-{"GOTS":"X","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Someone Somewhere","website":"https://someonesomewhere.mx","instagram":"https://www.instagram.com/someone.somewhere/","facebook":"","description":"Someone Somewhere colabora con comunidades que comparten la filosofía del “buen vivir”, la cual implica existir en armonía con la comunidad, la familia, la naturaleza y el universo. El buen vivir “describe una manera de actuar que privilegia la comunidad, el equilibrio ecológico y la sensibilidad cultural”. Nuestro objetivo es comunicar este espíritu en todo lo que creamos.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico"],"genders":["women","men"],"productTypes":["vestimenta","basicos","bolsos-y-mochilas","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "X",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "basicos",
+    "bolsos-y-mochilas",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Someone Somewhere",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/someone.somewhere/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330761/MEXICO1/SOMEONE%20SOMEWHERE/76819587_597558954340202_105944861327321120_n_peigc5.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330762/MEXICO1/SOMEONE%20SOMEWHERE/75281145_155824262322947_6998133000012419665_n_ltecj3.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://someonesomewhere.mx",
+  "description": "Someone Somewhere colabora con comunidades que comparten la filosofía del “buen vivir”, la cual implica existir en armonía con la comunidad, la familia, la naturaleza y el universo. El buen vivir “describe una manera de actuar que privilegia la comunidad, el equilibrio ecológico y la sensibilidad cultural”. Nuestro objetivo es comunicar este espíritu en todo lo que creamos.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

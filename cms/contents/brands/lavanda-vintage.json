@@ -1,1 +1,23 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Lavanda Vintage","website":"","instagram":"https://www.instagram.com/lavandavintage/?hl=fr","facebook":"https://www.facebook.com/lavandavintage/","description":"Venta y renta de ropa vintage y second hand","criteria":["vintage-y-segunda-mano"],"genders":[],"productTypes":[]}
+{
+  "facebook": "https://www.facebook.com/lavandavintage/",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Lavanda Vintage",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [],
+  "instagram": "https://www.instagram.com/lavandavintage/?hl=fr",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330758/MEXICO1/LAVANDA%20VINTAGE/67966850_977906522572913_2285624846501088869_n_dt74az.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330755/MEXICO1/LAVANDA%20VINTAGE/64386472_187929232201132_1979989272294612983_n_hbu4nm.jpg"
+  ],
+  "country": "mexico",
+  "website": "",
+  "description": "Venta y renta de ropa vintage y second hand",
+  "criteria": [
+    "vintage-y-segunda-mano"
+  ]
+}

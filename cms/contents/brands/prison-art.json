@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"mexico","name":"Prison Art","website":"https://www.prisonart.com.mx","instagram":"https://www.instagram.com/prisonartofficial/","facebook":"","description":"El objetivo de nuestro proyecto es apoyar, rehabilitar y reinsertar a los reclusos mexicanos en la sociedad. Todas las piezas son únicas.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos","integracion-social"],"genders":["women","men"],"productTypes":["bolsos-y-mochilas","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Prison Art",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/prisonartofficial/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330761/MEXICO1/PRISON%20ART/80647946_162364388356494_3547588569042321356_n_muphjq.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330761/MEXICO1/PRISON%20ART/73512644_193076858399517_2902900419413643019_n_nm9tkj.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.prisonart.com.mx",
+  "description": "El objetivo de nuestro proyecto es apoyar, rehabilitar y reinsertar a los reclusos mexicanos en la sociedad. Todas las piezas son únicas.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

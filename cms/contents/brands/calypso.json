@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"X","RSW (Responsible Wool Standard)":"","country":"chile","name":"Calypso","website":"https://calypsochile.com","instagram":"https://www.instagram.com/calypsochile/","facebook":"","description":"Calypso Chile fue creado por Marcela Cofre y su familia en 1996 con los diseños inspirados en una combinación de tradiciones y naturaleza chilenas. Usamos nuestro trabajo manual generando ingresos para mantener a nuestra familia y a las familias que son nuestros colaboradores y nuestro taller como un movimiento de comercio justo, promoviendo la conciencia del respeto social y la protección del medio ambiente.","criteria":["materiales-reciclados","produccion-local","comercio-etico"],"genders":["women"],"productTypes":["joyeria","decoracion-y-hogar"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Calypso",
+  "Fair Trade Certified": "X",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/calypsochile/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603793/CHILE/CALYPSO/calypso-50_7353f811-5feb-4a9b-b213-0cf04db05a74_grande_krw2ek.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603793/CHILE/CALYPSO/Pink_Dhalia_side_grande_xhnlfx.jpg"
+  ],
+  "country": "chile",
+  "website": "https://calypsochile.com",
+  "description": "Calypso Chile fue creado por Marcela Cofre y su familia en 1996 con los diseños inspirados en una combinación de tradiciones y naturaleza chilenas. Usamos nuestro trabajo manual generando ingresos para mantener a nuestra familia y a las familias que son nuestros colaboradores y nuestro taller como un movimiento de comercio justo, promoviendo la conciencia del respeto social y la protección del medio ambiente.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "comercio-etico"
+  ]
+}

@@ -19,6 +19,7 @@ import { setBrandsColors } from 'store/interface/actions'
 import useFilteredBrands from 'hooks/useFilteredBrands'
 import useFilters from 'hooks/userFilters'
 
+const ItemWrapper = motion.custom(Box)
 
 type HomeScreenProps = {}
 
@@ -62,6 +63,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
           height={brands.size !== 0 ? { min: '100vh' } : undefined}
           background={{ color: 'white' }}
           fill={brands.size === 0}
+          pad="0.5rem"
         >
           <AnimatePresence>
             <Box direction="row" wrap>
@@ -90,19 +92,26 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                   >
                     <Button plain>
                       {({ hover }: { hover: boolean }) => (
-                        <motion.div
+                        <ItemWrapper
                           initial={{ opacity: 0, transform: 'scale3d(0.98, 0.98, 1)' }}
                           animate={{ opacity: 1, transform: 'scale3d(1, 1, 1)' }}
                           exit={{ opacity: 0, transform: 'scale3d(0.98, 0.98, 1)' }}
                           transition={{ duration: 0.6 }}
                           style={{ zIndex: hover ? 2 : 1 }}
+                          pad="xsmall"
                         >
-                          <BrandPreview
-                            key={brand.get('id')}
-                            brand={brand}
-                            color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
-                          />
-                        </motion.div>
+                          <Box
+                            fill
+                            round="0.5rem"
+                            overflow="hidden"
+                          >
+                            <BrandPreview
+                              key={brand.get('id')}
+                              brand={brand}
+                              color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
+                            />
+                          </Box>
+                        </ItemWrapper>
                       )}
                     </Button>
                   </Box>

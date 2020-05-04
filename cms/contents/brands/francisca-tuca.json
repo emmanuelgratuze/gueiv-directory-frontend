@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Francisca Tuca","website":"https://franciscatuca.com","instagram":"https://www.instagram.com/franciscatuca/","facebook":"","description":"Colecciones pret a porter a baja escala y de edición limitada. Diseñadas para tener permanencia en el tiempo, son prendas atemporales tanto en diseño como en calidad. Fabricadas en Chile, con la intención de rescatar el oficio, poner en valor los procesos hecho a mano, e incentivar la producción local de una manera consciente.","criteria":["fibras-naturales","produccion-local"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Francisca Tuca",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/franciscatuca/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603801/CHILE/FRANCISCA%20TUCA/enterito-lu4_fjatk2.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603802/CHILE/FRANCISCA%20TUCA/camisa-wes-lu-4-1-3_av5odn.jpg"
+  ],
+  "country": "chile",
+  "website": "https://franciscatuca.com",
+  "description": "Colecciones pret a porter a baja escala y de edición limitada. Diseñadas para tener permanencia en el tiempo, son prendas atemporales tanto en diseño como en calidad. Fabricadas en Chile, con la intención de rescatar el oficio, poner en valor los procesos hecho a mano, e incentivar la producción local de una manera consciente.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local"
+  ]
+}

@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Ente Upcycling","website":"https://www.facebook.com/Ente.Upcycling/?__tn__=%2Cd%2CP-R&eid=ARALzCtO-CoIN04UKNPV7qkRma9KpUyJb8hzhn3e9s8LjTJWzVYlyGyj2DEiICt7_p28hfg2YitDSx7V","instagram":"https://www.instagram.com/ente.upcycling/","facebook":"","description":"Omnigenero - Atemporal - Moda Ética","criteria":["supra-reciclado-upcycling"],"genders":["women","men","unisex"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ente Upcycling",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/ente.upcycling/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603796/CHILE/ENTE%20UPCYCLING/74941123_191922425315977_8254204527207390927_n_fuw3ql.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603795/CHILE/ENTE%20UPCYCLING/78709670_150899306203966_5000169315867266384_n_ecqt4o.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.facebook.com/Ente.Upcycling/?__tn__=%2Cd%2CP-R&eid=ARALzCtO-CoIN04UKNPV7qkRma9KpUyJb8hzhn3e9s8LjTJWzVYlyGyj2DEiICt7_p28hfg2YitDSx7V",
+  "description": "Omnigenero - Atemporal - Moda Ética",
+  "criteria": [
+    "supra-reciclado-upcycling"
+  ]
+}

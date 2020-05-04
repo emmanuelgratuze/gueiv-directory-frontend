@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Endemica","website":"https://www.endemicatextilesnaturales.cl","instagram":"https://www.instagram.com/endemica_textilesnaturales/","facebook":"","description":"Somos mujeres unidas que creamos desde lo local, inspiradas en la naturaleza chilena y lo que ella nos entrega: colores, fibras y materiales. Prendas tejidas a mano con fibras y tintes naturales.","criteria":["fibras-naturales","produccion-local","tintes-naturales"],"genders":["women","children"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Endemica",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/endemica_textilesnaturales/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603795/CHILE/ENDEMICA/59911421_717337262002312_7570806848858125047_n_oko2xv.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603795/CHILE/ENDEMICA/67353258_222805855360420_5826652162814070503_n_v9kkd7.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.endemicatextilesnaturales.cl",
+  "description": "Somos mujeres unidas que creamos desde lo local, inspiradas en la naturaleza chilena y lo que ella nos entrega: colores, fibras y materiales. Prendas tejidas a mano con fibras y tintes naturales.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "tintes-naturales"
+  ]
+}

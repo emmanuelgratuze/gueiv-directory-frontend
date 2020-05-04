@@ -1,1 +1,27 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Recloset","website":"https://www.recloset.cl","instagram":"https://www.instagram.com/recloset.cl/","facebook":"","description":"Somos una biblioteca de ropa, con libre acceso a una colección de ropa y accesorios con curaduría de @mari.pattaro. Planes mensuales con visitas ilimitadas.","criteria":["renta"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Recloset",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/recloset.cl/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603963/CHILE/RECLOSET/RECLOSET-26_-_mariana_pattaro_guidio_j2w1vr.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603960/CHILE/RECLOSET/RECLOSET-42_-_mariana_pattaro_guidio_g9ksbk.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.recloset.cl",
+  "description": "Somos una biblioteca de ropa, con libre acceso a una colección de ropa y accesorios con curaduría de @mari.pattaro. Planes mensuales con visitas ilimitadas.",
+  "criteria": [
+    "renta"
+  ]
+}

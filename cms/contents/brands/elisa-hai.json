@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Elisa Hai","website":"http://www.elisahai.com","instagram":"https://www.instagram.com/Haielisa/","facebook":"","description":"Con sobras vintage creamos tesoros hechos a mano.","criteria":["vintage-y-segunda-mano","materiales-reciclados"],"genders":["women"],"productTypes":["joyeria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Elisa Hai",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/Haielisa/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603803/CHILE/HAIELISA/82454750_289819225313117_5682927687001486432_n_osrrkd.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603802/CHILE/HAIELISA/67413729_918605355172486_9145981350526202648_n_lqkakf.jpg"
+  ],
+  "country": "chile",
+  "website": "http://www.elisahai.com",
+  "description": "Con sobras vintage creamos tesoros hechos a mano.",
+  "criteria": [
+    "vintage-y-segunda-mano",
+    "materiales-reciclados"
+  ]
+}

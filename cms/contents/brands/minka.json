@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Minka","website":"https://causaminka.cl","instagram":"https://www.instagram.com/minkacl/","facebook":"","description":"Minka, se mueve por una gran causa, empoderar a mujeres artesanas a través del empleo. Todos nuestros productos son hechos por mujeres en el Centro Penitenciario de San Joaquín y de la comuna de Estación Central, que son capacitadas constantemente en técnicas de reutilización textil, nociones básicas de diseño y herramientas de auto emprendimiento.","criteria":["materiales-reciclados","produccion-local","integracion-social","comercio-etico","empoderamiento-de-la-mujer","manejo-de-residuos"],"genders":["women"],"productTypes":["complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Minka",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/minkacl/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603804/CHILE/MINKA/44547622_180603199546713_520975167898738262_n_wg1tio.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603804/CHILE/MINKA/60380144_519073945294515_947181240898611111_n_anvqer.jpg"
+  ],
+  "country": "chile",
+  "website": "https://causaminka.cl",
+  "description": "Minka, se mueve por una gran causa, empoderar a mujeres artesanas a través del empleo. Todos nuestros productos son hechos por mujeres en el Centro Penitenciario de San Joaquín y de la comuna de Estación Central, que son capacitadas constantemente en técnicas de reutilización textil, nociones básicas de diseño y herramientas de auto emprendimiento.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "manejo-de-residuos"
+  ]
+}

@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Vera Sielfeld","website":"https://verasielfeld.com","instagram":"https://www.instagram.com/verasielfeld/","facebook":"","description":"Vera Sielfeld es una marca que diseña y produce accesorios y prendas de vestir para mujer, donde se unen la alta calidad de trabajo manual con diseño contemporáneo, enfocándose en líneas claras e innovativos detalles de color, composición y forma.","criteria":["materiales-reciclados","produccion-local"],"genders":["women"],"productTypes":["joyeria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Vera Sielfeld",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/verasielfeld/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603939/CHILE/VERA%20SIELDFELD/71734906_539083493580542_6725934422373874124_n_inpz9t.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603939/CHILE/VERA%20SIELDFELD/73250141_149419569676856_5066997363254818_n_mnx2bm.jpg"
+  ],
+  "country": "chile",
+  "website": "https://verasielfeld.com",
+  "description": "Vera Sielfeld es una marca que diseña y produce accesorios y prendas de vestir para mujer, donde se unen la alta calidad de trabajo manual con diseño contemporáneo, enfocándose en líneas claras e innovativos detalles de color, composición y forma.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local"
+  ]
+}

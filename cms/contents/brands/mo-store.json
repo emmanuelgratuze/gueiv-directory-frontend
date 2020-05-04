@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Mo Store","website":"https://mo-store.cl","instagram":"https://www.instagram.com/mostore/","facebook":"","description":"MO-Store es una marca de prendas de vestir y accesorios con un carácter urbano y contemporáneo, el proceso creativo surge tras una vivencia y observación, donde la fuente de inspiración es la geografía de Chile y la música, el resultado son colecciones con una impronta latinoamericana. Todas las prendas son elaboradas en Chile con materiales especialmente escogidos y de la mejor calidad bajo el concepto de edición limitada. Todos los productos son fabricados por distintos talleres nacionales respetando siempre la línea de comercio justo y aprovechando de la mejor manera los materiales para evitar remanentes.","criteria":["produccion-local","comercio-etico","manejo-de-residuos"],"genders":["women","men"],"productTypes":["vestimenta","basicos","bolsos-y-mochilas","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "basicos",
+    "bolsos-y-mochilas",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Mo Store",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/mostore/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603804/CHILE/MO%20STORE/H_18_0000_Layer_7_MO_store_MagdalenaOlazabal_Chile_Moda_fashion_masculina_Tendencia_trend_vanguardia_outfit_ropa_hechoenchile_marcanacional_dise_o_design_calidad_hombre_online_estilo_sty_qflrxh.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603804/CHILE/MO%20STORE/M_15_0000_Layer_7_MO_store_MagdalenaOlazabal_Chile_Moda_fashion_masculina_Tendencia_trend_vanguardia_outfit_ropa_hechoenchile_marcanacional_dise_o_design_calidad_hombre_online_estilo_styl_horgwv.jpg"
+  ],
+  "country": "chile",
+  "website": "https://mo-store.cl",
+  "description": "MO-Store es una marca de prendas de vestir y accesorios con un carácter urbano y contemporáneo, el proceso creativo surge tras una vivencia y observación, donde la fuente de inspiración es la geografía de Chile y la música, el resultado son colecciones con una impronta latinoamericana. Todas las prendas son elaboradas en Chile con materiales especialmente escogidos y de la mejor calidad bajo el concepto de edición limitada. Todos los productos son fabricados por distintos talleres nacionales respetando siempre la línea de comercio justo y aprovechando de la mejor manera los materiales para evitar remanentes.",
+  "criteria": [
+    "produccion-local",
+    "comercio-etico",
+    "manejo-de-residuos"
+  ]
+}

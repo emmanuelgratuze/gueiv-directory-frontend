@@ -1,1 +1,21 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Surorigen","website":"http://www.surorigen.cl","instagram":"https://www.instagram.com/surorigen/?hl=es","facebook":"","description":"Creamos prendas que contienen en cada una de sus fibras la sabiduría de los productores locales y el valor mágico de las tradiciones ancestrales.","criteria":[],"genders":[],"productTypes":[]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Surorigen",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [],
+  "instagram": "https://www.instagram.com/surorigen/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603961/CHILE/SURORIGEN/47474104_377082869731578_7526579857450905548_n_u9ltjk.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603961/CHILE/SURORIGEN/32121873_2146418682065379_2052435252940374016_n_sjdmcz.jpg"
+  ],
+  "country": "chile",
+  "website": "http://www.surorigen.cl",
+  "description": "Creamos prendas que contienen en cada una de sus fibras la sabiduría de los productores locales y el valor mágico de las tradiciones ancestrales.",
+  "criteria": []
+}

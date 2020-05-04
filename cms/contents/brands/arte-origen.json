@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Arte Origen","website":"http://www.arteorigen.com","instagram":"https://www.instagram.com/arteorigen/","facebook":"","description":"Revalorizamos el arte textil de distintas comunidades indígenas, rescatando las tradiciones a través del trabajo 100% hecho a mano uniendo el presente y el pasado. Diseñamos con textiles antiguos para entender su cosmovisión que se traspasan de generación en generación, de la madre a la hija , de la abuela a la nieta, vestimos la historia dando un sentido y respeto al diseño de autor.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos","integracion-social"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Arte Origen",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/arteorigen/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603793/CHILE/ARTE%20ORIGEN/Pura002_smq5u5.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603793/CHILE/ARTE%20ORIGEN/Milagros002_pajhij.jpg"
+  ],
+  "country": "chile",
+  "website": "http://www.arteorigen.com",
+  "description": "Revalorizamos el arte textil de distintas comunidades indígenas, rescatando las tradiciones a través del trabajo 100% hecho a mano uniendo el presente y el pasado. Diseñamos con textiles antiguos para entender su cosmovisión que se traspasan de generación en generación, de la madre a la hija , de la abuela a la nieta, vestimos la historia dando un sentido y respeto al diseño de autor.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

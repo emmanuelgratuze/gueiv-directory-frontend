@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"X","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Kruza","website":"https://kruza.eco","instagram":"https://www.instagram.com/kruza_bc/","facebook":"","description":"Zapatillas éticas & sustentables hechas en Chile a partir del reciclaje y la reutilización de materiales que son desechos para otras industrias. Nos basamos en el triple impacto y la economía circular para hacer nuestras zapatillas.","criteria":["materiales-organicos","materiales-reciclados","produccion-local","comercio-etico","manejo-de-residuos"],"genders":["women","men"],"productTypes":["calzado"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "X",
+  "name": "Kruza",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/kruza_bc/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603803/CHILE/KRUZA/RaiNR_-_Crist%C3%B3bal_Arancibia_jw4up1.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603802/CHILE/KRUZA/AnoukBD_-_Crist%C3%B3bal_Arancibia_npzuqg.jpg"
+  ],
+  "country": "chile",
+  "website": "https://kruza.eco",
+  "description": "Zapatillas éticas & sustentables hechas en Chile a partir del reciclaje y la reutilización de materiales que son desechos para otras industrias. Nos basamos en el triple impacto y la economía circular para hacer nuestras zapatillas.",
+  "criteria": [
+    "materiales-organicos",
+    "materiales-reciclados",
+    "produccion-local",
+    "comercio-etico",
+    "manejo-de-residuos"
+  ]
+}

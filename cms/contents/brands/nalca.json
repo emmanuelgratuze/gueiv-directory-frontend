@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"chile","name":"Nalca","website":"https://www.nalcazapatos.cl","instagram":"https://www.instagram.com/nalca_zapatos/?hl=es","facebook":"","description":"Este espacio colaborativo nace con la intención de generar instancias de interacción creativa que permitan fortalecer el sector de la indumentaria y el diseño local, en respuesta a la producción desmedida de la industria. Como Plataforma Comercial, el espacio da lugar marcas nacionales que, con propuestas innovadoras y disímiles entre sí, se alinean bajo la noción de moda consciente por medio de la manufactura local.","criteria":["produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["calzado"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Nalca",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/nalca_zapatos/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603805/CHILE/NALCA/84177565_3012027978842158_5231351425032073770_n_e9zn4a.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603805/CHILE/NALCA/74627682_580487462767176_486859494006907490_n_pdnpnv.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.nalcazapatos.cl",
+  "description": "Este espacio colaborativo nace con la intención de generar instancias de interacción creativa que permitan fortalecer el sector de la indumentaria y el diseño local, en respuesta a la producción desmedida de la industria. Como Plataforma Comercial, el espacio da lugar marcas nacionales que, con propuestas innovadoras y disímiles entre sí, se alinean bajo la noción de moda consciente por medio de la manufactura local.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"paraguay","name":"La P3rcha","website":"","instagram":"https://www.instagram.com/la_p3rcha/","facebook":"www.facebook.com/pages/la-p3rcha/677551182276900","description":"Un Renew Vintage transformado y customizado para los millenials de Hoy","criteria":["vintage-y-segunda-mano","supra-reciclado-upcycling"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "www.facebook.com/pages/la-p3rcha/677551182276900",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "La P3rcha",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/la_p3rcha/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588685864/PARAGUAY/LA%20P3RCHA/IMG_9450_-_majenta_con_jota_t6h3mb.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588685872/PARAGUAY/LA%20P3RCHA/IMG_9214_-_majenta_con_jota_bp1oy0.jpg"
+  ],
+  "country": "paraguay",
+  "website": "",
+  "description": "Un Renew Vintage transformado y customizado para los millenials de Hoy",
+  "criteria": [
+    "vintage-y-segunda-mano",
+    "supra-reciclado-upcycling"
+  ]
+}

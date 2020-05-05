@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"bolivia","name":"Zef","website":"","instagram":"https://www.instagram.com/zef.upcycling/","facebook":"https://www.facebook.com/zef.clothing","description":"Piezas únicas creadas a partir del upcycling de prendas recuperadas, textiles y materiales típicos de Bolivia.","criteria":["supra-reciclado-upcycling","produccion-local"],"genders":["women","men","unisex"],"productTypes":["vestimenta"]}
+{
+  "facebook": "https://www.facebook.com/zef.clothing",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Zef",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/zef.upcycling/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684186/BOLIVIA/ZEFF/48402728_1029818297204966_1155324925356015616_o_rum7rt.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684194/BOLIVIA/ZEFF/25446487_807940096059455_3628588097917187228_n_n8k3fd.jpg"
+  ],
+  "country": "bolivia",
+  "website": "",
+  "description": "Piezas únicas creadas a partir del upcycling de prendas recuperadas, textiles y materiales típicos de Bolivia.",
+  "criteria": [
+    "supra-reciclado-upcycling",
+    "produccion-local"
+  ]
+}

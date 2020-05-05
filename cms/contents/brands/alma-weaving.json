@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"salvador","name":"Alma weaving","website":"https://almaweaving.com","instagram":"https://www.instagram.com/almaweaving/","facebook":"","description":"Moda sostenible para un look excepcional.","criteria":["materiales-reciclados","supra-reciclado-upcycling","produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["bolsos-y-mochilas","joyeria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "joyeria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Alma weaving",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/almaweaving/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684627/EL%20SALVADOR%20/ALMA%20WEAVING/79092565_732558517147944_3356579016986329088_o_vet03q.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684626/EL%20SALVADOR%20/ALMA%20WEAVING/78866407_733038573766605_6964076934007357440_n_cdngqh.jpg"
+  ],
+  "country": "salvador",
+  "website": "https://almaweaving.com",
+  "description": "Moda sostenible para un look excepcional.",
+  "criteria": [
+    "materiales-reciclados",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

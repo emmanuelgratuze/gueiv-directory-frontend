@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"ecuator","name":"Hakhu","website":"https://hakhu.net/","instagram":"https://www.instagram.com/hakhuamazon/","facebook":"","description":"Hakhu, que significa ‘vamos’ en Kichwa, es una organización dedicada a promover proyectos de desarrollo sostenible en liga con pequeñas comunidades indígenas dentro de la Amazonia ecuatoriana.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social","empoderamiento-de-la-mujer"],"genders":["women"],"productTypes":["joyeria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Hakhu",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/hakhuamazon/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684609/ECUADOR/HAKHU/IMG_98962_1_1024x1024_qivmix.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684609/ECUADOR/HAKHU/MG_6401_grande_yznghc.jpg"
+  ],
+  "country": "ecuator",
+  "website": "https://hakhu.net/",
+  "description": "Hakhu, que significa ‘vamos’ en Kichwa, es una organización dedicada a promover proyectos de desarrollo sostenible en liga con pequeñas comunidades indígenas dentro de la Amazonia ecuatoriana.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "empoderamiento-de-la-mujer"
+  ]
+}

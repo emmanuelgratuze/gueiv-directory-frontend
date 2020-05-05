@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"bolivia","name":"Folk de los Pueblos","website":"http://folkdelospueblos.com/es/#home","instagram":"https://www.instagram.com/folkdelospueblos/","facebook":"","description":"Folk de los Pueblos Somos una marca de diseño independiente boliviano que explora nuestra historia, tradiciones y festejos. En cada colección buscamos transmitir un mundo inspirado en esa exploración a partir de la estética cuetillo (los cohetes o petardos sirven para ahuyentan a los malos espíritus y acompañar el festejo) que nos rodea. Somos folk… somos de los pueblos!","criteria":["fibras-naturales","supra-reciclado-upcycling","produccion-local"],"genders":["women","men","unisex"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Folk de los Pueblos",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/folkdelospueblos/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684054/BOLIVIA/FOLK%20DE%20LOS%20PUEBLOS/7SMweb_-_Folk_de_los_pueblos_tjdsij.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684041/BOLIVIA/FOLK%20DE%20LOS%20PUEBLOS/13SMweb_-_Folk_de_los_pueblos_b1gzbi.jpg"
+  ],
+  "country": "bolivia",
+  "website": "http://folkdelospueblos.com/es/#home",
+  "description": "Folk de los Pueblos Somos una marca de diseño independiente boliviano que explora nuestra historia, tradiciones y festejos. En cada colección buscamos transmitir un mundo inspirado en esa exploración a partir de la estética cuetillo (los cohetes o petardos sirven para ahuyentan a los malos espíritus y acompañar el festejo) que nos rodea. Somos folk… somos de los pueblos!",
+  "criteria": [
+    "fibras-naturales",
+    "supra-reciclado-upcycling",
+    "produccion-local"
+  ]
+}

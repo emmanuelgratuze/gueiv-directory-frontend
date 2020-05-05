@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"ecuator","name":"Moshi Boots","website":"https://moshiboots.com/","instagram":"https://www.instagram.com/moshi_boots/","facebook":"","description":"Somos una marca que fabrica artesanalmente todos nuestros productos generando empleo en zonas rurales de Ambato, Ecuador. Creemos en el comercio justo y en minimizar nuestra huella ambiental, poniendo el máximo cuidado en cada uno de nuestros diseños, compitiendo así en el mercado nacional e internacional.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico"],"genders":["women","men","unisex"],"productTypes":["calzado"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Moshi Boots",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/moshi_boots/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684616/ECUADOR/MOSHI%20BOOTS/UNISEX-multicolor_gjdl5y.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684609/ECUADOR/MOSHI%20BOOTS/Slider-2_tbo93a.jpg"
+  ],
+  "country": "ecuator",
+  "website": "https://moshiboots.com/",
+  "description": "Somos una marca que fabrica artesanalmente todos nuestros productos generando empleo en zonas rurales de Ambato, Ecuador. Creemos en el comercio justo y en minimizar nuestra huella ambiental, poniendo el máximo cuidado en cada uno de nuestros diseños, compitiendo así en el mercado nacional e internacional.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"ecuator","name":"Pachacuti","website":"https://www.panamas.co.uk","instagram":"https://www.instagram.com/pachacutiuk/","facebook":"","description":"Durante años Pachacuti ha creado sombreros que son una unión sutil de tradición, lujo y sostenibilidad. Combinando la herencia de dos culturas, un sombrero de Panamá Pachacuti vincula la creatividad del diseño británico con el savoir-faire único de nuestros tejedores ecuatorianos.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico","empoderamiento-de-la-mujer"],"genders":["women","men"],"productTypes":["eco-lujo","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "eco-lujo",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Pachacuti",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/pachacutiuk/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684606/ECUADOR/PACHACUTI/67654109_2607618702605154_7750570559271862272_o_c5dloy.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684606/ECUADOR/PACHACUTI/65974479_2540262426007449_1253368746571988992_o_gunobt.jpg"
+  ],
+  "country": "ecuator",
+  "website": "https://www.panamas.co.uk",
+  "description": "Durante años Pachacuti ha creado sombreros que son una unión sutil de tradición, lujo y sostenibilidad. Combinando la herencia de dos culturas, un sombrero de Panamá Pachacuti vincula la creatividad del diseño británico con el savoir-faire único de nuestros tejedores ecuatorianos.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer"
+  ]
+}

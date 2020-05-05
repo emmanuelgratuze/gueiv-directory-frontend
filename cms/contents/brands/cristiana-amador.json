@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"ecuator","name":"Cristiana Amador","website":"https://cristinaamador.com/","instagram":"https://www.instagram.com/cristinaamador/","facebook":"","description":"No seguimos a la moda, sino que usamos elementos y diseños que perdurarán en el tiempo. Ya sean piezas atrevidas o simples, siempre se verán actualizadas. La joyería Cristina Amador está hecha con plata y oro reciclado. También nos esforzamos por utilizar piedras semipreciosas y preciosas extraídas de manera responsable para evitar productos químicos en nuestros procesos. Como parte de nuestras prácticas ecológicas, todas nuestras joyas se empaquetan en bolsas o cajas reutilizables elaboradas por artesanos locales. Nuestras etiquetas, tarjetas y bolsas de compras están impresas en papel de caña de azúcar procesado sin cloro y sin ácido.","criteria":["materiales-reciclados","trabajo-con-artesanos","comercio-etico","packaging-sostenible","tintes-naturales"],"genders":["women"],"productTypes":["joyeria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Cristiana Amador",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/cristinaamador/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684608/ECUADOR/CRISTINA%20AMADOR/80489093_2457444864366197_4517641679347384320_o_azjdix.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684608/ECUADOR/CRISTINA%20AMADOR/82841600_2511810415596308_4758108205236617216_o_f4jf9l.jpg"
+  ],
+  "country": "ecuator",
+  "website": "https://cristinaamador.com/",
+  "description": "No seguimos a la moda, sino que usamos elementos y diseños que perdurarán en el tiempo. Ya sean piezas atrevidas o simples, siempre se verán actualizadas. La joyería Cristina Amador está hecha con plata y oro reciclado. También nos esforzamos por utilizar piedras semipreciosas y preciosas extraídas de manera responsable para evitar productos químicos en nuestros procesos. Como parte de nuestras prácticas ecológicas, todas nuestras joyas se empaquetan en bolsas o cajas reutilizables elaboradas por artesanos locales. Nuestras etiquetas, tarjetas y bolsas de compras están impresas en papel de caña de azúcar procesado sin cloro y sin ácido.",
+  "criteria": [
+    "materiales-reciclados",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "packaging-sostenible",
+    "tintes-naturales"
+  ]
+}

@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"ecuator","name":"Shepherd","website":"https://shepherdecuador.com/","instagram":"https://www.instagram.com/ShepherdEcuador/","facebook":"","description":"Somos una tienda ecléctica de productos conscientes hechos a mano en Ecuador y de productos vintage para el hogar. No queremos masificar, sino desarrollar los pequeños detalles que hacen que nuestros productos sean únicos y exclusivos.","criteria":["vintage-y-segunda-mano","produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["bolsos-y-mochilas","joyeria","complementos","decoracion-y-hogar"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "joyeria",
+    "complementos",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Shepherd",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/ShepherdEcuador/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684607/ECUADOR/SHEPHERD/12930946_1084739618214355_1777532703_n_p7gxzz.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684607/ECUADOR/SHEPHERD/12907195_1005000312899558_1430154851_n_oyzr15.jpg"
+  ],
+  "country": "ecuator",
+  "website": "https://shepherdecuador.com/",
+  "description": "Somos una tienda ecléctica de productos conscientes hechos a mano en Ecuador y de productos vintage para el hogar. No queremos masificar, sino desarrollar los pequeños detalles que hacen que nuestros productos sean únicos y exclusivos.",
+  "criteria": [
+    "vintage-y-segunda-mano",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

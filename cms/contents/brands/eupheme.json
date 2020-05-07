@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Eupheme","website":"https://somoseupheme.wordpress.com","instagram":"https://www.instagram.com/somos.eupheme/","facebook":"","description":"EUPHEME, es el nombre que describe lo mejor del mundo para ti. A través de nuestras prendas íntimas diseñadas para tu comodidad y confort. Utilizamos materiales amigables con el medio-ambiente como es el algodón orgánico peruano. La mujer EUPHEME es idealista y a la vez moderna; que sabe lo que quiere, que se valora, y sobre todo que se acepta tal como es.","criteria":["materiales-organicos","produccion-local"],"genders":["women"],"productTypes":["lenceria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "lenceria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Eupheme",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/somos.eupheme/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870374/PERU/EVEA/71113344_2513654032033209_7175937856718766080_o_cqyd7q.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870374/PERU/EVEA/78635566_2691580610907216_7456520450894462976_o_wjvr2x.jpg"
+  ],
+  "country": "peru",
+  "website": "https://somoseupheme.wordpress.com",
+  "description": "EUPHEME, es el nombre que describe lo mejor del mundo para ti. A través de nuestras prendas íntimas diseñadas para tu comodidad y confort. Utilizamos materiales amigables con el medio-ambiente como es el algodón orgánico peruano. La mujer EUPHEME es idealista y a la vez moderna; que sabe lo que quiere, que se valora, y sobre todo que se acepta tal como es.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local"
+  ]
+}

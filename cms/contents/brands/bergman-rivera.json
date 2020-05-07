@@ -1,1 +1,30 @@
-{"GOTS":"X","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"X","RSW (Responsible Wool Standard)":"","country":"peru","name":"Bergman/Rivera","website":"http://bergmanrivera.com/","instagram":"https://www.instagram.com/bergmanrivera/","facebook":"","description":"Bergman Rivera es una empresa peruana dedicada a la produccion y comercializacion de productos de 100% algodon organico certificado. Ofrecemos hilados, telas y confeccion de prendas por encargo.","criteria":["a-pedido","materiales-organicos","fibras-naturales","produccion-local","trabajo-con-artesanos","comercio-etico"],"genders":[],"productTypes":["telas"]}
+{
+  "facebook": "",
+  "GOTS": "X",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "telas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Bergman/Rivera",
+  "Fair Trade Certified": "X",
+  "OCS100": "",
+  "genders": [],
+  "instagram": "https://www.instagram.com/bergmanrivera/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863219/PERU/BERGMAN%20RIVERA/IMG_3254_-_Mariela_Calderon_Ariz_gyaboi.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863220/PERU/BERGMAN%20RIVERA/IMG_5990_-_Mariela_Calderon_Ariz_f0had3.jpg"
+  ],
+  "country": "peru",
+  "website": "http://bergmanrivera.com/",
+  "description": "Bergman Rivera es una empresa peruana dedicada a la produccion y comercializacion de productos de 100% algodon organico certificado. Ofrecemos hilados, telas y confeccion de prendas por encargo.",
+  "criteria": [
+    "a-pedido",
+    "materiales-organicos",
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico"
+  ]
+}

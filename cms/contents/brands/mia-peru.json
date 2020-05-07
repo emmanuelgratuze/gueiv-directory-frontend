@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"X","RSW (Responsible Wool Standard)":"","country":"peru","name":"mia peru","website":"http://www.miaperu.com","instagram":"","facebook":"https://www.facebook.com/MIAPERU","description":"MIA crea hermosas prendas hechas con fibras de alpaca 100% puras. Creemos que es posible crear moda con amor en cada pieza que creamos y no contaminar nuestro planeta. Estamos certificados de comercio justo trabajando junto a más de 250 madres peruanas.","criteria":["fibras-naturales","produccion-local","comercio-etico","empoderamiento-de-la-mujer","tintes-naturales"],"genders":["women","men"],"productTypes":["vestimenta"]}
+{
+  "facebook": "https://www.facebook.com/MIAPERU",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "mia peru",
+  "Fair Trade Certified": "X",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863371/PERU/MIA%20PERU/37726652_10156771299044301_267799860969734144_n_tctyik.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863370/PERU/MIA%20PERU/56201201_10157442564054301_4059552802702098432_o_k4meih.jpg"
+  ],
+  "country": "peru",
+  "website": "http://www.miaperu.com",
+  "description": "MIA crea hermosas prendas hechas con fibras de alpaca 100% puras. Creemos que es posible crear moda con amor en cada pieza que creamos y no contaminar nuestro planeta. Estamos certificados de comercio justo trabajando junto a más de 250 madres peruanas.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "tintes-naturales"
+  ]
+}

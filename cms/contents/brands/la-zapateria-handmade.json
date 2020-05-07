@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"La zapateria handmade","website":"https://cooperativehandmade.pe","instagram":"https://www.instagram.com/lazapateriahandmade/","facebook":"","description":"Realizamos artesanalmente todos los procesos involucrados en cada pieza que conforman nuestras producciones, confeccionadas únicamente en nuestro showroom de trabajo en vivo, haciendo participe al cliente y a todos quienes deseen vivir esta experiencia.","criteria":["a-pedido","produccion-local","tintes-naturales"],"genders":["women","men"],"productTypes":["bolsos-y-mochilas","calzado"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "La zapateria handmade",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/lazapateriahandmade/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588872211/PERU/LAS%20TRAPERAS/82966062_2747640568607885_2948381313675034624_o_udx0fq.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588872210/PERU/LAS%20TRAPERAS/83802191_2747638365274772_7012271655388971008_o_ws6uu4.jpg"
+  ],
+  "country": "peru",
+  "website": "https://cooperativehandmade.pe",
+  "description": "Realizamos artesanalmente todos los procesos involucrados en cada pieza que conforman nuestras producciones, confeccionadas únicamente en nuestro showroom de trabajo en vivo, haciendo participe al cliente y a todos quienes deseen vivir esta experiencia.",
+  "criteria": [
+    "a-pedido",
+    "produccion-local",
+    "tintes-naturales"
+  ]
+}

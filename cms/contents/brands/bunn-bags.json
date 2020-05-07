@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Bunn Bags","website":"https://bunnbags.com","instagram":"https://www.instagram.com/bunnbags/?hl=es","facebook":"","description":"Bünn Bags no solo es una marca de carteras y bolsos de paja, es una expresión, una forma de vida, y por eso queremos que las lleves con actitud, personalidad y estilo.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["bolsos-y-mochilas"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Bunn Bags",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/bunnbags/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863217/PERU/BUNN%20BAGS/80214913_733661933796708_1647932557238468608_n_cmxb9e.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863217/PERU/BUNN%20BAGS/75564645_700324870463748_7069954844290711552_o_bakeh8.jpg"
+  ],
+  "country": "peru",
+  "website": "https://bunnbags.com",
+  "description": "Bünn Bags no solo es una marca de carteras y bolsos de paja, es una expresión, una forma de vida, y por eso queremos que las lleves con actitud, personalidad y estilo.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

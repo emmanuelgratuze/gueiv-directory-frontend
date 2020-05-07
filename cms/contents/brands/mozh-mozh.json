@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Mozh Mozh","website":"http://www.mozhmozh.com","instagram":"https://www.instagram.com/mozhmozh_/","facebook":"","description":"Mozh Mozh es una marca de lujo que trabaja con artesanos que protegen los textiles y las técnicas peruanas al tiempo que enfatizan la forma y los detalles en el diseño. Estamos interesados en utilizar materiales de la más alta calidad como Alpaca y Algodón que son nativos de Perú. Buscamos innovar con técnicas tradicionales y continuar forjando alianzas de trabajo con artesanos de pueblos nativos.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["vestimenta","ropa-de-fiesta","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Mozh Mozh",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/mozhmozh_/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863371/PERU/MOZH%20MOZH/17_MMSS20_gkw31w.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863371/PERU/MOZH%20MOZH/1_MMSS20_f99mgk.jpg"
+  ],
+  "country": "peru",
+  "website": "http://www.mozhmozh.com",
+  "description": "Mozh Mozh es una marca de lujo que trabaja con artesanos que protegen los textiles y las técnicas peruanas al tiempo que enfatizan la forma y los detalles en el diseño. Estamos interesados en utilizar materiales de la más alta calidad como Alpaca y Algodón que son nativos de Perú. Buscamos innovar con técnicas tradicionales y continuar forjando alianzas de trabajo con artesanos de pueblos nativos.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

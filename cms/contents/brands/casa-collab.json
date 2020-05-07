@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"X","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Casa Collab","website":"http://casacollab.com","instagram":"https://www.instagram.com/casacollab/","facebook":"","description":"Casa Collab es un laboratorio de diseño de joyas y accesorios que trabaja con comunidades artesanales, con sede en Perú. Desarrollamos cada pieza de joyería con el propósito de generar sentimientos de felicidad, plenitud, espiritualidad, empoderamiento y recuerdos agradables para cada uno de nuestros clientes.","criteria":["a-pedido","fibras-naturales","materiales-reciclados","produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["eco-lujo","joyeria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "eco-lujo",
+    "joyeria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "X",
+  "name": "Casa Collab",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/casacollab/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863217/PERU/CASA%20COLLAB/explore11_nl5b3b.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863217/PERU/CASA%20COLLAB/explore5_kg2uwq.jpg"
+  ],
+  "country": "peru",
+  "website": "http://casacollab.com",
+  "description": "Casa Collab es un laboratorio de diseño de joyas y accesorios que trabaja con comunidades artesanales, con sede en Perú. Desarrollamos cada pieza de joyería con el propósito de generar sentimientos de felicidad, plenitud, espiritualidad, empoderamiento y recuerdos agradables para cada uno de nuestros clientes.",
+  "criteria": [
+    "a-pedido",
+    "fibras-naturales",
+    "materiales-reciclados",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

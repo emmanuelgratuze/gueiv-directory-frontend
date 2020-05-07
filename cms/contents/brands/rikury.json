@@ -1,1 +1,27 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Rikury","website":"https://www.rikury.pe","instagram":"https://www.instagram.com/rikury_/","facebook":"","description":"Rikury nació en el 2016 bajo el concepto de vestir de manera \"sana y sofisticada\" a bebés y niños con el uso del algodón Pima Peruano, el mas fino y suave algodón del mundo. Ademas de caracterizarnos por nuestros diseños tiernos y sofisticados, en Rikury tenemos un compromiso con la sociedad que nos motiva a trabajar de manera ética y transparente, y ofrecer prendas de alta calidad hecho 100% en Perú. Contamos con la certificación del uso de algodón Pima peruano y algodón orgánico.","criteria":["materiales-organicos"],"genders":["children"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Rikury",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/rikury_/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863401/PERU/RIKURY/67340969_1087262708134523_7984957657737854976_o_sbza39.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863416/PERU/RIKURY/60977986_1048443078683153_3970380313745424384_o_tdsjoh.jpg"
+  ],
+  "country": "peru",
+  "website": "https://www.rikury.pe",
+  "description": "Rikury nació en el 2016 bajo el concepto de vestir de manera \"sana y sofisticada\" a bebés y niños con el uso del algodón Pima Peruano, el mas fino y suave algodón del mundo. Ademas de caracterizarnos por nuestros diseños tiernos y sofisticados, en Rikury tenemos un compromiso con la sociedad que nos motiva a trabajar de manera ética y transparente, y ofrecer prendas de alta calidad hecho 100% en Perú. Contamos con la certificación del uso de algodón Pima peruano y algodón orgánico.",
+  "criteria": [
+    "materiales-organicos"
+  ]
+}

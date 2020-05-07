@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Meche Correa","website":"https://www.mechecorrea.com","instagram":"https://www.instagram.com/mechecorreaoficial/","facebook":"","description":"Meche correa representa una filosofía y un estilo de vida ético y responsable, la preservación y el cuidado de nuestro planeta es su lucha constante. Directora creativa de su propia marca, en su larga carrera ha logrado un gran reconocimiento nacional e internacional, siendo el lujo sostenible su sello.","criteria":["produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["vestimenta","ropa-de-fiesta","eco-lujo","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "eco-lujo",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Meche Correa",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/mechecorreaoficial/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863370/PERU/MECHE%20CORREA/_mg_9382-crop-u3342_oxodia.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863370/PERU/MECHE%20CORREA/img-9080-1667x2500_zsn6ab.jpg"
+  ],
+  "country": "peru",
+  "website": "https://www.mechecorrea.com",
+  "description": "Meche correa representa una filosofía y un estilo de vida ético y responsable, la preservación y el cuidado de nuestro planeta es su lucha constante. Directora creativa de su propia marca, en su larga carrera ha logrado un gran reconocimiento nacional e internacional, siendo el lujo sostenible su sello.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Anntarah","website":"https://www.anntarah.com/international/","instagram":"https://www.instagram.com/anntarah_/","facebook":"","description":"En Anntarah, trabajamos para capacitar a cientos de mujeres, transformándolas en el principal apoyo de sus familias; convirtiéndose en nuestros proveedores y principales aliados; mujeres perseverantes y guerreras, que retratan en cada prenda la historia detrás de la etiqueta.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos","comercio-etico","empoderamiento-de-la-mujer"],"genders":["women","men","children"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Anntarah",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/anntarah_/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863194/PERU/ANNTHARA/81796818_2649278588494682_5061287807767543808_n_cnn9ef.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863190/PERU/ANNTHARA/82131573_2670794716343069_5664519606623010816_n-1_j6fhjr.jpg"
+  ],
+  "country": "peru",
+  "website": "https://www.anntarah.com/international/",
+  "description": "En Anntarah, trabajamos para capacitar a cientos de mujeres, transformándolas en el principal apoyo de sus familias; convirtiéndose en nuestros proveedores y principales aliados; mujeres perseverantes y guerreras, que retratan en cada prenda la historia detrás de la etiqueta.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer"
+  ]
+}

@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"philomena","website":"https://philomenaperu.com/","instagram":"https://www.instagram.com/philomenaperu/","facebook":"","description":"Somos una marca de ropa peruana que cree en la moda lenta y el comercio justo. Empoderamos a las mujeres de los andes.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["vestimenta","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "philomena",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/philomenaperu/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863371/PERU/PHILOMENA/65781159_187269582263898_6099441057323999446_n_cjvrqs.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863371/PERU/PHILOMENA/65892535_2573766715988567_3371095679462012224_n_fh6mww.jpg"
+  ],
+  "country": "peru",
+  "website": "https://philomenaperu.com/",
+  "description": "Somos una marca de ropa peruana que cree en la moda lenta y el comercio justo. Empoderamos a las mujeres de los andes.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

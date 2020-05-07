@@ -1,1 +1,31 @@
-{"GOTS":"X","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Uma organic cotton","website":"http://www.umaorganiccotton.com","instagram":"https://www.instagram.com/umaorganic/","facebook":"","description":"UMA nace de la visión de hacer una diferencia en nuestro mundo. Queremos que nuestros niños usen ropa de alta calidad que no dañe el medio ambiente y cree oportunidades de trabajo para nuestra gente. UMA está hecho con algodón orgánico peruano por peruanos. Nuestra ropa es natural, pura, orgánica y libre de pesticidas, de esta forma aseguramos prendas suaves, duraderas y sin alergias sin comprometer nuestro diseño.","criteria":["materiales-organicos","produccion-local","comercio-etico","tintes-naturales"],"genders":["children"],"productTypes":["vestimenta","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "X",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Uma organic cotton",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/umaorganic/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863402/PERU/UMA/23331276_10155012217887036_2381170403553351460_o_ue5epk.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863401/PERU/UMA/70858109_10156506507537036_1679618725709348864_o_ayhjic.jpg"
+  ],
+  "country": "peru",
+  "website": "http://www.umaorganiccotton.com",
+  "description": "UMA nace de la visión de hacer una diferencia en nuestro mundo. Queremos que nuestros niños usen ropa de alta calidad que no dañe el medio ambiente y cree oportunidades de trabajo para nuestra gente. UMA está hecho con algodón orgánico peruano por peruanos. Nuestra ropa es natural, pura, orgánica y libre de pesticidas, de esta forma aseguramos prendas suaves, duraderas y sin alergias sin comprometer nuestro diseño.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "comercio-etico",
+    "tintes-naturales"
+  ]
+}

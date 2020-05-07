@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"peru","name":"Kani","website":"http://kani.pe","instagram":"","facebook":"https://www.facebook.com/perukani","description":"KANI trabaja para posicionar la artesanía peruana como una herramienta de cambio social. Somos una empresa social integrada por profesionales especialistas en el trabajo con grupos artesanales, quienes comparten el sueño de mejorar las condiciones y alcances de la artesanía en el Perú.","criteria":["produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["joyeria","complementos","decoracion-y-hogar"]}
+{
+  "facebook": "https://www.facebook.com/perukani",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria",
+    "complementos",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Kani",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870405/PERU/KANI/28700814_1577887232327853_8544364830201360482_o_hddmu5.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870406/PERU/KANI/12120162_840829436033640_5268256155051488453_o_gnwjtu.jpg"
+  ],
+  "country": "peru",
+  "website": "http://kani.pe",
+  "description": "KANI trabaja para posicionar la artesanía peruana como una herramienta de cambio social. Somos una empresa social integrada por profesionales especialistas en el trabajo con grupos artesanales, quienes comparten el sueño de mejorar las condiciones y alcances de la artesanía en el Perú.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

@@ -1,1 +1,35 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"x","country":"uruguay","name":"Calmo","website":"https://www.calmoslow.com/","instagram":"https://www.instagram.com/calmoslow/","facebook":"","description":"Trabajamos junto a artesanos locales para preservar las técnicas artesanales tradicionales y producir piezas auténticas con nuestro característico toque moderno. Nuestro método se basa en colecciones cápsula y piezas únicas, sin temporadas fijas ni excedentes de stock. Introduciéndonos en un estilo de vida más responsable, estamos en la constante búsqueda de formas creativas de redefinir el lujo.","criteria":["fibras-naturales","trabajo-con-artesanos","comercio-etico","empoderamiento-de-la-mujer","packaging-sostenible","manejo-de-residuos","tintes-naturales"],"genders":["women"],"productTypes":["vestimenta","complementos","decoracion-y-hogar"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "x",
+  "productTypes": [
+    "vestimenta",
+    "complementos",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Calmo",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/calmoslow/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947716/URUGUAY/CALMO/80304295_848448548919956_7461758184986771456_o_qiwmhi.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947716/URUGUAY/CALMO/29244500_434823083615840_6217365443322052608_o_vqx17e.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://www.calmoslow.com/",
+  "description": "Trabajamos junto a artesanos locales para preservar las técnicas artesanales tradicionales y producir piezas auténticas con nuestro característico toque moderno. Nuestro método se basa en colecciones cápsula y piezas únicas, sin temporadas fijas ni excedentes de stock. Introduciéndonos en un estilo de vida más responsable, estamos en la constante búsqueda de formas creativas de redefinir el lujo.",
+  "criteria": [
+    "fibras-naturales",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "packaging-sostenible",
+    "manejo-de-residuos",
+    "tintes-naturales"
+  ]
+}

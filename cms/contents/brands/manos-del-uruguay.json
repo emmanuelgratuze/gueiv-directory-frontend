@@ -1,1 +1,33 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Manos del Uruguay","website":"https://www.manos.com.uy/","instagram":"https://www.instagram.com/manosdeluruguay/","facebook":"","description":"Manos del Uruguay se funda bajo la pregunta, ¿cómo podemos mejorar la calidad de vida de las mujeres rurales de Uruguay? La respuesta estaba en la artesanía, utilizando habilidades heredadas de nuestras madres y abuelas y la materia prima que teníamos a mano: lana. Creamos junto a ellas prendas e hilados hermosos, éticos y sostenibles. Cada pieza es una oportunidad para ayudar a una mujer uruguaya a mantener a su familia.","criteria":["produccion-local","trabajo-con-artesanos","integracion-social","empoderamiento-de-la-mujer"],"genders":["women"],"productTypes":["vestimenta","complementos","decoracion-y-hogar","telas"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos",
+    "decoracion-y-hogar",
+    "telas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Manos del Uruguay",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/manosdeluruguay/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947763/URUGUAY/MANOS/81605075_10157061304163635_1493312897063845888_o_a8msdj.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947763/URUGUAY/MANOS/81481049_10157061299658635_4401217794696282112_o_w9rnkt.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://www.manos.com.uy/",
+  "description": "Manos del Uruguay se funda bajo la pregunta, ¿cómo podemos mejorar la calidad de vida de las mujeres rurales de Uruguay? La respuesta estaba en la artesanía, utilizando habilidades heredadas de nuestras madres y abuelas y la materia prima que teníamos a mano: lana. Creamos junto a ellas prendas e hilados hermosos, éticos y sostenibles. Cada pieza es una oportunidad para ayudar a una mujer uruguaya a mantener a su familia.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "empoderamiento-de-la-mujer"
+  ]
+}

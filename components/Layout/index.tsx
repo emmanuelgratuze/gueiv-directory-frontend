@@ -5,8 +5,8 @@ import { useRouter } from 'next/router'
 
 import LoadingScreen from 'screens/Loading'
 
-import useAnalytics from 'hooks/useAnalytics'
-import useLoading from 'hooks/useLoading'
+import useAnalytics from 'hooks/generic/useAnalytics'
+import useLoading from 'hooks/generic/useRouteLoading'
 import theme from 'themes/theme'
 
 import { GlobalStyles } from './styled'

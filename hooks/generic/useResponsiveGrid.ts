@@ -1,16 +1,16 @@
 import { useMemo, useCallback } from 'react'
 import { sortBy } from 'lodash'
 
-import useTheme from 'hooks/useTheme'
+import useTheme from 'hooks/generic/useTheme'
 import { BreakpointsValuesType, BreakpointsType, BreakpointsKeysType } from 'themes/theme'
-import useResponsive from 'hooks/useResponsive'
+import useResponsive from 'hooks/generic/useResponsive'
 
 type Columns = {
   [key in BreakpointsKeysType]?: string[];
 }
 
 type UseReponsiveGridReturn = {
-  getChildrenSize: Function;
+  getChildrenSizeByIndex: Function;
 }
 
 const getSizesForEveryBreakpoints = (breakpoints: BreakpointsType, columns: Columns): { [key in BreakpointsKeysType]?: string[] } => {
@@ -56,12 +56,12 @@ const useReponsiveGrid = (columns: Columns): UseReponsiveGridReturn => {
     return sizes[currentSize] || []
   }, [columns, currentSize])
 
-  const getChildrenSize = useCallback((index: number) => (
+  const getChildrenSizeByIndex = useCallback((index: number) => (
     columnsSizes[index % columnsSizes.length] ? columnsSizes[index % columnsSizes.length] : 'full'
   ), [columnsSizes])
 
   return {
-    getChildrenSize
+    getChildrenSizeByIndex
   }
 }
 

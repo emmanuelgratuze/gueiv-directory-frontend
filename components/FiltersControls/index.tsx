@@ -2,8 +2,8 @@ import React from 'react'
 import { Box, BoxProps, Button } from 'grommet'
 import { FormFilter, FormUp } from 'grommet-icons'
 
-import useFilterMenu from 'hooks/useFilterMenu'
-import useResponsive from 'hooks/useResponsive'
+import useFilterMenu from 'hooks/app/brands/useFilterMenu'
+import useResponsive from 'hooks/generic/useResponsive'
 
 import FiltersControlsFields from './Fields'
 

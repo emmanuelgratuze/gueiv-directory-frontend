@@ -4,8 +4,8 @@ import React, {
   createRef,
   useMemo
 } from 'react'
-import useWindowSize from 'hooks/useWindowSize'
-import useScrollPosition from 'hooks/useScrollPosition'
+import useWindowSize from 'hooks/generic/useWindowSize'
+import useScrollPosition from 'hooks/generic/useScrollPosition'
 
 type ScrollableItemProps = {
   onScrollEnter?: Function;

@@ -5,13 +5,13 @@ import { Box, BoxProps, Stack } from 'grommet'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 
-import MenuScreen from 'screens/Menu'
+import MenuWrapper from 'components/Menu/Wrapper'
 
-import usePageTitle from 'hooks/usePageTitle'
-import useTheme from 'hooks/useTheme'
-import useFilterMenu from 'hooks/useFilterMenu'
-import useConfiguration from 'hooks/useConfiguration'
-import useMenuState from 'hooks/useMenuState'
+import usePageTitle from 'hooks/generic/usePageTitle'
+import useTheme from 'hooks/generic/useTheme'
+import useFilterMenu from 'hooks/app/brands/useFilterMenu'
+import useConfiguration from 'hooks/app/useConfiguration'
+import useMenuState from 'hooks/app/useMenuState'
 
 import FiltersMenu from './FiltersMenu'
 
@@ -71,18 +71,19 @@ const Page: React.FC<BoxProps & PageType> = ({
         <Header>
           {headerChildren}
         </Header>
-        <Stack>
-          <MenuScreen open={isMenuOpen} />
-          <FiltersMenu />
-        </Stack>
-        <Box fill={!withScroll}>
-          <Box fill={!withScroll} pad={{ top: header.height }}>
-            {children}
+        <MenuWrapper>
+          <Stack>
+            <FiltersMenu />
+          </Stack>
+          <Box fill={!withScroll}>
+            <Box fill={!withScroll} pad={{ top: header.height }}>
+              {children}
+            </Box>
+            {withFooter && (
+              <Footer />
+            )}
           </Box>
-          {withFooter && (
-            <Footer />
-          )}
-        </Box>
+        </MenuWrapper>
       </Box>
     </Box>
   )

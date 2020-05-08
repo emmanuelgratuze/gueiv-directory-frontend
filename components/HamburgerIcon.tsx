@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import useTheme from 'hooks/useTheme'
+import useTheme from 'hooks/generic/useTheme'
 
 
 type HamburgerIconProps = {

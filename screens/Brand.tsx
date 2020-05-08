@@ -8,8 +8,8 @@ import Text from 'components/Text'
 import Heading from 'components/Heading'
 import Button from 'components/Button'
 import BrandCarousel from 'components/BrandCarousel'
-import useResponsive from 'hooks/useResponsive'
-import useBrandColor from 'hooks/useBrandColor'
+import useResponsive from 'hooks/generic/useResponsive'
+import useBrandColor from 'hooks/app/brands/useBrandColor'
 import Paragraph from 'components/Paragraph'
 import CriterionIcon from 'components/CriterionIcon'
 import StandardLink from 'components/StandardLink'
@@ -18,7 +18,7 @@ import Icon from 'components/Icon'
 import { ImmutableBrand } from 'types/data/brand'
 import { ColorsNames } from 'themes/theme'
 
-import useFilters from 'hooks/userFilters'
+import useFilters from 'hooks/app/brands/useFilters'
 
 interface BrandScreenProps {
   brand: ImmutableBrand;
@@ -33,6 +33,8 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
     <>
       <Page
         title={brand.get('name')}
+        height={!isMobile ? '100vh' : undefined}
+        withScroll={false}
         headerChildren={(
           <Box justify="center" fill="vertical" width="2.5rem">
             <Link href={`/${getFiltersUrlString()}`}>

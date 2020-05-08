@@ -1,4 +1,4 @@
-import useConfiguration from './useConfiguration'
+import useConfiguration from '../app/useConfiguration'
 
 const usePageTitle = (title?: string | null | undefined): string => {
   const configuration = useConfiguration()

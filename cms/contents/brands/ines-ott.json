@@ -1,1 +1,32 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Ines Ott","website":"https://www.inesott.com/","instagram":"https://www.instagram.com/ines_ott/","facebook":"","description":"INES OTT es una marca de calzado diseñada y producida en Montevideo, Uruguay. De estética despojada y minimalista, la propuesta incluye piezas de estilo clásico, confeccionadas 100% en cuero y con particular atención a los detalles de terminación que se destacan en la producción artesanal. Los diseños están inspirados en una mujer independiente, activa, multifacética, entusiasta por el arte y que valora su singularidad.","criteria":["produccion-local","trabajo-con-artesanos","comercio-etico","empoderamiento-de-la-mujer"],"genders":["women"],"productTypes":["vestimenta","complementos","calzado"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ines Ott",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/ines_ott/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947762/URUGUAY/INES%20OTT/78761413_2646941022055377_8613946414122139648_o_urxjta.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947762/URUGUAY/INES%20OTT/79512097_2647421288674017_6037613494252077056_o_cbl6ev.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://www.inesott.com/",
+  "description": "INES OTT es una marca de calzado diseñada y producida en Montevideo, Uruguay. De estética despojada y minimalista, la propuesta incluye piezas de estilo clásico, confeccionadas 100% en cuero y con particular atención a los detalles de terminación que se destacan en la producción artesanal. Los diseños están inspirados en una mujer independiente, activa, multifacética, entusiasta por el arte y que valora su singularidad.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer"
+  ]
+}

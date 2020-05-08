@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Cardan Cabos","website":"http://www.cardancabos.com/","instagram":"https://www.instagram.com/cardancabos/","facebook":"","description":"CARDAN CABOS es una marca de diseño de indumentaria, accesorios y artículos para el hogar en 100% suave lana merino. Nuestros diseños son elaborados en Uruguay de forma artesanal mediante variadas técnicas de tejido. Cardar significa peinar y limpiar las fibras textiles antes de hilarlas. Cabo significa hebra o hilo. CARDAN CABOS es para nosotros el proceso en el que se quitan las impurezas que nos afectan en cierta forma nuestro andar. Buscamos construir algo nuevo, un nuevo hilado, una nueva historia.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Cardan Cabos",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/cardancabos/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947737/URUGUAY/CARDAN%20CABOS/19693546_1016161485153341_920224852492731909_o_umvzsl.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947737/URUGUAY/CARDAN%20CABOS/19800633_1016161115153378_341817596973478818_o_gry7u0.jpg"
+  ],
+  "country": "uruguay",
+  "website": "http://www.cardancabos.com/",
+  "description": "CARDAN CABOS es una marca de diseño de indumentaria, accesorios y artículos para el hogar en 100% suave lana merino. Nuestros diseños son elaborados en Uruguay de forma artesanal mediante variadas técnicas de tejido. Cardar significa peinar y limpiar las fibras textiles antes de hilarlas. Cabo significa hebra o hilo. CARDAN CABOS es para nosotros el proceso en el que se quitan las impurezas que nos afectan en cierta forma nuestro andar. Buscamos construir algo nuevo, un nuevo hilado, una nueva historia.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

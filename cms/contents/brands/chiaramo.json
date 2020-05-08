@@ -1,1 +1,28 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Chiaramo","website":"https://www.facebook.com/chiaramo.uy","instagram":"https://www.instagram.com/chiaramo.uy/","facebook":"","description":"Empezamos en 2015 creando accesorios, con el paso del tiempo transicionamos hacia un camino más verde. Hasta hoy seguimos en eso, renovando, aprendiendo y sobre todo, con el mismo entusiasmo. Vivi, sentí y disfruta de la naturaleza cuidándola.","criteria":["materiales-reciclados","produccion-local"],"genders":["women"],"productTypes":["joyeria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Chiaramo",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/chiaramo.uy/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947740/URUGUAY/CHIARAMO/80491442_1389357834571242_184111766077177856_o_bv4zd1.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947738/URUGUAY/CHIARAMO/82765242_1412898812217144_4283698800758882304_o_euz911.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://www.facebook.com/chiaramo.uy",
+  "description": "Empezamos en 2015 creando accesorios, con el paso del tiempo transicionamos hacia un camino más verde. Hasta hoy seguimos en eso, renovando, aprendiendo y sobre todo, con el mismo entusiasmo. Vivi, sentí y disfruta de la naturaleza cuidándola.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local"
+  ]
+}

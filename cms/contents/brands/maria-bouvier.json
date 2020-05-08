@@ -1,1 +1,31 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Maria Bouvier","website":"https://mariabouvier.com/","instagram":"https://www.instagram.com/maria.bouvier/","facebook":"","description":"MARÍA BOUVIER es una marca de indumentaria sostenible que busca ser una alternativa para esas mujeres apasionadas que eligen vestir de acuerdo a sus creencias y valores. Con base en Uruguay, Sudamérica, diseñamos y creamos prendas con amor y responsabilidad cuidando cada detalle. No sólo nos enfocamos en el resultado final, sino que también valoramos todo el proceso productivo intentando hacerlo lo más sustentable posible. Trabajamos únicamente con algodón orgánico certificado, teñimos esos textiles a mano con tintes naturales en nuestro propio taller, creando así hermosos y únicos colores, y confeccionamos localmente de forma justa colaborando con nuestra sociedad. Creemos que el proceso artesanal de los teñidos naturales dan alma y esencia a nuestras piezas, haciendo que cada una sea especial y diferente a las otras.","criteria":["materiales-organicos","produccion-local","trabajo-con-artesanos","comercio-etico","tintes-naturales"],"genders":["women"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Maria Bouvier",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/maria.bouvier/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947774/URUGUAY/MARIA%20BOUVIER/DSC_1954bc_-_Mar%C3%ADa_Bouvier_ktshsy.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947782/URUGUAY/MARIA%20BOUVIER/DSC_2439bc_-_Mar%C3%ADa_Bouvier_mixi1k.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://mariabouvier.com/",
+  "description": "MARÍA BOUVIER es una marca de indumentaria sostenible que busca ser una alternativa para esas mujeres apasionadas que eligen vestir de acuerdo a sus creencias y valores. Con base en Uruguay, Sudamérica, diseñamos y creamos prendas con amor y responsabilidad cuidando cada detalle. No sólo nos enfocamos en el resultado final, sino que también valoramos todo el proceso productivo intentando hacerlo lo más sustentable posible. Trabajamos únicamente con algodón orgánico certificado, teñimos esos textiles a mano con tintes naturales en nuestro propio taller, creando así hermosos y únicos colores, y confeccionamos localmente de forma justa colaborando con nuestra sociedad. Creemos que el proceso artesanal de los teñidos naturales dan alma y esencia a nuestras piezas, haciendo que cada una sea especial y diferente a las otras.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "tintes-naturales"
+  ]
+}

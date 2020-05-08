@@ -1,1 +1,30 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Elder","website":"https://www.shopelder.com","instagram":"https://www.instagram.com/elder.uy/","facebook":"","description":"Desde 2016 nos encargamos de seleccionar piezas de segunda mano curadas especialmente para la re-venta y el alquiler. Bajo la inspiración de la gente vieja, rescatamos prendas y accesorios de materiales antiguos, confeccionadas a mano o con terminaciones que ya no se realizan.","criteria":["vintage-y-segunda-mano","renta"],"genders":["women","men","unisex"],"productTypes":["vestimenta"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Elder",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/elder.uy/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947762/URUGUAY/ELDER/78232434_2725739327486554_6951655639479222272_o_i16hdq.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947762/URUGUAY/ELDER/53555050_2263367407057084_8205650927290417152_o_vcery1.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://www.shopelder.com",
+  "description": "Desde 2016 nos encargamos de seleccionar piezas de segunda mano curadas especialmente para la re-venta y el alquiler. Bajo la inspiración de la gente vieja, rescatamos prendas y accesorios de materiales antiguos, confeccionadas a mano o con terminaciones que ya no se realizan.",
+  "criteria": [
+    "vintage-y-segunda-mano",
+    "renta"
+  ]
+}

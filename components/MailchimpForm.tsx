@@ -57,6 +57,7 @@ const MailchimpForm: React.FC = () => {
               name="EMAIL"
               placeholder="Suscríbete con tu e-mail"
               type="email"
+              margin="xsmall"
               validate={{
                 regexp: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
                 message: '¡Tu e-mail no es valido!'

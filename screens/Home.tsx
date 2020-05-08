@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-
 import { Box, Button } from 'grommet'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useDispatch } from 'react-redux'
@@ -12,12 +11,12 @@ import Loader from 'components/Loader'
 import FiltersControls from 'components/FiltersControls'
 
 import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
-import useResponsiveGrid from 'hooks/useResponsiveGrid'
-import useTheme from 'hooks/useTheme'
+import useResponsiveGrid from 'hooks/generic/useResponsiveGrid'
+import useTheme from 'hooks/generic/useTheme'
 
 import { setBrandsColors } from 'store/interface/actions'
-import useFilteredBrands from 'hooks/useFilteredBrands'
-import useFilters from 'hooks/userFilters'
+import useFilteredBrands from 'hooks/app/brands/useFilteredBrands'
+import useFilters from 'hooks/app/brands/useFilters'
 
 const ItemWrapper = motion.custom(Box)
 
@@ -25,7 +24,7 @@ type HomeScreenProps = {}
 
 const HomeScreen: React.FC<HomeScreenProps> = () => {
   const { theme: { global: { brandColorsNames } } } = useTheme()
-  const { getChildrenSize } = useResponsiveGrid({
+  const { getChildrenSizeByIndex } = useResponsiveGrid({
     small: ['full'],
     medium: ['50%'],
     xlarge: ['33.33%']
@@ -69,7 +68,9 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
             <Box direction="row" wrap>
               <InfiniteScroll
                 dataLength={brands.size}
-                next={() => { selectMore() }}
+                next={() => {
+                  selectMore()
+                }}
                 hasMore={hasMore}
                 loader={(
                   <Box width="100%" height="medium" align="center" justify="center">
@@ -88,7 +89,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                 {brands.map((brand, index) => (
                   <Box
                     key={brand.get('id')}
-                    width={getChildrenSize(index)}
+                    width={getChildrenSizeByIndex(index)}
                   >
                     <Button plain>
                       {({ hover }: { hover: boolean }) => (
@@ -98,7 +99,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                           exit={{ opacity: 0, transform: 'scale3d(0.98, 0.98, 1)' }}
                           transition={{ duration: 0.6 }}
                           style={{ zIndex: hover ? 2 : 1 }}
-                          pad="xsmall"
+                          pad="0.4rem"
                         >
                           <Box
                             fill

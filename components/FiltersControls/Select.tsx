@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components'
 import { List } from 'immutable'
 
 import Text from 'components/Text'
-import useResponsive from 'hooks/useResponsive'
+import useResponsive from 'hooks/generic/useResponsive'
 
 type SelectProps = {
   isOpen: boolean;

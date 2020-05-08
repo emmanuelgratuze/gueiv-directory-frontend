@@ -2,9 +2,9 @@ import React, { Children, useMemo, memo } from 'react'
 import { sortBy } from 'lodash'
 import { Box, BoxTypes } from 'grommet'
 
-import useTheme from 'hooks/useTheme'
+import useTheme from 'hooks/generic/useTheme'
 import { BreakpointsValuesType, BreakpointsType, BreakpointsKeysType } from 'themes/theme'
-import useResponsive from 'hooks/useResponsive'
+import useResponsive from 'hooks/generic/useResponsive'
 
 interface ResponsiveGrid {
   columns: { [key in BreakpointsKeysType]?: string[] };

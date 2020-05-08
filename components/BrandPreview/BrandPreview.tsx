@@ -2,7 +2,6 @@ import React from 'react'
 import { Box, BoxProps } from 'grommet'
 import Link from 'next/link'
 
-
 import Heading from 'components/Heading'
 import A from 'components/A'
 import RelativeHeightBox from 'components/RelativeHeightBox'
@@ -11,9 +10,9 @@ import DynamicBackgroundColorBox from 'components/DynamicBackgroundColorBox'
 
 import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
-import useResponsive from 'hooks/useResponsive'
-import useTheme from 'hooks/useTheme'
-import useHover from 'hooks/useHover'
+import useResponsive from 'hooks/generic/useResponsive'
+import useTheme from 'hooks/generic/useTheme'
+import useHover from 'hooks/generic/useHover'
 
 import BrandImage from './Image'
 
@@ -40,7 +39,10 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
             {...props}
           >
             <Box fill direction="row">
-              <Box width={isSmallMobile ? '45%' : '50%'}>
+              <Box
+                width={isSmallMobile ? '45%' : '50%'}
+                overflow="hidden"
+              >
                 <BrandImage
                   fill
                   brand={brand}

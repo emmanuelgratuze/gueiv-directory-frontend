@@ -7,9 +7,9 @@ import Container from 'components/Container'
 import Text from 'components/Text'
 import A from 'components/A'
 import HamburgerIcon from 'components/HamburgerIcon'
-import useTheme from 'hooks/useTheme'
-import useMenuState from 'hooks/useMenuState'
-import useResponsive from 'hooks/useResponsive'
+import useTheme from 'hooks/generic/useTheme'
+import useMenuState from 'hooks/app/useMenuState'
+import useResponsive from 'hooks/generic/useResponsive'
 
 const Logo = require('assets/images/logo.svg').ReactComponent
 

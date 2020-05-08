@@ -4,7 +4,7 @@ import App, { AppProps } from 'next/app'
 import ErrorPage from 'next/error'
 import { CloudinaryProvider } from 'components/cloudinary/CloudinaryContext'
 
-import useStoreWithPageData from 'hooks/useStoreWithPageData'
+import useStoreWithPageData from 'hooks/generic/useStoreWithPageData'
 import Layout from 'components/Layout'
 
 const ProjectApp: React.FC<AppProps> = ({ Component, pageProps }) => {

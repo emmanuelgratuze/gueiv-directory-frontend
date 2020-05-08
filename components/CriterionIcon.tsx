@@ -7,8 +7,8 @@ import CriterionTooltip from 'components/CriterionTooltip'
 
 import { ImmutableCriterion } from 'types/data/criterion'
 import { ColorsNames } from 'themes/theme'
-import useTheme from 'hooks/useTheme'
-import useHover from 'hooks/useHover'
+import useTheme from 'hooks/generic/useTheme'
+import useHover from 'hooks/generic/useHover'
 import Link from 'next/link'
 import { AnimatePresence } from 'framer-motion'
 

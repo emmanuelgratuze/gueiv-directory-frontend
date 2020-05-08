@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Inner","website":"","instagram":"https://www.instagram.com/inner.uy/","facebook":"","description":"Piezas a-temporales. Indumentaria en fibras naturales y accesorios de cerámica.","criteria":["produccion-local","trabajo-con-artesanos"],"genders":["women"],"productTypes":["vestimenta","complementos"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Inner",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/inner.uy/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947762/URUGUAY/INNER/67411693_453261315254717_2057186934173728768_o_qop1es.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947763/URUGUAY/INNER/67981114_453262171921298_4481029694489100288_o_pua3p4.jpg"
+  ],
+  "country": "uruguay",
+  "website": "",
+  "description": "Piezas a-temporales. Indumentaria en fibras naturales y accesorios de cerámica.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

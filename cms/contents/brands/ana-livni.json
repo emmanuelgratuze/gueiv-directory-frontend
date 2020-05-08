@@ -1,1 +1,29 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Ana Livni","website":"https://www.analivni.com/","instagram":"https://www.instagram.com/ana_livni/","facebook":"","description":"Somos una empresa de investigación creativa de vestimenta. Integramos el movimiento \"slow fashion”, caminando lento pero seguros, fomentamos el desarrollo del trabajo sustentable, fusionando arte e industria. No seguimos patrones de moda establecidos. Diseñamos desde la fibra textil un nuevo concepto local más allá de las fronteras, buscando revalorizar los recursos materiales y humanos del Uruguay y la Región, uniendo el arte con la industria y creando vestimentas perdurables, heredables desde el año 2002.","criteria":["produccion-local"],"genders":["women"],"productTypes":["vestimenta","ropa-de-fiesta","eco-lujo"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ana Livni",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/ana_livni/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947716/URUGUAY/ANA%20LIVNI/22712298_1958771644335579_2371950820596249140_o_mhhe6n.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947716/URUGUAY/ANA%20LIVNI/22712308_1958773511002059_3396193290852867447_o_jyn75m.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://www.analivni.com/",
+  "description": "Somos una empresa de investigación creativa de vestimenta. Integramos el movimiento \"slow fashion”, caminando lento pero seguros, fomentamos el desarrollo del trabajo sustentable, fusionando arte e industria. No seguimos patrones de moda establecidos. Diseñamos desde la fibra textil un nuevo concepto local más allá de las fronteras, buscando revalorizar los recursos materiales y humanos del Uruguay y la Región, uniendo el arte con la industria y creando vestimentas perdurables, heredables desde el año 2002.",
+  "criteria": [
+    "produccion-local"
+  ]
+}

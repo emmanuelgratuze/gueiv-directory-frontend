@@ -1,1 +1,35 @@
-{"GOTS":"","Empresa B":"","OKTEX":"","OCS100":"","Fair Trade Certified":"","RSW (Responsible Wool Standard)":"","country":"uruguay","name":"Zarvich","website":"http://www.zarvich.com/","instagram":"https://www.instagram.com/zarvich.uy/","facebook":"","description":"Somos una marca de ropa de mujer fundada en 2017, con sede en Uruguay. Creemos en un sistema de producción consciente que no contribuye al residuo, por lo que producimos un número limitado de piezas por estilo, lo que se traduce prácticamente en stock muerto. Nuestra comunidad muy unida de artesanos y fabricantes trabaja desde talleres a pequeña escala o desde la comodidad de sus hogares. Dado que la mayoría de nuestra fuerza laboral es femenina, esto tiene un gran impacto positivo en el equilibrio diario de la vida laboral y familiar. Celebramos la imperfección y buscamos preservar nuestro savoir faire tradicional uruguayo.","criteria":["fibras-naturales","produccion-local","trabajo-con-artesanos","integracion-social","comercio-etico","empoderamiento-de-la-mujer"],"genders":["women"],"productTypes":["vestimenta","ropa-de-fiesta","eco-lujo","joyeria"]}
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "eco-lujo",
+    "joyeria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Zarvich",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/zarvich.uy/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947773/URUGUAY/ZARVICH/DSC_4092_grande_dcrvug.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947773/URUGUAY/ZARVICH/lookbook-aw19-10_yskvme.jpg"
+  ],
+  "country": "uruguay",
+  "website": "http://www.zarvich.com/",
+  "description": "Somos una marca de ropa de mujer fundada en 2017, con sede en Uruguay. Creemos en un sistema de producción consciente que no contribuye al residuo, por lo que producimos un número limitado de piezas por estilo, lo que se traduce prácticamente en stock muerto. Nuestra comunidad muy unida de artesanos y fabricantes trabaja desde talleres a pequeña escala o desde la comodidad de sus hogares. Dado que la mayoría de nuestra fuerza laboral es femenina, esto tiene un gran impacto positivo en el equilibrio diario de la vida laboral y familiar. Celebramos la imperfección y buscamos preservar nuestro savoir faire tradicional uruguayo.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer"
+  ]
+}

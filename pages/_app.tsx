@@ -9,10 +9,11 @@ import Layout from 'components/Layout'
 
 const ProjectApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const { store, isReady } = useStoreWithPageData(pageProps)
+
   return (
     <CloudinaryProvider cloudName={process.env.CLOUDINARY_CLOUD_NAME || ''}>
       <ReduxProvider store={store}>
-        <Layout isLoading={!isReady}>
+        <Layout isContentReady={!isReady}>
           {pageProps.statusCode ? (
             <ErrorPage statusCode={pageProps.statusCode} />
           ) : (

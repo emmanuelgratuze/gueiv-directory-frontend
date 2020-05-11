@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import { Box, Paragraph, Layer } from 'grommet'
-import { motion, AnimatePresence, useAnimation } from 'framer-motion'
+import React from 'react'
+import { Box, Paragraph } from 'grommet'
+import { motion, useAnimation } from 'framer-motion'
 
 import Button from 'components/Button'
 import Text from 'components/Text'
@@ -20,20 +20,12 @@ type MenuContentProps = {
   open: boolean;
 }
 
-const wrapperStyles = {
-  open: {
-    opacity: 1
-  },
-  closed: {
-    opacity: 0
-  }
-}
 
 const MenuContent: React.FC<MenuContentProps> = ({
   open = false
 }) => {
   const { theme: { header } } = useTheme()
-  const { isMobile } = useResponsive()
+  const { isMobile, isSmallMobile } = useResponsive()
   const configuration = useConfiguration()
   const animationControls = useAnimation()
   const { getChildrenSizeByIndex } = useResponsiveGrid({
@@ -41,16 +33,12 @@ const MenuContent: React.FC<MenuContentProps> = ({
     medium: ['50%']
   })
 
-  useEffect(() => {
-    animationControls.start(open ? wrapperStyles.open : wrapperStyles.closed)
-  }, [open])
-
   animationControls.mount()
 
   return (
     <motion.div
-      initial={wrapperStyles.closed}
-      animate={animationControls}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: open ? 1 : 0 }}
       transition={{
         duration: 1,
         delay: open ? 0.7 : 0
@@ -65,7 +53,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
     >
       <Box
         fill="vertical"
-        pad={{ top: header.height }}
+        pad={{ top: isMobile ? '0' : header.height }}
         // width={isMobile ? '100%' : '30%'}
         align="center"
         justify="center"
@@ -73,7 +61,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
       >
         <Box
           flex={false}
-          pad={isMobile ? 'medium' : 'large'}
+          pad={isMobile ? 'small' : 'large'}
           direction="row"
           wrap
         >
@@ -86,9 +74,9 @@ const MenuContent: React.FC<MenuContentProps> = ({
             <div style={{ maxWidth: '30rem' }}>
               <Paragraph
                 textAlign="center"
-                margin={{ bottom: 'large' }}
+                margin={{ bottom: isMobile ? 'medium' : 'large' }}
                 color="white"
-                size="large"
+                size={isMobile ? 'small' : 'large'}
               >
                 {configuration.getIn(['general', 'menuDescription'])}
               </Paragraph>
@@ -96,7 +84,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
 
             <Link href="/criterios">
               <A>
-                <Button color="white">
+                <Button color="white" size={isMobile ? 'small' : 'medium'}>
                   Ver todos los criterios
                 </Button>
               </A>
@@ -110,34 +98,38 @@ const MenuContent: React.FC<MenuContentProps> = ({
           >
             <Link href="/">
               <A>
-                <Box fill align="center">
-                  <Logo width="10rem" height="100%" />
+                <Box fill align="center" pad="medium">
+                  <Logo width={isMobile ? '7rem' : '10rem'} height="100%" />
                 </Box>
               </A>
             </Link>
 
-            <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
-              <Box direction="row" gap="small" justify="center">
-                <Instagram size="2rem" color="white" />
+            <Box direction={isSmallMobile ? 'row' : 'column'} gap="medium">
+              <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
+                <Box direction="row" gap="small" justify="center">
+                  <Instagram size="2rem" color="white" />
+                  {!isSmallMobile && (
+                    <Text
+                      font="Quicksand"
+                      transform="uppercase"
+                      weight="bold"
+                      color="white"
+                    >
+                      Sigue nuestros pasos!
+                    </Text>
+                  )}
+                </Box>
+              </StandardLink>
+              <StandardLink href={`mailto:${configuration.getIn(['social', 'email'])}`}>
                 <Text
-                  font="Quicksand"
-                  transform="uppercase"
+                  color="yellow"
                   weight="bold"
-                  color="white"
+                  transform="uppercase"
                 >
-                  Sigue nuestros pasos!
+                  {configuration.getIn(['social', 'email'])}
                 </Text>
-              </Box>
-            </StandardLink>
-            <StandardLink href={`mailto:${configuration.getIn(['social', 'email'])}`}>
-              <Text
-                color="yellow"
-                weight="bold"
-                transform="uppercase"
-              >
-                {configuration.getIn(['social', 'email'])}
-              </Text>
-            </StandardLink>
+              </StandardLink>
+            </Box>
           </Box>
         </Box>
       </Box>

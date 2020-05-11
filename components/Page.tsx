@@ -6,6 +6,7 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 
 import MenuWrapper from 'components/Menu/Wrapper'
+import LoadingWrapper from 'components/PageLoading/Wrapper'
 
 import usePageTitle from 'hooks/generic/usePageTitle'
 import useTheme from 'hooks/generic/useTheme'
@@ -71,19 +72,21 @@ const Page: React.FC<BoxProps & PageType> = ({
         <Header>
           {headerChildren}
         </Header>
-        <MenuWrapper>
-          <Stack>
-            <FiltersMenu />
-          </Stack>
-          <Box fill={!withScroll}>
-            <Box fill={!withScroll} pad={{ top: header.height }}>
-              {children}
+        <LoadingWrapper>
+          <MenuWrapper>
+            <Stack>
+              <FiltersMenu />
+            </Stack>
+            <Box fill={!withScroll}>
+              <Box fill={!withScroll} pad={{ top: header.height }}>
+                {children}
+              </Box>
+              {withFooter && (
+                <Footer />
+              )}
             </Box>
-            {withFooter && (
-              <Footer />
-            )}
-          </Box>
-        </MenuWrapper>
+          </MenuWrapper>
+        </LoadingWrapper>
       </Box>
     </Box>
   )

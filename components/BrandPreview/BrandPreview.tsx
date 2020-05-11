@@ -52,7 +52,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
               </Box>
               <Box
                 width={isSmallMobile ? '55%' : '50%'}
-                pad={isSmallMobile ? 'medium' : { vertical: '2rem', horizontal: '2.2rem' }}
+                pad={isSmallMobile ? '0.9rem' : { vertical: '2rem', horizontal: '2.2rem' }}
                 justify="between"
               >
 
@@ -87,9 +87,9 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                     {brand.get('criteria').map((criterion) => (
                       <Box
                         key={criterion.get('id')}
-                        width="1.5rem"
-                        height="1.5rem"
-                        margin={{ right: 'small', bottom: 'small' }}
+                        width="1.3rem"
+                        height="1.3rem"
+                        margin={{ right: 'small', bottom: 'xsmall' }}
                       >
                         <CriterionIcon
                           clickable

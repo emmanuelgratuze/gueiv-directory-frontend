@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Box, Button as GrommetButton } from 'grommet'
 import { StatusGoodSmall, FormClose } from 'grommet-icons'
 import Link from 'next/link'
@@ -28,6 +28,15 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
   const { isMobile, isTablet } = useResponsive()
   const [brandColor, oppBrandColor] = useBrandColor(brand)
   const { getFiltersUrlString } = useFilters()
+  const contentPadding = useMemo(() => {
+    let padding: string | object = 'xlarge'
+    if (isMobile) {
+      padding = 'large'
+    } else if (isTablet) {
+      padding = { vertical: 'xlarge', horizontal: 'large' }
+    }
+    return padding
+  }, [isMobile, isTablet])
 
   return (
     <>
@@ -72,7 +81,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
             overflow="auto"
           >
             <Box
-              pad={isTablet ? { vertical: 'xlarge', horizontal: 'large' } : 'xlarge'}
+              pad={contentPadding}
               flex={false}
             >
               <Heading

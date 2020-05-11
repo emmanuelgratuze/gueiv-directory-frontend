@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react'
-import { Box, Stack } from 'grommet'
+import { Box, BoxProps } from 'grommet'
 import styled from 'styled-components'
 import { darken } from 'polished'
+import { AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 import CriterionTooltip from 'components/CriterionTooltip'
 
@@ -9,8 +11,6 @@ import { ImmutableCriterion } from 'types/data/criterion'
 import { ColorsNames } from 'themes/theme'
 import useTheme from 'hooks/generic/useTheme'
 import useHover from 'hooks/generic/useHover'
-import Link from 'next/link'
-import { AnimatePresence } from 'framer-motion'
 
 type CriterionIcon = {
   criterion: ImmutableCriterion;
@@ -27,8 +27,8 @@ const StyledIconContainer = styled(Box)`
   svg,
   g,
   path {
-    fill: ${(props) => props.color} !important;
     pointer-events: none;
+    fill: ${(props) => props.color} !important;
   }
 
   path {
@@ -36,7 +36,7 @@ const StyledIconContainer = styled(Box)`
   }
 `
 
-const CriterionIcon: React.FC<CriterionIcon> = ({
+const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
   criterion,
   color = 'white',
   clickable = false,
@@ -63,7 +63,11 @@ const CriterionIcon: React.FC<CriterionIcon> = ({
   }, [color])
 
   const content = (
-    <Box fill overflow="hidden">
+    <Box
+      fill
+      overflow="hidden"
+      {...props}
+    >
       <StyledIconContainer
         fill
         align="center"
@@ -72,7 +76,6 @@ const CriterionIcon: React.FC<CriterionIcon> = ({
           __html: criterion.get('iconContent')
         }}
         color={isHover && clickable ? oppositeColor : normalColor}
-        {...props}
       />
     </Box>
   )
@@ -84,13 +87,10 @@ const CriterionIcon: React.FC<CriterionIcon> = ({
         style={{ position: 'relative' }}
         align="center"
         justify="center"
+        ref={ref}
       >
         <Link href="/criterios" as={`/criterios#${criterion.get('id')}`}>
-          <Box ref={ref}>
-            <Stack fill>
-              {content}
-            </Stack>
-          </Box>
+          {content}
         </Link>
         <AnimatePresence>
           {isHover && (

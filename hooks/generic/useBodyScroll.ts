@@ -1,4 +1,9 @@
-import { useEffect, useState, useCallback, useMemo } from 'react'
+import {
+  useEffect,
+  useState,
+  useCallback,
+  useMemo
+} from 'react'
 
 type Result = {
   enableScroll: Function;

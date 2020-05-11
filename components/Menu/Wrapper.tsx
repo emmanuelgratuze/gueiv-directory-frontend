@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import { Stack, Box } from 'grommet'
+import { Stack } from 'grommet'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 import useMenuState from 'hooks/app/useMenuState'
 import useBodyScroll from 'hooks/generic/useBodyScroll'
@@ -37,8 +38,19 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
   }, [isMenuOpen])
 
   return (
-    <Stack guidingChild={0}>
-      {children}
+    <Stack guidingChild={1}>
+      <motion.div
+        animate={{
+          opacity: isMenuOpen ? 0 : 1,
+          filter: isMenuOpen ? 'blur(2px)' : 'none'
+        }}
+        transition={{
+          duration: 1,
+          delay: isMenuOpen ? 0 : 0.5
+        }}
+      >
+        {children}
+      </motion.div>
 
       <MenuInnerWrapper open={isMenuOpen}>
         <MenuContent open={isMenuOpen} />

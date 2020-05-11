@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Box, Button as GrommetButton } from 'grommet'
 import { StatusGoodSmall, FormClose } from 'grommet-icons'
 import Link from 'next/link'
@@ -8,8 +8,8 @@ import Text from 'components/Text'
 import Heading from 'components/Heading'
 import Button from 'components/Button'
 import BrandCarousel from 'components/BrandCarousel'
-import useResponsive from 'hooks/useResponsive'
-import useBrandColor from 'hooks/useBrandColor'
+import useResponsive from 'hooks/generic/useResponsive'
+import useBrandColor from 'hooks/app/brands/useBrandColor'
 import Paragraph from 'components/Paragraph'
 import CriterionIcon from 'components/CriterionIcon'
 import StandardLink from 'components/StandardLink'
@@ -18,7 +18,7 @@ import Icon from 'components/Icon'
 import { ImmutableBrand } from 'types/data/brand'
 import { ColorsNames } from 'themes/theme'
 
-import useFilters from 'hooks/userFilters'
+import useFilters from 'hooks/app/brands/useFilters'
 
 interface BrandScreenProps {
   brand: ImmutableBrand;
@@ -28,11 +28,22 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
   const { isMobile, isTablet } = useResponsive()
   const [brandColor, oppBrandColor] = useBrandColor(brand)
   const { getFiltersUrlString } = useFilters()
+  const contentPadding = useMemo(() => {
+    let padding: string | object = 'xlarge'
+    if (isMobile) {
+      padding = 'large'
+    } else if (isTablet) {
+      padding = { vertical: 'xlarge', horizontal: 'large' }
+    }
+    return padding
+  }, [isMobile, isTablet])
 
   return (
     <>
       <Page
         title={brand.get('name')}
+        height={!isMobile ? '100vh' : undefined}
+        withScroll={false}
         headerChildren={(
           <Box justify="center" fill="vertical" width="2.5rem">
             <Link href={`/${getFiltersUrlString()}`}>
@@ -70,7 +81,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
             overflow="auto"
           >
             <Box
-              pad={isTablet ? { vertical: 'xlarge', horizontal: 'large' } : 'xlarge'}
+              pad={contentPadding}
               flex={false}
             >
               <Heading

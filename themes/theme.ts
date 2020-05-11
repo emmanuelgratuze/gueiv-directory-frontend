@@ -360,8 +360,8 @@ const theme = deepMerge(base, {
         xlarge: headingFontSizing(3.5)
       },
       2: {
-        small: headingFontSizing(1.3),
-        medium: headingFontSizing(1.7),
+        small: headingFontSizing(1.4),
+        medium: headingFontSizing(1.25),
         large: headingFontSizing(1.8),
         xlarge: headingFontSizing(1.9),
       },

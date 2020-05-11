@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-const useLoading = (): boolean => {
+const useLoading = (): { isLoading: boolean; currentPage: string } => {
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
   const handleRouteChangeStart = (): void => {
@@ -20,7 +20,10 @@ const useLoading = (): boolean => {
       router.events.off('routeChangeStart', handleRouteChangeStart)
     }
   }, [])
-  return isLoading
+  return {
+    isLoading,
+    currentPage: router.pathname
+  }
 }
 
 export default useLoading

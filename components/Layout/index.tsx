@@ -3,30 +3,26 @@ import Head from 'next/head'
 import { Grommet } from 'grommet'
 import { useRouter } from 'next/router'
 
-import LoadingScreen from 'screens/Loading'
-
-import useAnalytics from 'hooks/useAnalytics'
-import useLoading from 'hooks/useLoading'
+import useAnalytics from 'hooks/generic/useAnalytics'
 import theme from 'themes/theme'
 
 import { GlobalStyles } from './styled'
 
 type LayoutProps = {
-  isLoading?: boolean;
+  isContentReady?: boolean;
 }
 
 const Layout: React.FC<LayoutProps> = ({
   children,
-  isLoading: isLoadingProp = false
+  isContentReady = false
 }) => {
   if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
     useAnalytics(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
   }
 
   const router = useRouter()
-  const isLoading = useLoading()
 
-  // Only rerender the pages when route changed
+  // Only rerender the pages when route changed (or if the content changes)
   const siteContent = useMemo(
     () => children,
     [router.pathname, children]
@@ -64,11 +60,8 @@ const Layout: React.FC<LayoutProps> = ({
       <GlobalStyles />
 
       <Grommet theme={theme}>
-        {(isLoading || isLoadingProp) && (
-          <LoadingScreen />
-        )}
-        {/* If loading state has been given in prop, we do not render content yet */}
-        {!isLoadingProp && (
+        {/* If content doesn't ready we do not render it yet */}
+        {!isContentReady && (
           <>
             {siteContent}
           </>

@@ -10,12 +10,12 @@ import Text from 'components/Text'
 import Container from 'components/Container'
 import ResponsiveGrid from 'components/ResponsiveGrid'
 import CustomButton from 'components/Button'
-import useTheme from 'hooks/useTheme'
-import useFilter from 'hooks/useFilter'
+import useTheme from 'hooks/generic/useTheme'
+import useFilter from 'hooks/app/brands/useFilter'
 import { StatusGoodSmall, FormClose } from 'grommet-icons'
 
-import useResponsive from 'hooks/useResponsive'
-import useFilterMenu from 'hooks/useFilterMenu'
+import useResponsive from 'hooks/generic/useResponsive'
+import useFilterMenu from 'hooks/app/brands/useFilterMenu'
 
 import FiltersControlsFields from 'components/FiltersControls/Fields'
 
@@ -134,7 +134,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                 gap="medium"
               >
                 <CustomButton color="yellow" onClick={() => close()}>
-                  Ver las marcas
+                  Ver marcas
                 </CustomButton>
                 <Button plain onClick={() => removeFilters()} disabled={filterValue.size === 0}>
                   {({ hover }: { hover: boolean }) => (

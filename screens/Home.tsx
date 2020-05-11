@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-
 import { Box, Button } from 'grommet'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useDispatch } from 'react-redux'
@@ -12,19 +11,20 @@ import Loader from 'components/Loader'
 import FiltersControls from 'components/FiltersControls'
 
 import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
-import useResponsiveGrid from 'hooks/useResponsiveGrid'
-import useTheme from 'hooks/useTheme'
+import useResponsiveGrid from 'hooks/generic/useResponsiveGrid'
+import useTheme from 'hooks/generic/useTheme'
 
 import { setBrandsColors } from 'store/interface/actions'
-import useFilteredBrands from 'hooks/useFilteredBrands'
-import useFilters from 'hooks/userFilters'
+import useFilteredBrands from 'hooks/app/brands/useFilteredBrands'
+import useFilters from 'hooks/app/brands/useFilters'
 
+const ItemWrapper = motion.custom(Box)
 
 type HomeScreenProps = {}
 
 const HomeScreen: React.FC<HomeScreenProps> = () => {
   const { theme: { global: { brandColorsNames } } } = useTheme()
-  const { getChildrenSize } = useResponsiveGrid({
+  const { getChildrenSizeByIndex } = useResponsiveGrid({
     small: ['full'],
     medium: ['50%'],
     xlarge: ['33.33%']
@@ -62,12 +62,15 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
           height={brands.size !== 0 ? { min: '100vh' } : undefined}
           background={{ color: 'white' }}
           fill={brands.size === 0}
+          pad="0.5rem"
         >
           <AnimatePresence>
             <Box direction="row" wrap>
               <InfiniteScroll
                 dataLength={brands.size}
-                next={() => { selectMore() }}
+                next={() => {
+                  selectMore()
+                }}
                 hasMore={hasMore}
                 loader={(
                   <Box width="100%" height="medium" align="center" justify="center">
@@ -86,23 +89,30 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                 {brands.map((brand, index) => (
                   <Box
                     key={brand.get('id')}
-                    width={getChildrenSize(index)}
+                    width={getChildrenSizeByIndex(index)}
                   >
                     <Button plain>
                       {({ hover }: { hover: boolean }) => (
-                        <motion.div
+                        <ItemWrapper
                           initial={{ opacity: 0, transform: 'scale3d(0.98, 0.98, 1)' }}
                           animate={{ opacity: 1, transform: 'scale3d(1, 1, 1)' }}
                           exit={{ opacity: 0, transform: 'scale3d(0.98, 0.98, 1)' }}
                           transition={{ duration: 0.6 }}
                           style={{ zIndex: hover ? 2 : 1 }}
+                          pad="0.4rem"
                         >
-                          <BrandPreview
-                            key={brand.get('id')}
-                            brand={brand}
-                            color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
-                          />
-                        </motion.div>
+                          <Box
+                            fill
+                            round="0.5rem"
+                            overflow="hidden"
+                          >
+                            <BrandPreview
+                              key={brand.get('id')}
+                              brand={brand}
+                              color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
+                            />
+                          </Box>
+                        </ItemWrapper>
                       )}
                     </Button>
                   </Box>

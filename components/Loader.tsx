@@ -7,8 +7,8 @@ type LoaderProps = {}
 const Point = motion.custom(Box)
 const LoaderPoint: React.FC<MotionProps & BoxProps> = ({ transition }) => (
   <Point
-    initial={{ scale: 0.8 }}
-    animate={{ scale: 1.2 }}
+    initial={{ scale: 0.7 }}
+    animate={{ scale: 0.9 }}
     round="1rem"
     width="1rem"
     height="1rem"

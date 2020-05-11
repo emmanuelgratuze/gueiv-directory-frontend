@@ -11,9 +11,9 @@ import CriterionIcon from 'components/CriterionIcon'
 import Container from 'components/Container'
 import ScrollableItem from 'components/ScrollableItem'
 
-import useConfiguration from 'hooks/useConfiguration'
-import useTheme from 'hooks/useTheme'
-import useResponsive from 'hooks/useResponsive'
+import useConfiguration from 'hooks/app/useConfiguration'
+import useTheme from 'hooks/generic/useTheme'
+import useResponsive from 'hooks/generic/useResponsive'
 
 import { ImmutableCriterion } from 'types/data/criterion'
 

@@ -4,8 +4,8 @@ import { Box } from 'grommet'
 import { darken } from 'polished'
 import { motion } from 'framer-motion'
 import { ThemeColorsType } from 'themes/theme'
-import useTheme from 'hooks/useTheme'
-import useHover from 'hooks/useHover'
+import useTheme from 'hooks/generic/useTheme'
+import useHover from 'hooks/generic/useHover'
 
 type DynamicBackgroundColorBoxProps = {
   color?: keyof ThemeColorsType;

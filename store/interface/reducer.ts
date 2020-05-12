@@ -19,7 +19,7 @@ function brandsColors(state = fromJS({}), action: BasicAction): Reducer {
   }
 }
 
-function isMenuOpen(state = false, action: BasicAction): boolean {
+function isMenuOpen(state = true, action: BasicAction): boolean {
   switch (action.type) {
     case SET_MENU_OPEN_STATE:
       return fromJS(action.payload)

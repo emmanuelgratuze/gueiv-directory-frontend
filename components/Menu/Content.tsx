@@ -14,7 +14,9 @@ import { Instagram } from 'grommet-icons'
 import StandardLink from 'components/StandardLink'
 import useResponsive from 'hooks/generic/useResponsive'
 
-const Logo = require('assets/images/logo-white.svg').ReactComponent
+import BackgroundWave from './BackgroundWave'
+
+const Logo = require('assets/images/logo.svg').ReactComponent
 
 type MenuContentProps = {
   open: boolean;
@@ -47,7 +49,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
       // On top of svg background
       style={{
         position: 'relative',
-        height: '100%',
+        height: '80%',
         zIndex: 11
       }}
     >
@@ -72,19 +74,27 @@ const MenuContent: React.FC<MenuContentProps> = ({
           >
 
             <div style={{ maxWidth: '30rem' }}>
-              <Paragraph
-                textAlign="center"
-                margin={{ bottom: isMobile ? 'medium' : 'large' }}
-                color="white"
-                size={isMobile ? 'small' : 'large'}
-              >
-                {configuration.getIn(['general', 'menuDescription'])}
-              </Paragraph>
+              <Text weight="bold">
+                <Paragraph
+                  textAlign="center"
+                  margin={{ bottom: isMobile ? 'medium' : 'large' }}
+                  // color="white"
+                  color="blue"
+                  size={isMobile ? 'small' : 'large'}
+                >
+                  {configuration.getIn(['general', 'menuDescription'])}
+                </Paragraph>
+              </Text>
             </div>
 
             <Link href="/criterios">
               <A>
-                <Button color="white" size={isMobile ? 'small' : 'medium'}>
+                <Button
+                  // color="white"
+                  color="blue"
+                  hoverColor="gray"
+                  size={isMobile ? 'small' : 'medium'}
+                >
                   Ver todos los criterios
                 </Button>
               </A>
@@ -94,26 +104,44 @@ const MenuContent: React.FC<MenuContentProps> = ({
           <Box
             margin={{ bottom: 'medium' }}
             align="center"
+            justify="center"
             width={getChildrenSizeByIndex(1)}
           >
             <Link href="/">
               <A>
-                <Box fill align="center" pad="medium">
-                  <Logo width={isMobile ? '7rem' : '10rem'} height="100%" />
+                <Box fill align="center" margin={{ bottom: 'small' }}>
+                  <Logo
+                    width={isMobile ? '6rem' : '10rem'}
+                    height="7rem"
+                  />
                 </Box>
               </A>
             </Link>
 
-            <Box direction={isSmallMobile ? 'row' : 'column'} gap="medium">
+            <Box
+              direction={isSmallMobile ? 'row' : 'column'}
+              gap="medium"
+              align="center"
+            >
               <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
-                <Box direction="row" gap="small" justify="center">
-                  <Instagram size="2rem" color="white" />
+                <Box
+                  direction="row"
+                  gap="small"
+                  justify="center"
+                  align="center"
+                >
+                  <Instagram
+                    size="2rem"
+                    color="blue"
+                    // color="white"
+                  />
                   {!isSmallMobile && (
                     <Text
                       font="Quicksand"
                       transform="uppercase"
                       weight="bold"
-                      color="white"
+                      color="blue"
+                      // color="white"
                     >
                       Sigue nuestros pasos!
                     </Text>
@@ -133,6 +161,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
           </Box>
         </Box>
       </Box>
+      <BackgroundWave />
     </motion.div>
   )
 }

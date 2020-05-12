@@ -16,7 +16,7 @@ const WaveSVG = styled.svg`
 `
 
 const WavePath = styled(motion.path)`
-  fill: ${props => props.theme.global.colors.gray};
+  fill: ${props => props.theme.global.colors.white};
 `
 
 const waveShape = {

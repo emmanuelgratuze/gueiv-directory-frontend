@@ -8,6 +8,7 @@ import Container from 'components/Container'
 import Heading from 'components/Heading'
 import ResponsiveGrid from 'components/ResponsiveGrid'
 import useTheme from 'hooks/generic/useTheme'
+import useResponsive from 'hooks/generic/useResponsive'
 import useConfiguration from 'hooks/app/useConfiguration'
 
 import StandardLink from './StandardLink'
@@ -19,6 +20,7 @@ const FooterHeading: React.FC = ({ ...props }) => (
 
 const Footer: React.FC = () => {
   const configuration = useConfiguration()
+  const { isMobile } = useResponsive()
   const { brandColors } = useTheme()
 
   return (
@@ -33,7 +35,10 @@ const Footer: React.FC = () => {
             medium: ['33.33%'],
           }}
         >
-          <Box align="center" margin={{ bottom: 'medium' }}>
+          <Box
+            align="center"
+            margin={{ bottom: isMobile ? 'large' : 'medium' }}
+          >
             <FooterHeading>Sé parte</FooterHeading>
             <Paragraph
               size="small"
@@ -54,7 +59,11 @@ const Footer: React.FC = () => {
               </StandardLink>
             </Paragraph>
           </Box>
-          <Box align="center" gap="small" margin={{ bottom: 'medium' }}>
+          <Box
+            align="center"
+            gap="small"
+            margin={{ bottom: isMobile ? 'large' : 'medium' }}
+          >
             <FooterHeading>¡Sigue nuestros pasos!</FooterHeading>
             <Box direction="row" gap="medium">
               <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
@@ -65,7 +74,9 @@ const Footer: React.FC = () => {
               </StandardLink>
             </Box>
           </Box>
-          <Box align="center">
+          <Box
+            align="center"
+          >
             <FooterHeading>Súbete a la nueva ola</FooterHeading>
             <MailchimpForm />
           </Box>

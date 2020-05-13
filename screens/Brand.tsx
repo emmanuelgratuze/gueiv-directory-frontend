@@ -31,7 +31,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
   const contentPadding = useMemo(() => {
     let padding: string | object = 'xlarge'
     if (isMobile) {
-      padding = 'large'
+      padding = { bottom: 'large', horizontal: 'medium' }
     } else if (isTablet) {
       padding = { vertical: 'xlarge', horizontal: 'large' }
     }
@@ -42,8 +42,6 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
     <>
       <Page
         title={brand.get('name')}
-        height={!isMobile ? '100vh' : undefined}
-        withScroll={false}
         headerChildren={(
           <Box justify="center" fill="vertical" width="2.5rem">
             <Link href={`/${getFiltersUrlString()}`}>
@@ -54,7 +52,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                 {({ hover }: { hover: boolean }) => (
                   <Icon
                     Component={FormClose}
-                    color={hover ? brandColor : 'gray'}
+                    color={hover ? brandColor : 'white'}
                     size="2.5rem"
                   />
                 )}
@@ -69,24 +67,12 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
           direction={isMobile ? 'column' : 'row'}
           overflow="hidden"
         >
-          <BrandCarousel
-            width={isMobile ? '100%' : '50%'}
-            brand={brand}
-            color={brandColor as ColorsNames}
-            height={isMobile ? 'medium' : undefined}
-            overflow="hidden"
-          />
-          <Box
-            width={isMobile ? '100%' : '50%'}
-            overflow="auto"
-          >
-            <Box
-              pad={contentPadding}
-              flex={false}
-            >
+          {isMobile && (
+            <Box pad={{ horizontal: 'medium', top: 'medium' }}>
               <Heading
                 level={1}
                 transform="uppercase"
+                size="large"
               >
                 {brand.get('name')}
               </Heading>
@@ -101,6 +87,51 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                   {brand.get('city') && `${brand.get('city')}, `}
                   {brand.getIn(['country', 'name'])}
                 </Heading>
+              )}
+            </Box>
+          )}
+          <Box
+            height={isMobile ? '80vw' : '100vh'}
+            width={isMobile ? '100vw' : '80vh'}
+            pad={isMobile ? 'medium' : 'large'}
+            align="center"
+            justify="center"
+          >
+            <BrandCarousel
+              brand={brand}
+              color={brandColor as ColorsNames}
+              fill
+            />
+          </Box>
+          <Box
+            width={isMobile ? '100%' : '50%'}
+            overflow="auto"
+          >
+            <Box
+              pad={contentPadding}
+              flex={false}
+            >
+              {!isMobile && (
+                <>
+                  <Heading
+                    level={1}
+                    transform="uppercase"
+                  >
+                    {brand.get('name')}
+                  </Heading>
+
+                  {/* Location */}
+                  {brand.get('city') !== '' && brand.get('country') && (
+                    <Heading
+                      level={2}
+                      size="small"
+                      color={oppBrandColor}
+                    >
+                      {brand.get('city') && `${brand.get('city')}, `}
+                      {brand.getIn(['country', 'name'])}
+                    </Heading>
+                  )}
+                </>
               )}
 
               {/* Description */}
@@ -203,7 +234,7 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
                 {[
                   ['Instagram', brand.get('instagram')],
                   ['Facebook', brand.get('facebook')],
-                  ['Página web', brand.get('web')]
+                  ['web', brand.get('website')]
                 ].map(([label, link]) => link && (
                   <StandardLink
                     href={link}

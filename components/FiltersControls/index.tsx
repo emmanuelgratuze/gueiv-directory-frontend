@@ -24,9 +24,9 @@ const FiltersControls: React.FC<BoxProps> = () => {
           justify="center"
         >
           {!areFiltersOpen ? (
-            <FormFilter color="gray" />
+            <FormFilter color="white" />
           ) : (
-            <FormUp color="blue" />
+            <FormUp color="yellow" />
           )}
         </Box>
       </Button>

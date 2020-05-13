@@ -303,7 +303,7 @@ const theme = deepMerge(base, {
       bottom: 'medium'
     },
     border: {
-      color: 'light-2'
+      color: 'light-4'
     },
     focus: {
       border: {

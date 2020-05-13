@@ -12,6 +12,7 @@ import FiltersControls from 'components/FiltersControls'
 
 import { ThemeColorsType, BrandColorsKeys } from 'themes/theme'
 import useResponsiveGrid from 'hooks/generic/useResponsiveGrid'
+import useResponsive from 'hooks/generic/useResponsive'
 import useTheme from 'hooks/generic/useTheme'
 
 import { setBrandsColors } from 'store/interface/actions'
@@ -31,6 +32,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
   })
   const { brands, selectMore, hasMore } = useFilteredBrands()
   const { applyFiltersFromUrl } = useFilters()
+  const { isMobile } = useResponsive()
 
   const dispatch = useDispatch()
   useEffect(() => {
@@ -60,7 +62,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
       >
         <Box
           height={brands.size !== 0 ? { min: '100vh' } : undefined}
-          background={{ color: 'white' }}
+          background={{ color: 'gray' }}
           fill={brands.size === 0}
           pad="0.5rem"
         >
@@ -129,14 +131,15 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
             >
               {brands && brands.size === 0 && (
                 <Box
-                  fill
                   align="center"
                   justify="center"
-                  background={{ color: 'light-turquoise' }}
                   pad="medium"
+                  height={isMobile ? 'small' : 'large'}
                 >
-                  <Text weight="bold" color="gray" textAlign="center">
-                    No hemos encontrado marcas por tu criterios :(
+                  <Text size="large" weight="bold" color="pink" textAlign="center">
+                    ¡Oops!
+                    <br />
+                    No hemos encontrado marcas por tu criterios
                   </Text>
                 </Box>
               )}

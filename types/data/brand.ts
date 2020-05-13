@@ -13,7 +13,7 @@ type BrandBase = {
   city?: string;
   facebook?: string;
   instagram?: string;
-  web?: string;
+  website?: string;
 }
 
 export interface Brand extends BrandBase {

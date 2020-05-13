@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { useAnimation, motion, AnimatePresence } from 'framer-motion'
+import { useAnimation, AnimatePresence } from 'framer-motion'
 import { ThemeType } from 'themes/theme'
 
 import useTheme from 'hooks/generic/useTheme'
@@ -11,7 +11,7 @@ type Props = {
   theme: ThemeType;
 }
 
-const LoadingWrapper = styled(motion.div)`
+const LoadingWrapper = styled.div`
   position: relative;
   top: 0;
   left: 0;
@@ -46,13 +46,11 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({
 
   return (
     <AnimatePresence>
-      <LoadingWrapper
-        animate={controls}
-      >
+      <LoadingWrapper>
         <Logo
           width="5rem"
           height="100%"
-          fill={colors.gray}
+          fill={colors.yellow}
         />
       </LoadingWrapper>
     </AnimatePresence>

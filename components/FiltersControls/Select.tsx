@@ -28,7 +28,7 @@ const Select: React.FC<BoxProps & SelectProps> = ({
   selectedFilters,
   ...props
 }) => {
-  const color = isOpen ? ['yellow', 'light-yellow'] : ['blue', 'light-blue']
+  const color = isOpen ? ['yellow', 'light-yellow'] : ['white', 'light-2']
   const { isMobile } = useResponsive()
   return (
     <Button
@@ -40,13 +40,13 @@ const Select: React.FC<BoxProps & SelectProps> = ({
           direction="row"
           align="center"
           justify="center"
-          border={!isMobile ? { side: 'left', color: 'light-3' } : undefined}
+          border={!isMobile ? { side: 'left', color: 'dark-3' } : undefined}
           gap="small"
           pad={{
             horizontal: !isMobile ? 'medium' : 'medium',
             vertical: !isMobile ? undefined : 'medium'
           }}
-          background="white"
+          background="gray"
         >
           {selectedFilters && (
             <Box
@@ -57,7 +57,7 @@ const Select: React.FC<BoxProps & SelectProps> = ({
               align="center"
               justify="center"
             >
-              <Text size="xsmall" color="white">
+              <Text size="xsmall" color="gray">
                 {selectedFilters.size}
               </Text>
             </Box>

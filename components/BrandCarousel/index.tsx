@@ -6,6 +6,7 @@ import BrandImage from 'components/BrandPreview/Image'
 
 import { ImmutableBrand } from 'types/data/brand'
 import { ColorsNames } from 'themes/theme'
+import useResponsive from 'hooks/generic/useResponsive'
 
 import CarouselImage from './Image'
 import CarouselButton from './Button'
@@ -22,9 +23,12 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
 }) => {
   const [currentIndex, setIndex] = useState(0)
   const picturesCount = brand.get('pictures')?.size || 0
+  const { isMobile } = useResponsive()
+
   return (
     <Box
       background={{ color: 'black' }}
+      round={isMobile ? '1rem' : '2rem'}
       {...props}
     >
       {!brand.get('pictures')?.size && (
@@ -44,7 +48,12 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
             <AnimatePresence>
               <Stack fill>
                 {brand.get('pictures')?.map((fileName, index) => (
-                  <Box key={fileName} fill>
+                  <Box
+                    key={fileName}
+                    fill
+                    round={isMobile ? '1rem' : '2rem'}
+                    overflow="hidden"
+                  >
                     {index === currentIndex && (
                       <motion.div
                         initial={{ opacity: 0 }}

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import styled from 'styled-components'
+import useResponsive from 'hooks/generic/useResponsive'
 
 type MenuWaveProps = {
   open?: boolean;
@@ -16,7 +17,7 @@ const WaveSVG = styled.svg`
 `
 
 const WavePath = styled(motion.path)`
-  fill: ${props => props.theme.global.colors.white};
+  fill: ${props => props.theme.global.colors.gray};
 `
 
 const waveShape = {
@@ -27,6 +28,7 @@ const waveShape = {
 
 const MenuWave: React.FC<MenuWaveProps> = ({ open = false }) => {
   const controls = useAnimation()
+  const { isMobile } = useResponsive()
 
   useEffect(() => {
     controls.start({ d: open ? waveShape.open : waveShape.closed })
@@ -45,7 +47,7 @@ const MenuWave: React.FC<MenuWaveProps> = ({ open = false }) => {
         initial={{ d: waveShape.closed }}
         animate={controls}
         transition={{
-          duration: 1,
+          duration: isMobile ? 0.3 : 1,
           ease: 'easeInOut'
         }}
       />

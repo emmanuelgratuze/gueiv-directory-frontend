@@ -22,7 +22,10 @@ const FiltersControlsFields: React.FC<BoxProps> = ({ ...props }) => {
   }, [menuState])
 
   return (
-    <Box direction="row" {...props}>
+    <Box
+      direction="row"
+      {...props}
+    >
       {availableFilters.map((filter) => (
         <FilterSelect
           key={`${filter.get('id')}`}

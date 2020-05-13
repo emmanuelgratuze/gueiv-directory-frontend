@@ -1,6 +1,8 @@
 import React from 'react'
 import { Box, Paragraph } from 'grommet'
 import { motion, useAnimation } from 'framer-motion'
+import ReactMarkdown from 'react-markdown'
+import styled from 'styled-components'
 
 import Button from 'components/Button'
 import Text from 'components/Text'
@@ -16,12 +18,17 @@ import useResponsive from 'hooks/generic/useResponsive'
 
 import BackgroundWave from './BackgroundWave'
 
-const Logo = require('assets/images/logo.svg').ReactComponent
+const Logo = require('assets/images/logo-white.svg').ReactComponent
+
+const ProjectDescription = styled(Paragraph)`
+  strong {
+    color: ${(props) => props.theme.global.colors.yellow};
+  }
+`
 
 type MenuContentProps = {
   open: boolean;
 }
-
 
 const MenuContent: React.FC<MenuContentProps> = ({
   open = false
@@ -32,7 +39,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
   const animationControls = useAnimation()
   const { getChildrenSizeByIndex } = useResponsiveGrid({
     small: ['full'],
-    medium: ['50%']
+    medium: ['35%', '65%']
   })
 
   animationControls.mount()
@@ -49,77 +56,40 @@ const MenuContent: React.FC<MenuContentProps> = ({
       // On top of svg background
       style={{
         position: 'relative',
-        height: '80%',
-        zIndex: 11
+        zIndex: 11,
+        height: !isMobile ? '90%' : undefined
       }}
     >
       <Box
         fill="vertical"
-        pad={{ top: isMobile ? '0' : header.height }}
-        // width={isMobile ? '100%' : '30%'}
-        align="center"
-        justify="center"
-        overflow={isMobile ? { vertical: 'scroll' } : undefined}
+        pad={{ top: header.height }}
+        align={isMobile ? 'start' : 'center'}
+        justify={isMobile ? 'start' : 'center'}
       >
         <Box
           flex={false}
-          pad={isMobile ? 'small' : 'large'}
-          direction="row"
-          wrap
+          direction={isMobile ? 'column-reverse' : 'row'}
+          align={isMobile ? 'start' : 'center'}
         >
-          <Box
-            align="center"
-            pad="small"
-            width={getChildrenSizeByIndex(0)}
-          >
-
-            <div style={{ maxWidth: '30rem' }}>
-              <Text weight="bold">
-                <Paragraph
-                  textAlign="center"
-                  margin={{ bottom: isMobile ? 'medium' : 'large' }}
-                  // color="white"
-                  color="blue"
-                  size={isMobile ? 'small' : 'large'}
-                >
-                  {configuration.getIn(['general', 'menuDescription'])}
-                </Paragraph>
-              </Text>
-            </div>
-
-            <Link href="/criterios">
-              <A>
-                <Button
-                  // color="white"
-                  color="blue"
-                  hoverColor="gray"
-                  size={isMobile ? 'small' : 'medium'}
-                >
-                  Ver todos los criterios
-                </Button>
-              </A>
-            </Link>
-          </Box>
 
           <Box
             margin={{ bottom: 'medium' }}
             align="center"
             justify="center"
-            width={getChildrenSizeByIndex(1)}
+            width={getChildrenSizeByIndex(0)}
           >
             <Link href="/">
               <A>
                 <Box fill align="center" margin={{ bottom: 'small' }}>
                   <Logo
-                    width={isMobile ? '6rem' : '10rem'}
-                    height="7rem"
+                    width={isMobile ? '6rem' : '12rem'}
+                    height="6rem"
                   />
                 </Box>
               </A>
             </Link>
 
             <Box
-              direction={isSmallMobile ? 'row' : 'column'}
               gap="medium"
               align="center"
             >
@@ -132,25 +102,21 @@ const MenuContent: React.FC<MenuContentProps> = ({
                 >
                   <Instagram
                     size="2rem"
-                    color="blue"
-                    // color="white"
+                    color="pink"
                   />
-                  {!isSmallMobile && (
-                    <Text
-                      font="Quicksand"
-                      transform="uppercase"
-                      weight="bold"
-                      color="blue"
-                      // color="white"
-                    >
-                      Sigue nuestros pasos!
-                    </Text>
-                  )}
+                  <Text
+                    font="Quicksand"
+                    transform="uppercase"
+                    weight="bold"
+                    color="pink"
+                  >
+                    Sigue nuestros pasos!
+                  </Text>
                 </Box>
               </StandardLink>
               <StandardLink href={`mailto:${configuration.getIn(['social', 'email'])}`}>
                 <Text
-                  color="yellow"
+                  color="white"
                   weight="bold"
                   transform="uppercase"
                 >
@@ -159,9 +125,42 @@ const MenuContent: React.FC<MenuContentProps> = ({
               </StandardLink>
             </Box>
           </Box>
+
+
+          <Box
+            align={isMobile ? 'center' : 'start'}
+            pad={isSmallMobile ? 'medium' : 'large'}
+            width={getChildrenSizeByIndex(1)}
+          >
+
+            <div style={{ maxWidth: '55rem' }}>
+              <ProjectDescription
+                textAlign="start"
+                margin={{ bottom: isMobile ? 'medium' : 'large' }}
+                color="white"
+                size="medium"
+              >
+                <ReactMarkdown source={configuration.getIn(['general', 'menuDescription'])} />
+              </ProjectDescription>
+            </div>
+
+            <Link href="/criterios">
+              <A>
+                <Button
+                  color="pink"
+                  hoverColor="white"
+                  size={isMobile ? 'small' : 'medium'}
+                >
+                  Ver todos los criterios
+                </Button>
+              </A>
+            </Link>
+          </Box>
         </Box>
       </Box>
-      <BackgroundWave />
+      {!isMobile && (
+        <BackgroundWave />
+      )}
     </motion.div>
   )
 }

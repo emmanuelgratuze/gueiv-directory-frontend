@@ -11,7 +11,7 @@ import useTheme from 'hooks/generic/useTheme'
 import useMenuState from 'hooks/app/useMenuState'
 import useResponsive from 'hooks/generic/useResponsive'
 
-const Logo = require('assets/images/logo.svg').ReactComponent
+const Logo = require('assets/images/logo-white.svg').ReactComponent
 
 const HeaderWrapper = styled(Box)`
   position: fixed;
@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
 
   return (
     <HeaderWrapper
-      background={{ color: 'white' }}
+      background={{ color: 'gray' }}
       fill="horizontal"
       height={header.height}
     >
@@ -50,7 +50,10 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
           >
             <Box height="2rem" width="2rem">
               <Button plain onClick={() => toggleMenu()} fill>
-                <HamburgerIcon open={isMenuOpen} />
+                <HamburgerIcon
+                  color="white"
+                  open={isMenuOpen}
+                />
               </Button>
             </Box>
             <Link href="/">
@@ -64,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
               <Text
                 transform="uppercase"
                 weight={700}
-                color="dark-3"
+                color="light-3"
                 size="0.9rem"
                 spacing="large"
               >
@@ -73,9 +76,11 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
             </Box>
           </Box>
 
-          <Box>
-            {children}
-          </Box>
+          {!isMenuOpen && (
+            <Box>
+              {children}
+            </Box>
+          )}
         </Box>
 
       </Container>

@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle`
     overflow-y: auto !important;
     font-size: 10px;
     font-family: 'Quicksand', Helvetica, sans-serif;
+    background-color: #3d3d4f;
   }
 
   * {

@@ -5,6 +5,7 @@ import useTheme from 'hooks/generic/useTheme'
 
 type HamburgerIconProps = {
   open?: boolean;
+  color?: string;
 }
 
 type LineProps = HamburgerIconProps & {

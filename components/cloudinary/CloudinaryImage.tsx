@@ -1,7 +1,11 @@
 import React, { useContext } from 'react'
-import { Image, ImageProps } from 'grommet'
+import { ImageProps } from 'grommet'
 import { Transformation } from 'cloudinary-core'
+
+import Image from 'components/Image'
+
 import CloudinaryContext from './CloudinaryContext'
+
 
 type Props = {
   fileName: string;

@@ -8,7 +8,7 @@ cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY
 })
-const contentsPath = `${process.env.PWD}/cms/contents`
+const contentsPath = `${process.env.PWD}/contents`
 
 export async function getCollectionData<T extends object>(
   collectionName: string,

@@ -30,7 +30,7 @@ export default {
           name: 'general',
           extension: 'json',
           format: 'json',
-          file: 'cms/contents/configuration/general.json',
+          file: 'configuration/general.json',
           fields: [
             {
               label: 'Title',
@@ -54,7 +54,7 @@ export default {
           name: 'contact',
           extension: 'json',
           format: 'json',
-          file: 'cms/contents/configuration/social.json',
+          file: 'configuration/social.json',
           fields: [
             {
               label: 'Facebook page',
@@ -79,7 +79,7 @@ export default {
           name: 'criteriaPage',
           extension: 'json',
           format: 'json',
-          file: 'cms/contents/configuration/criteria-page.json',
+          file: 'configuration/criteria-page.json',
           fields: [
             {
               label: 'Title',
@@ -98,7 +98,7 @@ export default {
     {
       label: 'Brands',
       name: 'brands',
-      folder: 'cms/contents/brands',
+      folder: 'brands',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',
@@ -201,7 +201,7 @@ export default {
       label: 'Criteria',
       label_singular: 'Criterion',
       name: 'criteria',
-      folder: 'cms/contents/criteria',
+      folder: 'criteria',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',
@@ -241,7 +241,7 @@ export default {
       label: 'Countries',
       name: 'countries',
       label_singular: 'Country',
-      folder: 'cms/contents/countries',
+      folder: 'countries',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',
@@ -258,7 +258,7 @@ export default {
       label: 'Product types',
       label_singular: 'Product type',
       name: 'productTypes',
-      folder: 'cms/contents/product-types',
+      folder: 'product-types',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',
@@ -275,7 +275,7 @@ export default {
       label: 'Genders',
       label_singular: 'Gender',
       name: 'genders',
-      folder: 'cms/contents/genders',
+      folder: 'genders',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',

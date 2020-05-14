@@ -1,0 +1,3 @@
+[submodule "contents"]
+	path = contents
+	url = git@github.com:emmanuelgratuze/gueiv-directory-contents.git

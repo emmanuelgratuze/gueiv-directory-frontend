@@ -18,14 +18,14 @@ const WaveSVG = styled.svg`
   z-index: 10;
   width: 100vw;
   height: 100vh;
+  pointer-events: none;
 `
 
 const WavePath = styled(motion.path)`
-  fill: ${props => props.theme.global.colors.blue};
+  fill: ${props => props.theme.global.colors.yellow};
 `
 
-const YPosition = 80
-const height = 100
+const YPosition = 90
 const width = 100
 const pointsLength = 10
 const pointsInterval = width / pointsLength
@@ -33,13 +33,12 @@ const pointsInterval = width / pointsLength
 const BackgroundWave: React.FC<MenuWaveProps> = () => {
   const controls = useAnimation()
   const svgRef = createRef<SVGSVGElement>()
-  // const [cursorPosition, setCursorPosition] = useState<SVGPoint>()
   const [waveFactors, setWaveFactors] = useState<{ y: number; x: number }[]>()
   const shape = useMemo(() => {
     const pointsCommands = Array(pointsLength).fill(null).map((value, index) => {
       const command = index === 0 ? 'Q' : 'T'
-      const XDestination = Math.round((index + 1) * pointsInterval * 100) / 100 + (waveFactors ? waveFactors[index].x : 0)
-      const YDestination = YPosition + (waveFactors ? waveFactors[index].y : 0)
+      const XDestination = Math.round((index + 1) * pointsInterval * 100) / 100 + (waveFactors ? waveFactors[index].x : Math.random())
+      const YDestination = YPosition + (waveFactors ? waveFactors[index].y : Math.random())
       return `${command} ${index === 0 ? `${XDestination - pointsInterval / 2},${YDestination} ` : ''}${XDestination}, ${YDestination}`
     })
     return `M0,${YPosition} ${pointsCommands.join(' ')} L 100,100 L 0,100`
@@ -55,25 +54,6 @@ const BackgroundWave: React.FC<MenuWaveProps> = () => {
       })))
     }, 2000)
   }, [])
-
-  // Mouse listener
-  // useEffect(() => {
-  //   if (svgRef.current) {
-  //     const cursorPoint = svgRef.current.createSVGPoint()
-  //     const svg = svgRef.current
-  //     svg.addEventListener('mousemove', (e) => {
-  //       cursorPoint.x = e.clientX
-  //       cursorPoint.y = e.clientY
-
-  //       if (svg !== null) {
-  //         const screenCTM = svg.getScreenCTM()
-  //         if (screenCTM) {
-  //           setCursorPosition(cursorPoint.matrixTransform(screenCTM.inverse()))
-  //         }
-  //       }
-  //     }, false)
-  //   }
-  // }, [svgRef.current])
 
   controls.mount()
 

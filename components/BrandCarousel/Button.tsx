@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, BoxProps, Button } from 'grommet'
 import { Next, Previous } from 'grommet-icons'
 import Icon from 'components/Icon'
+import useResponsive from 'hooks/generic/useResponsive'
 
 type NavigationButtonProps = {
   side: 'previous' | 'next';
@@ -14,10 +15,11 @@ const CarouselButton: React.FC<BoxProps & NavigationButtonProps> = ({
   ...props
 }) => {
   const IconType = side === 'previous' ? Previous : Next
+  const { isMobile } = useResponsive()
   return (
     <Box
       fill
-      pad="large"
+      pad={isMobile ? 'medium' : 'large'}
     >
       <Button plain fill>
         {({ hover }: { hover: boolean }) => (
@@ -30,7 +32,7 @@ const CarouselButton: React.FC<BoxProps & NavigationButtonProps> = ({
             <Icon
               Component={IconType}
               color={hover ? color : 'white'}
-              size="2.5rem"
+              size={isMobile ? '2rem' : '2.5rem'}
             />
           </Box>
         )}

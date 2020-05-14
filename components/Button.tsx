@@ -39,6 +39,7 @@ const Button = styled(GrommetButton)<ButtonProps & GrommetButtonProps>`
     font-size: 0.8em;
     padding: 0.5em 1.8em;
   `}
+  appearance: none;
   ${(props: ButtonProps) => props.size === 'large' && css`
     font-size: 1.1em;
     padding: 0.7em 2.2em;

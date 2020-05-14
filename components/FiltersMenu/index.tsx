@@ -5,6 +5,7 @@ import {
   Layer,
   Button
 } from 'grommet'
+import styled, { css } from 'styled-components'
 
 import Text from 'components/Text'
 import Container from 'components/Container'
@@ -18,11 +19,27 @@ import useResponsive from 'hooks/generic/useResponsive'
 import useFilterMenu from 'hooks/app/brands/useFilterMenu'
 
 import FiltersControlsFields from 'components/FiltersControls/Fields'
+import { ThemeType } from 'themes/theme'
+import { darken } from 'polished'
+
+type ButtonsBoxProps = {
+  isMobile?: boolean;
+  theme: ThemeType;
+}
+const ButtonsBox = styled(Box)`
+  ${(props: ButtonsBoxProps) => props.isMobile && css`
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: ${props.theme.global.colors.gray};
+  `}
+`
 
 type FiltersMenuProps = {}
 
 const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
   const { isMobile } = useResponsive()
+  const { colors } = useTheme()
 
   const { state: menuState, close } = useFilterMenu()
 
@@ -48,11 +65,11 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
   // UI stuff
   const { theme } = useTheme()
   const getTextColor = useCallback((option, hover: boolean) => {
-    const colors = {
+    const colorsConfig = {
       normal: ['light-2', 'white'],
       selected: ['yellow', 'light-yellow']
     }
-    return colors[filterValue.includes(option.value) ? 'selected' : 'normal'][hover ? 1 : 0]
+    return colorsConfig[filterValue.includes(option.value) ? 'selected' : 'normal'][hover ? 1 : 0]
   }, [filterValue])
 
   return (
@@ -75,7 +92,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
               <Box
                 fill="horizontal"
                 overflow={{ horizontal: 'auto' }}
-                background={{ color: 'white' }}
+                background={{ color: 'gray' }}
                 flex={{ shrink: 0 }}
                 align="center"
               >
@@ -83,9 +100,13 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
               </Box>
             )}
             <Container
-              pad={isMobile ? { top: 'large', bottom: 'xlarge', horizontal: 'medium' } : 'medium'}
+              pad={isMobile ? { top: 'small', bottom: '10rem', horizontal: 'medium' } : 'medium'}
               flex={isMobile ? false : undefined}
               // overflow={isMobile ? 'scroll' : undefined}
+              direction={isMobile ? 'column-reverse' : 'column'}
+              background={{
+                color: darken(0.1, colors.gray)
+              }}
             >
               <ResponsiveGrid
                 columns={{
@@ -109,12 +130,14 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                         direction="row"
                         gap="small"
                       >
-                        <StatusGoodSmall
-                          size="small"
-                          color={filterValue.includes(option.value) ? getTextColor(option, hover) : 'transparent'}
-                        />
+                        {!isMobile && (
+                          <StatusGoodSmall
+                            size="small"
+                            color={filterValue.includes(option.value) ? getTextColor(option, hover) : 'transparent'}
+                          />
+                        )}
                         <Text
-                          weight="bold"
+                          weight={isMobile && filterValue.includes(option.value) || !isMobile ? 'bold' : undefined}
                           color={getTextColor(option, hover)}
                           textAlign="center"
                         >
@@ -125,13 +148,15 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                   </Button>
                 ))}
               </ResponsiveGrid>
-              <Box
+              <ButtonsBox
                 margin={{ top: 'medium' }}
                 fill="horizontal"
                 align="center"
                 justify="center"
-                direction="row-responsive"
+                direction="row"
                 gap="medium"
+                pad={{ vertical: 'xsmall' }}
+                isMobile={isMobile}
               >
                 <CustomButton color="yellow" onClick={() => close()}>
                   Ver marcas
@@ -152,7 +177,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
                     </Box>
                   )}
                 </Button>
-              </Box>
+              </ButtonsBox>
             </Container>
           </Box>
         </Layer>

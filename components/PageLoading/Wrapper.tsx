@@ -21,10 +21,12 @@ const LoadingWrapper: React.FC = ({ children }) => {
         {children}
       </motion.div>
 
-      <LoadingScreen
-        currentPage={currentPage}
-        isLoading={isLoading}
-      />
+      {isLoading && (
+        <LoadingScreen
+          currentPage={currentPage}
+          isLoading={isLoading}
+        />
+      )}
     </Stack>
   )
 }

@@ -1,30 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# Güeiv directory
+Here is the frontend app of: http://direction.gueiv.com. 
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+## Setup
+Install npm dependencies
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Contents and data
+All the website's contents and data are versioned and separately stored in a distinct repository. They are included (via .gitmodules) in the `/contents` app folder. From now, the production's website raw data aren't publicly accessible, so you will need to specify your own repository to make the app working.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The app uses [Netlify CMS](https://www.netlifycms.org/) as content manager, which will also need to be configurated with your content repository.
 
-## Learn More
+#### Ready to use fake contents repository (read-only)
+You only need to checkout the `with-fake-contents branch. This branch version is configurated to work with https://github.com/emmanuelgratuze/gueiv-directory-contents-sample which is a light version of the production data (without brands data).
 
-To learn more about Next.js, take a look at the following resources:
+#### Custom contents Github repository
+- First you need to define the `NETLIFY_CMS_BACKEND_REPO` environment variable, in order to tell Netlify CMS where it should read and write the contents. In `/.env`, replace with your **Github** repository path:
+```
+NETLIFY_CMS_BACKEND_REPO="emmanuelgratuze/gueiv-directory-contents-sample"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Then, tell git where it should pull the contents into the project.
+In `/.gitmodules, replace with your **Github** repository url as follow:
+```
+[submodule "contents"]
+	path = contents
+	url = git@github.com:emmanuelgratuze/gueiv-directory-contents.git
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+- Fetch the repository. In the project root, run:
 
-## Deploy on ZEIT Now
+  ```
+  git submodule update --recursive --remote
+  ```
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/) from the creators of Next.js.
+### External services
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The website requires configuring few external services to work:
+- Cloudinary (image storing)
+- Google analytics
+- Mailchimp (newsletter subscription)
+
+Here are the environment variables you will need to define:
+```
+# .env
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+
+GOOGLE_ANALYTICS_TRACKING_ID=
+
+MAILCHIMP_USERNAME=
+MAILCHIMP_U=
+MAILCHIMP_ID=
+MAILCHIMP_FORM_ID=
+```
+
+## Run in development mode
+```
+npm run dev
+```
+
+The app will start on : https://localhost:3000.
+
+## Build
+
+```
+npm run production-build
+```
+
+The build files are generated in the `/out` directory.
+
+### Lint code
+
+Eslint + stylent
+
+```
+npm run lint
+```

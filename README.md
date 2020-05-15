@@ -13,7 +13,7 @@ All the website's contents and data are versioned and separately stored in a dis
 The app uses [Netlify CMS](https://www.netlifycms.org/) as content manager, which will also need to be configurated with your content repository.
 
 #### Ready to use fake contents repository (read-only)
-You only need to checkout the `with-fake-contents branch. This branch version is configurated to work with https://github.com/emmanuelgratuze/gueiv-directory-contents-sample which is a light version of the production data (without brands data).
+You only need to checkout the `with-fake-contents` branch. This branch version is configurated to work with https://github.com/emmanuelgratuze/gueiv-directory-contents-sample which is a light version of the production data (without brands data).
 
 #### Custom contents Github repository
 - First you need to define the `NETLIFY_CMS_BACKEND_REPO` environment variable, in order to tell Netlify CMS where it should read and write the contents. In `/.env`, replace with your **Github** repository path:

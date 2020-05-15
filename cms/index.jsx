@@ -1,4 +1,5 @@
-import config from './config'
+import appConfig from '../app.config.json'
+import getConfig from './config'
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const loadCMS = () => {
@@ -10,7 +11,7 @@ export const loadCMS = () => {
       .then(([CMS, widget]) => {
         const { NetlifyCmsWidgetRelation } = widget
         CMS.registerWidget(NetlifyCmsWidgetRelation.Widget())
-        CMS.init({ config })
+        CMS.init({ config: getConfig(appConfig) })
       })
   }
 }

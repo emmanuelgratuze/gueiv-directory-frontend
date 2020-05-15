@@ -1,5 +1,6 @@
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
+const appConfig = require('./app.config.json')
 
 require('dotenv').config()
 
@@ -58,7 +59,8 @@ module.exports = withPlugins(
       MAILCHIMP_USERNAME: process.env.MAILCHIMP_USERNAME,
       MAILCHIMP_U: process.env.MAILCHIMP_U,
       MAILCHIMP_ID: process.env.MAILCHIMP_ID,
-      MAILCHIMP_FORM_ID: process.env.MAILCHIMP_FORM_ID
+      MAILCHIMP_FORM_ID: process.env.MAILCHIMP_FORM_ID,
+      ...appConfig
     }
   }
 )

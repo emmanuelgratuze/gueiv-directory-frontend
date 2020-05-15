@@ -32,7 +32,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
   })
   const { brands, selectMore, hasMore } = useFilteredBrands()
   const { applyFiltersFromUrl } = useFilters()
-  const { isMobile } = useResponsive()
+  const { isMobile, isTablet } = useResponsive()
 
   const dispatch = useDispatch()
   useEffect(() => {
@@ -102,11 +102,13 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                           transition={{ duration: 0.6 }}
                           style={{ zIndex: hover ? 2 : 1 }}
                           pad="0.4rem"
+                          align="center"
                         >
                           <Box
                             fill
                             round="0.5rem"
                             overflow="hidden"
+                            width={{ max: isTablet || isMobile ? '30rem' : undefined }}
                           >
                             <BrandPreview
                               key={brand.get('id')}

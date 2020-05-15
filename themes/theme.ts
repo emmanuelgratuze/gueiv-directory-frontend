@@ -172,7 +172,7 @@ const theme = deepMerge(base, {
         }
       },
       small: {
-        value: baseSpacing * 36, // 1152
+        value: baseSpacing * 32, // 1152
         borderSize: {
           xsmall: '1px',
           small: '2px',

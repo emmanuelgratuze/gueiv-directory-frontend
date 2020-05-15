@@ -20,7 +20,7 @@ import BackgroundWave from './BackgroundWave'
 
 const Logo = require('assets/images/logo-white.svg').ReactComponent
 
-const ProjectDescription = styled(Paragraph)`
+const ProjectDescription = styled(Text)`
   strong {
     color: ${(props) => props.theme.global.colors.yellow};
   }

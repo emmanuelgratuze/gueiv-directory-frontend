@@ -8,15 +8,20 @@ npm install
 ```
 
 ### Contents and data
-All the website's contents and data are versioned and separately stored in a distinct repository. They are included (via .gitmodules) in the `/contents` app folder. From now, the production's website raw data aren't publicly accessible, so you will need to specify your own repository to make the app working.
+All the website's contents and data are versioned and separately stored in a dedicated repository. They are included (via .gitmodules) in the `/contents` app folder and editable with Netlify CMS.
 
-The app uses [Netlify CMS](https://www.netlifycms.org/) as content manager, which will also need to be configurated with your content repository.
+From now, the production's website raw data aren't publicly accessible, so running the app on master or dev branch will result on an empty app. But a ready-to-use version can be run, based on light contents (without the brands). You can also use your own repository.
 
-#### Ready to use fake contents repository (read-only)
-You only need to checkout the `with-fake-contents` branch. This branch version is configurated to work with https://github.com/emmanuelgratuze/gueiv-directory-contents-sample which is a light version of the production data (without brands data).
+#### Ready-to-use version (light contents, read-only)
+Purpose: if you only want to run the app with light contents and not edit it.
 
-#### Custom contents Github repository
-- First you need to define the `NETLIFY_CMS_BACKEND_REPO` environment variable, in order to tell Netlify CMS from where it should read and write the contents. In `/.env`, replace with your **Github** repository path:
+- Checkout the `with-fake-contents` branch. This branch version is configured to work with https://github.com/emmanuelgratuze/gueiv-directory-contents-sample which is a light version of the production data (only two fake brands).
+
+#### Custom version (custom Github repository)
+Purpose: if you want to run the app with you own contents, and be able to edit it with the Netlify CMS.
+
+- First you need to change the `NETLIFY_CMS_GITHUB_REPOSITORY` configuration variable, in order to tell Netlify CMS from where it should read and write the contents.
+In `/app.config.json`, replace the `NETLIFY_CMS_GITHUB_REPOSITORY` property with your **Github** repository path:
 ```
 {
   "NETLIFY_CMS_GITHUB_REPOSITORY": "emmanuelgratuze/gueiv-directory-contents"
@@ -24,19 +29,21 @@ You only need to checkout the `with-fake-contents` branch. This branch version i
 ```
 
 - Then, tell git from where it should pull the contents into the project.
-In `/.gitmodules, replace with your **Github** repository url as follow:
+In `/.gitmodules`, set the url value with your **Github** repository url:
 ```
 [submodule "contents"]
 	path = contents
 	url = git@github.com:emmanuelgratuze/gueiv-directory-contents.git
 ```
 
-- Fetch the repository. In the project root, run:
-
+- Fetch the contents repository. In the project root, run:
   ```
   git submodule sync
   git submodule update --init --recursive --remote
   ```
+
+### Admin panel
+The app uses [Netlify CMS](https://www.netlifycms.org/) as content manager. The admin panel is available at: https://localhost:3000/admin. Content edition will only be available if a custom contents Github repository have been configured.
 
 ### External services
 
@@ -67,7 +74,6 @@ npm run dev
 The app will start on : https://localhost:3000.
 
 ## Build
-
 ```
 npm run production-build
 ```
@@ -75,8 +81,7 @@ npm run production-build
 The build files are generated in the `/out` directory.
 
 ### Lint code
-
-Eslint + stylent
+Eslint + stylelint
 
 ```
 npm run lint

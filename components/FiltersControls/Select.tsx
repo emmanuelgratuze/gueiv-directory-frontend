@@ -46,7 +46,6 @@ const Select: React.FC<BoxProps & SelectProps> = ({
             horizontal: !isMobile ? 'medium' : 'medium',
             vertical: !isMobile ? undefined : 'medium'
           }}
-          background="gray"
         >
           {selectedFilters && (
             <Box

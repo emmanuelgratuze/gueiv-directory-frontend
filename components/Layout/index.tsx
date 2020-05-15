@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({
         <meta name="robots" content="noindex" />
 
         {/* Fonts */}
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400&display=swap" rel="stylesheet" />
 
         <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />

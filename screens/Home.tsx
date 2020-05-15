@@ -106,8 +106,6 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                         >
                           <Box
                             fill
-                            round="0.5rem"
-                            overflow="hidden"
                             width={{ max: isTablet || isMobile ? '30rem' : undefined }}
                           >
                             <BrandPreview

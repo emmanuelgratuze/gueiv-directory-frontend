@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Paragraph } from 'grommet'
+import { Box } from 'grommet'
 import { motion, useAnimation } from 'framer-motion'
 import ReactMarkdown from 'react-markdown'
 import styled from 'styled-components'
@@ -16,7 +16,7 @@ import { Instagram } from 'grommet-icons'
 import StandardLink from 'components/StandardLink'
 import useResponsive from 'hooks/generic/useResponsive'
 
-import BackgroundWave from './BackgroundWave'
+import BackgroundWave from 'components/BackgroundWave'
 
 const Logo = require('assets/images/logo-white.svg').ReactComponent
 
@@ -133,16 +133,18 @@ const MenuContent: React.FC<MenuContentProps> = ({
             width={getChildrenSizeByIndex(1)}
           >
 
-            <div style={{ maxWidth: '55rem' }}>
+            <Box
+              margin={{ bottom: isMobile ? 'medium' : 'small' }}
+              width={{ max: '55rem' }}
+            >
               <ProjectDescription
                 textAlign="start"
-                margin={{ bottom: isMobile ? 'medium' : 'large' }}
                 color="white"
                 size="medium"
               >
                 <ReactMarkdown source={configuration.getIn(['general', 'menuDescription'])} />
               </ProjectDescription>
-            </div>
+            </Box>
 
             <Link href="/criterios">
               <A>
@@ -159,7 +161,9 @@ const MenuContent: React.FC<MenuContentProps> = ({
         </Box>
       </Box>
       {!isMobile && (
-        <BackgroundWave />
+        <BackgroundWave
+          YPosition={90}
+        />
       )}
     </motion.div>
   )

@@ -27,6 +27,9 @@ const Footer: React.FC = () => {
     <Box
       background={{ color: 'light-1' }}
       pad={{ vertical: 'large' }}
+      style={{
+        zIndex: 15
+      }}
     >
       <Container>
         <ResponsiveGrid

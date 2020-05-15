@@ -1,14 +1,23 @@
 import React, {
   useEffect,
-  createRef,
   useState,
   useMemo
 } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import styled from 'styled-components'
+import { ThemeType } from 'themes/theme'
 
 type MenuWaveProps = {
-  open?: boolean;
+  YPosition?: number;
+  pointsLength?: number;
+  intervalDuration?: number;
+  color?: string;
+  intensity?: number;
+}
+
+type PathProps = {
+  theme: ThemeType;
+  customColor?: string;
 }
 
 const WaveSVG = styled.svg`
@@ -22,17 +31,20 @@ const WaveSVG = styled.svg`
 `
 
 const WavePath = styled(motion.path)`
-  fill: ${props => props.theme.global.colors.yellow};
+  fill: ${(props: PathProps) => props.theme.global.colors[props.customColor || 'yellow']};
 `
-
-const YPosition = 90
 const width = 100
-const pointsLength = 10
-const pointsInterval = width / pointsLength
 
-const BackgroundWave: React.FC<MenuWaveProps> = () => {
+const BackgroundWave: React.FC<React.SVGProps<SVGSVGElement> & MenuWaveProps> = ({
+  YPosition = 90,
+  pointsLength = 10,
+  intervalDuration = 2000,
+  color = 'yellow',
+  intensity = 1,
+  style
+}) => {
+  const pointsInterval = width / pointsLength
   const controls = useAnimation()
-  const svgRef = createRef<SVGSVGElement>()
   const [waveFactors, setWaveFactors] = useState<{ y: number; x: number }[]>()
   const shape = useMemo(() => {
     const pointsCommands = Array(pointsLength).fill(null).map((value, index) => {
@@ -50,9 +62,9 @@ const BackgroundWave: React.FC<MenuWaveProps> = () => {
       // Value between -0.5 and 0.5
       setWaveFactors(Array(pointsLength).fill(null).map(() => ({
         x: Math.random() - 0.5,
-        y: (Math.random() - 0.5) * 2
+        y: (Math.random() - 0.5) * 2 * intensity
       })))
-    }, 2000)
+    }, intervalDuration)
   }, [])
 
   controls.mount()
@@ -63,15 +75,16 @@ const BackgroundWave: React.FC<MenuWaveProps> = () => {
       width="100%"
       height="100%"
       preserveAspectRatio="none"
-      ref={svgRef}
+      style={style}
     >
       <WavePath
         initial={{ d: shape }}
         animate={{ d: shape }}
         transition={{
-          duration: 2,
+          duration: intervalDuration / 1000,
           ease: 'easeInOut'
         }}
+        customColor={color}
       />
     </WaveSVG>
   )

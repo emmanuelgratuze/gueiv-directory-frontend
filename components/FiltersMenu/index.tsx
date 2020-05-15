@@ -17,6 +17,7 @@ import { StatusGoodSmall, FormClose } from 'grommet-icons'
 
 import useResponsive from 'hooks/generic/useResponsive'
 import useFilterMenu from 'hooks/app/brands/useFilterMenu'
+import useBodyScroll from 'hooks/generic/useBodyScroll'
 
 import FiltersControlsFields from 'components/FiltersControls/Fields'
 import { ThemeType } from 'themes/theme'
@@ -50,6 +51,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
     addFilter,
     removeFilters
   } = useFilter(menuState.get('filterId'))
+  const { y: scrollY } = useBodyScroll()
 
   const handleOptionClick = useCallback((optionId: string): void => {
     let currentValue = filterValue
@@ -72,6 +74,8 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
     return colorsConfig[filterValue.includes(option.value) ? 'selected' : 'normal'][hover ? 1 : 0]
   }, [filterValue])
 
+  const backgroundColor = scrollY < 10 ? 'gray' : 'dark-gray'
+
   return (
     <>
       {menuState.get('isOpen') && (
@@ -83,7 +87,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
           onEsc={() => close()}
         >
           <Box
-            background={{ color: 'gray' }}
+            background={{ color: backgroundColor }}
             pad={{ top: theme.header.height }}
             fill
             overflow="auto"
@@ -105,7 +109,7 @@ const FiltersMenu: React.FC<BoxProps & FiltersMenuProps> = () => {
               // overflow={isMobile ? 'scroll' : undefined}
               direction={isMobile ? 'column-reverse' : 'column'}
               background={{
-                color: darken(0.1, colors.gray)
+                color: isMobile ? darken(0.1, colors.gray) : backgroundColor
               }}
             >
               <ResponsiveGrid

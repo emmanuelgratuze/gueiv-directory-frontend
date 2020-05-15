@@ -4,7 +4,6 @@ import React, {
   createRef,
   useMemo
 } from 'react'
-import useWindowSize from 'hooks/generic/useWindowSize'
 import useScrollPosition from 'hooks/generic/useScrollPosition'
 
 type ScrollableItemProps = {
@@ -20,7 +19,6 @@ const ScrollableItem: React.FC<ScrollableItemProps> = ({
   const [isActive, setIsActive] = useState(false)
   const ref = createRef<HTMLDivElement>()
   const scrollPosition = useScrollPosition()
-  const { height: windowHeight } = useWindowSize()
 
   useEffect(() => {
     if (!ref.current) {
@@ -29,7 +27,7 @@ const ScrollableItem: React.FC<ScrollableItemProps> = ({
     const elementBounding = ref.current.getBoundingClientRect()
     if (
       elementBounding.top < elementBounding.height / 2
-      && elementBounding.top + windowHeight > elementBounding.height / 2
+      && elementBounding.top + elementBounding.height > elementBounding.height / 2
     ) {
       setIsActive(true)
     } else {

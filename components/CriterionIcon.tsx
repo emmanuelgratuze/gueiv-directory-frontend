@@ -15,7 +15,9 @@ import useHover from 'hooks/generic/useHover'
 type CriterionIcon = {
   criterion: ImmutableCriterion;
   color?: ColorsNames | string;
+  hoverColor?: ColorsNames | string;
   clickable?: boolean;
+  tooltipPosition?: 'top' | 'bottom';
 }
 
 const StyledIconContainer = styled(Box)`
@@ -39,7 +41,9 @@ const StyledIconContainer = styled(Box)`
 const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
   criterion,
   color = 'white',
+  hoverColor,
   clickable = false,
+  tooltipPosition,
   ...props
 }) => {
   const [ref, isHover] = useHover()
@@ -49,6 +53,9 @@ const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
   }
 
   const oppositeColor = useMemo(() => {
+    if (hoverColor) {
+      return colors[hoverColor]
+    }
     if ((color as ColorsNames) in colors) {
       return colors[oppositeColors[color as ColorsNames]]
     }
@@ -97,6 +104,7 @@ const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
             <CriterionTooltip
               criterion={criterion}
               color={color}
+              position={tooltipPosition}
             />
           )}
         </AnimatePresence>

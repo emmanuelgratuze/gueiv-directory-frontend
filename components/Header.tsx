@@ -10,6 +10,8 @@ import HamburgerIcon from 'components/HamburgerIcon'
 import useTheme from 'hooks/generic/useTheme'
 import useMenuState from 'hooks/app/useMenuState'
 import useResponsive from 'hooks/generic/useResponsive'
+import useBodyScroll from 'hooks/generic/useBodyScroll'
+import { motion } from 'framer-motion'
 
 const Logo = require('assets/images/logo-white.svg').ReactComponent
 
@@ -23,67 +25,70 @@ const HeaderWrapper = styled(Box)`
 type HeaderProps = {}
 
 const Header: React.FC<HeaderProps> = ({ children }) => {
-  const { theme: { header } } = useTheme()
+  const { theme: { header, global: { colors } } } = useTheme()
   const { isMenuOpen, toggleMenu } = useMenuState()
+  const { y: scrollY } = useBodyScroll()
 
   const { isMobile } = useResponsive()
 
   return (
     <HeaderWrapper
-      background={{ color: 'gray' }}
       fill="horizontal"
       height={header.height}
     >
-      <Container fill="vertical" fluid>
-        <Box
-          fill
-          direction="row"
-          justify="between"
-        >
-          {/* Left part */}
+      <motion.div
+        animate={{ backgroundColor: colors[scrollY < 10 ? 'gray' : 'dark-gray'] }}
+      >
+        <Container fill="vertical" fluid>
           <Box
-            fill="vertical"
+            fill
             direction="row"
-            align="center"
-            pad="small"
-            gap="small"
+            justify="between"
           >
-            <Box height="2rem" width="2rem">
-              <Button plain onClick={() => toggleMenu()} fill>
-                <HamburgerIcon
-                  color="white"
-                  open={isMenuOpen}
-                />
-              </Button>
+            {/* Left part */}
+            <Box
+              fill="vertical"
+              direction="row"
+              align="center"
+              pad="small"
+              gap="small"
+            >
+              <Box height="2rem" width="2rem">
+                <Button plain onClick={() => toggleMenu()} fill>
+                  <HamburgerIcon
+                    color="white"
+                    open={isMenuOpen}
+                  />
+                </Button>
+              </Box>
+              <Link href="/">
+                <A>
+                  <Box fill="vertical" align="center" justify="center">
+                    <Logo height={isMobile ? '1.5rem' : '2rem'} />
+                  </Box>
+                </A>
+              </Link>
+              <Box>
+                <Text
+                  transform="uppercase"
+                  weight={700}
+                  color="light-3"
+                  size="0.9rem"
+                  spacing="large"
+                >
+                  Directorio
+                </Text>
+              </Box>
             </Box>
-            <Link href="/">
-              <A>
-                <Box fill="vertical" align="center" justify="center">
-                  <Logo height={isMobile ? '1.5rem' : '2rem'} />
-                </Box>
-              </A>
-            </Link>
-            <Box>
-              <Text
-                transform="uppercase"
-                weight={700}
-                color="light-3"
-                size="0.9rem"
-                spacing="large"
-              >
-                Directorio
-              </Text>
-            </Box>
+
+            {!isMenuOpen && (
+              <Box>
+                {children}
+              </Box>
+            )}
           </Box>
-
-          {!isMenuOpen && (
-            <Box>
-              {children}
-            </Box>
-          )}
-        </Box>
-
-      </Container>
+        </Container>
+      </motion.div>
     </HeaderWrapper>
   )
 }

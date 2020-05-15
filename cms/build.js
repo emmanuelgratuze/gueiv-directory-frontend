@@ -2,9 +2,10 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import YAML from 'yaml'
 import fs from 'fs'
-import configFile from './config'
+import appConfig from '../app.config.json'
+import getConfig from './config'
 
-const yamlConfig = YAML.stringify(configFile)
+const yamlConfig = YAML.stringify(getConfig(appConfig))
 
 function createConfigFiles(yamlConfigString) {
   fs.writeFile('./public/config.yml', yamlConfigString, () => {

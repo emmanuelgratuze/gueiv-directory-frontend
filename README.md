@@ -18,7 +18,9 @@ You only need to checkout the `with-fake-contents` branch. This branch version i
 #### Custom contents Github repository
 - First you need to define the `NETLIFY_CMS_BACKEND_REPO` environment variable, in order to tell Netlify CMS from where it should read and write the contents. In `/.env`, replace with your **Github** repository path:
 ```
-NETLIFY_CMS_BACKEND_REPO="emmanuelgratuze/gueiv-directory-contents-sample"
+{
+  "NETLIFY_CMS_GITHUB_REPOSITORY": "emmanuelgratuze/gueiv-directory-contents"
+}
 ```
 
 - Then, tell git from where it should pull the contents into the project.
@@ -32,7 +34,8 @@ In `/.gitmodules, replace with your **Github** repository url as follow:
 - Fetch the repository. In the project root, run:
 
   ```
-  git submodule update --recursive --remote
+  git submodule sync
+  git submodule update --init --recursive --remote
   ```
 
 ### External services

@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/camelcase */
-export default {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export default (appConfig) => ({
   backend: process.env.NODE_ENV === 'production'
     ? {
       name: 'git-gateway'
     } : {
       name: 'github',
-      repo: process.env.NETLIFY_CMS_BACKEND_REPO
+      repo: appConfig.NETLIFY_CMS_GITHUB_REPOSITORY
     },
   site_url: 'https://directorio.gueiv.com',
   media_folder: 'assets/uploads',
@@ -289,4 +290,4 @@ export default {
       ]
     }
   ]
-}
+})

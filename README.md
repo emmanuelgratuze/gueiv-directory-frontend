@@ -16,12 +16,12 @@ The app uses [Netlify CMS](https://www.netlifycms.org/) as content manager, whic
 You only need to checkout the `with-fake-contents` branch. This branch version is configurated to work with https://github.com/emmanuelgratuze/gueiv-directory-contents-sample which is a light version of the production data (without brands data).
 
 #### Custom contents Github repository
-- First you need to define the `NETLIFY_CMS_BACKEND_REPO` environment variable, in order to tell Netlify CMS where it should read and write the contents. In `/.env`, replace with your **Github** repository path:
+- First you need to define the `NETLIFY_CMS_BACKEND_REPO` environment variable, in order to tell Netlify CMS from where it should read and write the contents. In `/.env`, replace with your **Github** repository path:
 ```
 NETLIFY_CMS_BACKEND_REPO="emmanuelgratuze/gueiv-directory-contents-sample"
 ```
 
-- Then, tell git where it should pull the contents into the project.
+- Then, tell git from where it should pull the contents into the project.
 In `/.gitmodules, replace with your **Github** repository url as follow:
 ```
 [submodule "contents"]

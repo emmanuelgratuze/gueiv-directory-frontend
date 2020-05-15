@@ -1,5 +1,5 @@
-# Güeiv directory
-Here is the frontend app of: http://direction.gueiv.com. 
+# Güeiv directory Front end app
+Here is the frontend app of: http://directorio.gueiv.com.
 
 ## Setup
 Install npm dependencies

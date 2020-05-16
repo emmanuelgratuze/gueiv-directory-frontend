@@ -1,12 +1,15 @@
 import React from 'react'
 import { Box } from 'grommet'
 import { Facebook, Instagram } from 'grommet-icons'
+import Link from 'next/link'
 
 import Paragraph from 'components/Paragraph'
 import Text from 'components/Text'
 import Container from 'components/Container'
 import Heading from 'components/Heading'
 import ResponsiveGrid from 'components/ResponsiveGrid'
+import A from 'components/A'
+
 import useTheme from 'hooks/generic/useTheme'
 import useResponsive from 'hooks/generic/useResponsive'
 import useConfiguration from 'hooks/app/useConfiguration'
@@ -21,12 +24,12 @@ const FooterHeading: React.FC = ({ ...props }) => (
 const Footer: React.FC = () => {
   const configuration = useConfiguration()
   const { isMobile } = useResponsive()
-  const { brandColors } = useTheme()
+  const { colors, brandColors } = useTheme()
 
   return (
     <Box
       background={{ color: 'light-1' }}
-      pad={{ vertical: 'large' }}
+      pad={{ top: 'large', bottom: 'medium' }}
       style={{
         zIndex: 15
       }}
@@ -85,6 +88,21 @@ const Footer: React.FC = () => {
           </Box>
         </ResponsiveGrid>
       </Container>
+      <Box margin={{ top: 'medium' }}>
+        <Text
+          size="small"
+          color="gray"
+          textAlign="center"
+        >
+          <Link href="/aviso-legal" passHref>
+            <A
+              style={{ color: colors['dark-5'] as string }}
+            >
+              Aviso legal
+            </A>
+          </Link>
+        </Text>
+      </Box>
     </Box>
   )
 }

@@ -93,7 +93,26 @@ export default (appConfig) => ({
               widget: 'text'
             }
           ]
-        }
+        },
+        {
+          label: 'Legal page',
+          name: 'legalPage',
+          extension: 'json',
+          format: 'json',
+          file: 'configuration/legal-page.json',
+          fields: [
+            {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+            },
+            {
+              label: 'Content',
+              name: 'content',
+              widget: 'markdown'
+            }
+          ]
+        },
       ]
     },
     {

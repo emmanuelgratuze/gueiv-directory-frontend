@@ -30,7 +30,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
     medium: ['50%'],
     xlarge: ['33.33%']
   })
-  const { brands, selectMore, hasMore } = useFilteredBrands()
+  const { brands, selectMore, hasMore } = useFilteredBrands(12)
   const { applyFiltersFromUrl } = useFilters()
   const { isMobile, isTablet } = useResponsive()
 
@@ -76,7 +76,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                 hasMore={hasMore}
                 loader={(
                   <Box width="100%" height="medium" align="center" justify="center">
-                    <Loader />
+                    <Loader width="3rem" />
                   </Box>
                 )}
                 endMessage={undefined}
@@ -84,16 +84,17 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                   width: '100%',
                   display: 'flex',
                   flexWrap: 'wrap',
-                  position: 'relative'
+                  position: 'relative',
+                  justifyContent: 'center'
                 }}
                 outerStyle={{ width: '100%' }}
               >
                 {brands.map((brand, index) => (
                   <Box
                     key={brand.get('id')}
-                    width={getChildrenSizeByIndex(index)}
+                    width={isTablet || isMobile ? '30rem' : getChildrenSizeByIndex(index)}
                   >
-                    <Button plain>
+                    <Button as="div" plain>
                       {({ hover }: { hover: boolean }) => (
                         <ItemWrapper
                           initial={{ opacity: 0, transform: 'scale3d(0.98, 0.98, 1)' }}
@@ -102,11 +103,9 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                           transition={{ duration: 0.6 }}
                           style={{ zIndex: hover ? 2 : 1 }}
                           pad="0.4rem"
-                          align="center"
                         >
                           <Box
                             fill
-                            width={{ max: isTablet || isMobile ? '30rem' : undefined }}
                           >
                             <BrandPreview
                               key={brand.get('id')}
@@ -134,12 +133,15 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
                   align="center"
                   justify="center"
                   pad="medium"
-                  height={isMobile ? 'small' : 'large'}
+                  height="70vh"
                 >
                   <Text size="large" weight="bold" color="pink" textAlign="center">
                     ¡Oops!
                     <br />
-                    No hemos encontrado marcas por tu criterios
+                    <br />
+                    No hemos encontrado marcas
+                    <br />
+                    para los criterios que buscas
                   </Text>
                 </Box>
               )}

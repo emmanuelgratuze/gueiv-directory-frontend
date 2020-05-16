@@ -78,7 +78,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
             justify="center"
             width={getChildrenSizeByIndex(0)}
           >
-            <Link href="/">
+            <Link href="/" passHref>
               <A>
                 <Box fill align="center" margin={{ bottom: 'small' }}>
                   <Logo
@@ -146,7 +146,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
               </ProjectDescription>
             </Box>
 
-            <Link href="/criterios">
+            <Link href="/criterios" passHref>
               <A>
                 <Button
                   color="pink"

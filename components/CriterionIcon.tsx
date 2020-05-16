@@ -11,6 +11,7 @@ import { ImmutableCriterion } from 'types/data/criterion'
 import { ColorsNames } from 'themes/theme'
 import useTheme from 'hooks/generic/useTheme'
 import useHover from 'hooks/generic/useHover'
+import A from './A'
 
 type CriterionIcon = {
   criterion: ImmutableCriterion;
@@ -38,7 +39,7 @@ const StyledIconContainer = styled(Box)`
   }
 `
 
-const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
+const CriterionIcon: React.FC<React.HTMLProps<HTMLDivElement> & BoxProps & CriterionIcon> = ({
   criterion,
   color = 'white',
   hoverColor,
@@ -96,8 +97,15 @@ const CriterionIcon: React.FC<BoxProps & CriterionIcon> = ({
         justify="center"
         ref={ref}
       >
-        <Link href="/criterios" as={`/criterios#${criterion.get('id')}`}>
-          {content}
+        <Link href="/criterios" as={`/criterios#${criterion.get('id')}`} passHref>
+          <A
+            style={{
+              height: '100%',
+              width: '100%'
+            }}
+          >
+            {content}
+          </A>
         </Link>
         <AnimatePresence>
           {isHover && (

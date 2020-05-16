@@ -30,14 +30,14 @@ const WaveSVG = styled.svg`
   pointer-events: none;
 `
 
-const WavePath = styled(motion.path)`
+const WavePath = styled(motion.path)<PathProps>`
   fill: ${(props: PathProps) => props.theme.global.colors[props.customColor || 'yellow']};
 `
 const width = 100
 
 const BackgroundWave: React.FC<React.SVGProps<SVGSVGElement> & MenuWaveProps> = ({
   YPosition = 90,
-  pointsLength = 10,
+  pointsLength = 4,
   intervalDuration = 2000,
   color = 'yellow',
   intensity = 1,
@@ -58,13 +58,17 @@ const BackgroundWave: React.FC<React.SVGProps<SVGSVGElement> & MenuWaveProps> = 
 
   // Auto waves
   useEffect(() => {
-    setInterval(() => {
+    const waveInterval = setInterval(() => {
       // Value between -0.5 and 0.5
       setWaveFactors(Array(pointsLength).fill(null).map(() => ({
         x: Math.random() - 0.5,
         y: (Math.random() - 0.5) * 2 * intensity
       })))
     }, intervalDuration)
+
+    return () => {
+      clearInterval(waveInterval)
+    }
   }, [])
 
   controls.mount()

@@ -30,7 +30,7 @@ const useStoreWithPageData = (
 
   useEffect(() => {
     addDataToStore()
-  }, [])
+  }, [pageProps.data])
 
   return {
     store,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, BoxProps } from 'grommet'
+import { Box, BoxProps, Stack } from 'grommet'
 import Link from 'next/link'
 
 import Heading from 'components/Heading'
@@ -36,81 +36,89 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
       overflow="hidden"
       style={{ transform: 'translate3d(0,0,0)' }}
     >
-      <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`} prefetch={false}>
-        <A ref={hoverRef}>
-          <DynamicBackgroundColorBox color={color}>
-            <RelativeHeightBox
-              relativeHeight="50%"
-              {...props}
-            >
-              <Box fill direction="row">
-                <Box
-                  width={isSmallMobile ? '45%' : '50%'}
-                  overflow="hidden"
-                >
-                  <BrandImage
-                    fill
-                    brand={brand}
-                    color={color}
-                    zoom={isHovered}
-                  />
-                </Box>
-                <Box
-                  width={isSmallMobile ? '55%' : '50%'}
-                  pad={isSmallMobile ? '0.9rem' : { vertical: '2rem', horizontal: '2.2rem' }}
-                  justify="between"
-                >
+      <Stack fill>
+        <DynamicBackgroundColorBox color={color}>
+          <RelativeHeightBox
+            relativeHeight="50%"
+            fill
+            {...props}
+          >
+            <Box fill direction="row">
+              <Box
+                width={isSmallMobile ? '45%' : '50%'}
+                overflow="hidden"
+              >
+                <BrandImage
+                  fill
+                  brand={brand}
+                  color={color}
+                  zoom={isHovered}
+                />
+              </Box>
+              <Box
+                width={isSmallMobile ? '55%' : '50%'}
+                pad={isSmallMobile ? '0.9rem' : { vertical: '2rem', horizontal: '2.2rem' }}
+                justify="between"
+              >
 
-                  <Box>
-                    {/* Name */}
+                <Box>
+                  {/* Name */}
+                  <Heading
+                    level={2}
+                    transform="uppercase"
+                    color={color ? oppositeColors[color] : undefined}
+                    wordBreak
+                    margin={{ bottom: 'small' }}
+                  >
+                    {brand.get('name')}
+                  </Heading>
+
+                  {/* Location */}
+                  {brand.get('city') !== '' && brand.get('country') && (
                     <Heading
-                      level={2}
-                      transform="uppercase"
+                      level={4}
+                      size="small"
                       color={color ? oppositeColors[color] : undefined}
-                      wordBreak
-                      margin={{ bottom: 'small' }}
                     >
-                      {brand.get('name')}
+                      {brand.get('city') && `${brand.get('city')} `}
+                      {brand.getIn(['country', 'name'])}
                     </Heading>
-
-                    {/* Location */}
-                    {brand.get('city') !== '' && brand.get('country') && (
-                      <Heading
-                        level={4}
-                        size="small"
-                        color={color ? oppositeColors[color] : undefined}
-                      >
-                        {brand.get('city') && `${brand.get('city')} `}
-                        {brand.getIn(['country', 'name'])}
-                      </Heading>
-                    )}
-                  </Box>
-
-                  {/* Criteria */}
-                  {brand.get('criteria') && (
-                    <Box direction="row" wrap>
-                      {brand.get('criteria').map((criterion) => (
-                        <Box
-                          key={criterion.get('id')}
-                          width="1.3rem"
-                          height="1.3rem"
-                          margin={{ right: 'small', bottom: 'xsmall' }}
-                        >
-                          <CriterionIcon
-                            clickable
-                            criterion={criterion}
-                            color={color ? oppositeColors[color] : undefined}
-                          />
-                        </Box>
-                      ))}
-                    </Box>
                   )}
                 </Box>
+
+                {/* Criteria */}
+                {brand.get('criteria') && (
+                  <Box direction="row" wrap>
+                    {brand.get('criteria').map((criterion) => (
+                      <Box
+                        key={criterion.get('id')}
+                        width="1.3rem"
+                        height="1.3rem"
+                        margin={{ right: 'small', bottom: 'xsmall' }}
+                      >
+                        <CriterionIcon
+                          clickable
+                          criterion={criterion}
+                          color={color ? oppositeColors[color] : undefined}
+                          style={{
+                            position: 'relative',
+                            zIndex: 10 // On top of the block link
+                          }}
+                        />
+                      </Box>
+                    ))}
+                  </Box>
+                )}
               </Box>
-            </RelativeHeightBox>
-          </DynamicBackgroundColorBox>
-        </A>
-      </Link>
+            </Box>
+          </RelativeHeightBox>
+        </DynamicBackgroundColorBox>
+        <Link href="/marcas/[slug]" as={`/marcas/${brand.get('slug')}`} prefetch={false} passHref>
+          <A ref={hoverRef}>
+            <Box fill />
+          </A>
+        </Link>
+      </Stack>
     </Box>
   )
 }

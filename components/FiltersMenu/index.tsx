@@ -27,7 +27,7 @@ type ButtonsBoxProps = {
   isMobile?: boolean;
   theme: ThemeType;
 }
-const ButtonsBox = styled(Box)`
+const ButtonsBox = styled(Box)<ButtonsBoxProps>`
   ${(props: ButtonsBoxProps) => props.isMobile && css`
     position: fixed;
     bottom: 0;

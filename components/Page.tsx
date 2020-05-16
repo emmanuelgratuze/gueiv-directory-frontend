@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 import { Box, BoxProps, Stack } from 'grommet'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import Header from 'components/Header'
 import Footer from 'components/Footer'
@@ -13,6 +14,7 @@ import useTheme from 'hooks/generic/useTheme'
 import useFilterMenu from 'hooks/app/brands/useFilterMenu'
 import useConfiguration from 'hooks/app/useConfiguration'
 import useMenuState from 'hooks/app/useMenuState'
+import useLoading from 'hooks/generic/useRouteLoading'
 
 import FiltersMenu from './FiltersMenu'
 
@@ -39,6 +41,7 @@ const Page: React.FC<BoxProps & PageType> = ({
   const { theme: { header } } = useTheme()
   const { isMenuOpen, closeMenu } = useMenuState()
   const { isOpen: areFiltersOpen, close: closeFilters } = useFilterMenu()
+  const { isLoading } = useLoading()
 
   useEffect(() => {
     if (areFiltersOpen) {
@@ -70,7 +73,17 @@ const Page: React.FC<BoxProps & PageType> = ({
         {...props}
       >
         <Header>
-          {headerChildren}
+          <AnimatePresence>
+            {!isLoading && (
+              <motion.div
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                style={{ height: '100%' }}
+              >
+                {headerChildren}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Header>
         <LoadingWrapper>
           <MenuWrapper>
@@ -78,7 +91,10 @@ const Page: React.FC<BoxProps & PageType> = ({
               <FiltersMenu />
             </Stack>
             <Box fill={!withScroll}>
-              <Box fill={!withScroll} pad={{ top: header.height }}>
+              <Box
+                fill={!withScroll}
+                pad={{ top: header.height }}
+              >
                 {children}
               </Box>
               {withFooter && (

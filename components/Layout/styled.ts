@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-y: auto !important;
+    overflow-y: scroll !important;
     font-size: 10px;
     font-family: 'Quicksand', Helvetica, sans-serif;
     background-color: #3d3d4f;

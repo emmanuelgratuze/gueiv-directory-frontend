@@ -1,5 +1,5 @@
 import React, { useEffect, createRef } from 'react'
-import { Box, Stack } from 'grommet'
+import { Box } from 'grommet'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -15,7 +15,7 @@ type InnerProps = {
   open: boolean;
   isMobile: boolean;
 }
-const MenuInnerWrapper = styled(Box)`
+const MenuInnerWrapper = styled(Box)<InnerProps>`
   position: fixed;
   top: 0;
   left: 0;
@@ -56,13 +56,11 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
   }, [isMenuOpen, menuRef])
 
   return (
-    <Stack
-      guidingChild={1}
-    >
+    <div>
       <motion.div
         animate={{
           opacity: isMenuOpen ? 0 : 1,
-          filter: isMenuOpen ? 'blur(2px)' : 'none'
+          filter: isMenuOpen ? 'blur(2px)' : 'blur(0px)'
         }}
         transition={{
           duration: 1,
@@ -81,7 +79,7 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
         <MenuContent open={isMenuOpen} />
         <MenuWave open={isMenuOpen} />
       </MenuInnerWrapper>
-    </Stack>
+    </div>
   )
 }
 

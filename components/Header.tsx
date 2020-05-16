@@ -32,12 +32,10 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
   const { isMobile } = useResponsive()
 
   return (
-    <HeaderWrapper
-      fill="horizontal"
-      height={header.height}
-    >
+    <HeaderWrapper fill="horizontal" height={header.height}>
       <motion.div
         animate={{ backgroundColor: colors[scrollY < 10 ? 'gray' : 'dark-gray'] }}
+        style={{ height: '100%' }}
       >
         <Container fill="vertical" fluid>
           <Box
@@ -61,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
                   />
                 </Button>
               </Box>
-              <Link href="/">
+              <Link href="/" passHref>
                 <A>
                   <Box fill="vertical" align="center" justify="center">
                     <Logo height={isMobile ? '1.5rem' : '2rem'} />

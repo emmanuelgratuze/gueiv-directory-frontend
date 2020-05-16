@@ -29,7 +29,13 @@ const CloudinaryImage: React.FC<ImageProps & JSX.IntrinsicElements['img']> = ({
       image.onload = () => {
         setIsLoaded(true)
       }
+      return () => {
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        image.onload = () => {}
+      }
     }
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    return () => {}
   }, [src])
 
   return (
@@ -43,7 +49,7 @@ const CloudinaryImage: React.FC<ImageProps & JSX.IntrinsicElements['img']> = ({
           align="center"
           justify="center"
         >
-          <Loader />
+          <Loader width="3rem" />
         </AnimatedWrapper>
         {isLoaded && (
           <AnimatedWrapper

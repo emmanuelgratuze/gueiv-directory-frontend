@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import { Box, Form, FormField } from 'grommet'
 import fetch from 'fetch-jsonp'
 
@@ -16,10 +16,12 @@ const MailchimpForm: React.FC = () => {
   const [message, setMessage] = useState<string | null>(null)
   const [status, setStatus] = useState<string | null>(null)
 
-  window.mailchimpCallback = (value: { result: string; msg: string }): void => {
-    setStatus(value.result)
-    setMessage(value.msg.split('<a href=')[0])
-  }
+  useEffect(() => {
+    window.mailchimpCallback = (value: { result: string; msg: string }): void => {
+      setStatus(value.result)
+      setMessage(value.msg.split('<a href=')[0])
+    }
+  }, [])
 
   const handleSubmit = useCallback(async (event) => {
     event.preventDefault()

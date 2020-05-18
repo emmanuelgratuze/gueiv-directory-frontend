@@ -63,10 +63,10 @@ const useBodyScroll = (): Result => {
     }
     return true
   }, [])
-  const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel'
 
   // call this to Disable
   function disableScroll(): void {
+    const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel'
     window.addEventListener('DOMMouseScroll', preventDefault, false) // older FF
     window.addEventListener(wheelEvent, preventDefault, wheelOpt) // modern desktop
     window.addEventListener('touchmove', preventDefault, wheelOpt) // mobile
@@ -75,6 +75,7 @@ const useBodyScroll = (): Result => {
 
   // call this to Enable
   function enableScroll(): void {
+    const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel'
     window.removeEventListener('DOMMouseScroll', preventDefault, false)
     window.removeEventListener(wheelEvent, preventDefault, wheelOpt as EventListenerOptions)
     window.removeEventListener('touchmove', preventDefault, wheelOpt as EventListenerOptions)

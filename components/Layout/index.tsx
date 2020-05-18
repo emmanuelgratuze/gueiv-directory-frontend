@@ -8,13 +8,8 @@ import theme from 'themes/theme'
 
 import { GlobalStyles } from './styled'
 
-type LayoutProps = {
-  isContentReady?: boolean;
-}
-
-const Layout: React.FC<LayoutProps> = ({
-  children,
-  isContentReady = false
+const Layout: React.FC = ({
+  children
 }) => {
   if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
     useAnalytics(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
@@ -60,12 +55,7 @@ const Layout: React.FC<LayoutProps> = ({
       <GlobalStyles />
 
       <Grommet theme={theme}>
-        {/* If content doesn't ready we do not render it yet */}
-        {!isContentReady && (
-          <>
-            {siteContent}
-          </>
-        )}
+        {siteContent}
       </Grommet>
     </>
   )

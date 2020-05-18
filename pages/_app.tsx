@@ -2,18 +2,22 @@ import React from 'react'
 import { Provider as ReduxProvider } from 'react-redux'
 import App, { AppProps } from 'next/app'
 import ErrorPage from 'next/error'
-import { CloudinaryProvider } from 'components/cloudinary/CloudinaryContext'
+import configureStore from 'store/index'
 
-import useStoreWithPageData from 'hooks/generic/useStoreWithPageData'
+import { CloudinaryProvider } from 'components/cloudinary/CloudinaryContext'
 import Layout from 'components/Layout'
 
+import useStaticDataInStore from 'hooks/generic/useStaticDataInStore'
+
+const store = configureStore()
+
 const ProjectApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  const { store, isReady } = useStoreWithPageData(pageProps)
+  useStaticDataInStore(store, pageProps)
 
   return (
     <CloudinaryProvider cloudName={process.env.CLOUDINARY_CLOUD_NAME || ''}>
       <ReduxProvider store={store}>
-        <Layout isContentReady={!isReady}>
+        <Layout>
           {pageProps.statusCode ? (
             <ErrorPage statusCode={pageProps.statusCode} />
           ) : (

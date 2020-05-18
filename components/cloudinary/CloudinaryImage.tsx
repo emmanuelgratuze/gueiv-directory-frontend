@@ -1,18 +1,18 @@
 import React, { useContext } from 'react'
-import { ImageProps } from 'grommet'
+import { ImageProps as GrommetImageProps } from 'grommet'
 import { Transformation } from 'cloudinary-core'
 
-import Image from 'components/Image'
+import Image, { ImageProps } from 'components/Image'
 
 import CloudinaryContext from './CloudinaryContext'
 
 
-type Props = {
+export type CloudinaryImageProps = ImageProps & {
   fileName: string;
   cloudinaryOptions?: Transformation.Options;
 }
 
-const CloudinaryImage: React.FC<ImageProps & Props> = ({
+const CloudinaryImage: React.FC<CloudinaryImageProps & ImageProps> = ({
   cloudinaryOptions,
   fileName,
   ...props

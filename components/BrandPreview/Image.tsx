@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { Box, BoxProps } from 'grommet'
+import { Box } from 'grommet'
 import { motion } from 'framer-motion'
 
 import CloudinaryImage from 'components/cloudinary/CloudinaryImage'
-
+import { ImageProps } from 'components/Image'
 import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
+import Loader from 'components/Loader'
+
 import CriterionIcon from '../CriterionIcon'
 
 const Logo = require('assets/images/logo-unicolor.svg').ReactComponent
@@ -21,25 +23,25 @@ const PlaceholderBox = styled(Box)`
   opacity: 1;
 `
 
-const BrandImage: React.FC<BoxProps & BrandImageType> = ({
+const BrandImage: React.FC<BrandImageType & ImageProps> = ({
   brand,
   color,
   zoom = false,
+  onPreload,
   ...props
-}) => (
-  <Box
-    fill
-    background={{ color: color || 'gray' }}
-    {...props}
-  >
-    {brand.get('pictures')?.size
-      ? (
-        <Box
-          width="100%"
-          height="100%"
-          align="center"
-          justify="center"
-        >
+}) => {
+  useEffect(() => {
+    if (!brand.get('pictures')?.size && onPreload) {
+      onPreload()
+    }
+  }, [])
+  return (
+    <Box
+      fill
+      // background={{ color: color }}
+    >
+      {brand.get('pictures')?.size
+        ? (
           <motion.div
             animate={{
               transform: `scale(${zoom ? '1.1' : '1'})`
@@ -54,39 +56,38 @@ const BrandImage: React.FC<BoxProps & BrandImageType> = ({
               transform: 'scale(1)'
             }}
           >
-            <Box
-              width="100%"
-              height="100%"
-            >
-              <CloudinaryImage
-                fit="cover"
-                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                fileName={brand.get('pictures') ? brand.get('pictures')!.first() : ''}
-                cloudinaryOptions={{
-                  height: 600,
-                  width: 600,
-                  crop: 'fit'
-                }}
-              />
-            </Box>
+            <CloudinaryImage
+              fit="cover"
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+              fileName={brand.get('pictures') ? brand.get('pictures')!.first() : ''}
+              cloudinaryOptions={{
+                height: 600,
+                width: 600,
+                crop: 'fit'
+              }}
+              loader={(
+                <Loader color="white" />
+              )}
+              {...props}
+            />
           </motion.div>
-        </Box>
-      )
-      : (
-        <PlaceholderBox
-          align="center"
-          justify="center"
-          fill
-        >
-          <Box width="xsmall" height="xsmall">
-            {/* Criterion icon or Logo */}
-            {brand.get('criteria')?.size
-              ? <CriterionIcon criterion={brand.get('criteria').first()} />
-              : <Logo height="100%" fill="white" />}
-          </Box>
-        </PlaceholderBox>
-      )}
-  </Box>
-)
+        )
+        : (
+          <PlaceholderBox
+            align="center"
+            justify="center"
+            fill
+          >
+            <Box width="xsmall" height="xsmall">
+              {/* Criterion icon or Logo */}
+              {brand.get('criteria')?.size
+                ? <CriterionIcon criterion={brand.get('criteria').first()} />
+                : <Logo height="100%" fill="white" />}
+            </Box>
+          </PlaceholderBox>
+        )}
+    </Box>
+  )
+}
 
 export default BrandImage

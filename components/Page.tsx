@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Box, BoxProps, Stack } from 'grommet'
 import { AnimatePresence, motion } from 'framer-motion'
 
-import Header from 'components/Header'
+import Header, { HeaderProps } from 'components/Header'
 import Footer from 'components/Footer'
 
 import MenuWrapper from 'components/Menu/Wrapper'
@@ -25,6 +25,7 @@ type PageType = {
   withFooter?: boolean;
   withFilters?: boolean;
   headerChildren?: React.ReactNode;
+  headerOptions?: HeaderProps;
 }
 
 const Page: React.FC<BoxProps & PageType> = ({
@@ -34,6 +35,7 @@ const Page: React.FC<BoxProps & PageType> = ({
   withScroll = true,
   withFooter = true,
   headerChildren,
+  headerOptions,
   ...props
 }) => {
   const fullTitle = usePageTitle(title)
@@ -72,7 +74,7 @@ const Page: React.FC<BoxProps & PageType> = ({
         height={!withScroll ? '100vh' : { min: '100vh' }}
         {...props}
       >
-        <Header>
+        <Header {...headerOptions}>
           <AnimatePresence>
             {!isLoading && (
               <motion.div

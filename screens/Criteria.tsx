@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import ReactMarkdown from 'react-markdown'
 
 import Page from 'components/Page'
-import Paragraph from 'components/Paragraph'
 import Heading from 'components/Heading'
 import CriterionIcon from 'components/CriterionIcon'
 import Container from 'components/Container'
@@ -31,6 +30,14 @@ const WaveWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+`
+
+const AnchorWrapper = styled(Box)`
+  position: relative;
+  top: 0;
+  z-index: 11;
+  margin-top: -8rem;
+  padding-top: 8rem;
 `
 
 const AnimatedContent = motion.div
@@ -90,7 +97,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
             <ScrollableItem
               onScrollEnter={() => {
                 setCurrentIndex(-1)
-                window.history.pushState(null, document.title, '#')
+                window.history.pushState(null, document.title, ' ')
               }}
             >
               <Container
@@ -115,13 +122,14 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                     >
                       {configuration.getIn(['criteria-page', 'title'])}
                     </Heading>
-                    <Paragraph
-                      textAlign="center"
-                      color="white"
-                      size="large"
+                    <Box
+                      width="large"
+                      margin={{ vertical: 'medium' }}
                     >
-                      <ReactMarkdown source={configuration.getIn(['criteria-page', 'introduction'])} />
-                    </Paragraph>
+                      <Text color="white" spacing="normal" textAlign="center">
+                        <ReactMarkdown source={configuration.getIn(['criteria-page', 'introduction'])} />
+                      </Text>
+                    </Box>
 
                     <Box
                       direction="row"
@@ -177,18 +185,13 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                 >
                   <WaveWrapper>
                     <Container pad="medium">
-                      <Box
+                      <AnchorWrapper
                         id={criterion.get('id')}
                         direction={isMobile ? 'column' : 'row'}
                         height={!isMobile ? '75vh' : undefined}
                         align="center"
                         justify="center"
                         fill="horizontal"
-                        style={{
-                          position: 'relative',
-                          top: 0,
-                          zIndex: 11
-                        }}
                       >
                         <Box
                           width="30%"
@@ -197,7 +200,8 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                         >
                           <AnimatedContent
                             animate={{
-                              opacity: currentIndex === index ? 1 : 0,
+                              opacity: isMobile || currentIndex === index ? 1 : 0,
+                              // eslint-disable-next-line no-nested-ternary
                               scale: currentIndex === index ? 1 : 0.9,
                               rotate: currentIndex === index ? 0 : '3deg',
                               y: currentIndex === index ? 0 : 10
@@ -235,11 +239,11 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                           justify="center"
                           margin={!isMobile ? { left: 'medium' } : undefined}
                         >
-                          <Box width="35rem">
+                          <Box width="35rem" margin={{ top: isMobile ? 'medium' : 0 }}>
                             <AnimatedContent
                               animate={{
-                                opacity: currentIndex === index ? 1 : 0,
-                                y: currentIndex === index ? 0 : 10,
+                                opacity: isMobile || currentIndex === index ? 1 : 0,
+                                y: isMobile || currentIndex === index ? 0 : 10,
                               }}
                               transition={{
                                 duration: 0.7,
@@ -260,7 +264,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                             </AnimatedContent>
                           </Box>
                         </Box>
-                      </Box>
+                      </AnchorWrapper>
                     </Container>
 
                     {!isMobile && (

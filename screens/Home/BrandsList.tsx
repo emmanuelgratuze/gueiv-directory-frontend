@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useEffect } from 'react'
 import { Box } from 'grommet'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { List } from 'immutable'
@@ -48,21 +48,14 @@ const BrandsList: React.FC<BrandsListProps> = ({
     xlarge: ['33.33%']
   })
   const { isMobile, isTablet } = useResponsive()
-  const [loadedItemsCount, setLoadedItemsCount] = useState(0)
-  const [displayedBrands, setDisplayedBrand] = useState<List<ImmutableBrand>>()
-
-  // If all new brands items have been loaded,
-  // push them in the displayedBrandItems array
-  useEffect(() => {
-    if (loadedItemsCount === brands.size - 1) {
-      setDisplayedBrand(brands)
-    }
-  }, [loadedItemsCount, brands])
 
   return (
-    <Box direction="row" wrap>
+    <Box
+      fill
+      flex={{ grow: 1 }}
+    >
       <InfiniteScroll
-        dataLength={displayedBrands ? displayedBrands.size : brands.size}
+        dataLength={brands.size}
         next={() => {
           selectMore()
         }}
@@ -74,15 +67,15 @@ const BrandsList: React.FC<BrandsListProps> = ({
         )}
         endMessage={undefined}
         style={{
-          width: '100%',
+          // width: '100%',
           display: 'flex',
           flexWrap: 'wrap',
           position: 'relative',
-          justifyContent: 'start'
+          justifyContent: isMobile || isTablet ? 'center' : 'start'
         }}
         outerStyle={{ width: '100%' }}
       >
-        {(displayedBrands || brands).map((brand, index) => (
+        {brands.map((brand, index) => (
           <BrandItem
             key={brand.get('id')}
             brand={brand}

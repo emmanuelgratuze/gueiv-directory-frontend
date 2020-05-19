@@ -1,27 +1,29 @@
 import React, { useEffect, useState } from 'react'
-import { AnimatePresence } from 'framer-motion'
-import { ThemeType } from 'themes/theme'
 import styled from 'styled-components'
 
 import Loader from 'components/Loader'
 import { Box } from 'grommet'
+import { motion } from 'framer-motion'
 
 type Props = {
-  theme: ThemeType;
+  visible?: boolean;
 }
 
-const LoadingWrapper = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-`
+const LoadingWrapper = motion.custom(
+  styled.div<Props>`
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: ${(props) => props.theme.global.colors.gray};
+    pointer-events: none;
+  `
+)
 
 type LogoProps = {
   colors: string[];
@@ -33,30 +35,26 @@ type LoadingScreenProps = {
 }
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({
-  isLoading = false,
-  currentPage
+  isLoading = false
 }) => {
-  const [animationPage, setAnimationPage] = useState<string>()
+  const [isVisible, setVisibility] = useState(false)
 
   useEffect(() => {
-    // controls.start({ opacity: animationPage !== currentPage ? 0 : 1 })
-    if (animationPage !== currentPage) {
-      setAnimationPage(currentPage)
-    }
-  }, [currentPage, isLoading])
+    setVisibility(true)
+  }, [])
 
   return (
-    <AnimatePresence>
-      <LoadingWrapper>
-        <Box
-          direction="column"
-          align="center"
-          justify="center"
-        >
-          <Loader />
-        </Box>
-      </LoadingWrapper>
-    </AnimatePresence>
+    <LoadingWrapper
+      animate={{ opacity: isVisible && isLoading ? 1 : 0 }}
+    >
+      <Box
+        direction="column"
+        align="center"
+        justify="center"
+      >
+        <Loader />
+      </Box>
+    </LoadingWrapper>
   )
 }
 

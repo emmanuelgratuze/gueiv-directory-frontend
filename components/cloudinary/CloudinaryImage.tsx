@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { ImageProps as GrommetImageProps } from 'grommet'
 import { Transformation } from 'cloudinary-core'
 
 import Image, { ImageProps } from 'components/Image'

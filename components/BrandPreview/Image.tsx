@@ -6,7 +6,6 @@ import { motion } from 'framer-motion'
 import CloudinaryImage from 'components/cloudinary/CloudinaryImage'
 import { ImageProps } from 'components/Image'
 import { ImmutableBrand } from 'types/data/brand'
-import { ThemeColorsType } from 'themes/theme'
 import Loader from 'components/Loader'
 
 import CriterionIcon from '../CriterionIcon'
@@ -15,7 +14,6 @@ const Logo = require('assets/images/logo-unicolor.svg').ReactComponent
 
 type BrandImageType = {
   brand: ImmutableBrand;
-  color?: keyof ThemeColorsType;
   zoom?: boolean;
 }
 
@@ -25,7 +23,6 @@ const PlaceholderBox = styled(Box)`
 
 const BrandImage: React.FC<BrandImageType & ImageProps> = ({
   brand,
-  color,
   zoom = false,
   onPreload,
   ...props
@@ -38,7 +35,7 @@ const BrandImage: React.FC<BrandImageType & ImageProps> = ({
   return (
     <Box
       fill
-      // background={{ color: color }}
+      background={{ color: 'rgba(0, 0, 0, 0.1)' }}
     >
       {brand.get('pictures')?.size
         ? (

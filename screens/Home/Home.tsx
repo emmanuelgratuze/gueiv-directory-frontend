@@ -13,7 +13,7 @@ import BrandsList from './BrandsList'
 type HomeScreenProps = {}
 
 const HomeScreen: React.FC<HomeScreenProps> = () => {
-  const { brands, selectMore, hasMore } = useFilteredBrands(10)
+  const { brands, selectMore, hasMore } = useFilteredBrands(12)
   const { applyFiltersFromUrl } = useFilters()
 
   useEffect(() => (
@@ -30,6 +30,9 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
             <FiltersControls />
           </Box>
         )}
+        headerOptions={{
+          withHomeButton: false
+        }}
       >
         <Box
           height={brands.size !== 0 ? { min: '100vh' } : undefined}

@@ -30,6 +30,7 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
       round={isMobile ? '1rem' : '2rem'}
       style={{ transform: 'translate3d(0,0,0)' }}
       overflow="hidden"
+      background={{ color: 'gray' }}
       {...props}
     >
       {!brand.get('pictures')?.size && (

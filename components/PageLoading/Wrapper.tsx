@@ -1,4 +1,3 @@
-import { motion, AnimatePresence } from 'framer-motion'
 import React from 'react'
 
 import useLoading from 'hooks/generic/useRouteLoading'
@@ -8,14 +7,11 @@ const LoadingWrapper: React.FC = ({ children }) => {
   const { isLoading, currentPage } = useLoading()
   return (
     <div>
+      <LoadingScreen
+        currentPage={currentPage}
+        isLoading={isLoading}
+      />
       {children}
-
-      {isLoading && (
-        <LoadingScreen
-          currentPage={currentPage}
-          isLoading={isLoading}
-        />
-      )}
     </div>
   )
 }

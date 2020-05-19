@@ -6,7 +6,7 @@ import useTheme from 'hooks/generic/useTheme'
 
 const scaleKeyframes = keyframes`
   0% { transform: scaleX(1) scaleY(1); }
-  20% { transform: scaleX(1.4) scaleY(1.4); }
+  20% { transform: scaleX(1.1) scaleY(1.1) translateY(-3px); }
   60% { transform: scaleX(1) scaleY(1); }
   100% { transform: scaleX(1) scaleY(1); }
 `
@@ -30,8 +30,8 @@ const Point = styled.div<PointProps>`
   height: 10px;
   border-radius: 10px;
   animation:
-    1.3s ${scaleKeyframes} ${props => props.delay || '0s'} ease-in-out infinite,
-    2.6s ${(props) => backgroundKeyframes(props.colors)} 0s linear infinite;
+    1s ${scaleKeyframes} ${props => props.delay || '0s'} ease-in-out infinite,
+    2s ${(props) => backgroundKeyframes(props.colors)} 0s linear infinite;
 `
 
 type LoaderProps = {
@@ -57,15 +57,15 @@ const Loader: React.FC<LoaderProps> = ({ color }) => {
       {realColors && (
         <>
           <Point
-            delay="0.33s"
+            delay="0.22s"
+            colors={realColors}
+          />
+          <Point
+            delay="0.44s"
             colors={realColors}
           />
           <Point
             delay="0.66s"
-            colors={realColors}
-          />
-          <Point
-            delay="1s"
             colors={realColors}
           />
         </>

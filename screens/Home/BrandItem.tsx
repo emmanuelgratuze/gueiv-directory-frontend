@@ -18,7 +18,7 @@ type WrapperProps = {
 }
 const Wrapper = styled(Box)<WrapperProps>`
   transform: translate3d(0, 0, 0);
-  transition: 0.3s opacity ${(props) => props.displayDelay}s ease-out, 0.3s translate3d(0, 0, 0) linear;
+  transition: 0.5s opacity ${(props) => props.displayDelay}s ease-out;
 `
 
 const BrandItem: React.FC<BoxProps & JSX.IntrinsicElements['div'] &BrandItemType> = ({
@@ -31,18 +31,18 @@ const BrandItem: React.FC<BoxProps & JSX.IntrinsicElements['div'] &BrandItemType
 }) => {
   const [isVisible, setIsVisible] = useState(false)
 
-  // useEffect(() => {
-  //   if (!hidden) {
-  //     setIsVisible(true)
-  //   }
-  // }, [])
+  useEffect(() => {
+    if (!hidden) {
+      setIsVisible(true)
+    }
+  }, [])
 
   return (
     <Wrapper
-      // style={{
-      //   opacity: isVisible ? 1 : 0
-      // }}
-      // displayDelay={displayDelay}
+      style={{
+        opacity: isVisible ? 1 : 0
+      }}
+      displayDelay={displayDelay}
       {...props}
     >
       <Button as="div" plain>

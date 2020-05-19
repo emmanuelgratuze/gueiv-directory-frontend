@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, createRef } from 'react'
 import {
   Image as GrommetImage,
   ImageProps as GrommetImageProps,
   Box,
   Stack
 } from 'grommet'
-import { AnimatePresence, motion } from 'framer-motion'
 import Loader from 'components/Loader'
+import styled from 'styled-components'
 
 export type ImageProps = GrommetImageProps & JSX.IntrinsicElements['img'] & {
   withLoader?: boolean;
@@ -15,7 +15,9 @@ export type ImageProps = GrommetImageProps & JSX.IntrinsicElements['img'] & {
   loader?: JSX.Element;
 }
 
-const AnimatedWrapper = motion.custom(Box)
+const AnimatedWrapper = styled(Box)`
+  transition: opacity 0.2s ease-out;
+`
 
 const CloudinaryImage: React.FC<ImageProps> = ({
   src,
@@ -26,6 +28,17 @@ const CloudinaryImage: React.FC<ImageProps> = ({
   ...props
 }) => {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaderHidden, setIsLoaderHidden] = useState(false)
+  const loaderRef = createRef<HTMLDivElement>()
+
+  useEffect(() => {
+    // When has been hidden
+    if (loaderRef.current) {
+      loaderRef.current.addEventListener('transitionend', () => {
+        setIsLoaderHidden(true)
+      }, false)
+    }
+  }, [loaderRef.current])
 
   useEffect(() => {
     if (src && withLoader) {
@@ -54,36 +67,33 @@ const CloudinaryImage: React.FC<ImageProps> = ({
   }, [isLoaded])
 
   return (
-    <Box
-      fill
-    >
+    <Box fill>
       {withLoader && (
-        <AnimatePresence>
-          <Stack fill>
-            <AnimatedWrapper
-              initial={{ opacity: 0 }}
-              animate={{ opacity: !isLoaded ? 1 : 0 }}
-              fill
-              align="center"
-              justify="center"
-            >
-              {loader || <Loader />}
-            </AnimatedWrapper>
-            {isLoaded && (
-              <AnimatedWrapper
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                fill
-              >
-                <GrommetImage
-                  src={src}
-                  {...props}
-                />
-              </AnimatedWrapper>
-            )}
-          </Stack>
-        </AnimatePresence>
+        <Stack fill>
+          <AnimatedWrapper
+            ref={loaderRef}
+            fill
+            align="center"
+            justify="center"
+            style={{
+              opacity: !isLoaded ? 1 : 0
+            }}
+          >
+            {!isLoaderHidden && loader || <Loader />}
+          </AnimatedWrapper>
+          {/* {isLoaded && ( */}
+          <AnimatedWrapper
+            style={{
+              opacity: isLoaded ? 1 : 0
+            }}
+            fill
+          >
+            <GrommetImage
+              src={src}
+              {...props}
+            />
+          </AnimatedWrapper>
+        </Stack>
       )}
       {!withLoader && (
         <GrommetImage

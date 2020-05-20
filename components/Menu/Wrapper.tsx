@@ -1,12 +1,10 @@
-import React, { useEffect, createRef, useMemo } from 'react'
+import React, { useEffect, createRef } from 'react'
 import { Box } from 'grommet'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 
 import useMenuState from 'hooks/app/useMenuState'
 import useBodyScroll from 'hooks/generic/useBodyScroll'
 import useResponsive from 'hooks/generic/useResponsive'
-import useBrowser from 'hooks/generic/useBrowser'
 
 import MenuWave from './Wave'
 import MenuContent from './Content'
@@ -23,8 +21,11 @@ const MenuInnerWrapper = styled(Box)<InnerProps>`
   z-index: 10;
   width: 100vw;
   height: 100vh;
+  padding-bottom: ${(props: InnerProps) => (props.open && props.isMobile ? '10rem' : 'none')};
   overflow-x: hidden;
   overflow-y: ${(props: InnerProps) => (props.open && props.isMobile ? 'auto' : 'hidden')};
+  background-color: ${(props) => (props.open ? props.theme.global.colors.gray : 'transparent')};
+  transition: background-color 0.3s ease-out;
   pointer-events: ${(props: InnerProps) => (props.open ? 'initial' : 'none')};
 `
 
@@ -35,7 +36,6 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
   const menuRef = createRef<HTMLDivElement>()
   const { isMobile } = useResponsive()
   const { disableScroll, enableScroll } = useBodyScroll()
-  const { isFirefox } = useBrowser()
 
   useEffect(() => {
     if (!menuRef.current) {
@@ -59,17 +59,7 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
 
   return (
     <div>
-      <motion.div
-        // animate={{
-        //   opacity: isMenuOpen ? 0 : 1,
-        // }}
-        // transition={{
-        //   duration: 1,
-        //   delay: isMenuOpen ? 0 : 0.5
-        // }}
-      >
-        {children}
-      </motion.div>
+      {children}
 
       <MenuInnerWrapper
         open={isMenuOpen}

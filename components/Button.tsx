@@ -10,6 +10,8 @@ type ButtonProps = {
   size?: 'small' | 'medium' | 'large';
   color?: ColorsNames;
   hoverColor?: ColorsNames;
+
+  small?: boolean; // TODO: (typescript issue)
 }
 
 const getHoverOppositeColor = (props: ButtonProps): ColorType => (
@@ -35,7 +37,7 @@ const Button = styled(GrommetButton)<ButtonProps & GrommetButtonProps>`
   outline: none;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
-  ${(props: ButtonProps) => props.size === 'small' && css`
+  ${(props: ButtonProps) => (props.size === 'small' || props.small) && css`
     font-size: 0.8em;
     padding: 0.5em 1.8em;
   `}

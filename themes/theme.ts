@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import { deepMerge } from 'grommet/utils'
 import { base } from 'grommet/themes'
 import { ValueOf } from 'types/utils'
-import { lighten, darken } from 'polished'
+import { lighten, darken, rgba } from 'polished'
 
 const baseSpacing = 24
 const baseFontSize = 16
@@ -91,8 +91,8 @@ const oppositeColors = {
 
 export const colors: { [key: string]: string } = {
   ...themeColors,
-  placeholder: darkColors[4],
-  focus: 'blue'
+  placeholder: rgba('#AAAAAA', 0.4),
+  focus: 'pink'
 }
 
 const colorArray = (array: Array<string>, prefix: string): void => {
@@ -306,6 +306,7 @@ const theme = deepMerge(base, {
       bottom: 'medium'
     },
     border: {
+      size: '2px',
       color: 'light-4'
     },
     focus: {
@@ -396,25 +397,18 @@ const theme = deepMerge(base, {
   },
   textInput: {
     extend: css`
+      /* padding-top: 0; */
       padding-left: 0;
       font-weight: 600;
       font-size: 0.9em;
       font-family: 'Quicksand', sans-serif;
       font-style: initial;
       text-align: center;
+      border-color: ${colors.pink};
       border-radius: 0;
 
       &:focus {
-        color: ${colors.blue};
-      }
-
-      ::placeholder,
-      ::-webkit-input-placeholder,
-      :-ms-input-placeholder {
-        color: ${lightColors[4]};
-        font-weight: bold;
-        font-family: 'Lato', sans-serif;
-        font-style: italic;
+        color: ${colors.pink};
       }
     `
   },
@@ -459,10 +453,7 @@ const theme = deepMerge(base, {
   layer: {
     container: {
       zIndex: 15
-    },
-    extend: `
-      
-    `
+    }
   },
 
   // Custom

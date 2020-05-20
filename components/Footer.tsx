@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'grommet'
+import { Box, HeadingProps as GrommetHeadingProps } from 'grommet'
 import { Facebook, Instagram } from 'grommet-icons'
 import Link from 'next/link'
 
@@ -17,7 +17,7 @@ import useConfiguration from 'hooks/app/useConfiguration'
 import StandardLink from './StandardLink'
 import MailchimpForm from './MailchimpForm'
 
-const FooterHeading: React.FC = ({ ...props }) => (
+const FooterHeading: React.FC<GrommetHeadingProps> = ({ ...props }) => (
   <Heading level={3} color="blue" transform="uppercase" {...props} />
 )
 
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
       background={{ color: 'light-1' }}
       pad={{ top: 'large', bottom: 'medium' }}
       style={{
-        zIndex: 15
+        zIndex: 10
       }}
     >
       <Container>
@@ -45,7 +45,12 @@ const Footer: React.FC = () => {
             align="center"
             margin={{ bottom: isMobile ? 'large' : 'medium' }}
           >
-            <FooterHeading>Sé parte</FooterHeading>
+            <FooterHeading
+              size={isMobile ? 'medium' : 'small'}
+              margin={{ bottom: 'medium' }}
+            >
+              Sé parte
+            </FooterHeading>
             <Paragraph
               size="small"
               color="dark-4"
@@ -70,7 +75,12 @@ const Footer: React.FC = () => {
             gap="small"
             margin={{ bottom: isMobile ? 'large' : 'medium' }}
           >
-            <FooterHeading>¡Sigue nuestros pasos!</FooterHeading>
+            <FooterHeading
+              size={isMobile ? 'medium' : 'small'}
+              margin={{ bottom: 'medium' }}
+            >
+              Sigue nuestros pasos
+            </FooterHeading>
             <Box direction="row" gap="medium">
               <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
                 <Instagram size="2rem" color={brandColors.blue} />
@@ -83,7 +93,13 @@ const Footer: React.FC = () => {
           <Box
             align="center"
           >
-            <FooterHeading>Súbete a la nueva ola</FooterHeading>
+            <FooterHeading
+              textAlign="center"
+              size={isMobile ? 'medium' : 'small'}
+              margin={{ bottom: 'small' }}
+            >
+              Subscríbete a nuestra Newsletter
+            </FooterHeading>
             <MailchimpForm />
           </Box>
         </ResponsiveGrid>

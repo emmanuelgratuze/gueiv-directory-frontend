@@ -32,7 +32,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 }) => {
   const { oppositeColors, colors } = useTheme()
   const [hoverRef, isHovered] = useHover()
-  const { isSmallMobile } = useResponsive()
+  const { isSmallMobile, isMobile } = useResponsive()
   const backgroundColors = useMemo(() => ({
     normal: colors[color as string],
     hover: darken(0.05, colors[color as string])
@@ -44,7 +44,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
       overflow="hidden"
       style={{
         transform: 'translate3d(0,0,0)',
-        opacity: 0.9
+        opacity: !isMobile ? 0.9 : 1
       }}
       whileHover={{ opacity: 1 }}
     >

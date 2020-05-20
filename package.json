@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run build-cms && next",
-    "build": "NODE_ENV=production npm run build-cms && next build && npm run export",
+    "fetch-contents": "git submodule foreach git pull origin master",
+    "build": "NODE_ENV=production npm run build-cms && npm run fetch-contents && npm run build-next",
+    "build-next": "next build && npm run export",
     "production-build": "NODE_ENV=production npm run build-cms && npm run build && npm run export",
     "build-cms": "babel-node -r dotenv/config ./cms/build.js --presets @babel/preset-env",
     "start": "next start",

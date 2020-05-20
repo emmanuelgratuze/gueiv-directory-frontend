@@ -3,18 +3,13 @@ import Head from 'next/head'
 import { Grommet } from 'grommet'
 import { useRouter } from 'next/router'
 
-import useAnalytics from 'hooks/generic/useAnalytics'
 import theme from 'themes/theme'
 
-import { GlobalStyles } from './styled'
+import { GlobalStyles } from './global-styles'
 
 const Layout: React.FC = ({
   children
 }) => {
-  if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
-    useAnalytics(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
-  }
-
   const router = useRouter()
 
   // Only rerender the pages when route changed (or if the content changes)

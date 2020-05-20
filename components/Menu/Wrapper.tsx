@@ -57,24 +57,16 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
     }
   }, [isMenuOpen, menuRef])
 
-  const animationControls = useMemo(() => {
-    const controls: { [key: string]: unknown } = {
-      opacity: isMenuOpen ? 0 : 1,
-    }
-    if (!isFirefox) {
-      controls.filter = isMenuOpen ? 'blur(2px)' : 'blur(0px)'
-    }
-    return controls
-  }, [isMenuOpen, isFirefox])
-
   return (
     <div>
       <motion.div
-        animate={animationControls}
-        transition={{
-          duration: 1,
-          delay: isMenuOpen ? 0 : 0.5
-        }}
+        // animate={{
+        //   opacity: isMenuOpen ? 0 : 1,
+        // }}
+        // transition={{
+        //   duration: 1,
+        //   delay: isMenuOpen ? 0 : 0.5
+        // }}
       >
         {children}
       </motion.div>

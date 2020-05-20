@@ -3,23 +3,13 @@ import Head from 'next/head'
 import { Grommet } from 'grommet'
 import { useRouter } from 'next/router'
 
-import useAnalytics from 'hooks/generic/useAnalytics'
 import theme from 'themes/theme'
 
-import { GlobalStyles } from './styled'
+import { GlobalStyles } from './global-styles'
 
-type LayoutProps = {
-  isContentReady?: boolean;
-}
-
-const Layout: React.FC<LayoutProps> = ({
-  children,
-  isContentReady = false
+const Layout: React.FC = ({
+  children
 }) => {
-  if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
-    useAnalytics(process.env.GOOGLE_ANALYTICS_TRACKING_ID)
-  }
-
   const router = useRouter()
 
   // Only rerender the pages when route changed (or if the content changes)
@@ -41,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({
         <meta name="robots" content="noindex" />
 
         {/* Fonts */}
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400&display=swap" rel="stylesheet" />
 
         <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
@@ -60,12 +50,7 @@ const Layout: React.FC<LayoutProps> = ({
       <GlobalStyles />
 
       <Grommet theme={theme}>
-        {/* If content doesn't ready we do not render it yet */}
-        {!isContentReady && (
-          <>
-            {siteContent}
-          </>
-        )}
+        {siteContent}
       </Grommet>
     </>
   )

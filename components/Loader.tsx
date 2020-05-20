@@ -1,60 +1,77 @@
-import React from 'react'
-import { Box, BoxProps } from 'grommet'
-import { motion, MotionProps } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
+import { Box } from 'grommet'
+import styled, { keyframes, Keyframes } from 'styled-components'
+
+import useTheme from 'hooks/generic/useTheme'
+
+const scaleKeyframes = keyframes`
+  0% { transform: scaleX(1) scaleY(1); }
+  20% { transform: scaleX(1.1) scaleY(1.1) translateY(-3px); }
+  60% { transform: scaleX(1) scaleY(1); }
+  100% { transform: scaleX(1) scaleY(1); }
+`
+
+const backgroundKeyframes = (colors: string[]): Keyframes => (
+  keyframes`
+    0% { background-color: ${colors[0]}; }
+    25% { background-color: ${colors[1]}; }
+    50% { background-color: ${colors[2]}; }
+    75% { background-color: ${colors[3]}; }
+    100% { background-color: ${colors[0]}; }
+  `
+)
+
+type PointProps = {
+  delay: string;
+  colors: string[];
+}
+const Point = styled.div<PointProps>`
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  animation:
+    1s ${scaleKeyframes} ${props => props.delay || '0s'} ease-in-out infinite,
+    2s ${(props) => backgroundKeyframes(props.colors)} 0s linear infinite;
+`
 
 type LoaderProps = {
   color?: string;
 }
 
-const Point = motion.custom(Box)
-const LoaderPoint: React.FC<MotionProps & BoxProps & LoaderProps> = ({ color, transition }) => (
-  <Point
-    initial={{ scale: 0.7 }}
-    animate={{ scale: 0.9 }}
-    round="1rem"
-    width="1rem"
-    height="1rem"
-    background={{ color }}
-    transition={transition}
-  />
-)
+const Loader: React.FC<LoaderProps> = ({ color }) => {
+  const { colors } = useTheme()
+  const [realColors, setRealColors] = useState<string[]>()
 
-const Loader: React.FC<BoxProps & LoaderProps> = ({
-  color = 'yellow',
-  ...props
-}) => (
-  <Box
-    {...props}
-    direction="row"
-    gap="small"
-  >
-    <LoaderPoint
-      color={color}
-      transition={{
-        yoyo: Infinity,
-        duration: 0.5,
-        ease: 'easeInOut'
-      }}
-    />
-    <LoaderPoint
-      color={color}
-      transition={{
-        yoyo: Infinity,
-        duration: 0.5,
-        ease: 'easeInOut',
-        delay: 0.3
-      }}
-    />
-    <LoaderPoint
-      color={color}
-      transition={{
-        yoyo: Infinity,
-        duration: 0.5,
-        ease: 'easeInOut',
-        delay: 0.6
-      }}
-    />
-  </Box>
-)
+  useEffect(() => {
+    const pointsColors = color ? new Array(4).fill(color) : ['blue', 'pink', 'turquoise', 'yellow']
+    setRealColors(pointsColors.map((c) => colors[c]))
+  }, [color])
+
+  return (
+    <Box
+      direction="row"
+      justify="between"
+      align="center"
+      width="3rem"
+    >
+      {realColors && (
+        <>
+          <Point
+            delay="0.22s"
+            colors={realColors}
+          />
+          <Point
+            delay="0.44s"
+            colors={realColors}
+          />
+          <Point
+            delay="0.66s"
+            colors={realColors}
+          />
+        </>
+      )}
+    </Box>
+  )
+}
 
 export default Loader

@@ -57,6 +57,8 @@ export const brandColorsNames = Object.keys(brandColors) as [keyof (typeof brand
 const themeColors = {
   ...brandColors,
   gray: '#3D3D4F',
+  'dark-gray': darken(0.03, '#3D3D4F'),
+
   black: '#000000',
   white: '#FFFFFF',
 
@@ -70,11 +72,12 @@ const themeColors = {
 
 // All the themeColors keys should exist in oppositeColors
 const oppositeColors = {
-  yellow: 'white',
+  yellow: 'gray',
   turquoise: 'gray',
   blue: 'white',
   pink: 'white',
   gray: 'white',
+  'dark-gray': 'white',
   black: 'white',
   white: 'gray',
 

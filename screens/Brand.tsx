@@ -43,22 +43,28 @@ const BrandScreen: React.FC<BrandScreenProps> = ({ brand }) => {
       <Page
         title={brand.get('name')}
         headerChildren={(
-          <Box justify="center" fill="vertical" width="2.5rem">
-            <Link href={`/${getFiltersUrlString()}`}>
-              <GrommetButton
-                plain
-                fill
-              >
-                {({ hover }: { hover: boolean }) => (
-                  <Icon
-                    Component={FormClose}
-                    color={hover ? brandColor : 'white'}
-                    size="2.5rem"
-                  />
-                )}
-              </GrommetButton>
-            </Link>
-          </Box>
+          <>
+            <Box
+              justify="center"
+              fill="vertical"
+              width="2.5rem"
+            >
+              <Link href={`/${getFiltersUrlString()}`} passHref>
+                <GrommetButton
+                  plain
+                  as="a"
+                >
+                  {({ hover }: { hover: boolean }) => (
+                    <Icon
+                      Component={FormClose}
+                      color={hover ? brandColor : 'white'}
+                      size="2.5rem"
+                    />
+                  )}
+                </GrommetButton>
+              </Link>
+            </Box>
+          </>
         )}
       >
         <Box

@@ -1,13 +1,10 @@
 /* eslint-disable @typescript-eslint/camelcase */
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default (appConfig) => ({
-  backend: process.env.NODE_ENV === 'production'
-    ? {
-      name: 'git-gateway'
-    } : {
-      name: 'github',
-      repo: appConfig.NETLIFY_CMS_GITHUB_REPOSITORY
-    },
+  backend: {
+    name: 'github',
+    repo: appConfig.NETLIFY_CMS_GITHUB_REPOSITORY
+  },
   site_url: 'https://directorio.gueiv.com',
   media_folder: 'assets/uploads',
   public_folder: 'assets',
@@ -93,7 +90,26 @@ export default (appConfig) => ({
               widget: 'text'
             }
           ]
-        }
+        },
+        {
+          label: 'Legal page',
+          name: 'legalPage',
+          extension: 'json',
+          format: 'json',
+          file: 'configuration/legal-page.json',
+          fields: [
+            {
+              label: 'Title',
+              name: 'title',
+              widget: 'string',
+            },
+            {
+              label: 'Content',
+              name: 'content',
+              widget: 'markdown'
+            }
+          ]
+        },
       ]
     },
     {

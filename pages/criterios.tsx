@@ -12,7 +12,6 @@ const Criteria: NextPage = () => {
   )
 }
 
-// eslint-disable-next-line
 export const getStaticProps: GetStaticProps = async () => {
   const dataList = [
     { collection: 'brands', schema: ['brand'] },

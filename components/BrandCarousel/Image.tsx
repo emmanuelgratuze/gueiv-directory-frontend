@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, BoxProps } from 'grommet'
 import CloudinaryImage from 'components/cloudinary/CloudinaryImage'
+import Loader from 'components/Loader'
 
 type CarouselImageProps = {
   fileName: string;
@@ -24,6 +25,9 @@ const CarouselImage: React.FC<BoxProps & CarouselImageProps> = ({
         width: 1400,
         crop: 'fit'
       }}
+      loader={(
+        <Loader color="white" />
+      )}
       fill
     />
   </Box>

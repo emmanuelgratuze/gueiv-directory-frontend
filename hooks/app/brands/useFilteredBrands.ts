@@ -20,7 +20,7 @@ type ReturnedValue = {
   hasMore: boolean;
 }
 
-const useFilteredBrands = (limit = 20): ReturnedValue => {
+const useFilteredBrands = (limit = 10): ReturnedValue => {
   const [, triggerUpdate] = useState(0)
   const newFilters = useSelector(selectCurrentFilters)
   const filters = useRef<Record<{ [key: string]: List<string> }>>()

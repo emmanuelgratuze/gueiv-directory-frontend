@@ -4,32 +4,36 @@ import React, {
   createRef,
   useMemo
 } from 'react'
-import useWindowSize from 'hooks/generic/useWindowSize'
 import useScrollPosition from 'hooks/generic/useScrollPosition'
+import useResponsive from 'hooks/generic/useResponsive'
 
 type ScrollableItemProps = {
   onScrollEnter?: Function;
   onScrollLeave?: Function;
+  detectionPadding?: number;
 }
 
-const ScrollableItem: React.FC<ScrollableItemProps> = ({
+const ScrollableItem: React.FC<ScrollableItemProps & JSX.IntrinsicElements['div']> = ({
   onScrollEnter = () => undefined,
   onScrollLeave = () => undefined,
-  children
+  detectionPadding = 0,
+  children,
+  ...props
 }) => {
   const [isActive, setIsActive] = useState(false)
   const ref = createRef<HTMLDivElement>()
   const scrollPosition = useScrollPosition()
-  const { height: windowHeight } = useWindowSize()
+  const { isMobile } = useResponsive()
 
   useEffect(() => {
     if (!ref.current) {
       return
     }
     const elementBounding = ref.current.getBoundingClientRect()
+    const detectionPosition = isMobile ? elementBounding.height * 2 / 3 : elementBounding.height / 2
     if (
-      elementBounding.top < elementBounding.height / 2
-      && elementBounding.top + windowHeight > elementBounding.height / 2
+      elementBounding.top - detectionPadding < detectionPosition
+      && elementBounding.top + detectionPadding + elementBounding.height > detectionPosition
     ) {
       setIsActive(true)
     } else {
@@ -47,7 +51,7 @@ const ScrollableItem: React.FC<ScrollableItemProps> = ({
   }, [isActive])
 
   return useMemo(() => (
-    <div ref={ref}>
+    <div ref={ref} {...props}>
       {children}
     </div>
   ), [children, ref])

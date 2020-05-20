@@ -13,7 +13,7 @@ import BrandsList from './BrandsList'
 type HomeScreenProps = {}
 
 const HomeScreen: React.FC<HomeScreenProps> = () => {
-  const { brands, selectMore, hasMore } = useFilteredBrands(12)
+  const { brands, selectMore, hasMore } = useFilteredBrands(30)
   const { applyFiltersFromUrl } = useFilters()
 
   useEffect(() => (

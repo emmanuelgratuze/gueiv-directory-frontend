@@ -239,7 +239,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                           justify="center"
                           margin={!isMobile ? { left: 'medium' } : undefined}
                         >
-                          <Box width="35rem" margin={{ top: isMobile ? 'medium' : 0 }}>
+                          <Box width="35rem" margin={{ top: isMobile ? 'medium' : undefined }}>
                             <AnimatedContent
                               animate={{
                                 opacity: isMobile || currentIndex === index ? 1 : 0,

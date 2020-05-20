@@ -3,7 +3,8 @@
 export default (appConfig) => ({
   backend: process.env.NODE_ENV === 'production'
     ? {
-      name: 'git-gateway'
+      name: 'git-gateway',
+      repo: appConfig.NETLIFY_CMS_GITHUB_REPOSITORY
     } : {
       name: 'github',
       repo: appConfig.NETLIFY_CMS_GITHUB_REPOSITORY

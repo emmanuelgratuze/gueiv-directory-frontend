@@ -1,6 +1,5 @@
 import React, {
   useState,
-  useEffect,
   useRef,
   SyntheticEvent,
   useMemo
@@ -60,7 +59,8 @@ const MailchimpForm: React.FC<MailchimpFormType> = ({
       <TextInput
         size={small ? 'small' : undefined}
         color={dark ? 'white' : undefined}
-        placeholderColor={dark ? 'light-4' : undefined}
+        backgroundColor={dark ? 'dark-gray' : 'light-3'}
+        placeholderColor={dark ? 'light-7' : undefined}
         fontSize="small"
         {...props}
       />

@@ -43,7 +43,6 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
           <BrandImage
             fill
             brand={brand}
-            color={color}
           />
         </Box>
       )}

@@ -8,20 +8,23 @@ import Link from 'next/link'
 import CriterionTooltip from 'components/CriterionTooltip'
 
 import { ImmutableCriterion } from 'types/data/criterion'
-import { ColorsNames } from 'themes/theme'
+import { ColorsNames, ColorsNamesWithOpposite } from 'themes/theme'
 import useTheme from 'hooks/generic/useTheme'
 import useHover from 'hooks/generic/useHover'
 import A from './A'
 
 type CriterionIcon = {
   criterion: ImmutableCriterion;
-  color?: ColorsNames | string;
-  hoverColor?: ColorsNames | string;
+  color?: ColorsNamesWithOpposite;
+  hoverColor?: ColorsNames;
   clickable?: boolean;
   tooltipPosition?: 'top' | 'bottom';
 }
 
-const StyledIconContainer = styled(Box)`
+type ContainerProps = {
+  fillColor?: ColorsNamesWithOpposite | ColorsNames | string;
+}
+const StyledIconContainer = styled(Box)<ContainerProps>`
   svg {
     width: 100%;
     height: 100%;
@@ -31,7 +34,7 @@ const StyledIconContainer = styled(Box)`
   g,
   path {
     pointer-events: none;
-    fill: ${(props) => props.color} !important;
+    fill: ${(props) => props.fillColor || 'black'} !important;
   }
 
   path {
@@ -57,8 +60,8 @@ const CriterionIcon: React.FC<React.HTMLProps<HTMLDivElement> & BoxProps & Crite
     if (hoverColor) {
       return colors[hoverColor]
     }
-    if ((color as ColorsNames) in colors) {
-      return colors[oppositeColors[color as ColorsNames]]
+    if (color in oppositeColors) {
+      return colors[oppositeColors[color]]
     }
     return darken(0.5, color)
   }, [color])
@@ -83,7 +86,7 @@ const CriterionIcon: React.FC<React.HTMLProps<HTMLDivElement> & BoxProps & Crite
         dangerouslySetInnerHTML={{
           __html: criterion.get('iconContent')
         }}
-        color={isHover && clickable ? oppositeColor : normalColor}
+        fillColor={isHover && clickable ? oppositeColor : normalColor}
       />
     </Box>
   )

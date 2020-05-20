@@ -306,7 +306,7 @@ const theme = deepMerge(base, {
       bottom: 'medium'
     },
     border: {
-      size: '2px',
+      size: '0',
       color: 'light-4'
     },
     focus: {
@@ -405,10 +405,19 @@ const theme = deepMerge(base, {
       font-style: initial;
       text-align: center;
       border-color: ${colors.pink};
-      border-radius: 0;
+      border-radius: 5px;
 
       &:focus {
         color: ${colors.pink};
+      }
+
+      ::placeholder,
+      ::-webkit-input-placeholder {
+        font-weight: 400;
+      }
+
+      :-ms-input-placeholder {
+        font-weight: 400;
       }
     `
   },
@@ -469,5 +478,6 @@ export type ThemeColorsType = typeof themeColors
 export type BreakpointsKeysType = keyof BreakpointsType
 export type BreakpointsValuesType = ValueOf<BreakpointsType>
 export type BrandColorsKeys = keyof ThemeType['global']['brandColors']
-export type ColorsNames = keyof typeof oppositeColors
+export type ColorsNames = keyof ThemeType['global']['colors'] | keyof typeof colors | keyof typeof oppositeColors
+export type ColorsNamesWithOpposite = keyof typeof oppositeColors
 export default theme

@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 import Header, { HeaderProps } from 'components/Header'
 import Footer from 'components/Footer'
-
 import MenuWrapper from 'components/Menu/Wrapper'
 import LoadingWrapper from 'components/PageLoading/Wrapper'
 
@@ -17,6 +16,8 @@ import useMenuState from 'hooks/app/useMenuState'
 import useLoading from 'hooks/generic/useRouteLoading'
 
 import FiltersMenu from './FiltersMenu'
+
+const socialBanner = require('assets/images/social-banner.png')
 
 type PageType = {
   title: string;
@@ -62,12 +63,13 @@ const Page: React.FC<BoxProps & PageType> = ({
       <Head>
         <title>{fullTitle}</title>
         <meta name="description" content={description || configuration.getIn(['general', 'description'])} />
-        {/* <meta property="og:description" content={description || contents.getIn(['general', 'description'])} /> */}
-        {/* <meta property="twitter:description" content={description || contents.getIn(['general', 'description'])} /> */}
-        {/* <meta property="og:title" content={getTitle(title)} /> */}
-        {/* <meta property="og:image" content={socialBanner} /> */}
-        {/* <meta property="twitter:title" content={getTitle(title)} /> */}
-        {/* <meta property="twitter:image" content={socialBanner} /> */}
+        <meta property="og:description" content={description || configuration.getIn(['general', 'description'])} />
+        <meta property="twitter:description" content={description || configuration.getIn(['general', 'description'])} />
+        <meta property="og:title" content={fullTitle} />
+        <meta property="og:image" content={socialBanner} />
+        <meta property="twitter:title" content={fullTitle} />
+        <meta property="twitter:image" content={socialBanner} />
+
       </Head>
 
       <Box

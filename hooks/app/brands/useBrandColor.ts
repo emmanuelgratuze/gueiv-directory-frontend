@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux'
 import useTheme from 'hooks/generic/useTheme'
 import { selectBrandsColors } from 'store/interface/selectors'
 import { ImmutableBrand } from 'types/data/brand'
-import { BrandColorsKeys } from 'themes/theme'
+import { BrandColorsKeys, ColorsNamesWithOpposite } from 'themes/theme'
 
-const useBrandColor = (brand: ImmutableBrand): [string, string] => {
+const useBrandColor = (brand: ImmutableBrand): [string, ColorsNamesWithOpposite] => {
   const brandsColors = useSelector(selectBrandsColors)
   const { brandColors, oppositeColors } = useTheme()
   const brandColorName = useMemo(() => {
@@ -22,7 +22,7 @@ const useBrandColor = (brand: ImmutableBrand): [string, string] => {
 
   return [
     brandColorName ? brandColors[brandColorName] : 'transparent',
-    brandColorName ? oppositeColors[brandColorName] : 'transparent'
+    brandColorName ? oppositeColors[brandColorName] as BrandColorsKeys : 'blue'
   ]
 }
 

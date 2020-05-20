@@ -94,6 +94,15 @@ const MenuContent: React.FC<MenuContentProps> = ({
               </Link>
             )}
 
+            {isMobile && (
+              <Box pad={{ vertical: 'medium' }}>
+                <SmallWave
+                  fill="white"
+                  width="6rem"
+                />
+              </Box>
+            )}
+
             <Box
               gap="small"
               align="center"
@@ -146,7 +155,6 @@ const MenuContent: React.FC<MenuContentProps> = ({
                 width="6rem"
               />
 
-
               <Box
                 margin={{ top: 'small' }}
                 fill="horizontal"
@@ -170,8 +178,6 @@ const MenuContent: React.FC<MenuContentProps> = ({
               </Box>
             </Box>
           </Box>
-
-
           <Box
             align={isMobile ? 'center' : 'start'}
             pad={isSmallMobile ? 'medium' : 'large'}

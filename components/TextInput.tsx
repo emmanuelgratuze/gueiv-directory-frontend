@@ -11,7 +11,8 @@ type TextInputProps = {
   theme: ThemeType;
   fontSize?: 'small' | 'medium' | 'large';
   color?: ColorsNames;
-  placeholderColor?: string;
+  backgroundColor?: ColorsNames;
+  placeholderColor?: ColorsNames;
 }
 
 // const getHoverOppositeColor = (props: TextInputProps): ColorType => (
@@ -25,8 +26,15 @@ type TextInputProps = {
 
 const TextInput = styled(GrommetTextInput)<GrommetTextInputProps & TextInputProps>`
   max-width: 1000px;
+  margin: 10px 0;
+  background-color: transparent;
+  border: none;
+  ${(props: TextInputProps) => props.backgroundColor && css`
+    background-color: ${props.theme.global.colors[props.backgroundColor || 'white']};
+  `}
+
   ${(props: TextInputProps) => props.color && css`
-    color: ${props.theme.global.colors[props.color || 'gray']};
+    color: ${props.theme.global.colors[props.color || 'gray']} !important;
   `}
 
   ${(props: TextInputProps) => props.fontSize === 'small' && css`

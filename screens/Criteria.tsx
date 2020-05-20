@@ -21,6 +21,7 @@ import { ImmutableCriterion } from 'types/data/criterion'
 import BackgroundWave from 'components/BackgroundWave'
 import styled from 'styled-components'
 import { Down } from 'grommet-icons'
+import { ColorsNamesWithOpposite } from 'themes/theme'
 
 interface CriteriaScreenProps {
   criteria: List<ImmutableCriterion>;
@@ -219,7 +220,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                             >
                               <CriterionIcon
                                 criterion={criterion}
-                                color={oppositeColors[colorNames[(index) % colorNames.length]]}
+                                color={oppositeColors[colorNames[(index) % colorNames.length]] as ColorsNamesWithOpposite}
                               />
                               <Heading
                                 transform="uppercase"

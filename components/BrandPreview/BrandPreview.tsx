@@ -10,7 +10,7 @@ import RelativeHeightBox from 'components/RelativeHeightBox'
 import CriterionIcon from 'components/CriterionIcon'
 
 import { ImmutableBrand } from 'types/data/brand'
-import { ThemeColorsType } from 'themes/theme'
+import { ColorsNamesWithOpposite } from 'themes/theme'
 import useResponsive from 'hooks/generic/useResponsive'
 import useTheme from 'hooks/generic/useTheme'
 import useHover from 'hooks/generic/useHover'
@@ -19,7 +19,7 @@ import BrandImage from './Image'
 
 type BrandItemType = {
   brand: ImmutableBrand;
-  color?: keyof ThemeColorsType;
+  color?: ColorsNamesWithOpposite;
   onLoad?: Function;
 }
 
@@ -113,7 +113,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                       <CriterionIcon
                         clickable
                         criterion={criterion}
-                        color={color ? oppositeColors[color] : undefined}
+                        color={color ? oppositeColors[color] as ColorsNamesWithOpposite : undefined}
                         style={{
                           position: 'relative',
                           zIndex: 10 // On top of the block link

@@ -1,4 +1,4 @@
-import React, { useEffect, createRef } from 'react'
+import React, { useEffect, createRef, useMemo } from 'react'
 import { Box } from 'grommet'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import useMenuState from 'hooks/app/useMenuState'
 import useBodyScroll from 'hooks/generic/useBodyScroll'
 import useResponsive from 'hooks/generic/useResponsive'
+import useBrowser from 'hooks/generic/useBrowser'
 
 import MenuWave from './Wave'
 import MenuContent from './Content'
@@ -34,6 +35,7 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
   const menuRef = createRef<HTMLDivElement>()
   const { isMobile } = useResponsive()
   const { disableScroll, enableScroll } = useBodyScroll()
+  const { isFirefox } = useBrowser()
 
   useEffect(() => {
     if (!menuRef.current) {
@@ -55,13 +57,20 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
     }
   }, [isMenuOpen, menuRef])
 
+  const animationControls = useMemo(() => {
+    const controls: { [key: string]: unknown } = {
+      opacity: isMenuOpen ? 0 : 1,
+    }
+    if (!isFirefox) {
+      controls.filter = isMenuOpen ? 'blur(2px)' : 'blur(0px)'
+    }
+    return controls
+  }, [isMenuOpen, isFirefox])
+
   return (
     <div>
       <motion.div
-        animate={{
-          opacity: isMenuOpen ? 0 : 1,
-          filter: isMenuOpen ? 'blur(2px)' : 'blur(0px)'
-        }}
+        animate={animationControls}
         transition={{
           duration: 1,
           delay: isMenuOpen ? 0 : 0.5

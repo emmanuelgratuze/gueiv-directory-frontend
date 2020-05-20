@@ -23,7 +23,7 @@ const ErrorScreen: React.FC = () => (
         textAlign="center"
         color="white"
       >
-        Lo siento, no hay nada por aquí
+        Lo sentimos, no hay nada por aquí
         &thinsp;
         <Emoji symbol="🤷‍♂️" label="sorry" />
       </Text>

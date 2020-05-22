@@ -1,12 +1,18 @@
-import React, { useEffect, useState, createRef } from 'react'
+import React, {
+  useEffect,
+  useState,
+  createRef,
+  useMemo
+} from 'react'
 import {
   Image as GrommetImage,
   ImageProps as GrommetImageProps,
   Box,
   Stack
 } from 'grommet'
-import Loader from 'components/Loader'
 import styled from 'styled-components'
+import Loader from 'components/Loader'
+import useBrowser from 'hooks/generic/useBrowser'
 
 export type ImageProps = GrommetImageProps & JSX.IntrinsicElements['img'] & {
   withLoader?: boolean;
@@ -30,6 +36,7 @@ const CloudinaryImage: React.FC<ImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false)
   const [isLoaderHidden, setIsLoaderHidden] = useState(false)
   const loaderRef = createRef<HTMLDivElement>()
+  const { isServerSide } = useBrowser()
 
   useEffect(() => {
     // When has been hidden
@@ -66,9 +73,13 @@ const CloudinaryImage: React.FC<ImageProps> = ({
     }
   }, [isLoaded])
 
+  const shouldDisplayLoader = useMemo(() => (
+    !isServerSide && withLoader
+  ), [withLoader])
+
   return (
     <Box fill>
-      {withLoader && (
+      {shouldDisplayLoader && (
         <Stack fill>
           <AnimatedWrapper
             ref={loaderRef}
@@ -95,7 +106,7 @@ const CloudinaryImage: React.FC<ImageProps> = ({
           </AnimatedWrapper>
         </Stack>
       )}
-      {!withLoader && (
+      {!shouldDisplayLoader && (
         <GrommetImage
           src={src}
           onLoad={() => {

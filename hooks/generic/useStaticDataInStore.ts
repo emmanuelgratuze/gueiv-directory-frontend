@@ -1,20 +1,27 @@
 import { useEffect } from 'react'
 import { Store, AnyAction } from 'redux'
 
-import { addData } from 'store/data/actions'
+import { addData, clearData } from 'store/data/actions'
 import { Data, SchemaKeys } from 'store/data/types'
+import useBrowser from 'hooks/generic/useBrowser'
 
 const useStaticDataInStore = (
   store: Store<unknown, AnyAction>,
   pageProps: { data: { data: Data[]; schema: SchemaKeys | SchemaKeys[] }[] }
 ): void => {
-  useEffect(() => {
-    if (pageProps.data) {
+  const { isServerSide } = useBrowser()
+  if (isServerSide && pageProps.data) {
+    store.dispatch(clearData())
+    pageProps.data.forEach((datum): void => {
+      store.dispatch(addData(datum.schema, datum.data))
+    })
+  } else {
+    useEffect(() => {
       pageProps.data.forEach((datum): void => {
         store.dispatch(addData(datum.schema, datum.data))
       })
-    }
-  }, [pageProps])
+    }, [pageProps])
+  }
 }
 
 export default useStaticDataInStore

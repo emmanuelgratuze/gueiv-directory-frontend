@@ -7,6 +7,7 @@ import BrandImage from 'components/BrandPreview/Image'
 import { ImmutableBrand } from 'types/data/brand'
 import { ColorsNames } from 'themes/theme'
 import useResponsive from 'hooks/generic/useResponsive'
+import useBrowser from 'hooks/generic/useBrowser'
 
 import CarouselImage from './Image'
 import CarouselButton from './Button'
@@ -24,6 +25,7 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
   const [currentIndex, setIndex] = useState(0)
   const picturesCount = brand.get('pictures')?.size || 0
   const { isMobile } = useResponsive()
+  const { isServerSide } = useBrowser()
 
   return (
     <Box
@@ -62,7 +64,7 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
                   >
                     {index === currentIndex && (
                       <motion.div
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: isServerSide ? 1 : 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         style={{ height: '100%' }}

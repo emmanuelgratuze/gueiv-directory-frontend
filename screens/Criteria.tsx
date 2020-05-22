@@ -145,6 +145,7 @@ const CriteriaScreen: React.FC<CriteriaScreenProps> = ({ criteria }) => {
                           width="2rem"
                           height="2rem"
                           pad="0.3rem"
+                          key={criterion.get('id')}
                         >
                           <CriterionIcon
                             criterion={criterion}

@@ -1,5 +1,11 @@
 import React from 'react'
-import Document, { DocumentContext } from 'next/document'
+import Document, {
+  DocumentContext,
+  Html,
+  Main,
+  Head,
+  NextScript
+} from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
@@ -28,5 +34,18 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  render() {
+    return (
+      <Html lang={process.env.LANGUAGUE}>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }

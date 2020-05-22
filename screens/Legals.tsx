@@ -26,7 +26,9 @@ const LegalsScreen: React.FC = () => {
   const { isMobile } = useResponsive()
 
   return (
-    <Page title={configuration.getIn(['legal-page', 'title'])}>
+    <Page
+      title={configuration.getIn(['legal-page', 'title'])}
+    >
       <Box
         align="center"
         justify="center"

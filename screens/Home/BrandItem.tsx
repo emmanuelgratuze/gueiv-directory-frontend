@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Button, BoxProps } from 'grommet'
-import BrandPreview from 'components/BrandPreview'
+import styled from 'styled-components'
+
 import { ImmutableBrand } from 'types/data/brand'
 import { ThemeColorsType } from 'themes/theme'
-import styled from 'styled-components'
+import useBrowser from 'hooks/generic/useBrowser'
+import BrandPreview from 'components/BrandPreview'
 
 type BrandItemType = {
   brand: ImmutableBrand;
@@ -29,7 +31,9 @@ const BrandItem: React.FC<BoxProps & JSX.IntrinsicElements['div'] &BrandItemType
   displayDelay = 0,
   ...props
 }) => {
-  const [isVisible, setIsVisible] = useState(false)
+  const { isServerSide } = useBrowser()
+  // Make it visible on server
+  const [isVisible, setIsVisible] = useState(isServerSide)
 
   useEffect(() => {
     if (!hidden) {

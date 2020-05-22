@@ -1,4 +1,5 @@
 import React from 'react'
+import { Stack } from 'grommet'
 
 import useLoading from 'hooks/generic/useRouteLoading'
 import useBrowser from 'hooks/generic/useBrowser'
@@ -9,7 +10,7 @@ const LoadingWrapper: React.FC = ({ children }) => {
   const { isLoading, currentPage } = useLoading()
   const { isServerSide } = useBrowser()
   return (
-    <div>
+    <Stack>
       {/* No loading on server side */}
       {!isServerSide && (
         <LoadingScreen
@@ -18,7 +19,7 @@ const LoadingWrapper: React.FC = ({ children }) => {
         />
       )}
       {children}
-    </div>
+    </Stack>
   )
 }
 

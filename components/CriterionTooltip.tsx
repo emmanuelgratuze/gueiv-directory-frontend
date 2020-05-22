@@ -21,7 +21,7 @@ type CriterionTooltip = {
 const StyledBox = styled(Box)`
   position: absolute;
   bottom: 130%;
-  z-index: 20;
+  z-index: 21;
   max-width: none;
   pointer-events: none;
   ${(props: Props) => props.position === 'bottom' && css`

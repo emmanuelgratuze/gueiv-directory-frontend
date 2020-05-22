@@ -18,7 +18,7 @@ const MenuInnerWrapper = styled(Box)<InnerProps>`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 18;
   width: 100vw;
   height: 100vh;
   padding-bottom: ${(props: InnerProps) => (props.open && props.isMobile ? '10rem' : 'none')};

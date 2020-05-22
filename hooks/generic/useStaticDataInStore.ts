@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
 import { Store, AnyAction } from 'redux'
 
 import { addData, clearData } from 'store/data/actions'
@@ -10,17 +10,20 @@ const useStaticDataInStore = (
   pageProps: { data: { data: Data[]; schema: SchemaKeys | SchemaKeys[] }[] }
 ): void => {
   const { isServerSide } = useBrowser()
-  if (isServerSide && pageProps.data) {
-    store.dispatch(clearData())
-    pageProps.data.forEach((datum): void => {
-      store.dispatch(addData(datum.schema, datum.data))
-    })
-  } else {
-    useEffect(() => {
+  const addDataToStore = useCallback(() => {
+    if (pageProps.data) {
       pageProps.data.forEach((datum): void => {
         store.dispatch(addData(datum.schema, datum.data))
       })
-    }, [pageProps])
+    }
+  }, [pageProps.data])
+  if (isServerSide) {
+    store.dispatch(clearData())
+    addDataToStore()
+  } else {
+    useEffect(() => {
+      addDataToStore()
+    }, [pageProps.data])
   }
 }
 

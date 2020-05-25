@@ -26,7 +26,8 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
     <>
       <Page
         title="Home"
-        withScroll={brands.size !== 0}
+        withScroll={false}
+        withFooter={false}
         headerChildren={(
           <Box fill="vertical" justify="center">
             <FiltersControls />
@@ -37,10 +38,11 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
         }}
       >
         <Box
-          height={brands.size !== 0 ? { min: '100vh' } : undefined}
           background={{ color: 'gray' }}
-          fill={brands.size === 0}
-          pad="0.5rem"
+          // pad="0.5rem"
+          fill
+          // height={brands.size !== 0 ? { min: '100vh' } : undefined}
+          // fill={brands.size === 0}
         >
           {/* SEO purpose */}
           <h1 style={{ display: 'none' }}>

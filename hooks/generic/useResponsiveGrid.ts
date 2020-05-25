@@ -6,16 +6,16 @@ import { BreakpointsValuesType, BreakpointsType, BreakpointsKeysType } from 'the
 import useResponsive from 'hooks/generic/useResponsive'
 
 type Columns = {
-  [key in BreakpointsKeysType]?: string[];
+  [key in BreakpointsKeysType]?: (string | number)[];
 }
 
 type UseReponsiveGridReturn = {
   getChildrenSizeByIndex: Function;
 }
 
-const getSizesForEveryBreakpoints = (breakpoints: BreakpointsType, columns: Columns): { [key in BreakpointsKeysType]?: string[] } => {
-  const allBreakpointsColumns: { [key in BreakpointsKeysType]?: string[] } = {}
-  let lastDefinedColumns: string[] | undefined
+const getSizesForEveryBreakpoints = (breakpoints: BreakpointsType, columns: Columns): { [key in BreakpointsKeysType]?: (string | number)[] } => {
+  const allBreakpointsColumns: { [key in BreakpointsKeysType]?: (string | number)[] } = {}
+  let lastDefinedColumns: (string | number)[] | undefined
   const breakpointsNames = Object.keys(breakpoints) as BreakpointsKeysType[]
   const breakpointValues: BreakpointsValuesType[] = Object.values(breakpoints)
   const breakpointValuesWithName = breakpointValues.map((col, index) => ({ ...col, name: breakpointsNames[index] }))

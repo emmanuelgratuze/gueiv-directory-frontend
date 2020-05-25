@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Head from 'next/head'
 import { Box, BoxProps, Stack } from 'grommet'
 import { AnimatePresence, motion } from 'framer-motion'
+import { createGlobalStyle } from 'styled-components'
 
 import Header, { HeaderProps } from 'components/Header'
 import Footer from 'components/Footer'
@@ -18,6 +19,12 @@ import useLoading from 'hooks/generic/useRouteLoading'
 import FiltersMenu from './FiltersMenu'
 
 const socialBanner = require('assets/images/social-banner.png')
+
+const NoScrollStyle = createGlobalStyle`
+  body {
+    overflow: hidden !important;
+  }
+`
 
 type PageType = {
   title: string;
@@ -69,8 +76,11 @@ const Page: React.FC<BoxProps & PageType> = ({
         <meta property="og:image" content={socialBanner} />
         <meta property="twitter:title" content={fullTitle} />
         <meta property="twitter:image" content={socialBanner} />
-
       </Head>
+
+      {!withScroll && (
+        <NoScrollStyle />
+      )}
 
       <Box
         height={!withScroll ? '100vh' : { min: '100vh' }}
@@ -89,8 +99,8 @@ const Page: React.FC<BoxProps & PageType> = ({
             )}
           </AnimatePresence>
         </Header>
-        <LoadingWrapper>
-          <MenuWrapper>
+        <LoadingWrapper fill={!withScroll}>
+          <MenuWrapper fill={!withScroll}>
             <Stack>
               <FiltersMenu />
             </Stack>

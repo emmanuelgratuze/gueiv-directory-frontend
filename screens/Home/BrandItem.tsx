@@ -19,8 +19,8 @@ type WrapperProps = {
   displayDelay: number;
 }
 const Wrapper = styled(Box)<WrapperProps>`
-  transform: translate3d(0, 0, 0);
-  transition: 0.5s opacity ${(props) => props.displayDelay}s ease-out;
+  /* transform: translate3d(0, 0, 0);
+  transition: 0.5s opacity ${(props) => props.displayDelay}s ease-out; */
 `
 
 const BrandItem: React.FC<BoxProps & JSX.IntrinsicElements['div'] &BrandItemType> = ({
@@ -47,15 +47,12 @@ const BrandItem: React.FC<BoxProps & JSX.IntrinsicElements['div'] &BrandItemType
         opacity: isVisible ? 1 : 0
       }}
       displayDelay={displayDelay}
+      fill="vertical"
       {...props}
     >
-      <Button as="div" plain>
-        <Box
-          pad="0.4rem"
-          fill
-        >
+      <Button as="div" fill plain>
+        <Box fill pad="0.5rem">
           <BrandPreview
-            key={brand.get('id')}
             brand={brand}
             color={color}
             onLoad={onLoad}

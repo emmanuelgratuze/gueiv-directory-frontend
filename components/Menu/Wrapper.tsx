@@ -1,5 +1,5 @@
 import React, { useEffect, createRef } from 'react'
-import { Box } from 'grommet'
+import { Box, BoxProps } from 'grommet'
 import styled from 'styled-components'
 
 import useMenuState from 'hooks/app/useMenuState'
@@ -31,7 +31,7 @@ const MenuInnerWrapper = styled(Box)<InnerProps>`
 
 type MenuScreenProps = {}
 
-const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
+const MenuWrapper: React.FC<BoxProps & MenuScreenProps> = ({ children, ...props }) => {
   const { isMenuOpen } = useMenuState()
   const menuRef = createRef<HTMLDivElement>()
   const { isMobile } = useResponsive()
@@ -58,7 +58,9 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
   }, [isMenuOpen, menuRef])
 
   return (
-    <div>
+    <Box 
+      {...props}
+    >
       {children}
 
       <MenuInnerWrapper
@@ -70,7 +72,7 @@ const MenuWrapper: React.FC<MenuScreenProps> = ({ children }) => {
         <MenuContent open={isMenuOpen} />
         <MenuWave open={isMenuOpen} />
       </MenuInnerWrapper>
-    </div>
+    </Box>
   )
 }
 

@@ -41,10 +41,15 @@ const CloudinaryImage: React.FC<ImageProps> = ({
   useEffect(() => {
     // When has been hidden
     if (loaderRef.current) {
-      loaderRef.current.addEventListener('transitionend', () => {
+      const callback = (): void => {
         setIsLoaderHidden(true)
-      }, false)
+      }
+      loaderRef.current.addEventListener('transitionend', callback, false)
+      return () => {
+        loaderRef.current?.removeEventListener('transitionend', callback, false)
+      }
     }
+    return undefined
   }, [loaderRef.current])
 
   useEffect(() => {
@@ -61,6 +66,8 @@ const CloudinaryImage: React.FC<ImageProps> = ({
       return () => {
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         image.onload = () => {}
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        image.onerror = () => {}
       }
     }
     // eslint-disable-next-line @typescript-eslint/no-empty-function

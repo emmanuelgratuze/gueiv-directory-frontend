@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import { Box } from 'grommet'
-import InfiniteScroll from 'react-infinite-scroll-component'
 import { List } from 'immutable'
 import { useDispatch } from 'react-redux'
-import Loader from 'components/Loader'
+import InfiniteLoader from 'react-window-infinite-loader'
 
 import useResponsiveGrid from 'hooks/generic/useResponsiveGrid'
 import useResponsive from 'hooks/generic/useResponsive'
@@ -14,7 +13,10 @@ import { setBrandsColors } from 'store/interface/actions'
 
 import { ImmutableBrand } from 'types/data/brand'
 
-import BrandItem from './BrandItem'
+import { FixedSizeList } from 'react-window'
+import AutoSizer from 'react-virtualized-auto-sizer'
+
+import BrandsLine from './BrandsLine'
 
 type BrandsListProps = {
   brands: List<ImmutableBrand>;
@@ -42,48 +44,76 @@ const BrandsList: React.FC<BrandsListProps> = ({
     }
   }, [brands])
 
-  const { getChildrenSizeByIndex } = useResponsiveGrid({
+  const windowWidth = typeof window !== 'undefined' ? window.outerWidth : 1000
+  const { getChildrenSizeByIndex: getWidth } = useResponsiveGrid({
     small: ['full'],
     medium: ['50%'],
     xlarge: ['33.33%']
   })
-  const { isMobile, isTablet } = useResponsive()
+  const { getChildrenSizeByIndex: getHeight } = useResponsiveGrid({
+    xsmall: [windowWidth * 0.5 * 1.2],
+    small: [windowWidth * 0.5 / 1.5],
+    medium: [windowWidth * 0.5 / 3.5],
+    xlarge: [windowWidth * 0.5 / 4]
+  })
+
+  const { isMobile, isTablet, size } = useResponsive()
+  const brandsChunks = useMemo(() => {
+    const brandItems = brands.map((brand, index) => (
+      {
+        brand,
+        color: brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType,
+        width: isTablet || isMobile ? '30rem' : getWidth(index)
+      }
+    ))
+
+    let brandsPerLine = 3
+    if (size === 'medium') {
+      brandsPerLine = 2
+    }
+    if (size === 'small' || size === 'xsmall') {
+      brandsPerLine = 1
+    }
+    const chunks = []
+    for (let i = 0, j = brandItems.size; i < j; i += brandsPerLine) {
+      chunks.push(brandItems.slice(i, i + brandsPerLine))
+    }
+    return chunks
+  }, [brands, size])
 
   return (
     <Box
       fill
       flex={{ grow: 1 }}
     >
-      <InfiniteScroll
-        dataLength={brands.size}
-        next={() => {
-          selectMore()
-        }}
-        hasMore={hasMore}
-        loader={(
-          <Box width="100%" height="medium" align="center" justify="center">
-            <Loader />
-          </Box>
+      <AutoSizer>
+        {({ height, width }) => (
+          <InfiniteLoader
+            isItemLoaded={(index) => (
+              !hasMore || index < brandsChunks.length - 1
+            )}
+            loadMoreItems={() => (
+              selectMore()
+            )}
+            itemCount={brandsChunks.length}
+            minimumBatchSize={30}
+          >
+            {({ onItemsRendered, ref }) => (
+              <FixedSizeList
+                onItemsRendered={onItemsRendered}
+                ref={ref}
+                height={height}
+                width={width}
+                itemCount={brandsChunks.length}
+                itemSize={getHeight(0)}
+                itemData={brandsChunks}
+              >
+                {BrandsLine}
+              </FixedSizeList>
+            )}
+          </InfiniteLoader>
         )}
-        endMessage={undefined}
-        style={{
-          // width: '100%',
-          display: 'flex',
-          flexWrap: 'wrap',
-          position: 'relative',
-          justifyContent: isMobile || isTablet ? 'center' : 'start'
-        }}
-        outerStyle={{ width: '100%' }}
-      >
-        {brands.map((brand, index) => (
-          <BrandItem
-            key={brand.get('id')}
-            brand={brand}
-            color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
-            width={isTablet || isMobile ? '30rem' : getChildrenSizeByIndex(index)}
-          />
-        ))}
-      </InfiniteScroll>
+      </AutoSizer>
     </Box>
   )
 }

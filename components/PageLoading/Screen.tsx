@@ -14,7 +14,7 @@ const LoadingWrapper = motion.custom(
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 16;
+    z-index: 19;
     display: flex;
     align-items: center;
     justify-content: center;

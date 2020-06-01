@@ -53,7 +53,7 @@ export async function getPageCollectionData(collectionName: string): Promise<obj
       if (criterion.icon) {
         const fullUrl = criterion.icon.includes('://')
           ? criterion.icon
-          : cloudinary.url(criterion.icon.split('/')[1])
+          : cloudinary.url(criterion.icon.split('/')[1], { secure: true })
         newCriterion.iconContent = await fetchFileContent(fullUrl, true)
       }
       return newCriterion

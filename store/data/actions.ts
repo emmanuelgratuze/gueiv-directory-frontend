@@ -17,7 +17,7 @@ export function addData(schema: SchemaKeys | SchemaKeys[], data: Data[]): AddDat
   }
 }
 
-export const clearEntities = (entitiesNames: string[]): ClearDataAction => ({
+export const clearData = (entitiesNames?: string[]): ClearDataAction => ({
   type: CLEAR_DATA,
   payload: {
     entitiesNames

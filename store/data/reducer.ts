@@ -40,9 +40,14 @@ const dataReducer = (
     }
     case CLEAR_DATA: {
       let newState = state
-      action.payload.entitiesNames.forEach((entityName) => {
-        newState = newState.remove(entityName)
-      })
+
+      if (action.payload.entitiesNames) {
+        action.payload.entitiesNames.forEach((entityName) => {
+          newState = newState.remove(entityName)
+        })
+      } else {
+        return fromJS({})
+      }
       return newState
     }
     default:

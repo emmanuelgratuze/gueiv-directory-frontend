@@ -40,6 +40,11 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
           fill={brands.size === 0}
           pad="0.5rem"
         >
+          {/* SEO purpose */}
+          <h1 style={{ display: 'none' }}>
+            Todas las marcas de moda sostenible de Latinoamérica en un lugar
+          </h1>
+
           <BrandsList
             brands={brands}
             hasMore={hasMore}

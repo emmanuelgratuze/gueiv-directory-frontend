@@ -17,8 +17,11 @@ import StandardLink from 'components/StandardLink'
 import useResponsive from 'hooks/generic/useResponsive'
 
 import BackgroundWave from 'components/BackgroundWave'
+import MailchimpForm from 'components/MailchimpForm'
 
 const Logo = require('assets/images/logo-white.svg').ReactComponent
+const EmailIcon = require('assets/images/email-icon.svg').ReactComponent
+const SmallWave = require('assets/images/small-wave.svg').ReactComponent
 
 const ProjectDescription = styled(Text)`
   strong {
@@ -57,7 +60,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
       style={{
         position: 'relative',
         zIndex: 11,
-        height: !isMobile ? '90%' : undefined
+        height: !isMobile ? '90%' : undefined,
       }}
     >
       <Box
@@ -78,20 +81,32 @@ const MenuContent: React.FC<MenuContentProps> = ({
             justify="center"
             width={getChildrenSizeByIndex(0)}
           >
-            <Link href="/" passHref>
-              <A>
-                <Box fill align="center" margin={{ bottom: 'small' }}>
-                  <Logo
-                    width={isMobile ? '6rem' : '12rem'}
-                    height="6rem"
-                  />
-                </Box>
-              </A>
-            </Link>
+            {!isMobile && (
+              <Link href="/" passHref>
+                <A>
+                  <Box fill align="center" margin={{ bottom: 'small' }}>
+                    <Logo
+                      width={isMobile ? '4rem' : '9rem'}
+                      height="6rem"
+                    />
+                  </Box>
+                </A>
+              </Link>
+            )}
+
+            {isMobile && (
+              <Box pad={{ vertical: 'medium' }}>
+                <SmallWave
+                  fill="white"
+                  width="6rem"
+                />
+              </Box>
+            )}
 
             <Box
-              gap="medium"
+              gap="small"
               align="center"
+              fill="horizontal"
             >
               <StandardLink href={configuration.getIn(['social', 'instagram'])} external>
                 <Box
@@ -101,7 +116,7 @@ const MenuContent: React.FC<MenuContentProps> = ({
                   align="center"
                 >
                   <Instagram
-                    size="2rem"
+                    size="1.5rem"
                     color="pink"
                   />
                   <Text
@@ -110,23 +125,59 @@ const MenuContent: React.FC<MenuContentProps> = ({
                     weight="bold"
                     color="pink"
                   >
-                    Sigue nuestros pasos!
+                    @gueiv_
                   </Text>
                 </Box>
               </StandardLink>
               <StandardLink href={`mailto:${configuration.getIn(['social', 'email'])}`}>
+                <Box
+                  direction="row"
+                  gap="small"
+                  justify="center"
+                  align="center"
+                >
+                  <EmailIcon
+                    fill="white"
+                    width="1.5rem"
+                  />
+                  <Text
+                    color="white"
+                    weight="bold"
+                    transform="uppercase"
+                  >
+                    {configuration.getIn(['social', 'email'])}
+                  </Text>
+                </Box>
+              </StandardLink>
+
+              <SmallWave
+                fill="white"
+                width="6rem"
+              />
+
+              <Box
+                margin={{ top: 'small' }}
+                fill="horizontal"
+                align="center"
+              >
                 <Text
                   color="white"
-                  weight="bold"
+                  size="small"
                   transform="uppercase"
+                  weight="bold"
+                  textAlign="center"
                 >
-                  {configuration.getIn(['social', 'email'])}
+                  Subscríbete a
+                  <br />
+                  nuestra Newsletter
                 </Text>
-              </StandardLink>
+                <MailchimpForm
+                  small
+                  dark
+                />
+              </Box>
             </Box>
           </Box>
-
-
           <Box
             align={isMobile ? 'center' : 'start'}
             pad={isSmallMobile ? 'medium' : 'large'}

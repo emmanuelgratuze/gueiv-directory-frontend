@@ -10,7 +10,7 @@ import RelativeHeightBox from 'components/RelativeHeightBox'
 import CriterionIcon from 'components/CriterionIcon'
 
 import { ImmutableBrand } from 'types/data/brand'
-import { ThemeColorsType } from 'themes/theme'
+import { ColorsNamesWithOpposite } from 'themes/theme'
 import useResponsive from 'hooks/generic/useResponsive'
 import useTheme from 'hooks/generic/useTheme'
 import useHover from 'hooks/generic/useHover'
@@ -19,7 +19,7 @@ import BrandImage from './Image'
 
 type BrandItemType = {
   brand: ImmutableBrand;
-  color?: keyof ThemeColorsType;
+  color?: ColorsNamesWithOpposite;
   onLoad?: Function;
 }
 
@@ -32,7 +32,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
 }) => {
   const { oppositeColors, colors } = useTheme()
   const [hoverRef, isHovered] = useHover()
-  const { isSmallMobile } = useResponsive()
+  const { isSmallMobile, isMobile } = useResponsive()
   const backgroundColors = useMemo(() => ({
     normal: colors[color as string],
     hover: darken(0.05, colors[color as string])
@@ -44,7 +44,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
       overflow="hidden"
       style={{
         transform: 'translate3d(0,0,0)',
-        opacity: 0.9
+        opacity: !isMobile ? 0.9 : 1
       }}
       whileHover={{ opacity: 1 }}
     >
@@ -113,7 +113,7 @@ const BrandPreview: React.FC<BoxProps & BrandItemType> = ({
                       <CriterionIcon
                         clickable
                         criterion={criterion}
-                        color={color ? oppositeColors[color] : undefined}
+                        color={color ? oppositeColors[color] as ColorsNamesWithOpposite : undefined}
                         style={{
                           position: 'relative',
                           zIndex: 10 // On top of the block link

@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import { deepMerge } from 'grommet/utils'
 import { base } from 'grommet/themes'
 import { ValueOf } from 'types/utils'
-import { lighten, darken } from 'polished'
+import { lighten, darken, rgba } from 'polished'
 
 const baseSpacing = 24
 const baseFontSize = 16
@@ -91,8 +91,8 @@ const oppositeColors = {
 
 export const colors: { [key: string]: string } = {
   ...themeColors,
-  placeholder: darkColors[4],
-  focus: 'blue'
+  placeholder: rgba('#AAAAAA', 0.4),
+  focus: 'pink'
 }
 
 const colorArray = (array: Array<string>, prefix: string): void => {
@@ -306,6 +306,7 @@ const theme = deepMerge(base, {
       bottom: 'medium'
     },
     border: {
+      size: '0',
       color: 'light-4'
     },
     focus: {
@@ -396,25 +397,27 @@ const theme = deepMerge(base, {
   },
   textInput: {
     extend: css`
+      /* padding-top: 0; */
       padding-left: 0;
       font-weight: 600;
       font-size: 0.9em;
       font-family: 'Quicksand', sans-serif;
       font-style: initial;
       text-align: center;
-      border-radius: 0;
+      border-color: ${colors.pink};
+      border-radius: 5px;
 
       &:focus {
-        color: ${colors.blue};
+        color: ${colors.pink};
       }
 
       ::placeholder,
-      ::-webkit-input-placeholder,
+      ::-webkit-input-placeholder {
+        font-weight: 400;
+      }
+
       :-ms-input-placeholder {
-        color: ${lightColors[4]};
-        font-weight: bold;
-        font-family: 'Lato', sans-serif;
-        font-style: italic;
+        font-weight: 400;
       }
     `
   },
@@ -459,10 +462,7 @@ const theme = deepMerge(base, {
   layer: {
     container: {
       zIndex: 15
-    },
-    extend: `
-      
-    `
+    }
   },
 
   // Custom
@@ -478,5 +478,6 @@ export type ThemeColorsType = typeof themeColors
 export type BreakpointsKeysType = keyof BreakpointsType
 export type BreakpointsValuesType = ValueOf<BreakpointsType>
 export type BrandColorsKeys = keyof ThemeType['global']['brandColors']
-export type ColorsNames = keyof typeof oppositeColors
+export type ColorsNames = keyof ThemeType['global']['colors'] | keyof typeof colors | keyof typeof oppositeColors
+export type ColorsNamesWithOpposite = keyof typeof oppositeColors
 export default theme

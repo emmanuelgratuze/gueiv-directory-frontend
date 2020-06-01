@@ -22,7 +22,7 @@ export interface AddDataAction extends BasicAction {
 export interface ClearDataAction {
   type: typeof CLEAR_DATA;
   payload: {
-    entitiesNames: string[];
+    entitiesNames?: string[];
   };
 }
 

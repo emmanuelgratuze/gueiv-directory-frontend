@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import useBrowser from 'hooks/generic/useBrowser'
 
 type ReturnedValue = {
   width: number;
@@ -6,19 +7,19 @@ type ReturnedValue = {
 }
 
 function useWindowSize(): ReturnedValue {
-  const isClient = typeof window === 'object'
+  const { isServerSide } = useBrowser()
 
   function getSize(): ReturnedValue {
     return {
-      width: isClient ? window.innerWidth : 0,
-      height: isClient ? window.innerHeight : 0
+      width: !isServerSide ? window.innerWidth : 0,
+      height: !isServerSide ? window.innerHeight : 0
     }
   }
 
   const [windowSize, setWindowSize] = useState(getSize)
 
   useEffect(() => {
-    if (!isClient) {
+    if (isServerSide) {
       return () => null
     }
 

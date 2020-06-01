@@ -60,6 +60,7 @@ module.exports = withPlugins(
       MAILCHIMP_U: process.env.MAILCHIMP_U,
       MAILCHIMP_ID: process.env.MAILCHIMP_ID,
       MAILCHIMP_FORM_ID: process.env.MAILCHIMP_FORM_ID,
+      GOOGLE_ANALYTICS_TRACKING_ID: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
       ...appConfig
     }
   }

@@ -5,10 +5,10 @@ const useLoading = (): { isLoading: boolean; currentPage: string } => {
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
   const handleRouteChangeStart = (): void => {
-    window.scrollTo(0, 0)
     setIsLoading(true)
   }
   const handleRouteChangeComplete = (): void => {
+    // window.scrollTo(0, 0)
     setIsLoading(false)
   }
   useEffect(() => {

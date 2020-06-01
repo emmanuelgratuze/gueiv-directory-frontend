@@ -12,12 +12,10 @@ const LoadingWrapper: React.FC = ({ children }) => {
   return (
     <Stack>
       {/* No loading on server side */}
-      {!isServerSide && (
-        <LoadingScreen
-          currentPage={currentPage}
-          isLoading={isLoading}
-        />
-      )}
+      <LoadingScreen
+        currentPage={currentPage}
+        isLoading={isLoading}
+      />
       {children}
     </Stack>
   )

@@ -7,15 +7,13 @@ import FiltersControls from 'components/FiltersControls'
 
 import useFilteredBrands from 'hooks/app/brands/useFilteredBrands'
 import useFilters from 'hooks/app/brands/useFilters'
-import useBrowser from 'hooks/generic/useBrowser'
 
 import BrandsList from './BrandsList'
 
 type HomeScreenProps = {}
 
 const HomeScreen: React.FC<HomeScreenProps> = () => {
-  const { isServerSide } = useBrowser()
-  const { brands, selectMore, hasMore } = useFilteredBrands(isServerSide ? 0 : 30)
+  const { brands, selectMore, hasMore } = useFilteredBrands(30)
   const { applyFiltersFromUrl } = useFilters()
 
   useEffect(() => (
@@ -53,7 +51,7 @@ const HomeScreen: React.FC<HomeScreenProps> = () => {
             selectMore={selectMore}
           />
 
-          {!isServerSide && brands && brands.size === 0 && (
+          {brands && brands.size === 0 && (
             <Box
               align="center"
               justify="center"

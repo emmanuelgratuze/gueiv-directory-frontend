@@ -3,11 +3,13 @@ import { Box } from 'grommet'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import { List } from 'immutable'
 import { useDispatch } from 'react-redux'
-import Loader from 'components/Loader'
+import { motion } from 'framer-motion'
 
 import useResponsiveGrid from 'hooks/generic/useResponsiveGrid'
 import useResponsive from 'hooks/generic/useResponsive'
 import useTheme from 'hooks/generic/useTheme'
+import useBrowser from 'hooks/generic/useBrowser'
+import Loader from 'components/Loader'
 
 import { BrandColorsKeys, ThemeColorsType } from 'themes/theme'
 import { setBrandsColors } from 'store/interface/actions'
@@ -48,43 +50,48 @@ const BrandsList: React.FC<BrandsListProps> = ({
     xlarge: ['33.33%']
   })
   const { isMobile, isTablet } = useResponsive()
+  const { isServerSide } = useBrowser()
 
   return (
-    <Box
-      fill
-      flex={{ grow: 1 }}
+    <motion.div
+      animate={{ opacity: isServerSide ? 0 : 1 }}
     >
-      <InfiniteScroll
-        dataLength={brands.size}
-        next={() => {
-          selectMore()
-        }}
-        hasMore={hasMore}
-        loader={(
-          <Box width="100%" height="medium" align="center" justify="center">
-            <Loader />
-          </Box>
-        )}
-        endMessage={undefined}
-        style={{
-          // width: '100%',
-          display: 'flex',
-          flexWrap: 'wrap',
-          position: 'relative',
-          justifyContent: isMobile || isTablet ? 'center' : 'start'
-        }}
-        outerStyle={{ width: '100%' }}
+      <Box
+        fill
+        flex={{ grow: 1 }}
       >
-        {brands.map((brand, index) => (
-          <BrandItem
-            key={brand.get('id')}
-            brand={brand}
-            color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
-            width={isTablet || isMobile ? '30rem' : getChildrenSizeByIndex(index)}
-          />
-        ))}
-      </InfiniteScroll>
-    </Box>
+        <InfiniteScroll
+          dataLength={brands.size}
+          next={() => {
+            selectMore()
+          }}
+          hasMore={hasMore}
+          loader={(
+            <Box width="100%" height="medium" align="center" justify="center">
+              <Loader />
+            </Box>
+          )}
+          endMessage={undefined}
+          style={{
+            // width: '100%',
+            display: 'flex',
+            flexWrap: 'wrap',
+            position: 'relative',
+            justifyContent: isMobile || isTablet ? 'center' : 'start'
+          }}
+          outerStyle={{ width: '100%' }}
+        >
+          {brands.map((brand, index) => (
+            <BrandItem
+              key={brand.get('id')}
+              brand={brand}
+              color={brandColorsNames[index % brandColorsNames.length] as keyof ThemeColorsType}
+              width={isTablet || isMobile ? '30rem' : getChildrenSizeByIndex(index)}
+            />
+          ))}
+        </InfiniteScroll>
+      </Box>
+    </motion.div>
   )
 }
 

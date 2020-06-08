@@ -54,6 +54,7 @@ const BrandsList: React.FC<BrandsListProps> = ({
 
   return (
     <motion.div
+      initial={{ opacity: 0 }}
       animate={{ opacity: isServerSide ? 0 : 1 }}
     >
       <Box

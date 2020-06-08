@@ -30,9 +30,6 @@ const useAnalytics = (trackingId: string): ReturnValue => {
   const [gaInitialized, setGaInitialized] = useState(false)
   const router = useRouter()
 
-  const handleRouteChangeStart = (): void => {
-    window.scrollTo(0, 0)
-  }
   const handleRouteChangeComplete = (): void => {
     setTimeout(() => {
       logPageView()
@@ -40,7 +37,6 @@ const useAnalytics = (trackingId: string): ReturnValue => {
   }
 
   useEffect(() => {
-    router.events.on('routeChangeStart', handleRouteChangeStart)
     router.events.on('routeChangeComplete', handleRouteChangeComplete)
 
     if (!gaInitialized) {
@@ -51,7 +47,6 @@ const useAnalytics = (trackingId: string): ReturnValue => {
 
     return () => {
       router.events.off('routeChangeComplete', handleRouteChangeComplete)
-      router.events.off('routeChangeStart', handleRouteChangeStart)
     }
   }, [])
 

@@ -5,10 +5,13 @@ import Image, { ImageProps } from 'components/Image'
 
 import CloudinaryContext from './CloudinaryContext'
 
-
 export type CloudinaryImageProps = ImageProps & {
   fileName: string;
   cloudinaryOptions?: Transformation.Options;
+}
+
+const defaultCloudinaryOptions = {
+  secure: true
 }
 
 const CloudinaryImage: React.FC<CloudinaryImageProps & ImageProps> = ({
@@ -27,7 +30,13 @@ const CloudinaryImage: React.FC<CloudinaryImageProps & ImageProps> = ({
     [, derivedFileName] = fileName.split('/')
   }
 
-  const url = cloudinary?.url(derivedFileName, cloudinaryOptions || {})
+  const url = cloudinary?.url(
+    derivedFileName,
+    {
+      ...cloudinaryOptions,
+      ...defaultCloudinaryOptions
+    } || defaultCloudinaryOptions
+  )
 
   return (
     <Image

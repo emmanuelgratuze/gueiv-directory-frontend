@@ -153,5 +153,6 @@ dist
 
 # Custom
 
-# Is generated on build
+# These files are generated on build
 /public/config.yml
+/public/sitemap.xml

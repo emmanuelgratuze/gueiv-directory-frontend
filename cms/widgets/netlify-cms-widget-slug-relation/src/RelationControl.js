@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ImmutablePropTypes from 'react-immutable-proptypes'
-import { Async as AsyncSelect } from 'react-select'
+import Select from 'react-select'
 import { find, isEmpty, last, debounce } from 'lodash'
 import { List, Map, fromJS } from 'immutable'
 import { reactSelectStyles } from 'netlify-cms-ui-default'
@@ -196,7 +196,7 @@ export default class RelationControl extends React.Component {
     })
 
     return (
-      <AsyncSelect
+      <Select.Async
         value={selectedValue}
         inputId={forID}
         defaultOptions

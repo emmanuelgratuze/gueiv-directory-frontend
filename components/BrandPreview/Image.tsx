@@ -62,6 +62,7 @@ const BrandImage: React.FC<BrandImageType & ImageProps> = ({
                 width: 600,
                 crop: 'fit'
               }}
+              alt={`Imagen de ${brand.get('name')}`}
               loader={(
                 <Loader color="white" />
               )}

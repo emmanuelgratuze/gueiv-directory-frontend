@@ -71,6 +71,9 @@ const BrandCarousel: React.FC<BoxProps & BrandCarouselProps> = ({
                       >
                         <CarouselImage
                           fileName={fileName}
+                          imageProps={{
+                            alt: `Imagen de ${brand.get('name')}`
+                          }}
                         />
                       </motion.div>
                     )}

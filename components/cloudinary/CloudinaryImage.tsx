@@ -14,7 +14,7 @@ const defaultCloudinaryOptions = {
   secure: true
 }
 
-const CloudinaryImage: React.FC<CloudinaryImageProps & ImageProps> = ({
+const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
   cloudinaryOptions,
   fileName,
   ...props

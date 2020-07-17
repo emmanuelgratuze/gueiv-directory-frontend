@@ -40,6 +40,7 @@
     "lodash": "^4.17.15",
     "netlify-cms": "^2.10.48",
     "netlify-cms-core": "^2.26.0",
+    "netlify-cms-ui-default": "^2.11.1",
     "next": "^9.4.0",
     "next-absolute-url": "^1.2.2",
     "next-compose-plugins": "^2.2.0",

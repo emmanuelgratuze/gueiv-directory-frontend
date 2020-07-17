@@ -15,7 +15,7 @@ const defaultCloudinaryOptions = {
 }
 
 const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
-  cloudinaryOptions,
+  cloudinaryOptions = {},
   fileName,
   ...props
 }) => {
@@ -35,7 +35,7 @@ const CloudinaryImage: React.FC<CloudinaryImageProps> = ({
     {
       ...cloudinaryOptions,
       ...defaultCloudinaryOptions
-    } || defaultCloudinaryOptions
+    }
   )
 
   return (

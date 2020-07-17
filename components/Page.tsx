@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Head from 'next/head'
 import { Box, BoxProps, Stack } from 'grommet'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 import Header, { HeaderProps } from 'components/Header'
 import Footer from 'components/Footer'
@@ -45,6 +46,7 @@ const Page: React.FC<BoxProps & PageType> = ({
   const { isMenuOpen, closeMenu } = useMenuState()
   const { isOpen: areFiltersOpen, close: closeFilters } = useFilterMenu()
   const { isLoading } = useLoading()
+  const router = useRouter()
 
   useEffect(() => {
     if (areFiltersOpen) {
@@ -58,6 +60,8 @@ const Page: React.FC<BoxProps & PageType> = ({
     }
   }, [isMenuOpen])
 
+  console.log(router)
+
   return (
     <Box>
       <Head>
@@ -70,6 +74,11 @@ const Page: React.FC<BoxProps & PageType> = ({
         <meta property="twitter:title" content={fullTitle} />
         <meta property="twitter:image" content={socialBanner} />
 
+        <link
+          rel="canonical"
+          href={router.pathname}
+          key="canonical"
+        />
       </Head>
 
       <Box

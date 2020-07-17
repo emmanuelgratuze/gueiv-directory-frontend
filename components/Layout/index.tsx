@@ -36,8 +36,6 @@ const Layout: React.FC = ({
         <meta name="msapplication-TileColor" content="#f1f1f1" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#f1f1f1" />
-
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </Head>
 
       <GlobalStyles />

@@ -3,13 +3,13 @@
 import YAML from 'yaml'
 import fs from 'fs'
 import appConfig from '../app.config.json'
-import getConfig from './config'
+import getConfig from '../cms/config'
 
 const yamlConfig = YAML.stringify(getConfig(appConfig))
 
 function createConfigFiles(yamlConfigString) {
   fs.writeFile('./public/config.yml', yamlConfigString, () => {
-    console.log('Netlify CMS config file created successfully.')
+    console.log('Netlify CMS config file successfully created.')
   })
 }
 

@@ -1,0 +1,28 @@
+{
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "complementos"
+  ],
+  "name": "Paulamar",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/paulamar.cl/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596808607/CHILE/PAULAMAR/Kimonos_Paulamar-111_-_Paulamar_w5qhcz.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596808607/CHILE/PAULAMAR/Paulamar_Conjunto_-_Paulamar_pipqzr.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.paulamar.cl",
+  "description": "Diseñamos para mujeres conscientes que buscan un look femenino y natural al mismo tiempo que cuidar nuestra Tierra. Mujeres que quieran conectar con su esencia.",
+  "criteria": [
+    "fibras-naturales",
+    "materiales-organicos",
+    "materiales-reciclados",
+    "manejo-de-residuos",
+    "produccion-local",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer"
+  ]
+}

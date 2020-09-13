@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Tigre de Salon",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/tigredesalon/?hl=es-la",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587567368/COLOMBIA%202/TIGRE%20DE%20SALON/65317071_634737933697812_2212993880442949151_n_k0f1gy.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587567369/COLOMBIA%202/TIGRE%20DE%20SALON/Screenshot_2020-03-27_at_20.40.06_xjxv5r.png"
+  ],
+  "country": "colombia",
+  "website": "https://www.untigredesalon.com",
+  "description": "Creamos objetos que resaltan el valor de las artesanías antiguas y las cosas hechas a mano, objetos puros y hermosos que atesoran historias, viajes y sueños. Creemos en la belleza de lo simple.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "manejo-de-residuos"
+  ]
+}

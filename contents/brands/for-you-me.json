@@ -1,0 +1,29 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "For you & me",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/_foryouandme/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603796/CHILE/FOR%20YOU%20_%20ME/57909288_422810944931976_3811645064109021173_n_mbhjys.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603796/CHILE/FOR%20YOU%20_%20ME/74917307_943437859346071_7027847967849597576_n_kxmy1l.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.foryouandme.cl",
+  "description": "Hecho en Chile, nuestra base en materia prima es lana patagónica, algodón peruano y linos.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local"
+  ]
+}

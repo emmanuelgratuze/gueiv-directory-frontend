@@ -1,0 +1,36 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "denim",
+    "bolsos-y-mochilas",
+    "joyeria",
+    "calzado",
+    "trajes-de-bano-ropa-de-playa",
+    "lenceria",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "True Love and poems",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/trueloveandpoems/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587567366/COLOMBIA%202/TRUE%20LOVE%20AND%20POEMS/69577903_2408657482724868_6137790539824627712_o_fhnzau.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587567366/COLOMBIA%202/TRUE%20LOVE%20AND%20POEMS/65214172_2366252416965375_5085226722819833856_o_ifon3x.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://trueloveandpoems.com/",
+  "description": "True Love & Poems es la primera plataforma online colombiana de moda y sostenibilidad curada para fashionistas responsables. Aquí podrás comprar nuestro closet alternativo, una colección especial de prendas seleccionadas con conciencia, una mezcla de tesoros vintage, intervenciones y nuestros favoritos locales.",
+  "criteria": [
+    "vintage-y-segunda-mano",
+    "produccion-local",
+    "comercio-etico"
+  ]
+}

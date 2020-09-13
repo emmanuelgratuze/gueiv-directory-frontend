@@ -6,8 +6,8 @@ export default (appConfig) => ({
     repo: appConfig.NETLIFY_CMS_GITHUB_REPOSITORY
   },
   site_url: 'https://directorio.gueiv.com',
-  media_folder: 'assets/uploads',
-  public_folder: 'assets',
+  media_folder: 'contents/assets/uploads',
+  public_folder: 'contents/assets',
   media_library: {
     name: 'cloudinary',
     output_filename_only: false,
@@ -28,7 +28,7 @@ export default (appConfig) => ({
           name: 'general',
           extension: 'json',
           format: 'json',
-          file: 'configuration/general.json',
+          file: 'contents/configuration/general.json',
           fields: [
             {
               label: 'Title',
@@ -52,7 +52,7 @@ export default (appConfig) => ({
           name: 'contact',
           extension: 'json',
           format: 'json',
-          file: 'configuration/social.json',
+          file: 'contents/configuration/social.json',
           fields: [
             {
               label: 'Facebook page',
@@ -77,7 +77,7 @@ export default (appConfig) => ({
           name: 'criteriaPage',
           extension: 'json',
           format: 'json',
-          file: 'configuration/criteria-page.json',
+          file: 'contents/configuration/criteria-page.json',
           fields: [
             {
               label: 'Title',
@@ -96,7 +96,7 @@ export default (appConfig) => ({
           name: 'legalPage',
           extension: 'json',
           format: 'json',
-          file: 'configuration/legal-page.json',
+          file: 'contents/configuration/legal-page.json',
           fields: [
             {
               label: 'Title',
@@ -115,7 +115,7 @@ export default (appConfig) => ({
     {
       label: 'Brands',
       name: 'brands',
-      folder: 'brands',
+      folder: 'contents/brands',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',
@@ -218,7 +218,7 @@ export default (appConfig) => ({
       label: 'Criteria',
       label_singular: 'Criterion',
       name: 'criteria',
-      folder: 'criteria',
+      folder: 'contents/criteria',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',
@@ -258,7 +258,7 @@ export default (appConfig) => ({
       label: 'Countries',
       name: 'countries',
       label_singular: 'Country',
-      folder: 'countries',
+      folder: 'contents/countries',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',
@@ -275,7 +275,7 @@ export default (appConfig) => ({
       label: 'Product types',
       label_singular: 'Product type',
       name: 'productTypes',
-      folder: 'product-types',
+      folder: 'contents/product-types',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',
@@ -292,7 +292,7 @@ export default (appConfig) => ({
       label: 'Genders',
       label_singular: 'Gender',
       name: 'genders',
-      folder: 'genders',
+      folder: 'contents/genders',
       identifier_field: 'name',
       extension: 'json',
       format: 'json',

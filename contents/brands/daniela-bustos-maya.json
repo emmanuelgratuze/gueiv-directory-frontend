@@ -1,0 +1,35 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo",
+    "joyeria",
+    "trajes-de-bano-ropa-de-playa"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Daniela Bustos Maya",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/danielabustosmaya/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330742/MEXICO1/DANIELA%20BUSTOS%20MAYA/34032528_179891822728341_5825472629867282432_n_y8rfa3.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330741/MEXICO1/DANIELA%20BUSTOS%20MAYA/33728675_1209692875827296_6340170532683513856_n_prolsh.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://danielabustosmaya.mx",
+  "description": "Nuestras piezas intentan conectar con el deseo de llevar una imagen d la esencia de la cultura Mexicana cerca del corazón; a través de técnicas tradicionales de tejido transmitidas de generación en generación y las imágenes plasmadas en la monedas como el águila, el nopal, el maíz y los héroes de la historia Mexicana.",
+  "criteria": [
+    "materiales-organicos",
+    "materiales-reciclados",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

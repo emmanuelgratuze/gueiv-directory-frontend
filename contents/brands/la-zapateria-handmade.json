@@ -1,0 +1,31 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "La zapateria handmade",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/lazapateriahandmade/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870406/PERU/LA%20ZAPATERIA%20HANDMADE/81349883_1222329377952712_4803813988775231488_n_ijyvvb.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870406/PERU/LA%20ZAPATERIA%20HANDMADE/78675213_1185661274952856_207885745795366912_o_zhdqsv.jpg"
+  ],
+  "country": "peru",
+  "website": "https://cooperativehandmade.pe",
+  "description": "Realizamos artesanalmente todos los procesos involucrados en cada pieza que conforman nuestras producciones, confeccionadas únicamente en nuestro showroom de trabajo en vivo, haciendo participe al cliente y a todos quienes deseen vivir esta experiencia.",
+  "criteria": [
+    "a-pedido",
+    "produccion-local",
+    "tintes-naturales"
+  ]
+}

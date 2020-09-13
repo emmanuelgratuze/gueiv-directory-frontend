@@ -1,0 +1,27 @@
+{
+  "productTypes": [
+    "trajes-de-bano-ropa-de-playa"
+  ],
+  "name": "Marea Diseños",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/mareadisenos/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599995307/REP%20DOM/MAREA%20DISEN%CC%83OS/_MG_0191_-_Jenniffer_Almonte_ixrrjd.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599995251/REP%20DOM/MAREA%20DISEN%CC%83OS/_MG_8852_-_Jenniffer_Almonte_rgohwm.jpg"
+  ],
+  "country": "república-dominicana",
+  "website": "https://www.mareadesigns.com/",
+  "description": "Marca local sostenible, enfocada en la re-utilización de textiles para confeccionar bañadores y ropa de playa eco-amigables con el medio ambiente. Reducir la huella de carbono que genera la fabricación de nueva materia prima es nuestro principal objetivo como marca, reutilizar a través de la recolección de textiles como el Nylon, Poliéster, lycra y Elastano disminuyendo así el impacto ambiental que genera la producción de estos textiles desde cero. Educar a nuestra comunidad sobre la compra consciente e inteligente, crear conciencia de como se beneficia el planeta seguir un estilo de vida eco-amigable y nuestra pasión y dedicación en cada eco-diseño elaborado son nuestro principal objetivo como marca.",
+  "criteria": [
+    "vintage-y-segunda-mano",
+    "a-pedido",
+    "materiales-reciclados",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "packaging-sostenible"
+  ]
+}

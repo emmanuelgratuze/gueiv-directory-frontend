@@ -1,0 +1,28 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "The pack",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/thepackbrand/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330762/MEXICO1/THE%20PACK/BQ2A1586_600x600_c6dkrm.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330762/MEXICO1/THE%20PACK/BQ2A1237_600x600_ls7f4u.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://thepack.mx",
+  "description": "THE PACK es un concepto desarrollado en la Ciudad de México. Es ropa fabricada bajo normas de comercio justo y con la misión de utilizar materiales ecológicamente sustentables. Es un proyecto enfocado en confeccionar ropa con un impacto positivo en la sociedad. El precio es equivalente al valor de los productos.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local"
+  ]
+}

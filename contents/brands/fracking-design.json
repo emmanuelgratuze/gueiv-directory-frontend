@@ -1,0 +1,25 @@
+{
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "complementos"
+  ],
+  "name": "Fracking Design",
+  "genders": [
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/frackingdesign/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595695610/ARGENTINA%201/FRACKING%20DESIGN/Basilotta_Producto_11-06-1900404_-_Ornella_Basilotta_cuxrxy.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595695610/ARGENTINA%201/FRACKING%20DESIGN/Producto_11-06-1900173_-_Ornella_Basilotta_wsclob.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.frackingdesign.com/",
+  "description": "FRACKING DESIGN, es un emprendimiento liderado por 3 mujeres y hermanas, somos Carla, Ornella y Mora Basilotta. Fabricamos accesorios de marroquinería con residuos de big bags plásticos contenedores de arena que descartan las petroleras en el yacimiento Vaca Muerta. Un producto, 100% reciclado, sin género y de triple impacto. Lo combinamos con descartes de cuero, cueros de 2da y 3ra calidad que las curtiembre no venden y también desechan.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer"
+  ]
+}

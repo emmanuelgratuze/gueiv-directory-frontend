@@ -1,0 +1,24 @@
+{
+  "name": "Elementos Argentinos Alfombras",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599992943/ARGENTINA%201/ELEMENTOS%20ARGENTINOS/_94A3341redes_-_Fernando_Bach_jppsul.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599992943/ARGENTINA%201/ELEMENTOS%20ARGENTINOS/_94A3735redes_-_Fernando_Bach_qikzca.jpg"
+  ],
+  "website": "https://elementosargentinos.com.ar/es/",
+  "instagram": "https://www.instagram.com/elementosargentinos/",
+  "description": "Creada en 2005, Elementos Argentinos tiene como objetivo ser un puente entre las más de 140 familias de tejedoras y artesanos del noroeste de Argentina que forman parte del proyecto, y un mercado que entienda y valore su trabajo. Creemos que el diseño ayuda a unir esos mundos, y por eso nos dedicamos a hacer alfombras tejidas a mano en telar en pura lana de oveja 100% natural. Elementos Argentinos cuenta con el Sello Buen Diseño Argentino, recibió el Premio Exportar 2019 en Economías Regionales y es Empresa B Certificada internacionalmente en triple impacto: económico, social y ambiental.",
+  "country": "argentina",
+  "productTypes": [
+    "decoracion-y-hogar"
+  ],
+  "criteria": [
+    "a-pedido",
+    "comercio-etico",
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "tintes-naturales",
+    "empoderamiento-de-la-mujer",
+    "integracion-social"
+  ]
+}

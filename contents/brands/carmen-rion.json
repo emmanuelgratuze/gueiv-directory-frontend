@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "eco-lujo",
+    "joyeria",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Carmen Rion",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/carmenrion/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330730/MEXICO1/CARMEN%20RION/AW19-CARMEN-RION-MODA_-80_cvylc9.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330729/MEXICO1/CARMEN%20RION/INVIERNO-19-MARIA-0239_wf0n54.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.carmenrion.com/",
+  "description": "Carmen Rion es una marca 100% mexicana, fundada en 1998. Comercio justo, moda ética y sustentable son parte de nuestros principios de trabajo. Usamos fibras naturales y hechuras a mano; tejidos hechos en telar de cintura, por el grupo “Sna Maruch” ubicado en Zinacantán, Magdalena y Chamula en Chiapas.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

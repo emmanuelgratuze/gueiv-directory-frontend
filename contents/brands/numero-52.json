@@ -1,0 +1,29 @@
+{
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "calzado"
+  ],
+  "name": "Número 52",
+  "genders": [
+    "unisex",
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/n52shop/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595696714/ARGENTINA%201/Numero52/N5252427_-_Nu%CC%81mero_52_Made_from_Pin%CC%83atex_fceemn.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595696714/ARGENTINA%201/Numero52/N5252800_-_Nu%CC%81mero_52_Made_from_Pin%CC%83atex_wxhvzy.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.numero52.com.ar/",
+  "description": "Marca de accesorios con materiales plant based, sustentables y cruelty free.",
+  "criteria": [
+    "materiales-organicos",
+    "fibras-naturales",
+    "comercio-etico",
+    "packaging-sostenible",
+    "eficiencia-uso-de-agua",
+    "vegano",
+    "tintes-naturales"
+  ]
+}

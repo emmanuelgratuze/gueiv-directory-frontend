@@ -1,0 +1,23 @@
+{
+  "name": "Ama",
+  "description": "Ama es una marca de ropa interior cómoda, versátil y alegre, con la intención de salir del esquema de que la lencería o ropa interior se usa con tal de satisfacer a un otro, y así incentivar su uso para una misma y el amor propio. Cada prenda de AMA es única e irrepetible, ya que son trabajadas bajo la técnica del upcycling o supra-reciclaje, reutilizando algodones y telas únicas, con la clara intención de llevar el diseño cada vez más hacia la sustentabilidad y conciencia con el medio ambiente.",
+  "instagram": "https://www.instagram.com/amateamalo/",
+  "website": "https://www.jardinb.cl/collections/todo-jardin-b-mujer?constraint=custom-filter+vendor=ama",
+  "country": "chile",
+  "productTypes": [
+    "vestimenta",
+    "trajes-de-bano-ropa-de-playa",
+    "lenceria",
+    "maternidad"
+  ],
+  "criteria": [
+    "a-pedido",
+    "materiales-reciclados",
+    "supra-reciclado-upcycling",
+    "produccion-local"
+  ],
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596805837/CHILE/AMA/_MG_6921_-_AMA_tzpb7d.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596805851/CHILE/AMA/rayenconi2_-_AMA_ihcaio.jpg"
+  ]
+}

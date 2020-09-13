@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Meüs",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/van.meus/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564449/GUATEMALA/ME%C3%9CS/IMG_6449_sckony.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564449/GUATEMALA/ME%C3%9CS/Meus_collab-IMG_1403_bnsbcb.jpg"
+  ],
+  "country": "guatemala",
+  "website": "https://www.vanmeus.com",
+  "description": "MEÜS nace de la conciencia de la vida, los asuntos sociales y la percepción de la realidad; definida como una entidad creativa, se embarca en conceptualización, diseño y producción.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

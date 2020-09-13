@@ -1,0 +1,31 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Inner",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/inner.uy/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1591193382/URUGUAY/INNER/Verde_02_PG_01_Full_ikofzi.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1591193382/URUGUAY/INNER/Rosa_02_PM_02_Full_xfyotv.jpg"
+  ],
+  "country": "uruguay",
+  "website": "",
+  "description": "Piezas a-temporales. Indumentaria en fibras naturales y accesorios de cerámica.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "fibras-naturales",
+    "comercio-etico"
+  ]
+}

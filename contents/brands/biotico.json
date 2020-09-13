@@ -1,0 +1,34 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "bolsos-y-mochilas",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Biotico",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/biotico_sustentable/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588087695/ARGENTINA%202/BIOTICO/Biotico-115_fmfz2i.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588087694/ARGENTINA%202/BIOTICO/Biotico-222_n9fwk1.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://biotico.com.ar/tienda/",
+  "description": "Somos una marca de moda ética y sustentable, generando una transformación social y ambiental mediante la producción de piezas de art couture y prêt à porter. Fusionamos diseño de autor, arte y moda en colecciones de piezas únicas y exclusivas.",
+  "criteria": [
+    "materiales-reciclados",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "name": "Troja",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://instagram.com/trojaoficial",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599994005/ARGENTINA%201/TROJA/C5441E3C-22E7-4333-A7FF-362C4D889DC5_-_Katy_Mychajtyszczuk_idviiw.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599994005/ARGENTINA%201/TROJA/F85290D4-87F4-4679-AD95-85E4F0CFB99B_-_Katy_Mychajtyszczuk_ohn0ok.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://troja.mitiendanube.com/",
+  "description": "Troja es una marca lenta, calma, que avanza sin prisa. Elaboramos prendas con fibras naturales, con detalles artesanales realizados a mano con técnicas antiguas de tejido transmitidas por generaciones. Nuestra producción es pequeña, evitando así posibles futuros desechos por lo que los productos se van confeccionando por pedido con un mínimo de stock, entendiendo que cada uno de ellos es realizado a mano y de forma exclusiva siendo el cliente parte del proceso.",
+  "criteria": [
+    "a-pedido",
+    "fibras-naturales",
+    "produccion-local"
+  ]
+}

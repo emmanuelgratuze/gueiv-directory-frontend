@@ -1,0 +1,26 @@
+{
+  "facebook": "https://www.facebook.com/kaikirichai",
+  "productTypes": [
+    "joyeria"
+  ],
+  "name": "Kai Kirichai",
+  "genders": [
+    "women",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/kaikirichai",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599993828/ARGENTINA%201/KAI%20KIRICHAI/12697318_1740901529493518_4454810006218368182_o_-_Kai_Kirichai_ytoiek.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599993828/ARGENTINA%201/KAI%20KIRICHAI/78425202_2483355025248161_5353147053327253504_o_-_Kai_Kirichai_bdfr1y.jpg"
+  ],
+  "country": "argentina",
+  "description": "Kai Kirichai, que en lengua Nasa, significa: Tejiendo Pensamientos. Son tejidos a mano con mucho amor y dedicación, directamente de quién les hace. En estas artesanías, de origen ancestral, tejidas por diferentes pueblos originarios de todo el mundo, cargadas de significados y cosmovisiones, la semilla se aproxima a la mostacilla de vidrio y ambas emprenden la travesía del tejido, que el hilo de nylon articula junto con la aguja, dirigido por las manos y el pensamiento de la tejedora. Mucho más que Accesorios tejidos.",
+  "criteria": [
+    "produccion-local",
+    "integracion-social",
+    "empoderamiento-de-la-mujer",
+    "eficiencia-uso-de-agua",
+    "packaging-sostenible",
+    "vegano"
+  ]
+}

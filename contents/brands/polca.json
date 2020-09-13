@@ -1,0 +1,29 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Polca",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/polcazapateria/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603959/CHILE/POLCA/72792878_2396555617263406_7384622655009338410_n_szlnfu.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603959/CHILE/POLCA/67410611_330884971149425_3515168279378231695_n_dlpbr1.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.polcazapateria.com",
+  "description": "Fuertemente influenciado por las tendencias creativas y artísticas; Estéticamente basados en la belleza natural, lo más simple y espontáneo. Cada zapato está cuidadosamente hecho a mano con materiales de alta calidad por familias de artesanos especializados, ya sean pequeños o grandes talleres. Polca Zapatería trabaja con ediciones limitadas, presentando piezas únicas e irrepetibles.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "basicos",
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "BSCSMX - Basicos de Mexico",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/basicosdemexico/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330733/MEXICO1/BSCS/trh2_1500x_d3aqay.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330732/MEXICO1/BSCS/RET_DSC_6624_550x_wnydxw.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://bscs.mx",
+  "description": "BSCSMX nace por una genuina preocupación sobre la manera en la que se produce la ropa que consumimos hoy en día. Nosotros te garantizamos una tela de calidad hecha en México y un modelo de maquila justa en donde nos asociamos con pequeñas cooperativas para garantizar que quien colabora con nosotros es tratado con dignidad, pagado justamente y valorado por su trabajo.",
+  "criteria": [
+    "produccion-local",
+    "integracion-social",
+    "packaging-sostenible"
+  ]
+}

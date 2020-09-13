@@ -1,0 +1,29 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Zunica",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/store.zunica/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863403/PERU/ZUNICA/76751594_2534864279943308_1644410641106075648_o_lut7uk.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863403/PERU/ZUNICA/82792540_2651928214903580_5955655644114583552_o_fes2rl.jpg"
+  ],
+  "country": "peru",
+  "website": "https://unotheshop.com/pages/hechoenperu-zunica",
+  "description": "Zunica busca rescatar técnicas tradicionales como el telar de cintura y combinarlo con tendencias actuales de moda. Todo hecho con amor por artesanas de La Jalca en Chachapoyas, Amazonas.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

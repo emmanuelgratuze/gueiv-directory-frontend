@@ -1,0 +1,27 @@
+{
+  "productTypes": [
+    "vestimenta",
+    "basicos"
+  ],
+  "name": "Antemar",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/antemar.rd/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596817618/REP%20DOM/ANTEMAR/5A010B10-4558-4AB4-9CA4-ED11941011EA_-_palmar_caribbean_hnrxvn.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596817618/REP%20DOM/ANTEMAR/Secundarios_3_-_palmar_caribbean_d7v43a.png"
+  ],
+  "country": "república-dominicana",
+  "website": "https://antemar.com.do/",
+  "description": "Somos una marca dominicana de básicos atemporales de textiles sustentables para la mujer latinoamericana con el objetivo de disminuir el consumo masivo de piezas de moda.",
+  "criteria": [
+    "a-pedido",
+    "fibras-naturales",
+    "materiales-organicos",
+    "materiales-reciclados",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "packaging-sostenible"
+  ]
+}

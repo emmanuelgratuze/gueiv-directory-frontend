@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Arte Origen",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/arteorigen/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1589982179/CHILE/ARTE%20ORIGEN/Pura002_bhfxtj.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1589982180/CHILE/ARTE%20ORIGEN/Milagros002_ghl5fa.jpg"
+  ],
+  "country": "chile",
+  "website": "http://www.arteorigen.com",
+  "description": "Revalorizamos el arte textil de distintas comunidades indígenas, rescatando las tradiciones a través del trabajo 100% hecho a mano uniendo el presente y el pasado. Diseñamos con textiles antiguos para entender su cosmovisión que se traspasan de generación en generación, de la madre a la hija , de la abuela a la nieta, vestimos la historia dando un sentido y respeto al diseño de autor.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

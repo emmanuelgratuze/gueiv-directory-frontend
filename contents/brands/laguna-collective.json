@@ -1,0 +1,36 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo",
+    "complementos",
+    "trajes-de-bano-ropa-de-playa",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Laguna Collective",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/laguna_collective/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330755/MEXICO1/LAGUNA%20COLLECTIVE/08cb84_ed031f00e53a4d999a0886a9e55ca52c_mv2_d_3648_5472_s_4_2_nwnxqu.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330755/MEXICO1/LAGUNA%20COLLECTIVE/08cb84_da42afa425474d5391d96489073b5112_mv2_d_2880_3600_s_4_2_k0k7jf.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.lagunacollective.com/",
+  "description": "Laguna Collective es parte del movimiento Slow Fashion donde la tela, el tiempo y la artesanía tienen prioridad sobre las tendencias y la cultura de consumo rápido.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "tintes-naturales"
+  ]
+}

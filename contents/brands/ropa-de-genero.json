@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ropa De Genero",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/ropa_de_genero/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603960/CHILE/ROPA%20DE%20GENERO/d338ff_72cee84126384f6ea2af8d80ca8a85b1_mv2_d_2740_4252_s_4_2_yhymfw.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603960/CHILE/ROPA%20DE%20GENERO/d338ff_643312531a7a4c56bd5e9c307bae4b09_mv2_d_4754_7124_s_4_2_guf2hl.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.ropadegenero.cl",
+  "description": "RDG es una marca atemporal, artesanal, una visión muy personal de las infinitas posibilidades del universo textil.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico"
+  ]
+}

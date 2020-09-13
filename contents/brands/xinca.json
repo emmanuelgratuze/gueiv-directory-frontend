@@ -1,0 +1,32 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Xinca",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "men",
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/xinca_eco_shoes/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588088096/ARGENTINA%202/XINCA/14026699_1670598766494135_1896087676_n_diamiz.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588088096/ARGENTINA%202/XINCA/39957930_353156378559036_6431538183224913777_n_hzyne4.jpg"
+  ],
+  "country": "argentina",
+  "website": "http://www.xinca.com.ar/web/",
+  "description": "Queremos ser algo más que una marca de zapatillas. Buscamos hacer negocios de una forma diferente. Sin traicionar nuestros valores y disfrutar mientras hacemos lo que más nos gusta. Las personas nos importan y creemos que nuestra empresa puede ser espacio de transformación social. Estamos creando un futuro donde el problema de la basura se convierta en integración social.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

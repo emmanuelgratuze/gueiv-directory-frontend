@@ -1,0 +1,32 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Escvdo",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/escvdo/?hl=es-la",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863220/PERU/ESCVDO/72535304_107441423897877_1818318038806866775_n_gkgokp.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863218/PERU/ESCVDO/75265126_150486573012411_660597982692489040_n_pfeixw.jpg"
+  ],
+  "country": "peru",
+  "website": "https://escvdo.com",
+  "description": "Escudo es una marca de moda ética contemporánea que utiliza técnicas textiles ancestrales peruanas en la creación de nuestras piezas. Nuestras colecciones están inspiradas en la vasta riqueza cultural y natural del Perú, combinando tradiciones textiles ancestrales con fibras de primera calidad.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

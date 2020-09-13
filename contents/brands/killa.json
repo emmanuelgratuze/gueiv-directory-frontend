@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Killa Knits",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/killaknits/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870406/PERU/KILLA%20KNITS/75380440_2498395990238543_4959705070938619904_o_ondeqf.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870405/PERU/KILLA%20KNITS/84258977_2652169874861153_861202352290398208_o_fqhcif.jpg"
+  ],
+  "country": "peru",
+  "website": "http://www.killaknits.com.pe",
+  "description": "Killa Knits es una empresa peruana especializada en moda ética y comprometida con dar a conocer la fibra de alpaca en todo el mundo, cuidar el medio ambiente y apoyar el desarrollo de comunidades de tejido en Perú.",
+  "criteria": [
+    "materiales-organicos",
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

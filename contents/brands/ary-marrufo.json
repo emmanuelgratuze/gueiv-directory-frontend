@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta",
+    "eco-lujo",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ary Marrufo",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/arymarrufomx/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330733/MEXICO1/ARY%20MARRUFO%20/75272151_2554394887932228_979814888621216651_n_vilqgi.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330733/MEXICO1/ARY%20MARRUFO%20/30602902_143248126516363_5812654467476094976_n_kobupi.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.arymarrufo.com.mx",
+  "description": "Ary Marrufo colabora con artesanos procedentes de diferentes comunidades locales en el sureste de México, quienes realizan la técnica del punto de cruz, bordados artesanales y tejidos. Entre sus artesanos se encuentran mujeres en situaciones vulnerables que han sufrido de violencia doméstica y abandono y amas de casa sin recursos. Hoy cuentan con un ingreso extra para poder cumplir sus metas.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

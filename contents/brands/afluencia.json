@@ -1,0 +1,24 @@
+{
+  "productTypes": [
+    "trajes-de-bano-ropa-de-playa",
+    "lenceria",
+    "maternidad"
+  ],
+  "name": "Afluencia",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://instagram.com/afluenciaorg",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595676985/ARGENTINA%201/AFLUENCIA/foto-61_-_Afluencia_Orga%CC%81nico_khwjtt.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595676932/ARGENTINA%201/AFLUENCIA/e9ebe5ce7ae33aca4bc074e3db7a442c_-_Afluencia_Orga%CC%81nico_zlvsua.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://afluenciaorg.wordpress.com/",
+  "description": "AFLUENCIA es una Marca de absorbentes y Lencería Slow con el objetivo de aportar a la industria de la moda una alternativa Sustentable y Responsable con el medio ambiente sin perder la Identidad, Innovación Y Diseño Personal. AFLUENCIA es colaboración con Ciclos naturales, donde todos sus integrantes en cadena se ven beneficiados.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "empoderamiento-de-la-mujer"
+  ]
+}

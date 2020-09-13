@@ -1,0 +1,36 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "ropa-deportiva",
+    "basicos"
+  ],
+  "OKTEX": "X",
+  "Empresa B": "X",
+  "name": "Get Wild",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/getwildar/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588086645/ARGENTINA%201/GET%20WILD/GETWILD7016_-_Agostina_Trovato_mhxtgj.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588086642/ARGENTINA%201/GET%20WILD/MONO_FPD2_-_Agostina_Trovato_gwho0l.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.getwild.com.ar",
+  "description": "Hacemos Indumentaria con la fibra natural de bamboo. Colaboramos activamente con el crecimiento de una tendencia de moda ética: Utilizando un recurso ecológico y sostenible para la fabricación de productos textiles, desarrollando prácticas de comercio justo y asumiendo el compromiso social de mejorar la calidad de vida de las personas. Contamos con Certificación Ecológica Sello Bioproducto Argentino y el respaldo de CAME (Confederación Argentina de la Mediana Empresa) quienes auditaron nuestro proceso ecológico de producción.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "vegano"
+  ]
+}

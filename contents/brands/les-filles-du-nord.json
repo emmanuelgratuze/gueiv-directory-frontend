@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo",
+    "trajes-de-bano-ropa-de-playa"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Les filles du nord",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/lesfillesdunord/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330759/MEXICO1/LES%20FILLES%20DU%20NORD/LFDN-9967_qtjyun.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330760/MEXICO1/LES%20FILLES%20DU%20NORD/LFDN-8536_c6z961.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.lesfillesdunord.com",
+  "description": "LES FILLES DU NORD nace de la idea de crear una línea de ropa de descanso con colecciones de Edición Limitada, que fuera 100% hecha en México y que combinara elementos importantes como diseño y confort.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

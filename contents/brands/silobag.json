@@ -1,0 +1,35 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Silobag",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/silobags/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1591194586/ARGENTINA%202/SILOBAG/mochi03_LowRes_qg8xmx.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1591194586/ARGENTINA%202/SILOBAG/IMG_0008_LowRes_eeqyff.jpg"
+  ],
+  "country": "argentina",
+  "website": "http://www.silobag.fashion/",
+  "description": "Somos la primer marca en el mundo que está innovando con el reciclado de silo bolsas en desuso para crear mochilas, carteras, bolsos, accesorios y mucho más, resultando en productos que son reciclados y reutilizables, 3 veces más resistentes y personalizables.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico",
+    "manejo-de-residuos",
+    "packaging-sostenible",
+    "trabajo-con-artesanos"
+  ]
+}

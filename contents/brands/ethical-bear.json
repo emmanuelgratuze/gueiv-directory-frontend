@@ -1,0 +1,27 @@
+{
+  "productTypes": [
+    "basicos",
+    "vestimenta"
+  ],
+  "name": "Ethical Bear",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/ethicalbear/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595692923/ARGENTINA%201/ETHICAL%20BEAR/eb1_mfl1dg.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595692919/ARGENTINA%201/ETHICAL%20BEAR/eb_pddbsa.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.ethicalbear.com.ar/",
+  "description": "Ethical Bear pudo no haber tenido nombre por un tiempo, pero su espíritu estaba dando vueltas por los integrantes detrás del emprendimiento. Se juntaron varios factores que lo hicieron posible y empujan el proyecto día a día. Las formas de pensar, las ganas y la energía puesta en tratar de hacer este un mundo mejor, la que utilizamos para crear todos los productos que acompañan a EB.",
+  "criteria": [
+    "materiales-organicos",
+    "materiales-reciclados",
+    "produccion-local",
+    "comercio-etico",
+    "eficiencia-uso-de-agua",
+    "tintes-naturales"
+  ]
+}

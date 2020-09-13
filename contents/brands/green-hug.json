@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "basicos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Green Hug",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/greenhug7/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330754/MEXICO1/GREEN%20HUG/Screenshot_2020-01-17_at_20.07.18_fsmbhe.png",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330754/MEXICO1/GREEN%20HUG/Screenshot_2020-01-17_at_20.06.40_jdplna.png"
+  ],
+  "country": "mexico",
+  "website": "https://www.greenhug.com",
+  "description": "Estamos conscientes de los problemas ambientales y sociales que se viven en México y el mundo, por eso decidimos crear algo que pudiera hacer frente a todo esto. Green Hug nació como un proyecto de prepa y terminó convirtiéndose en una fundación en apoyo al artesano mexicano y al medio ambiente con una pulsera artesanal ecológica y posteriormente una colección hecha en México, con materiales 100% reciclados, 45% PET y 55% algodón reciclado. Estamos convencidos que cada vez somos más los que hacemos que este planeta sea muy diferente, sea más verde, consciente y unido.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

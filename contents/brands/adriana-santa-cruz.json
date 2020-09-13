@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Adriana Santa Cruz",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/ad_santacruz/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587566705/COLOMBIA%201/ADRIANA%20SANTA%20CRUZ/79507009_2908111069201671_416368723973111808_o_gplgxf.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587566705/COLOMBIA%201/ADRIANA%20SANTA%20CRUZ/74243354_2801779083168204_1644072047359295488_n_be4f39.jpg"
+  ],
+  "country": "colombia",
+  "website": "http://adrianasantacruz.com/tienda/",
+  "description": "Adriana Santacruz es una marca de diseño especializada en prendas elaboradas en telar con técnicas artesanales indígenas, por hombres y mujeres descendientes de la tribu de Los Pastos y otras tribus que dieron origen a sociedades que hoy habitan Nariño, departamento ubicado al sur de Colombia. Se trata de vestidos, abrigos y estolas que, aunque fabricados con un concepto contemporáneo, evocan tiempo, espacio, unidad tribal y un arraigo cultural que trasciende, y que se opone a la mecanización de la industria textil.",
+  "criteria": [
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Y'abal",
+  "Fair Trade Certified": "X",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/yabal_/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564446/GUATEMALA/YABAL/69928621_2425622221041035_5409899762486533678_n_e8jxj7.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564447/GUATEMALA/YABAL/46711501_2384766281551055_3201195155829075874_n_ugssqx.jpg"
+  ],
+  "country": "guatemala",
+  "website": "https://www.yabalhandicrafts.com",
+  "description": "Yabal Home es una línea artesanal de accesorios textiles tejidos a mano. Nuestras telas están hechas a mano utilizando el telar de cintura maya por cooperativas de artesanos mayas guatemaltecos. Nuestra producción esta hecha con tintes ecológicos a base de plantas, algodón natural, hilos de mezclilla reciclados, bolsas de plástico recicladas y lana de oveja natural. Yabal es una organización de Comercio Justo dedicada al empoderamiento de las mujeres artesanas rurales y todos los beneficios financian programas sociales para nuestras tejedoras.",
+  "criteria": [
+    "a-pedido",
+    "fibras-naturales",
+    "materiales-reciclados",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "tintes-naturales"
+  ]
+}

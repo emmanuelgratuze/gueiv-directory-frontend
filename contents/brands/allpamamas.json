@@ -1,0 +1,34 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Allpamamas",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/allpamamas/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684608/ECUADOR/ALLPAMAMAS/ALTAMIRANO-A-33_gjqkvt.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684608/ECUADOR/ALLPAMAMAS/ALTAMIRANO-A-3_nzoo1d.jpg"
+  ],
+  "country": "ecuator",
+  "website": "https://www.allpamamas.com",
+  "description": "Allpamamas es un proyecto de moda ética que nace de la exploración intercultural de las experiencias compartidas de nuestro equipo. Las diseñadoras María Puente Silva (España) y Vanessa Alarcón (Ecuador) fusionan su conocimiento con el de los artesanos de los Andes ecuatorianos para crear piezas que encarnan la sabiduría ancestral, el diseño de calidad y el profundo amor por nuestra Allpamama, nuestra Madre Tierra. Cada una de nuestras prendas hechas a mano es única y contiene su propia identidad. Están conceptualizados, diseñados y producidos en Ecuador.",
+  "criteria": [
+    "materiales-organicos",
+    "fibras-naturales",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer"
+  ]
+}

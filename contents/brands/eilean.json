@@ -1,0 +1,29 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Eilean",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/eilean.brand/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330741/MEXICO1/EILEAN/51066397_773871469678185_7690757241195343861_n_hlw2sr.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330741/MEXICO1/EILEAN/74649521_795618824211173_8989180547248253172_n_mpgons.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://eileanbrand.com",
+  "description": "Eilean Brand es una marca de moda sustentable que fundada en 2012 y se convirtió en sustentable y orgánica en 2016. Diseñamos y producimos nuestras colecciones en México. Alentamos a nuestros consumidores a adoptar una manera consciente de comprar, investigando y conociendo el origen de sus productos; así como su impacto en el medio ambiente. De esta manera también alentamos a las marcas de moda a convertirse en más responsables hacia el medio ambiente y preocuparse por el impacto que tienen.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "packaging-sostenible"
+  ]
+}

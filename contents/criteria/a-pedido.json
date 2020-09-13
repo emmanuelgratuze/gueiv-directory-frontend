@@ -1,0 +1,6 @@
+{
+  "name": "A pedido",
+  "description": "Adiós a la sobreproducción, al sobrestock, al tener que forzar ventas solamente por el ‘¿qué hago ahora con todo esto que me sobra?’. En este modelo se produce a pedido del cliente, así se aminora el impacto en la utilización de recursos ya que se fabrica únicamente lo que la persona va a comprar, ni más ni menos.",
+  "id": "a-pedido",
+  "icon": "assets/upon-request_oip42e.svg"
+}

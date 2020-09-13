@@ -1,0 +1,32 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Echaniz",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/proyectaechaniz/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588086658/ARGENTINA%201/ECHANIZ/_MG_3481-_-_Echaniz_laboratorio_textil_hgvfxt.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588086643/ARGENTINA%201/ECHANIZ/_MG_8066_2_-_Echaniz_laboratorio_textil_z3u5s7.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://echaniz.mitiendanube.com",
+  "description": "Somos una marca que realiza productos únicos y de elaborado artesanal con materiales recuperados. Trabajamos en forma de  laboratorio, hacemos  diseño consciente dentro de un espacio creativo.\r\nA partir del cierre de la última fábrica textil que quedaba viva en la ciudad de Buenos Aires, Argentina,  de la que recibimos una gran herencia, nos dimos cuenta del potencial escondido en lo olvidado, en lo desechado. Estas telas, tesoros singulares y discontinuados creados hace más de cincuenta años, son géneros y sedas de las décadas del 70, 80 y 90 cuyos diseños y calidad invitan a la interacción e intervención. \r\nNuestro propósito es generar conciencia ambiental y la revalorización del oficio textil, recuperando materiales de descarte creando prendas únicas.",
+  "criteria": [
+    "materiales-reciclados",
+    "supra-reciclado-upcycling",
+    "produccion-local"
+  ]
+}

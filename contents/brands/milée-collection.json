@@ -1,0 +1,28 @@
+{
+  "productTypes": [
+    "vestimenta",
+    "complementos",
+    "trajes-de-bano-ropa-de-playa"
+  ],
+  "name": "Milée Collection",
+  "genders": [
+    "women",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/mileecollection/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599994734/REP%20DOM/_MG_4109_-_Mile%CC%81e_Collection_cgdwqf.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599994733/REP%20DOM/_MG_4123_-_Mile%CC%81e_Collection_aul4fx.jpg"
+  ],
+  "country": "república-dominicana",
+  "website": "https://www.mileecollection.com/",
+  "description": "Marca de moda dominicana con un enfoque ambientalista que brinda innovadores diseños a través del Upcycling o Supra-Reciclaje. Tiene como propósito concientizar a los consumidores de ropa sobre la moda sostenible. Cree en el consumo consciente y re-utilización de los materiales para reducir la contaminación de la industria de la moda.",
+  "criteria": [
+    "materiales-reciclados",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "comercio-etico",
+    "eficiencia-uso-de-agua",
+    "packaging-sostenible"
+  ]
+}

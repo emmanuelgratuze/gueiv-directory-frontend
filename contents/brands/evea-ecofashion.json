@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "X",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Evea Ecofashion",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/eveaecofashion/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870374/PERU/EVEA/71113344_2513654032033209_7175937856718766080_o_cqyd7q.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588870374/PERU/EVEA/78635566_2691580610907216_7456520450894462976_o_wjvr2x.jpg"
+  ],
+  "country": "peru",
+  "website": "http://evea-ecofashion.com/es/",
+  "description": "Experimenta un calzado cómodo y resistente que conserva bosques.",
+  "criteria": [
+    "materiales-organicos",
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "vegano"
+  ]
+}

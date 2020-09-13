@@ -1,0 +1,35 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Laura Áñez Textiles",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/textileslauraanez/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587566704/COLOMBIA%201/LAURA%20A%C3%91EZ/66506999_2717129665016584_821505004660588544_n_rfiop3.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587566703/COLOMBIA%201/LAURA%20A%C3%91EZ/53743379_2516677195061833_7234113588175044608_o_xpx3pc.jpg"
+  ],
+  "country": "colombia",
+  "website": "https://www.lauranez.com/",
+  "description": "De la unión entre el diseño textil contemporáneo y la técnica tradicional de tejido de punto nace la marca Laura Áñez Textiles (LAT). Después de estudiar diseño industrial, Laura viajó a Canadá donde aprendió la técnica del tejido de punto a máquina en el Centro Textil Contemporáneo de Montreal. De regreso a Colombia creó esta empresa cuyas insignias son el saber-hacer, la calidad creativa y la sostenibilidad.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "manejo-de-residuos",
+    "packaging-sostenible",
+    "empoderamiento-de-la-mujer"
+  ]
+}

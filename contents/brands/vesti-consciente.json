@@ -1,0 +1,36 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "basicos",
+    "bolsos-y-mochilas",
+    "joyeria",
+    "complementos",
+    "calzado",
+    "lenceria"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Vesti Consciente",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/vesti_consciente/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588088095/ARGENTINA%202/VESTI%20CONSCIENTE/20023848_451846781847544_7224579211668626811_o_dgk195.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588088095/ARGENTINA%202/VESTI%20CONSCIENTE/79959002_979252099107007_3527717314654896128_o_s5xupq.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.vesticonsciente.com.ar",
+  "description": "Somos una tienda de indumentaria, en donde encontrarás las creaciones de marcas, diseñadores y artesanos que cuidan el medio ambiente y adhieren a los principios del comercio justo.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico"
+  ]
+}

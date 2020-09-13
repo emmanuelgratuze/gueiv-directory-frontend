@@ -1,0 +1,26 @@
+{
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "complementos",
+    "decoracion-y-hogar"
+  ],
+  "name": "Basura",
+  "genders": [
+    "unisex",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/basura.mx/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596803534/MEXICO1/BASURA/basura.mx_75458084_660426134537644_665589411861107449_n_1_-_Basura_M%C3%A9xico_hkdusq.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596803532/MEXICO1/BASURA/basura.mx_103534047_258001958977934_3031122058107322180_n_-_Basura_M%C3%A9xico_uinydo.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://comprabasura.com/",
+  "description": "Basura es una marca de accesorios que transforma desechos textiles en accesorios. Todos nuestros productos se hacen a partir de material recuperado (tanto sintético como textil). Estamos localizados en León, Guanajuato, una ciudad dedicada casi en su totalidad a la producción de moda y calzado. Los desechos que la misma produce son exorbitantes y provienen de fábricas, diseñadores y también de usuarios comunes y corrientes que consumen mucha o poca ropa. Basura es la forma que tenemos de colaborar desde nuestra trinchera, es la manera en la que podemos cambiar e intentar generar tendencias de consumo más conscientes.",
+  "criteria": [
+    "a-pedido",
+    "materiales-reciclados",
+    "produccion-local",
+    "supra-reciclado-upcycling"
+  ]
+}

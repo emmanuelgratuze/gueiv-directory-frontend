@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Suspiro Taller",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/shopsuspiro/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684606/ECUADOR/SUSPIRO/67684350_1829934310442620_979030755671801856_o_gf5yay.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588684606/ECUADOR/SUSPIRO/48392242_1493048784131176_8813529751911137280_o_w7wrjj.jpg"
+  ],
+  "country": "ecuator",
+  "website": "https://www.shopsuspiro.com/all.html",
+  "description": "Somos una marca ecuatoriana que crea productos modernos y duraderos tejidos a mano y accesorios de moda. Nuestra misión es revivir, potenciar y promover el trabajo artesanal y sostenible de los artesanos textiles que viven en los Andes ecuatorianos.",
+  "criteria": [
+    "fibras-naturales",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico"
+  ]
+}

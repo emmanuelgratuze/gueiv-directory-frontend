@@ -1,0 +1,36 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Leaf Social",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/leaf.social/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1591194814/ARGENTINA%202/LEAF%20SOCIAL/LEAF-EcoBag-Vela-01-01_duchxp.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1591194814/ARGENTINA%202/LEAF%20SOCIAL/IMG_8957_lowres_ocyhet.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://leaf.social",
+  "description": "Desarrollamos productos solidarios, 100% argentinos, social y medioambientalmente responsables, hechos con materiales reciclados, innovando en el mercado de la industria de la moda. Incentivamos la inclusión social capacitando y trabajando con pequeñas fábricas, talleres sociales y protegidos, generando oportunidades laborales en el interior del país y barrios en situación de vulnerabilidad. Además colaboramos con diversas organizaciones sociales para que puedan cumplir con su misiones de erradicar la pobreza, educar a niños y capacitar a adultos en situación de vulnerabilidad.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico",
+    "packaging-sostenible",
+    "manejo-de-residuos",
+    "trabajo-con-artesanos"
+  ]
+}

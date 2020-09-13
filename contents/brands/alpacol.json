@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Alpacol",
+  "Fair Trade Certified": "X",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/puertasgallegos/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863189/PERU/ALPACOL/A17-X002_xe3lm9.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863190/PERU/ALPACOL/A18-001_malq8q.jpg"
+  ],
+  "country": "peru",
+  "website": "https://www.alpacolca.com",
+  "description": "Alpacol es una empresa peruana dedicada a la confección de prendas de alta calidad a partir de algodón y baby alpaca 100% natural. Seleccionamos a mano todos nuestros materiales para asegurarnos de que cada prenda producida por Alpacol sea única.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer"
+  ]
+}

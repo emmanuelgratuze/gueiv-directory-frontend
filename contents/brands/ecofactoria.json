@@ -1,0 +1,31 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "joyeria",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ecofactoria",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/ecofactoria/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588686273/PUERTO%20RICO/ECO%20FACTORIA/IMG_20190921_123305_267_-_elda_gonzalez_azzl0p.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588686273/PUERTO%20RICO/ECO%20FACTORIA/IMG_20191012_140353_354_-_elda_gonzalez_hzwlzi.jpg"
+  ],
+  "country": "puerto-rico",
+  "website": "https://www.ecofactoria.com",
+  "description": "Eco factoría es una marca sostenible dónde se trabaja cada pieza a mano artesanalmente. El material base de cada diseño es el papel reciclado. Utilizando solo papel de segunda mano para cada diseño se aporta a la reducción de desperdicios y evita la tala eccesiva de nuestros bosques.",
+  "criteria": [
+    "fibras-naturales",
+    "materiales-reciclados",
+    "produccion-local",
+    "tintes-naturales"
+  ]
+}

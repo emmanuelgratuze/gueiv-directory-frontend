@@ -1,0 +1,31 @@
+{
+  "productTypes": [
+    "vestimenta",
+    "talles-grandes"
+  ],
+  "name": "Alenkie",
+  "genders": [
+    "children",
+    "unisex",
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/alenkie__/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595675026/ARGENTINA%201/ALENKIE/FRA07239_-_Jessica_Hernandez_mhy7rm.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595675915/ARGENTINA%201/ALENKIE/FRA06987_-_Jessica_Hernandez_nqbaws.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://alenkie.com/collections/all",
+  "description": "ALENKIE es una marca de ropa sustentable, libre de crueldad, inspirada en el upcycling. Nuestras confecciones están hechas a base de Tencel (fibra de la madera del eucalipto), algodón orgánico, botellas de plástico y redes de pescas (estos últimos materiales abandonados y recuperados de los océanos). Por un planeta más consciente y una vision más ecológica, este es nuestro aporte al futuro.",
+  "criteria": [
+    "materiales-organicos",
+    "materiales-reciclados",
+    "fibras-naturales",
+    "supra-reciclado-upcycling",
+    "eficiencia-uso-de-agua",
+    "packaging-sostenible",
+    "vegano",
+    "tintes-naturales"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "facebook": "https://www.facebook.com/COOLTRASHCO/",
+  "productTypes": [
+    "vestimenta",
+    "denim",
+    "ropa-de-fiesta",
+    "basicos",
+    "bolsos-y-mochilas",
+    "complementos",
+    "calzado"
+  ],
+  "name": "Cool Trash",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/_cooltrash/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596809171/COLOMBIA%201/Cooltrash/94593207_3446778872003789_6602527474384901434_n_kblbg0.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596809171/COLOMBIA%201/Cooltrash/94706899_325306778442141_6652619623175140331_n_hlqrfk.jpg"
+  ],
+  "country": "colombia",
+  "description": "Somos una marca que le apuesta a un futuro sostenible, queremos concientizar a las personas sobre sus hábitos de consumo e invitarlos a divertirse vistiendo prendas de segunda mano.",
+  "criteria": [
+    "vintage-y-segunda-mano"
+  ]
+}

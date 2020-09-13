@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Coeur",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/coeur.mx/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330733/MEXICO1/COEUR/R1-08369-0003_gvipgd.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330734/MEXICO1/COEUR/R1-08369-0006_ch3iyd.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.coeur.mx",
+  "description": "Cœur es una colección de prendas que logra combinar la simplicidad con los detalles. Deseando ir en contra de las tendencias en constante cambio y el consumo acelerado, el diseño de Coeur gira entorno a prendas para el uso diario enfatizando la importancia de la versatilidad y el diseño meticuloso. Desde la conceptualización de una nueva prenda hasta el producto final, todas las piezas de Coeur están diseñadas, desarrolladas y fabricadas en México por un pequeño y talentoso equipo de trabajo.",
+  "criteria": [
+    "a-pedido",
+    "materiales-organicos",
+    "produccion-local",
+    "integracion-social"
+  ]
+}

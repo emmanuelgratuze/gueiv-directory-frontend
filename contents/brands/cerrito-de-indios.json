@@ -1,0 +1,35 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "bolsos-y-mochilas",
+    "complementos",
+    "decoracion-y-hogar",
+    "telas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Cerrito de Indios",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/cerritodeindios/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947737/URUGUAY/CERRITO%20DE%20INDIOS/27709393_236489413562162_4044732069684642990_o_gftvtt.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947739/URUGUAY/CERRITO%20DE%20INDIOS/41873148_354162615128174_4117002547246399488_n_rk8bbs.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://www.cerritodeindios.com",
+  "description": "Cerrito de Indios es la experiencia de llevar una pieza que cuenta una historia: Habiéndose aplicado técnicas de teñido, confección e impresión artesanal, contemplando parámetros de trabajo genuino en Uruguay. Los procesos de desarrollo son amigables con el medio ambiente. Las materias primas utilizadas son de origen natural, adquiridas localmente.",
+  "criteria": [
+    "fibras-naturales",
+    "supra-reciclado-upcycling",
+    "produccion-local"
+  ]
+}

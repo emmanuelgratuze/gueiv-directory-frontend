@@ -1,0 +1,20 @@
+{
+  "productTypes": [],
+  "name": "Mercadillo Vintage",
+  "genders": [
+    "men",
+    "women",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/mercadillovintage/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596804278/MEXICO1/MERCADILLO%20VINTAGE/MV-18_-_Alana_Rivero_ljoz2k.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596804170/MEXICO1/MERCADILLO%20VINTAGE/MV-4_-_Alana_Rivero_ujtufy.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://mercadillovintage.mx/",
+  "description": "Mercadillo Vintage reúne prendas y accesorios que definieron los estilos de vestir que fueron populares algunas décadas atrás.",
+  "criteria": [
+    "vintage-y-segunda-mano"
+  ]
+}

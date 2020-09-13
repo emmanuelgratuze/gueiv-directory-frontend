@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Mei Lang",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/mei_lang_loo/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603804/CHILE/MEI%20LANG/56894604_2272318399683550_190103462612264049_n_tyioyu.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603803/CHILE/MEI%20LANG/54447028_360234951366391_1906343888535906032_n_yivssq.jpg"
+  ],
+  "country": "chile",
+  "website": "https://meilang.cl",
+  "description": "Diseño de autor Chileno que rescata diversas manifestaciones textiles de los pueblos andinos y las aplica a la moda contemporánea.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico",
+    "manejo-de-residuos"
+  ]
+}

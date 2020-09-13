@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Rania Yarn",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/rania.yarn/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947771/URUGUAY/RANIA/73377067_820414188393268_875824279133368833_n_at4bc4.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947772/URUGUAY/RANIA/77035132_2422480207964597_6188999991352361575_n_siqnua.jpg"
+  ],
+  "country": "uruguay",
+  "website": "",
+  "description": "Dialogamos con la naturaleza a través de nuestras prendas. Hecho a mano. Tejidos orgánicos.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

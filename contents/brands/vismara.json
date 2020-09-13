@@ -1,0 +1,26 @@
+{
+  "productTypes": [
+    "joyeria",
+    "decoracion-y-hogar"
+  ],
+  "name": "Vismara",
+  "genders": [
+    "women",
+    "unisex"
+  ],
+  "instagram": "http://www.instagram.com/vismaradeautor",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599994198/ARGENTINA%201/VISMARA/3_-_Maria%CC%81ngeles_Vismara_Marta_gpuuru.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1599994197/ARGENTINA%201/VISMARA/pulsera_1_-_Maria%CC%81ngeles_Vismara_Marta_xecfle.jpg"
+  ],
+  "country": "argentina",
+  "website": "http://www.vismaraweb.com/",
+  "description": "Vismara nace con el Propósito de materializar el amor que sentimos los argentinos por nuestro país. Nuestra Misión es realizar piezas de autor sostenibles con alto valor estético y emocional para gente única. Nuestra Visión es representar las virtudes de Argentina ante el mundo.",
+  "criteria": [
+    "a-pedido",
+    "materiales-organicos",
+    "materiales-reciclados",
+    "produccion-local",
+    "manejo-de-residuos"
+  ]
+}

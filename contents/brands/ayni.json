@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ayni",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/ayniuniverse/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863190/PERU/AYNI/97dde9cc-a82d-43ad-b9ce-47ff08563902_mcjgjt.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863191/PERU/AYNI/7784922d-aab7-47b4-ba7e-6d4decadb6e6_wj2ezo.jpg"
+  ],
+  "country": "peru",
+  "website": "http://ayni.com.pe",
+  "description": "AYNI se creó a partir de un amor común por los productos de alta calidad, los mejores materiales de la naturaleza y un fuerte compromiso social, económico y medioambiental. Todos nuestros productos están diseñados y fabricados en Perú, un país con una de las economías de más rápido crecimiento del mundo, que utiliza solo los materiales peruanos más exclusivos, como la lujosa alpaca bebé y el algodón Pima.",
+  "criteria": [
+    "materiales-organicos",
+    "fibras-naturales",
+    "produccion-local"
+  ]
+}

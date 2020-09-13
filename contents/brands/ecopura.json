@@ -1,0 +1,34 @@
+{
+  "facebook": "",
+  "GOTS": "X",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "basicos",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Ecopura",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/ecopuracl/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603794/CHILE/ECOPURA/14052573_315504895465869_1232568511_n_t3k1es.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603795/CHILE/ECOPURA/14474036_995752317216909_4412694990988247040_n_k5lau2.jpg"
+  ],
+  "country": "chile",
+  "website": "http://ecopura.cl",
+  "description": "Ecopura es una empresa que nace en Puerto Varas a orillas del lago Llanquihue. Formada por personas de la Región de Los Lagos cuyos principios son el cuidado del medio ambiente y la conciencia social. En nuestros productos consagran un rol predominante las tejedoras, las cuales en su gran mayoría son mujeres de sectores rurales y alrededores de la ciudad de Puerto Varas. Nos preocupamos de generar un impacto social, elaborando textiles con fibras 100% naturales siendo una alternativa a la industria textil tradicional, causando un triple impacto: social, económico y ambiental.",
+  "criteria": [
+    "materiales-organicos",
+    "fibras-naturales",
+    "produccion-local",
+    "comercio-etico",
+    "tintes-naturales"
+  ]
+}

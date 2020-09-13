@@ -1,0 +1,32 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Gaia",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/gaia.uy",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947761/URUGUAY/GAIA/65300428_851967155174724_4284345269111236359_n_gn9ihi.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947761/URUGUAY/GAIA/67332911_1884200538348321_31836546676969511_n_muspvi.jpg"
+  ],
+  "country": "uruguay",
+  "website": "",
+  "description": "Transformar para preservar. Vestimenta sustentable hecha en Uruguay. Gaia Utiliza materia prima reciclada proveniente de desechos textiles de fábricas, como también prendas en desuso y materiales naturales como lana merino nacional. Los mismos son transformados implementando estrategias que generen el menor impacto ambiental durante cada etapa de producción, promoviendo el trabajo manual y creando prendas con diseño y calidad.",
+  "criteria": [
+    "materiales-reciclados",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "manejo-de-residuos"
+  ]
+}

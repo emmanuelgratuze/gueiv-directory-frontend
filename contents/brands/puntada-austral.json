@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "ropa-de-fiesta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Puntada Austral",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/puntadaaustral/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603959/CHILE/PUNTADA%20AUSTRAL/Entropia-hombre-33_lf42cm.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603959/CHILE/PUNTADA%20AUSTRAL/fluir-192_jplvzp.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.puntadaaustral.com/tienda/",
+  "description": "PUNTADA AUSTRAL es moda auténtica. Prendas cómodas, realizadas con materiales de calidad. Innovando en los cortes de las prendas, centrados en el buen calce, aplicando técnicas de la sastrería tradicional.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "manejo-de-residuos"
+  ]
+}

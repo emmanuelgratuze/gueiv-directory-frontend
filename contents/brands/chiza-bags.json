@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Chiza Bags",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/chiza_bags/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603796/CHILE/CHIZA%20BAGS/noesno1_1296x_xytt1f.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603794/CHILE/CHIZA%20BAGS/48B_1296x_z7jwpf.jpg"
+  ],
+  "country": "chile",
+  "website": "https://chizabags.myshopify.com",
+  "description": "Creemos que una bolsa reutilizable debe necesariamente ser de calidad para que cumpla con el principal de sus objetivos: Reusarse. Cuantas más veces sea posible, mejor. Para lograrlo trabajamos cuidadosamente potenciando cada material y aprovechando al máximo sus posibilidades. Nos importan los detalles, confeccionamos a pequeña escala cuidando cada uno de los recursos involucrados, priorizamos la calidad, resistencia y estilo en cada uno de nuestros productos, todos ellos estampados con diseños propios, atemporales, que buscan evocar emociones y recuerdos.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local"
+  ]
+}

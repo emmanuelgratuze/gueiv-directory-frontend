@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Fabrica Social",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/fabricasocial/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330742/MEXICO1/FABRICA%20SOCIAL/54522255_2215938248444693_6759682549947039744_o_craaxd.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330742/MEXICO1/FABRICA%20SOCIAL/52853967_2196281983743653_6012484894733631488_o-1_hfqvjs.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://fabricasocial.mx",
+  "description": "Empresa Social mexicana dedicada al apoyo y difusión del trabajo y conocimiento de mujeres artesanas indígenas en México. Colaboramos en el desarrollo y producción de ropa y textiles artesanales, facilitando herramientas de diseño, organización y administración y comercializando el producto final.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico"
+  ]
+}

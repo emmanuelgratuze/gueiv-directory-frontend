@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Mochi",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/MochilasMochi/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603805/CHILE/MOCHI%20MOCHILAS/70731855_1002818676729289_1957451758548284924_n_ky7gz1.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603804/CHILE/MOCHI%20MOCHILAS/67719819_1128006200738942_5565075518294114657_n_dcxbaj.jpg"
+  ],
+  "country": "chile",
+  "website": "https://www.mochilasmochi.org",
+  "description": "Mochilas Hechas con Reciclaje de Plástico y Desechos Textiles.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local"
+  ]
+}

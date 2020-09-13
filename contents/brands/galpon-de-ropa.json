@@ -1,0 +1,26 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Galpón de Ropa",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/galponderopa/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588086637/ARGENTINA%201/GALPON%20DE%20ROPA/newbery-web-1_a7460v.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588086641/ARGENTINA%201/GALPON%20DE%20ROPA/arcos-web_zzrmlj.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://galponderopa.com",
+  "description": "Mientras que algunos deciden abordar la moda sustentable desde los recursos que utilizan para la confección de sus prendas, en Galpón de Ropa le pegamos la vuelta y decidimos enfocarnos en encontrar un nuevo hábitat para las cientos de miles de prendas de las que la gente decide desprenderse y así, encontramos una nueva forma de abordar el problema de la ropa en desuso.",
+  "criteria": [
+    "vintage-y-segunda-mano"
+  ]
+}

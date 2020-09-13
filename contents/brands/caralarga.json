@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo",
+    "joyeria",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Caralarga",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/caralarga_mx/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330731/MEXICO1/CARALARGA/CODICE_1296x_y9rpdh.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330731/MEXICO1/CARALARGA/1-mantarraya_1024x1024_2x_pwv6iz.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://caralarga.com.mx",
+  "description": "Caralarga es un taller de diseño y producción textil inspirado en los materiales crudos de la naturaleza. Buscamos conservar su esencia y resaltar sus bondades transformándolos así en piezas de alta calidad artesanal. Con nuestros diseños, queremos transmitir el valor de nuestras manos y destacar la belleza natural de cada material. Nos gustan las cosas como son y creemos que un mundo sencillo es un mundo mejor; ésta es nuestra fuente de inspiración.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

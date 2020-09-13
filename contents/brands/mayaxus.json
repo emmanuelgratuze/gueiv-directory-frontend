@@ -1,0 +1,29 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Mayaxus",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/mayaxus/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564447/GUATEMALA/MAYAXUS/23498297_140059586753539_3253191595029168128_n_rsljr0.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564448/GUATEMALA/MAYAXUS/21911034_136136720455160_7317432041002237952_n_bfk2ie.jpg"
+  ],
+  "country": "guatemala",
+  "website": "https://www.mayaxus.com/es/",
+  "description": "Somos una empresa familiar operada por tres hermanos motivados por su orgullo de ser guatemaltecos. Nuestra misión es crear zapatos artesanales de alta calidad utilizando los mejores textiles de Guatemala, así mismo promover y apoyar el talento de las tejedoras Mayas y a sus familias.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

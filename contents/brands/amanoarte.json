@@ -1,0 +1,32 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "joyeria",
+    "complementos",
+    "decoracion-y-hogar"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Amanoarte",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/amanoarte/?hl=es",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330732/MEXICO1/AMANOARTE/69233647_206516930338124_8017226251056987982_n_xtaqia.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330732/MEXICO1/AMANOARTE/73527672_492881364675662_4386335323860355636_n_k9ypx0.jpg"
+  ],
+  "country": "mexico",
+  "website": "http://amanoarte.org/tienda/",
+  "description": "Moda lenta, mística, ética y orgánica por el gusto de vestir nuestras raíces. Fusionando el ayer con el ahora en apoyo a la mujer indígena de México para que con su arte y legado, nuestras redes y talleres logre independencia y sustentabilidad. La Pachamama es el eje de nuestra visión así como la relación con el ambiente, la familia y la sociedad.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

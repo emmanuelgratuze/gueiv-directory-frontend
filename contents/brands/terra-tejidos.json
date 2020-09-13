@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Terra Tejidos",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/terratejidos/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947773/URUGUAY/TERRA/57160064_1510289099107414_7531892539914190848_o_vkg0gm.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588947772/URUGUAY/TERRA/58909850_1522007404602250_7845275876638851072_n_c8xzwi.jpg"
+  ],
+  "country": "uruguay",
+  "website": "https://terratejidos.com/",
+  "description": "Terra es realizada por manos uruguayas, impulsando la moda en Uruguay y rescatando el tejido a mano como un antiguo oficio artesanal con una estética moderna. Al tejer cada prenda no solo se entrecruzan hebras, sino también pensamientos y sensaciones los cuales son reflejados en cada TERRA. Enfocados en el cuidado por el medio ambiente, el valor de lo estético y la confección de piezas únicas, utilizamos 100% lana merino y materiales cuidadosamente seleccionados en nuestras prendas",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

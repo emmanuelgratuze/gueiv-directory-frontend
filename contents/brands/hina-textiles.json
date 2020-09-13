@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Hina Textiles",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/hina.textiles/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330757/MEXICO1/HINA%20TEXTILES/Detalle-Huipil-1_qtegcc.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330757/MEXICO1/HINA%20TEXTILES/Bufanda_kp0w8p.jpg"
+  ],
+  "country": "mexico",
+  "website": "www.hinatextiles.com",
+  "description": "HINA es una marca que honra la historia y no la ignora, pero que tiene sus pies en el presente y mira hacia el futuro. HINA crea un producto que une la demanda de un mercado moderno con la conciencia ambiental y cultural, junto con una tecnología antigua, lenta y básica y una forma de trabajo 100% natural.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social",
+    "comercio-etico",
+    "empoderamiento-de-la-mujer",
+    "tintes-naturales"
+  ]
+}

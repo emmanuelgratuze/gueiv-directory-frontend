@@ -1,0 +1,32 @@
+{
+  "productTypes": [
+    "eco-lujo",
+    "basicos",
+    "vestimenta"
+  ],
+  "name": "Elisa de Córdova",
+  "genders": [
+    "women",
+    "unisex"
+  ],
+  "instagram": "http://www.instagram.com/elisadecordova",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596807395/CHILE/ELISA%20DE%20CORDOVA/EDC2-originalalta_-_Elisa_De_cordova_qhjwps.png",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596807389/CHILE/ELISA%20DE%20CORDOVA/EDC1-originalalta_-_Elisa_De_cordova_vwsx6l.png"
+  ],
+  "country": "chile",
+  "website": "http://www.elisadecordova.com",
+  "description": "La firma homónima de la diseñadora Elisa De Córdova nació como una respuesta sustentable al fast fashion. Desde su fundación, el 2016, utiliza materias primas orgánicas, naturales y recicladas en procesos de producción lentos y éticos, que recogen la atemporalidad y la comodidad propia de la marca. En la actualidad, Elisa trabaja con múltiples talleres Chilenos basándose en los estándares y valores del comercio justo y la economía circular, reivindicando, de esta manera, el oficio de la costura y dando una mirada sostenible al mundo del diseño y la moda.",
+  "criteria": [
+    "a-pedido",
+    "materiales-organicos",
+    "fibras-naturales",
+    "materiales-reciclados",
+    "produccion-local",
+    "comercio-etico",
+    "trabajo-con-artesanos",
+    "eficiencia-uso-de-agua",
+    "manejo-de-residuos",
+    "tintes-naturales"
+  ]
+}

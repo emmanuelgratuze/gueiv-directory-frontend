@@ -1,0 +1,29 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Maiz y Matiz",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/maizandmatiz/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564450/GUATEMALA/MAIZ%20Y%20MATIZ/piel_fs8i2r.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564450/GUATEMALA/MAIZ%20Y%20MATIZ/3R6A1684_nflrjc.jpg"
+  ],
+  "country": "guatemala",
+  "website": "https://www.matizguate.com",
+  "description": "Maiz & Matiz, es una línea de prendas de vestir inspirada en el colorido de la cultura maya. Las colecciónes de ropa cuentan con: blusas, vestidos, faldas, pantalones, túnicas, pareos, bolsas y accesorios.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

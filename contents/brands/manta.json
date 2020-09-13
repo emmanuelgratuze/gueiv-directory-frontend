@@ -1,0 +1,35 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "bolsos-y-mochilas",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "manta",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/mantabags/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588872316/PERU/MANTA/70759968_2438809696200822_1489226875631828992_o_javrgt.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588872315/PERU/MANTA/70859254_2438771929537932_7084136607258771456_n_ssfnvy.jpg"
+  ],
+  "country": "peru",
+  "website": "https://www.manta.pe",
+  "description": "Carteras y accesorios hechos a mano por artesanos peruanos que muestran la fusión de lo tradicional y contemporáneo combinando telares peruanos. Cada pieza es única y exclusiva. Marca sostenible que apuesta por un desarrollo sostenible en el ámbito social, económico y ambiental.",
+  "criteria": [
+    "materiales-organicos",
+    "fibras-naturales",
+    "supra-reciclado-upcycling",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "vegano"
+  ]
+}

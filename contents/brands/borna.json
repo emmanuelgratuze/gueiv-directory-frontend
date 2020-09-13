@@ -1,0 +1,30 @@
+{
+  "productTypes": [
+    "vestimenta",
+    "bolsos-y-mochilas",
+    "basicos",
+    "complementos",
+    "trajes-de-bano-ropa-de-playa"
+  ],
+  "name": "Borna",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/somosborna/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595676369/ARGENTINA%201/BORNA/Gorras2_-_Somos_Borna_n95j23.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1595676370/ARGENTINA%201/BORNA/Borna_FashRev_-_Somos_Borna_hrsoak.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://www.somosborna.com",
+  "description": "En BORNA creamos remeras, camisas, buzos, gorras y trajes de baño con diseños únicos, duraderos y originales. Promovemos la inclusión social fabricando nuestros productos a través de prácticas de comercio responsables, con aliados conscientes, entre los cuales se encuentran cooperativas, ONG's y fundaciones que nuclean a mujeres en situación de vulnerabilidad y personas con discapacidad. Cuidamos al medio ambiente trabajando parte de nuestra producción con descarte textil reutilizado y nuestro packaging es biodegradable. Además destinamos una parte de nuestras ventas para comprar eco ladrillos fabricados con plástico reutilizado, que no solo ayudan a construir espacios donde se desarrollan talleres de oficio, promoviendo de esta forma la capacitación y la generación de empleo futuro, sino que también promueven la re-utilización de botellas de plástico PET.",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "comercio-etico",
+    "integracion-social",
+    "packaging-sostenible"
+  ]
+}

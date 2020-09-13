@@ -1,0 +1,29 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Korbata",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/korbataguatemala/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564450/GUATEMALA/KORBATA/49297365_944533185670598_1597623062679781376_n_tnbkmn.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1587564450/GUATEMALA/KORBATA/43163734_849353975188520_3328441174401744896_n_fxrzab.jpg"
+  ],
+  "country": "guatemala",
+  "website": "https://www.korbata.com",
+  "description": "Productos de moda ética de alta calidad tejidos a mano por felices artesanos guatemaltecos. Cada colección es de edición limitada inspirada en la cultura y tradición de Guatemala.",
+  "criteria": [
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "comercio-etico"
+  ]
+}

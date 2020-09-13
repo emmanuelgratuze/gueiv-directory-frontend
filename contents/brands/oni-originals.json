@@ -1,0 +1,34 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "bolsos-y-mochilas",
+    "calzado"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Oni Originals",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/onioriginal/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330761/MEXICO1/ONI%20ORIGINALS/64982869_386392322232249_4877893524402910746_n_hsei7r.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330761/MEXICO1/ONI%20ORIGINALS/65795701_410742299532980_849240752892214355_n_muomjn.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.onioriginal.com",
+  "description": "ONI es una Empresa Social, en donde su principal objetivo es con el medio ambiente, haciendo productos que cuiden a la naturaleza y ademas modificar nuestras formas de consumo actuales y demostrar que un producto puede ser hermoso y al mismo tiempo puede salvar al planeta. ¡Tus productos ONI están hechos con botellas de PET (plástico) reciclado!",
+  "criteria": [
+    "materiales-reciclados",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "X",
+  "name": "Stay True",
+  "Fair Trade Certified": "X",
+  "OCS100": "X",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/staytrueorganic/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588087841/ARGENTINA%202/STAY%20TRUE/58410757_2135794900045540_3905175595933967016_n_pqvj6v.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588087840/ARGENTINA%202/STAY%20TRUE/60767570_486270248785278_5550051095623504461_n_d5uene.jpg"
+  ],
+  "country": "argentina",
+  "website": "https://staytrueorganic.com",
+  "description": "Somos parte de una generación de pensamiento libre que involucra el surf, el skate, la música, el arte y los deportes de acción. Que se mantiene en contacto con su lado salvaje y recorre el mundo en búsqueda de aventuras. El respeto a la biodiversidad es parte de nuestra filosofía de vida. Queremos ser recordados como la generación que alzo la bandera de un mundo sin fronteras. Bajo esta creencia venimos produciendo nuestras remeras generando un cambio de consciencia con un estilo de vida del no maltrato de la tierra, los animales y los seres humanos.",
+  "criteria": [
+    "materiales-organicos",
+    "produccion-local",
+    "integracion-social",
+    "comercio-etico",
+    "eficiencia-uso-de-agua",
+    "vegano"
+  ]
+}

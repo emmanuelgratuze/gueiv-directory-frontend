@@ -1,0 +1,29 @@
+{
+  "productTypes": [
+    "vestimenta",
+    "basicos",
+    "eco-lujo"
+  ],
+  "name": "ILÉ Slow Fashion",
+  "genders": [
+    "men",
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/ile.slowfashion/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596808181/CHILE/ILE%20SLOW%20FASHION/FASHION_WEEK_099_-_Tamara_Tenreiro_mk84tc.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596808183/CHILE/ILE%20SLOW%20FASHION/FASHION_WEEK_095_-_Tamara_Tenreiro_uoa5u8.jpg"
+  ],
+  "country": "chile",
+  "website": "https://es.ileslowfashion.com/",
+  "description": "Marca de moda sustentable que brinda soluciones a las diversas problemáticas por las que está pasando la industria de la moda actualmente. Nos basamos en tres acciones fundamentales: sustentabilidad, comercio justo y educación al consumidor. Incentivar el consumo sustentable en la sociedad supone enseñarles a discernir entre el consumo ético y sustentable, a conocer la historia de sus prendas y qué personas están detrás de ellas. En un mundo tan acelerado y cambiante, necesitamos encontrar maneras de hacer consciencia en cada resquicio de nuestra sociedad. ILÉ Slow Fashion encuentra su razón de ser en la puesta en práctica de estos conceptos primordiales, en función del bienestar de la comunidad del mañana.",
+  "criteria": [
+    "a-pedido",
+    "fibras-naturales",
+    "produccion-local",
+    "comercio-etico",
+    "packaging-sostenible",
+    "vegano",
+    "manejo-de-residuos"
+  ]
+}

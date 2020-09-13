@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Pelff",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "unisex"
+  ],
+  "instagram": "https://www.instagram.com/pelff_knitwear/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603805/CHILE/PELFF/66716612_221429942153990_4241613219427296319_n_fuoaqx.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588603806/CHILE/PELFF/65218207_467120647420749_3732575310641511368_n_pdlmuy.jpg"
+  ],
+  "country": "chile",
+  "website": "https://pelff.com",
+  "description": "Tejido exclusivo y limitado, vegano y hecho a mano.",
+  "criteria": [
+    "produccion-local",
+    "vegano"
+  ]
+}

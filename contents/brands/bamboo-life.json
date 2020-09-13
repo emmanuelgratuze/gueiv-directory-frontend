@@ -1,0 +1,32 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Bamboo Life",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men",
+    "children"
+  ],
+  "instagram": "https://www.instagram.com/bamboolifeco/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330732/MEXICO1/BAMBOO%20LIFE/60705888_110775506845221_5071601520165309440_n_oqen3q.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588330731/MEXICO1/BAMBOO%20LIFE/60089369_659377401142966_890417324715024516_n_dvlxnr.jpg"
+  ],
+  "country": "mexico",
+  "website": "https://www.bamboo-life.com",
+  "description": "Somos una empresa mexicana con un proyecto ambicioso de volver el mundo en el que vivimos en un lugar sustentable. Producimos nuestros productos en Asia y México, con la meta de siempre ofrecer la mejor calidad en productos. Estamos firmemente convencidos de que los recursos naturales deben ser utilizados de manera responsable para mantener el equilibrio y evitar consecuencias negativas para el medio ambiente. Por eso, nuestros productos están hechos de bambú, una de las plantas de mas rápido crecimiento en el mundo, y a veces lo combinamos con materiales reciclados para crear una estética única.",
+  "criteria": [
+    "materiales-organicos",
+    "materiales-reciclados",
+    "trabajo-con-artesanos",
+    "integracion-social"
+  ]
+}

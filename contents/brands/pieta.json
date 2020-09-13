@@ -1,0 +1,32 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "basicos",
+    "bolsos-y-mochilas",
+    "complementos"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "pietà",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/projectpieta/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863372/PERU/PIETA/74418931_2553677751367823_8864523808422232064_o_bjjbmv.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863372/PERU/PIETA/67896713_2329344937134440_8699876030971641856_o_lijulh.jpg"
+  ],
+  "country": "peru",
+  "website": "https://www.peru.projectpieta.com",
+  "description": "Pietà es un proyecto de moda social y creativo hecho en las cárceles de Lima, Perú. Una marca, influenciada por las contraculturas, que niega someterse a las normas sociales de una sociedad consagrada al consumismo.Todas las prendas son elaboradas en los talleres de confección, de tejidos, de zapatería y marroquinería en las cárceles, donde los internos realizan con pasión y orgullo piezas que viajaran a todas partes del Mundo. Cada producto es único, producto en serie limitada, y lleva la firma del artesano quien lo realizó además de soltar una historia para cada costura o hilo tejido. Pietà privilegia los materiales naturales, orgánicos y reciclados. Las piezas se distinguen por sus cortes simples y minimalistas para la vida de cada día.",
+  "criteria": [
+    "produccion-local",
+    "integracion-social"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [
+    "vestimenta",
+    "eco-lujo"
+  ],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "Qaytu",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women"
+  ],
+  "instagram": "https://www.instagram.com/qaytu/?hl=es-la",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863400/PERU/QAYTU/7_lyvzju.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1588863400/PERU/QAYTU/22_zc19ye.jpg"
+  ],
+  "country": "peru",
+  "website": "https://www.qaytu.com",
+  "description": "Qaytu es una marca de moda hecha a mano en Perú. Su identidad se refleja en la naturaleza de sus aportes y en las personas que lo hacen no solo posible sino también sostenible. La marca considera los atributos de tendencia y los combina con un buen diseño irremediable, por lo que es una opción ideal para aquellos que buscan productos de carácter, color y resistencia.",
+  "criteria": [
+    "fibras-naturales",
+    "produccion-local",
+    "trabajo-con-artesanos"
+  ]
+}

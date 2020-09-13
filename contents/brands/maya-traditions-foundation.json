@@ -1,0 +1,30 @@
+{
+  "facebook": "https://www.facebook.com/MayaTraditionsFoundation",
+  "productTypes": [
+    "vestimenta",
+    "bolsos-y-mochilas",
+    "decoracion-y-hogar",
+    "telas",
+    "complementos"
+  ],
+  "name": "Maya Traditions Foundation",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/mayatraditions/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596805213/GUATEMALA/MAYA%20TRADITIONS/Maya_Wall_Hanging_in_White_-_Serena_Frascona%CC%80_pcm0qf.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1596805212/GUATEMALA/MAYA%20TRADITIONS/_DSC1294copy_-_Serena_Frascona%CC%80_eqlhwb.jpg"
+  ],
+  "country": "guatemala",
+  "description": "Como una empresa social sin fines de lucro, la Fundación Tradiciones Mayas se dedica a facilitar el acceso a los mercados nacionales e internacionales con el fin de contribuir al desarrollo de las mujeres artesanas indígenas y sus familias en el altiplano de Guatemala. Siguiendo el modelo de Comercio Justo, buscamos apoyar a nuestras artesanas, sus familias y sus comunidades a través de programas sociales que promuevan las técnicas y conocimientos, preserven las culturas locales y motiven a las mujeres indígenas a fortalecer sus ecosistemas empresariales.",
+  "criteria": [
+    "fibras-naturales",
+    "comercio-etico",
+    "produccion-local",
+    "trabajo-con-artesanos",
+    "empoderamiento-de-la-mujer",
+    "tintes-naturales"
+  ]
+}

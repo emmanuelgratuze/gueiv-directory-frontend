@@ -1,0 +1,33 @@
+{
+  "facebook": "",
+  "GOTS": "",
+  "RSW (Responsible Wool Standard)": "",
+  "productTypes": [],
+  "OKTEX": "",
+  "Empresa B": "",
+  "name": "D'Perú Textil",
+  "Fair Trade Certified": "",
+  "OCS100": "",
+  "genders": [
+    "women",
+    "men"
+  ],
+  "instagram": "https://www.instagram.com/dperutextil/",
+  "pictures": [
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1607613406/PERU/D%27PERU%20TEXTIL/D_PERU_TEXTIL_-_Angelica_Leyva_Pomacahua_ztwsge.jpg",
+    "https://res.cloudinary.com/dq9k7gnud/image/upload/v1607613415/PERU/D%27PERU%20TEXTIL/D_PERU_TEXTIL_2_-_Angelica_Leyva_Pomacahua_svgv5x.jpg"
+  ],
+  "country": "peru",
+  "website": "https://dperutextil.com/es",
+  "description": "Las piezas D'PERÚ TEXTIL son diseñadas y producidas en Perú. Nuestra herencia se basa en dos generaciones de producción familiar a pequeña escala: un legado de fabricación de tejido de punto, prendas de vestir y productos de lujo inspirados en nuestra cultura textil milenaria, cada pieza está creada como un objeto de arte cuyo carácter se puede apreciar tanto por su belleza como por su suavidad bajo los principios de un comercio justo y sostenible.La marca ha venido abrazando lo tradicional, lo innovador y lo inesperado con la ambición de presentar la moda bajo una nueva luz, la del respeto por la artesanía combinada con la nobleza de las materias primas naturales y el diseño. Es por ello que nuestro slogan resume nuestra esencia. Feel the HAUTE CULTURE of The Andes",
+  "criteria": [
+    "a-pedido"
+    "fibras-naturales"
+    "comercio-etico"
+    "empoderamiento-de-la-mujer"
+    "manejo-de-residuos"
+    "packaging-sostenible"
+    "produccion-local"
+    "trabajo-con-artesanos"
+  ]
+}
